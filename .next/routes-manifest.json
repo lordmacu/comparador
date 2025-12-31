@@ -56,6 +56,12 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/api/call-request",
+      "regex": "^/api/call\\-request(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/call\\-request(?:/)?$"
+    },
+    {
       "page": "/claro",
       "regex": "^/claro(?:/)?$",
       "routeKeys": {},
