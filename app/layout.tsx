@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
   },
   verification: {
-    google: 'tu-codigo-google-search-console', // TODO: Agregar código real de Google Search Console
+    google: 'cMUfMPNRJ7JXK67SNgIAbIFRdpPkt5G5_Nawzdczp-k',
   },
   alternates: {
     canonical: 'https://comparadorinternet.co',
