@@ -13,6 +13,7 @@ import ContactForm from '@/components/ContactForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import QuickCallForm from '@/components/QuickCallForm';
 import FAQSection from '@/components/FAQSection';
+import ProviderBlogSection from '@/components/ProviderBlogSection';
 import { BadgePercent, ClipboardList } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -219,6 +220,12 @@ export default function MovistarPage() {
           <WhatsAppButton provider={provider} size="lg" />
         </div>
       </section>
+
+      <ProviderBlogSection
+        providerName={provider.name}
+        providerSlug={provider.slug}
+        accentColor={provider.brand.primaryColor}
+      />
 
       {/* FAQ */}
       <FAQSection faqs={provider.faqs} accentColor={provider.brand.primaryColor} />

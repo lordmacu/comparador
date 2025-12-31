@@ -109,6 +109,9 @@ export default function RootLayout({
 
         {/* llms.txt para AI Discoverability */}
         <link rel="llms-txt" href="/llms.txt" type="text/plain" />
+
+        {/* RSS Feed */}
+        <link rel="alternate" type="application/rss+xml" title="Blog de Internet Colombia" href="/blog/feed.xml" />
       </head>
       <body className={inter.className}>
         {/* Header condicional */}

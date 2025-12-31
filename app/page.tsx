@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import { getAllProviders, getComparableBenefits } from '@/lib/data';
+import { getAllPosts } from '@/lib/blog';
 import {
   generateWebSiteSchema,
   generateServiceListSchema,
@@ -8,6 +10,7 @@ import {
 } from '@/lib/schemas';
 import BenefitCard from '@/components/BenefitCard';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { Clock, Tag } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
 import { Zap, Globe, Phone, Gift } from 'lucide-react';
 import type { Metadata } from 'next';
@@ -287,6 +290,64 @@ export default function HomePage() {
                 Consultar ETB
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Guías y Consejos sobre Internet
+            </h2>
+            <p className="text-xl text-gray-600">
+              Aprende a optimizar tu conexión y elegir el mejor proveedor
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {getAllPosts().slice(0, 3).map((post) => (
+              <article
+                key={post.slug}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+              >
+                <Link href={`/blog/${post.slug}`}>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Tag className="w-4 h-4 text-blue-600" />
+                      <span className="text-sm font-medium text-blue-600">
+                        {post.category}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+                      {post.title}
+                    </h3>
+
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {post.description}
+                    </p>
+
+                    <div className="flex items-center gap-4 text-sm text-gray-500">
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        <span>{post.readingTime} min</span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </article>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/blog"
+              className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Ver Todos los Artículos
+            </Link>
           </div>
         </div>
       </section>

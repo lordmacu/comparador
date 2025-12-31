@@ -22,6 +22,9 @@ export default function Header() {
             Internet Colombia
           </a>
           <div className="flex gap-4">
+            <a href="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Blog
+            </a>
             <a href="/claro" className="text-gray-700 hover:text-claro-primary font-medium transition-colors">
               Claro
             </a>
