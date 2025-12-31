@@ -1,0 +1,12 @@
+HTTP/2 404 
+date: Tue, 30 Dec 2025 19:10:40 GMT
+content-length: 0
+x-gravitee-transaction-id: c8853abc-ada7-4669-853a-bcada7d6691a
+x-gravitee-request-id: c8853abc-ada7-4669-853a-bcada7d6691a
+server-timing: intid;desc=04b93d390d2054a5
+vary: Origin
+vary: Access-Control-Request-Method
+vary: Access-Control-Request-Headers
+access-control-allow-origin: *
+amx: sk3
+

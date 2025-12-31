@@ -1,0 +1,9 @@
+HTTP/2 415 
+date: Tue, 30 Dec 2025 18:50:14 GMT
+content-type: application/json
+x-gravitee-transaction-id: cea3c595-ab4a-4c7d-a3c5-95ab4afc7d68
+x-gravitee-request-id: cea3c595-ab4a-4c7d-a3c5-95ab4afc7d68
+server-timing: intid;desc=d54a579b693bc7e7
+accept: application/json
+amx: sk3
+

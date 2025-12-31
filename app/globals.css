@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-claro-primary: #FF0000;
+  --color-claro-secondary: #CC0000;
+  --color-movistar-primary: #00A9E0;
+  --color-movistar-secondary: #0085B2;
+  --color-etb-primary: #0033A0;
+  --color-etb-secondary: #002880;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Componentes personalizados */
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  transform: scale(1);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.plan-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  transition: all 0.3s;
+  padding: 1.5rem;
+  border: 1px solid rgb(229 231 235);
+}
+
+.plan-card:hover {
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  border-color: rgb(147 197 253);
+}
+
+.plan-card-featured {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  transition: all 0.3s;
+  padding: 1.5rem;
+  border: 1px solid rgb(229 231 235);
+  position: relative;
+  box-shadow: 0 0 0 2px rgb(59 130 246);
+}
+
+.plan-card-featured:hover {
+  box-shadow: 0 0 0 2px rgb(59 130 246), 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  border-color: rgb(147 197 253);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.badge-popular {
+  background-color: rgb(59 130 246);
+  color: white;
+}
+
+.badge-premium {
+  background-color: rgb(168 85 247);
+  color: white;
+}
+
+.badge-recommended {
+  background-color: rgb(34 197 94);
+  color: white;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Animación de fade-in con sombra sutil */
+@keyframes fade-in-shadow {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in-shadow 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
