@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getProviderSlugs } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://tudominio.com'; // CAMBIAR por tu dominio real
+  const baseUrl = 'https://comparadorinternet.co'; // CAMBIAR por tu dominio real
   const providerSlugs = getProviderSlugs();
 
   const routes = [

@@ -31,22 +31,25 @@ export const metadata: Metadata = {
     'streaming ETB'
   ],
   alternates: {
-    canonical: 'https://tudominio.com/etb',
+    canonical: 'https://comparadorinternet.co/etb',
   },
   openGraph: {
     title: `Internet ${provider.name} Bogotá 2025`,
     description: provider.hero.subtitle,
-    url: 'https://tudominio.com/etb',
+    url: 'https://comparadorinternet.co/etb',
   },
 };
+
+// ISR: Revalidar cada hora (3600 segundos)
+export const revalidate = 3600;
 
 export default function ETBPage() {
   const organizationSchema = generateOrganizationSchema(provider);
   const faqSchema = generateFAQSchema(provider);
   const howToSchema = generateHowToContactSchema(provider);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Inicio', url: 'https://tudominio.com' },
-    { name: provider.name, url: 'https://tudominio.com/etb' }
+    { name: 'Inicio', url: 'https://comparadorinternet.co' },
+    { name: provider.name, url: 'https://comparadorinternet.co/etb' }
   ]);
 
   const serviceSchemas = provider.services.map(service =>

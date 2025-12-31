@@ -26,7 +26,7 @@ export function generateOrganizationSchema(provider: Provider) {
   };
 }
 
-// Schema.org Service (sin pricing específico)
+// Schema.org Service con AggregateOffer para pricing
 export function generateServiceSchema(service: Service, provider: Provider) {
   return {
     "@context": "https://schema.org",
@@ -46,7 +46,48 @@ export function generateServiceSchema(service: Service, provider: Provider) {
       "@type": "ServiceChannel",
       "serviceUrl": provider.brand.website,
       "servicePhone": provider.whatsapp.number
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "COP",
+      "lowPrice": "45000",
+      "highPrice": "150000",
+      "offerCount": service.speeds?.length || service.options?.length || 3,
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": new Date(new Date().setMonth(new Date().getMonth() + 3)).toISOString().split('T')[0],
+      "seller": {
+        "@type": "Organization",
+        "name": provider.name
+      }
     }
+  };
+}
+
+// Schema.org AggregateOffer para página de comparador
+export function generateAggregateOfferSchema(providers: Provider[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AggregateOffer",
+    "name": "Planes de Internet en Colombia",
+    "description": "Comparación de precios de internet para hogar en Colombia",
+    "priceCurrency": "COP",
+    "lowPrice": "45000",
+    "highPrice": "180000",
+    "availability": "https://schema.org/InStock",
+    "priceValidUntil": new Date(new Date().setMonth(new Date().getMonth() + 3)).toISOString().split('T')[0],
+    "offerCount": providers.reduce((acc, p) => acc + (p.services?.length || 0), 0),
+    "offers": providers.map(provider => ({
+      "@type": "Offer",
+      "name": `Internet ${provider.name}`,
+      "seller": {
+        "@type": "Organization",
+        "name": provider.name,
+        "url": provider.brand.website
+      },
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock",
+      "url": `https://comparadorinternet.co/${provider.slug}`
+    }))
   };
 }
 
@@ -87,12 +128,12 @@ export function generateWebSiteSchema() {
     "@type": "WebSite",
     "name": "Comparador de Internet Colombia",
     "description": "Descubre y compara los servicios de internet en Colombia: Claro, Movistar y ETB. Información sobre beneficios, tecnologías y cobertura.",
-    "url": "https://tudominio.com",
+    "url": "https://comparadorinternet.co",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://tudominio.com/?q={search_term_string}"
+        "urlTemplate": "https://comparadorinternet.co/?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -113,7 +154,7 @@ export function generateServiceListSchema(providers: Provider[]) {
         "@type": "Organization",
         "name": provider.name,
         "description": provider.tagline,
-        "url": `https://tudominio.com/${provider.slug}`
+        "url": `https://comparadorinternet.co/${provider.slug}`
       }
     }))
   };

@@ -3,6 +3,7 @@ import {
   generateWebSiteSchema,
   generateServiceListSchema,
   generateBreadcrumbSchema,
+  generateAggregateOfferSchema,
   renderJsonLd
 } from '@/lib/schemas';
 import BenefitCard from '@/components/BenefitCard';
@@ -26,15 +27,18 @@ export const metadata: Metadata = {
     'mejor internet Colombia 2025'
   ],
   alternates: {
-    canonical: 'https://tudominio.com',
+    canonical: 'https://comparadorinternet.co',
   },
   openGraph: {
     title: 'Comparador de Internet en Colombia 2025',
     description: 'Compara servicios de internet de Claro, Movistar y ETB',
-    url: 'https://tudominio.com',
+    url: 'https://comparadorinternet.co',
     type: 'website',
   },
 };
+
+// ISR: Revalidar cada hora (3600 segundos)
+export const revalidate = 3600;
 
 export default function HomePage() {
   const providers = getAllProviders();
@@ -44,8 +48,9 @@ export default function HomePage() {
   const websiteSchema = generateWebSiteSchema();
   const serviceListSchema = generateServiceListSchema(providers);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Inicio', url: 'https://tudominio.com' }
+    { name: 'Inicio', url: 'https://comparadorinternet.co' }
   ]);
+  const aggregateOfferSchema = generateAggregateOfferSchema(providers);
 
   return (
     <>
@@ -53,6 +58,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(websiteSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(serviceListSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(breadcrumbSchema)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(aggregateOfferSchema)} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20">

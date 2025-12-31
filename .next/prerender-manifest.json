@@ -62,7 +62,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/claro",
       "dataRoute": "/claro.rsc",
       "allowHeader": [
@@ -86,9 +87,39 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/etb",
       "dataRoute": "/etb.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/manifest.webmanifest": {
+      "initialHeaders": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "application/manifest+json",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/manifest.webmanifest/layout,_N_T_/manifest.webmanifest/route,_N_T_/manifest.webmanifest"
+      },
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/manifest.webmanifest",
+      "dataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -110,7 +141,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/movistar",
       "dataRoute": "/movistar.rsc",
       "allowHeader": [
@@ -134,7 +166,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/",
       "dataRoute": "/index.rsc",
       "allowHeader": [
@@ -208,8 +241,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "b3bbe283bf96153c3f2a6e37c9ef4b04",
-    "previewModeSigningKey": "c422cc20030d0de08739437ef7cf16e6c8d14f75fbde900bf9f2c16b9bb1f19f",
-    "previewModeEncryptionKey": "e880bcf88ffed7d352d44bcdf940fd1f7eabd509ee155de2fc17c8c991df427a"
+    "previewModeId": "a3b929c3250efeb9a9adc7aeb891d1a4",
+    "previewModeSigningKey": "1de11e140a5319053f94e4c5c63a7434f01a3b05dff1387515589024b31be81e",
+    "previewModeEncryptionKey": "b82f2154ebc8510d7531d7a66e9e543f366bdac826841ac46d8b775eeec66abe"
   }
 }

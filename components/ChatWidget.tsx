@@ -295,13 +295,13 @@ export default function ChatWidget() {
 
         if (value === 'call') {
           setCurrentStep('phone-input');
-          addBotMessage('¡Genial! Solo necesito tu número de celular y te llamamos en los próximos minutos 📞');
+          addBotMessage('¡Genial! Solo necesito tu número de celular y te llamamos en los próximos minutos');
         } else if (value === 'whatsapp') {
           setCurrentStep('summary');
           const whatsappNumber = '573154645370';
           const providerName = newData.provider === 'claro' ? 'Claro' : newData.provider === 'movistar' ? 'Movistar' : 'ETB';
           const message = `Hola, vengo de la web. Me interesa un plan de internet ${providerName} para ${newData.peopleCount} personas, uso principal: ${newData.usage}`;
-          addBotMessage('¡Perfecto! Te redirijo al WhatsApp. Menciona que vienes de la web para ofertas exclusivas 🎁', 1000, false);
+          addBotMessage('¡Perfecto! Te redirijo al WhatsApp. Menciona que vienes de la web para ofertas exclusivas', 1000, false);
           setTimeout(() => {
             window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
           }, 1000);
@@ -325,8 +325,24 @@ export default function ChatWidget() {
           addBotMessage(`¡Listo! ✅ Un asesor de ${providerName} te contactará muy pronto. Mientras tanto, aquí tienes más información.`, 1000, false);
           setInputValue('');
 
-          // Aquí podrías enviar los datos a tu backend
-          console.log('Datos capturados:', newData);
+          // Enviar datos al API para enviar email
+          fetch('/api/call-request', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              phone: inputValue,
+              provider: newData.provider,
+            }),
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log('✅ Solicitud de chatbot enviada:', data);
+            })
+            .catch(error => {
+              console.error('❌ Error al enviar solicitud del chatbot:', error);
+            });
         } else {
           addBotMessage('Por favor ingresa un número de celular válido de 10 dígitos', 800, true);
         }

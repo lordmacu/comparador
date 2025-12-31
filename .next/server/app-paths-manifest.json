@@ -4,6 +4,7 @@
   "/api/call-request/route": "app/api/call-request/route.js",
   "/claro/page": "app/claro/page.js",
   "/etb/page": "app/etb/page.js",
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/movistar/page": "app/movistar/page.js",
   "/page": "app/page.js",
   "/robots.txt/route": "app/robots.txt/route.js",

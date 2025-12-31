@@ -4,6 +4,7 @@
   "/api/call-request/route": "/api/call-request",
   "/claro/page": "/claro",
   "/etb/page": "/etb",
+  "/manifest.webmanifest/route": "/manifest.webmanifest",
   "/movistar/page": "/movistar",
   "/page": "/",
   "/robots.txt/route": "/robots.txt",

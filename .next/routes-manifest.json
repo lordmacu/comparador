@@ -74,6 +74,12 @@
       "namedRegex": "^/etb(?:/)?$"
     },
     {
+      "page": "/manifest.webmanifest",
+      "regex": "^/manifest\\.webmanifest(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/manifest\\.webmanifest(?:/)?$"
+    },
+    {
       "page": "/movistar",
       "regex": "^/movistar(?:/)?$",
       "routeKeys": {},

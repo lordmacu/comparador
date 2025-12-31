@@ -13,7 +13,7 @@ import ContactForm from '@/components/ContactForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import QuickCallForm from '@/components/QuickCallForm';
 import FAQSection from '@/components/FAQSection';
-import { BadgePercent } from 'lucide-react';
+import { BadgePercent, ClipboardList } from 'lucide-react';
 import type { Metadata } from 'next';
 
 const provider = getProvider('movistar');
@@ -31,22 +31,25 @@ export const metadata: Metadata = {
     'streaming Movistar'
   ],
   alternates: {
-    canonical: 'https://tudominio.com/movistar',
+    canonical: 'https://comparadorinternet.co/movistar',
   },
   openGraph: {
     title: `Internet ${provider.name} Colombia 2025`,
     description: provider.hero.subtitle,
-    url: 'https://tudominio.com/movistar',
+    url: 'https://comparadorinternet.co/movistar',
   },
 };
+
+// ISR: Revalidar cada hora (3600 segundos)
+export const revalidate = 3600;
 
 export default function MovistarPage() {
   const organizationSchema = generateOrganizationSchema(provider);
   const faqSchema = generateFAQSchema(provider);
   const howToSchema = generateHowToContactSchema(provider);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Inicio', url: 'https://tudominio.com' },
-    { name: provider.name, url: 'https://tudominio.com/movistar' }
+    { name: 'Inicio', url: 'https://comparadorinternet.co' },
+    { name: provider.name, url: 'https://comparadorinternet.co/movistar' }
   ]);
 
   const serviceSchemas = provider.services.map(service =>
@@ -106,9 +109,10 @@ export default function MovistarPage() {
               <WhatsAppButton provider={provider} size="lg" />
               <a
                 href="#contacto"
-                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white hover:text-movistar-primary transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white hover:text-movistar-primary transition-all"
               >
-                📋 Solicitar Información
+                <ClipboardList size={24} />
+                Solicitar Información
               </a>
             </div>
           </div>

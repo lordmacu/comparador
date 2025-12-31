@@ -13,6 +13,7 @@ import ContactForm from '@/components/ContactForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import QuickCallForm from '@/components/QuickCallForm';
 import FAQSection from '@/components/FAQSection';
+import { ClipboardList } from 'lucide-react';
 import type { Metadata } from 'next';
 
 const provider = getProvider('claro');
@@ -30,22 +31,25 @@ export const metadata: Metadata = {
     'cobertura Claro'
   ],
   alternates: {
-    canonical: 'https://tudominio.com/claro',
+    canonical: 'https://comparadorinternet.co/claro',
   },
   openGraph: {
     title: `Internet ${provider.name} Colombia 2025`,
     description: provider.hero.subtitle,
-    url: 'https://tudominio.com/claro',
+    url: 'https://comparadorinternet.co/claro',
   },
 };
+
+// ISR: Revalidar cada hora (3600 segundos)
+export const revalidate = 3600;
 
 export default function ClaroPage() {
   const organizationSchema = generateOrganizationSchema(provider);
   const faqSchema = generateFAQSchema(provider);
   const howToSchema = generateHowToContactSchema(provider);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Inicio', url: 'https://tudominio.com' },
-    { name: provider.name, url: 'https://tudominio.com/claro' }
+    { name: 'Inicio', url: 'https://comparadorinternet.co' },
+    { name: provider.name, url: 'https://comparadorinternet.co/claro' }
   ]);
 
   // Schemas de servicios
@@ -103,9 +107,10 @@ export default function ClaroPage() {
               <WhatsAppButton provider={provider} size="lg" />
               <a
                 href="#contacto"
-                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white hover:text-claro-primary transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white hover:text-claro-primary transition-all"
               >
-                📋 Déjanos tus Datos
+                <ClipboardList size={24} />
+                Déjanos tus Datos
               </a>
             </div>
           </div>

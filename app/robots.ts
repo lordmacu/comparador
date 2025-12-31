@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://tudominio.com'; // CAMBIAR por tu dominio real
+  const baseUrl = 'https://comparadorinternet.co';
 
   return {
     rules: [

@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tudominio.com'), // CAMBIAR por tu dominio real
+  metadataBase: new URL('https://comparadorinternet.co'),
   title: {
     default: "Comparador de Internet en Colombia 2025 | Claro, Movistar, ETB",
     template: "%s | Comparador Internet Colombia"
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_CO',
-    url: 'https://tudominio.com',
+    url: 'https://comparadorinternet.co',
     siteName: 'Comparador Internet Colombia',
     title: 'Comparador de Internet en Colombia 2025 | Claro, Movistar, ETB',
     description: 'Descubre servicios de internet en Colombia. Compara beneficios y consulta planes disponibles.',
     images: [
       {
-        url: '/og-image.jpg', // Crear esta imagen
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Comparador de Internet Colombia - Claro, Movistar, ETB',
@@ -67,10 +67,10 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
   },
   verification: {
-    google: 'tu-codigo-google-search-console', // Agregar después
+    google: 'tu-codigo-google-search-console', // TODO: Agregar código real de Google Search Console
   },
   alternates: {
-    canonical: 'https://tudominio.com',
+    canonical: 'https://comparadorinternet.co',
   },
 };
 

@@ -6,7 +6,7 @@
       "slug": "claro",
       "tagline": "La red más grande de Colombia",
       "brand": {
-        "logo": "/images/claro-logo.png",
+        "logo": "/images/claro-logo.svg",
         "primaryColor": "#FF0000",
         "website": "https://www.claro.com.co"
       },
@@ -247,7 +247,7 @@
       "slug": "etb",
       "tagline": "Empresa de Telecomunicaciones de Bogotá",
       "brand": {
-        "logo": "/images/etb-logo.png",
+        "logo": "/images/etb-logo.svg",
         "primaryColor": "#0033A0",
         "website": "https://etb.com"
       },

@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import { Provider } from '@/lib/types';
+import { Phone, Send } from 'lucide-react';
 
 interface ContactFormProps {
   provider: Provider;
@@ -99,14 +100,24 @@ export default function ContactForm({ provider, title }: ContactFormProps) {
         disabled={isSubmitting}
         className={`
           w-full py-4 px-6 rounded-lg font-bold text-white text-lg
-          transition-all duration-300 transform
+          transition-all duration-300 transform inline-flex items-center justify-center gap-2
           ${isSubmitting
             ? 'bg-gray-400 cursor-not-allowed'
             : 'bg-blue-600 hover:bg-blue-700 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl'
           }
         `}
       >
-        {isSubmitting ? '📤 Enviando...' : '📞 Solicitar Llamada Gratis'}
+        {isSubmitting ? (
+          <>
+            <Send size={20} className="animate-pulse" />
+            Enviando...
+          </>
+        ) : (
+          <>
+            <Phone size={20} />
+            Solicitar Llamada Gratis
+          </>
+        )}
       </button>
 
       <p className="text-xs text-gray-500 text-center leading-relaxed">
