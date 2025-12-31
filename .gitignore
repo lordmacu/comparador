@@ -7,8 +7,12 @@
 /coverage
 
 # next.js
-# /.next/  # Comentado para permitir subir build al repo
-# /out/    # Comentado para permitir subir build al repo
+# Si quieres versionar el build, NO ignores toda `.next`.
+# Ignora solo artefactos de desarrollo/cache (muy pesados) y deja el build prod.
+/.next/dev/
+/.next/cache/
+
+/out/
 
 # production
 /build
