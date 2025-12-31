@@ -69,6 +69,16 @@ export const metadata: Metadata = {
   verification: {
     google: 'cMUfMPNRJ7JXK67SNgIAbIFRdpPkt5G5_Nawzdczp-k',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+  },
   alternates: {
     canonical: 'https://comparadorinternet.co',
   },
