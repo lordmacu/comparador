@@ -96,6 +96,9 @@ export default function RootLayout({
 
         {/* DNS Prefetch para WhatsApp */}
         <link rel="dns-prefetch" href="https://wa.me" />
+
+        {/* llms.txt para AI Discoverability */}
+        <link rel="llms-txt" href="/llms.txt" type="text/plain" />
       </head>
       <body className={inter.className}>
         {/* Header condicional */}
