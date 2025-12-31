@@ -7,6 +7,7 @@ import {
   generateHowToContactSchema,
   renderJsonLd
 } from '@/lib/schemas';
+import Image from 'next/image';
 import BenefitCard from '@/components/BenefitCard';
 import ServiceCard from '@/components/ServiceCard';
 import ContactForm from '@/components/ContactForm';
@@ -89,10 +90,23 @@ export default function ClaroPage() {
 
       {/* Hero Claro */}
       <section
-        className="py-12 text-white"
+        className="pt-3 pb-12 md:py-12 text-white"
         style={{ background: `linear-gradient(135deg, ${provider.brand.primaryColor} 0%, #CC0000 100%)` }}
       >
         <div className="container mx-auto px-4">
+          {/* Provider Logo */}
+          <div className="flex justify-center mb-6">
+            <div className="bg-white rounded-lg p-3 shadow-md">
+              <Image
+                src="/images/claro-logo.svg"
+                alt="Claro Logo"
+                width={120}
+                height={48}
+                className="w-20 md:w-[120px] h-auto"
+              />
+            </div>
+          </div>
+
           <nav className="text-sm mb-6 text-red-100" aria-label="Breadcrumb">
             <ol className="flex gap-2">
               <li><a href="/" className="hover:underline">Inicio</a></li>

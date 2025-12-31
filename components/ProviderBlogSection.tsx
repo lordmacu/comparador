@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Clock, Tag } from 'lucide-react';
 import { getAllPosts, getPostsForProvider } from '@/lib/blog';
 
@@ -38,6 +39,19 @@ export default function ProviderBlogSection({
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100"
             >
               <Link href={`/blog/${post.slug}`}>
+                {/* Featured Image */}
+                {post.image && (
+                  <div className="relative w-full h-48 bg-gray-100">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                )}
+
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <Tag className="w-4 h-4" style={{ color: accentColor }} />

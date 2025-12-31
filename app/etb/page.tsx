@@ -7,6 +7,7 @@ import {
   generateHowToContactSchema,
   renderJsonLd
 } from '@/lib/schemas';
+import Image from 'next/image';
 import BenefitCard from '@/components/BenefitCard';
 import ServiceCard from '@/components/ServiceCard';
 import ContactForm from '@/components/ContactForm';
@@ -84,10 +85,21 @@ export default function ETBPage() {
 
       {/* Hero ETB */}
       <section
-        className="py-12 text-white"
+        className="pt-3 pb-12 md:py-12 text-white"
         style={{ background: `linear-gradient(135deg, ${provider.brand.primaryColor} 0%, #002880 100%)` }}
       >
         <div className="container mx-auto px-4">
+          {/* Provider Logo */}
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/images/etb-logo.svg"
+              alt="ETB Logo"
+              width={120}
+              height={48}
+              className="w-20 md:w-[120px] h-auto"
+            />
+          </div>
+
           <nav className="text-sm mb-6 text-blue-100" aria-label="Breadcrumb">
             <ol className="flex gap-2">
               <li><a href="/" className="hover:underline">Inicio</a></li>

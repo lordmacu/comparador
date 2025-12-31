@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getAllPosts, getAllCategories } from "@/lib/blog";
 import { Clock, Calendar, Tag } from "lucide-react";
 
@@ -103,6 +104,19 @@ export default function BlogPage() {
               role="listitem"
             >
               <Link href={`/blog/${post.slug}`} aria-label={`Leer artículo: ${post.title}`}>
+                {/* Featured Image */}
+                {post.image && (
+                  <div className="relative w-full h-48 bg-gray-100">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                )}
+
                 <div className="p-6">
                   {/* Category Badge */}
                   <div className="flex items-center gap-2 mb-3">
