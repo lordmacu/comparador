@@ -95,17 +95,18 @@ export default function BlogPage() {
         </div>
 
         {/* Blog Posts Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" role="list">
           {posts.map((post) => (
             <article
               key={post.slug}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              role="listitem"
             >
-              <Link href={`/blog/${post.slug}`}>
+              <Link href={`/blog/${post.slug}`} aria-label={`Leer artículo: ${post.title}`}>
                 <div className="p-6">
                   {/* Category Badge */}
                   <div className="flex items-center gap-2 mb-3">
-                    <Tag className="w-4 h-4 text-blue-600" />
+                    <Tag className="w-4 h-4 text-blue-600" aria-hidden="true" />
                     <span className="text-sm font-medium text-blue-600">
                       {post.category}
                     </span>

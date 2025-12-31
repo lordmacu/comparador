@@ -44,6 +44,7 @@ const availableSlugs = [
   'claro-vs-movistar-vs-etb-bogota',
   'movistar-vs-claro-vs-etb-bogota',
   'etb-vs-movistar-vs-claro-bogota',
+  'historia-etb-bogota',
 ];
 
 // Cargar todos los posts

@@ -242,6 +242,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/blog/historia-etb-bogota": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/historia-etb-bogota.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/blog/instalacion-internet-bogota": {
       "experimentalBypassFor": [
         {
@@ -653,8 +677,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "a3b929c3250efeb9a9adc7aeb891d1a4",
-    "previewModeSigningKey": "1de11e140a5319053f94e4c5c63a7434f01a3b05dff1387515589024b31be81e",
-    "previewModeEncryptionKey": "b82f2154ebc8510d7531d7a66e9e543f366bdac826841ac46d8b775eeec66abe"
+    "previewModeId": "4c8b8dad5e3f9c69b00ca6ef6c9f7d75",
+    "previewModeSigningKey": "39418568e6004405b735e22f8fd73c35e465dbdd47047eaf9340341f9ffe0afe",
+    "previewModeEncryptionKey": "2f71899859dd5602f31ce46c23359195d57db0d7a4fb5f149b626ba7bdd68002"
   }
 }
