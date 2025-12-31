@@ -32,7 +32,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "📤 Pushing to remote repository..."
-git push origin main
+git push origin main -f
 
 if [ $? -ne 0 ]; then
   echo "❌ Push failed. Check your Git configuration."
