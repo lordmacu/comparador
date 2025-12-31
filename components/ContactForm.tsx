@@ -19,14 +19,24 @@ export default function ContactForm({ provider, title }: ContactFormProps) {
     setIsSubmitting(true);
 
     try {
-      // TODO: Integrar con tu API, CRM o servicio de email
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      console.log('Form submitted:', {
-        phone,
-        provider: provider.name,
-        timestamp: new Date().toISOString()
+      const response = await fetch('/api/call-request', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          phone,
+          provider: provider.slug,
+        }),
       });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Error al enviar solicitud');
+      }
+
+      console.log('✅ Solicitud enviada:', data);
 
       setSubmitStatus('success');
       setPhone('');
@@ -34,7 +44,7 @@ export default function ContactForm({ provider, title }: ContactFormProps) {
       // Reset después de 4 segundos
       setTimeout(() => setSubmitStatus('idle'), 4000);
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('❌ Error al enviar formulario:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
