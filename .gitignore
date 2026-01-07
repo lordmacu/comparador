@@ -6,12 +6,8 @@
 # testing
 /coverage
 
-# next.js
-# Si quieres versionar el build, NO ignores toda `.next`.
-# Ignora solo artefactos de desarrollo/cache (muy pesados) y deja el build prod.
-/.next/dev/
+# next.js - Solo ignorar cache (build se versiona)
 /.next/cache/
-
 /out/
 
 # production

@@ -20,7 +20,7 @@ fi
 
 echo "✅ Build successful!"
 echo ""
-echo "📦 Adding files to Git..."
+echo "📦 Adding files to Git (including .next)..."
 git add .
 
 echo "💾 Committing changes..."
@@ -32,7 +32,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "📤 Pushing to remote repository..."
-git push origin main -f
+git push origin main
 
 if [ $? -ne 0 ]; then
   echo "❌ Push failed. Check your Git configuration."

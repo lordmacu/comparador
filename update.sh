@@ -2,7 +2,11 @@
 # update.sh - Server-side update script for EC2
 # This file should be copied to /home/ubuntu/apps/internet-colombia/ on your EC2 server
 
-echo "🔄 Pulling latest changes from Git..."
+echo "🧹 Limpiando .next para evitar conflictos..."
+git reset --hard HEAD
+rm -rf .next
+
+echo "🔄 Pulling latest changes from Git (with built .next)..."
 git pull origin main
 
 if [ $? -ne 0 ]; then
@@ -18,12 +22,13 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "🏗️  Building project..."
-npm run build
+echo "🔄 Restarting application with PM2..."
+pm2 restart internet-colombia
 
 if [ $? -ne 0 ]; then
-  echo "❌ Build failed."
-  exit 1
+  echo "⚠️  PM2 restart failed, trying to start..."
+  pm2 start npm --name "internet-colombia" -- start
+  pm2 save
 fi
 
 echo "🔄 Restarting application with PM2..."

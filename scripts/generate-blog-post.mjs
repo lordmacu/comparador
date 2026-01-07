@@ -1,6 +1,10 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import fs from "fs/promises";
 import path from "path";
+import dotenv from "dotenv";
+
+// Cargar variables de entorno desde .env
+dotenv.config();
 
 // ==================== CONSTANTES ====================
 const MODEL_RESEARCH = 'gemini-3-flash-preview';

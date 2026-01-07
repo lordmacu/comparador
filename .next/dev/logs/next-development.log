@@ -1,0 +1,8 @@
+[00:00:00.553] Server  LOG     ✓ Ready in 415ms
+[00:00:01.579] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:44.208] Server  ERROR   ⨯ ReferenceError: blogPosts is not defined
+[00:00:44.344] Browser ERROR   uncaughtError: ReferenceError: blogPosts is not defined
+[00:00:55.203] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:54.351] Server  LOG       Reload env: .env
+[00:33:54.421] Server  LOG       Reload env: .env
+[00:34:06.546] Server  LOG       Reload env: .env
