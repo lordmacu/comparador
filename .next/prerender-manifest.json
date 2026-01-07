@@ -62,9 +62,35 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/checklist-para-contratar-internet-en-bogota.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blog/claro-dominancia-5g-expansion-colombia": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/claro-dominancia-5g-expansion-colombia.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -86,7 +112,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/claro-vs-movistar-vs-etb-bogota.rsc",
       "allowHeader": [
@@ -110,7 +137,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/como-bajar-el-ping-en-bogota.rsc",
       "allowHeader": [
@@ -134,7 +162,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/como-conseguir-internet-gratis-colombia.rsc",
       "allowHeader": [
@@ -158,7 +187,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/como-mejorar-velocidad-internet-casa.rsc",
       "allowHeader": [
@@ -182,7 +212,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/como-saber-si-hay-fibra-optica-en-tu-direccion-bogota.rsc",
       "allowHeader": [
@@ -206,7 +237,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/etb-vs-movistar-vs-claro-bogota.rsc",
       "allowHeader": [
@@ -230,9 +262,35 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/fibra-optica-vs-cable-colombia.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blog/fusion-tigo-movistar-colombia-duopolio-analisis-2026": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/fusion-tigo-movistar-colombia-duopolio-analisis-2026.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -254,7 +312,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/historia-etb-bogota.rsc",
       "allowHeader": [
@@ -278,7 +337,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/instalacion-internet-bogota.rsc",
       "allowHeader": [
@@ -302,7 +362,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/internet-barato-en-bogota.rsc",
       "allowHeader": [
@@ -326,7 +387,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/internet-para-apartamento-bogota.rsc",
       "allowHeader": [
@@ -350,9 +412,35 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/internet-para-teletrabajo-bogota.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blog/liderazgo-claro-5g-vs-tigo-movistar-colombia": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/liderazgo-claro-5g-vs-tigo-movistar-colombia.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -374,7 +462,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/mejor-internet-gaming-colombia.rsc",
       "allowHeader": [
@@ -398,7 +487,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/mejores-proveedores-internet-bogota.rsc",
       "allowHeader": [
@@ -422,7 +512,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/movistar-vs-claro-vs-etb-bogota.rsc",
       "allowHeader": [
@@ -446,7 +537,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/blog",
       "dataRoute": "/blog.rsc",
       "allowHeader": [

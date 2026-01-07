@@ -27,50 +27,51 @@ function loadPostFromJSON(slug: string): BlogPost | null {
   }
 }
 
-// Lista de slugs de posts disponibles
-const availableSlugs = [
-  'como-mejorar-velocidad-internet-casa',
-  'mejor-internet-gaming-colombia',
-  'fibra-optica-vs-cable-colombia',
-  'como-conseguir-internet-gratis-colombia',
-  'mejores-proveedores-internet-bogota',
-  'como-saber-si-hay-fibra-optica-en-tu-direccion-bogota',
-  'internet-para-teletrabajo-bogota',
-  'checklist-para-contratar-internet-en-bogota',
-  'internet-barato-en-bogota',
-  'internet-para-apartamento-bogota',
-  'instalacion-internet-bogota',
-  'como-bajar-el-ping-en-bogota',
-  'claro-vs-movistar-vs-etb-bogota',
-  'movistar-vs-claro-vs-etb-bogota',
-  'etb-vs-movistar-vs-claro-bogota',
-  'historia-etb-bogota',
-];
+// Función para obtener todos los slugs disponibles dinámicamente
+function getAllAvailableSlugs(): string[] {
+  try {
+    const blogDir = path.join(process.cwd(), 'content', 'blog');
+    const files = fs.readdirSync(blogDir);
+    
+    // Filtrar solo archivos .json y remover la extensión
+    return files
+      .filter(file => file.endsWith('.json'))
+      .map(file => file.replace('.json', ''));
+  } catch (error) {
+    console.error('Error reading blog directory:', error);
+    return [];
+  }
+}
 
-// Cargar todos los posts
-export const blogPosts: BlogPost[] = availableSlugs
-  .map(slug => loadPostFromJSON(slug))
-  .filter((post): post is BlogPost => post !== null);
+// Función para cargar todos los posts (ejecutada cada vez que se necesite)
+function loadAllPosts(): BlogPost[] {
+  return getAllAvailableSlugs()
+    .map(slug => loadPostFromJSON(slug))
+    .filter((post): post is BlogPost => post !== null);
+}
 
 export function getAllPosts(): BlogPost[] {
-  return blogPosts.sort((a, b) =>
+  const posts = loadAllPosts();
+  return posts.sort((a, b) =>
     new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find(post => post.slug === slug);
+  return loadPostFromJSON(slug) || undefined;
 }
 
 export function getPostsByCategory(category: string): BlogPost[] {
-  return blogPosts.filter(post => post.category === category);
+  const posts = loadAllPosts();
+  return posts.filter(post => post.category === category);
 }
 
 export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
   const currentPost = getPostBySlug(currentSlug);
   if (!currentPost) return [];
 
-  return blogPosts
+  const posts = loadAllPosts();
+  return posts
     .filter(post =>
       post.slug !== currentSlug &&
       (post.category === currentPost.category ||
@@ -80,11 +81,13 @@ export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
 }
 
 export function getAllCategories(): string[] {
-  return Array.from(new Set(blogPosts.map(post => post.category)));
+  const posts = loadAllPosts();
+  return Array.from(new Set(posts.map(post => post.category)));
 }
 
 export function getAllTags(): string[] {
-  const tags = blogPosts.flatMap(post => post.tags);
+  const posts = loadAllPosts();
+  const tags = posts.flatMap(post => post.tags);
   return Array.from(new Set(tags));
 }
 

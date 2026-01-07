@@ -10,6 +10,9 @@ import BlogContactForm from "@/components/BlogContactForm";
 import TableOfContents from "@/components/TableOfContents";
 import InlineBlogCallWidget from "@/components/InlineBlogCallWidget";
 
+// ISR: Regenera la página cada 1 hora si hay tráfico
+export const revalidate = 3600;
+
 interface BlogPostPageProps {
   params: Promise<{
     slug: string;

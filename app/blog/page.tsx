@@ -4,6 +4,9 @@ import Image from "next/image";
 import { getAllPosts, getAllCategories } from "@/lib/blog";
 import { Clock, Calendar, Tag } from "lucide-react";
 
+// ISR: Regenera la lista de posts cada 1 hora si hay tráfico
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Blog de Internet Colombia - Guías y Consejos",
   description: "Artículos, guías y consejos sobre internet en Colombia. Aprende a optimizar tu conexión, elegir el mejor proveedor y más.",
