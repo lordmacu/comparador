@@ -45,12 +45,12 @@
       "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
     },
     {
-      "page": "/[operador1]-vs-[operador2]",
-      "regex": "^/([^/]+?)(?:/)?$",
+      "page": "/comparar/[...operadores]",
+      "regex": "^/comparar/(.+?)(?:/)?$",
       "routeKeys": {
-        "nxtPoperador1": "nxtPoperador1"
+        "nxtPoperadores": "nxtPoperadores"
       },
-      "namedRegex": "^/(?<nxtPoperador1>[^/]+?)(?:/)?$"
+      "namedRegex": "^/comparar/(?<nxtPoperadores>.+?)(?:/)?$"
     }
   ],
   "staticRoutes": [

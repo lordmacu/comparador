@@ -47,15 +47,6 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
-// Validate ../../app/[operador1]-vs-[operador2]/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/[operador1]-vs-[operador2]">> = Specific
-  const handler = {} as typeof import("../../app/[operador1]-vs-[operador2]/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
 // Validate ../../app/blog/[slug]/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/blog/[slug]">> = Specific
@@ -78,6 +69,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/claro">> = Specific
   const handler = {} as typeof import("../../app/claro/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/comparar/[...operadores]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/comparar/[...operadores]">> = Specific
+  const handler = {} as typeof import("../../app/comparar/[...operadores]/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

@@ -1,5 +1,4 @@
 {
-  "/[operador1]-vs-[operador2]/page": "/[operador1]-vs-[operador2]",
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/api/call-request/route": "/api/call-request",
@@ -7,6 +6,7 @@
   "/blog/feed.xml/route": "/blog/feed.xml",
   "/blog/page": "/blog",
   "/claro/page": "/claro",
+  "/comparar/[...operadores]/page": "/comparar/[...operadores]",
   "/etb/page": "/etb",
   "/internet-[barrio]-bogota/page": "/internet-[barrio]-bogota",
   "/manifest.webmanifest/route": "/manifest.webmanifest",
