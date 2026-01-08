@@ -67,6 +67,14 @@
         "nxtPoperadores": "nxtPoperadores"
       },
       "namedRegex": "^/comparar/(?<nxtPoperadores>.+?)(?:/)?$"
+    },
+    {
+      "page": "/velocidades/[velocidad]",
+      "regex": "^/velocidades/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPvelocidad": "nxtPvelocidad"
+      },
+      "namedRegex": "^/velocidades/(?<nxtPvelocidad>[^/]+?)(?:/)?$"
     }
   ],
   "staticRoutes": [

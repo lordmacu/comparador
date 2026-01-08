@@ -14,5 +14,6 @@
   "/movistar/page": "/movistar",
   "/page": "/",
   "/robots.txt/route": "/robots.txt",
-  "/sitemap.xml/route": "/sitemap.xml"
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/velocidades/[velocidad]/page": "/velocidades/[velocidad]"
 }

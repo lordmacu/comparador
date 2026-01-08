@@ -36,6 +36,20 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  // Detectar rutas de velocidades: internet-{velocidad}-bogota
+  const velocidadMatch = pathname.match(/^\/internet-([0-9]+-megas|fibra-optica)-bogota$/);
+  if (velocidadMatch) {
+    const velocidad = velocidadMatch[1];
+    const validVelocidades = ['100-megas', '200-megas', '300-megas', '500-megas', 'fibra-optica'];
+    
+    if (validVelocidades.includes(velocidad)) {
+      // Reescribir a la ruta interna
+      const url = request.nextUrl.clone();
+      url.pathname = `/velocidades/${velocidad}`;
+      return NextResponse.rewrite(url);
+    }
+  }
+
   return NextResponse.next();
 }
 
@@ -43,5 +57,6 @@ export const config = {
   matcher: [
     '/internet-:barrio-bogota',
     '/mejor-internet-:caso-bogota',
+    '/internet-:velocidad-bogota',
   ],
 };

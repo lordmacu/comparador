@@ -20,6 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Casos de uso
   const casos = ['gaming', 'teletrabajo', 'streaming'];
   
+  // Velocidades
+  const velocidades = ['100-megas', '200-megas', '300-megas', '500-megas', 'fibra-optica'];
+  
   // Comparativas de operadores
   const comparativas = [
     ['etb', 'claro'],
@@ -57,6 +60,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...casos.map((caso) => ({
       url: `${baseUrl}/mejor-internet-${caso}-bogota`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+    ...velocidades.map((velocidad) => ({
+      url: `${baseUrl}/internet-${velocidad}-bogota`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,

@@ -14,5 +14,6 @@
   "/movistar/page": "app/movistar/page.js",
   "/page": "app/page.js",
   "/robots.txt/route": "app/robots.txt/route.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js"
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/velocidades/[velocidad]/page": "app/velocidades/[velocidad]/page.js"
 }

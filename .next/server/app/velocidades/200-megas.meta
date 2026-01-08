@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/velocidades/layout,_N_T_/velocidades/[velocidad]/layout,_N_T_/velocidades/[velocidad]/page,_N_T_/velocidades/200-megas"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/velocidades/$d$velocidad/__PAGE__",
+    "/velocidades/$d$velocidad",
+    "/velocidades",
+    "/_index",
+    "/_head"
+  ]
+}
