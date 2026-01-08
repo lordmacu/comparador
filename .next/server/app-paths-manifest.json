@@ -20,6 +20,7 @@
   "/robots.txt/route": "app/robots.txt/route.js",
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/soluciones/[solucion]/page": "app/soluciones/[solucion]/page.js",
+  "/testimonios/page": "app/testimonios/page.js",
   "/velocidades/[velocidad]/page": "app/velocidades/[velocidad]/page.js",
   "/viviendas/[vivienda]/page": "app/viviendas/[vivienda]/page.js"
 }

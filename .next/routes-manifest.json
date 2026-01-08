@@ -189,6 +189,12 @@
       "regex": "^/sitemap\\.xml(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/testimonios",
+      "regex": "^/testimonios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/testimonios(?:/)?$"
     }
   ],
   "dataRoutes": [],
