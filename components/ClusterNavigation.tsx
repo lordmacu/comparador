@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { getClusterForPage, getPillarPage, isPillarPage } from '@/lib/clusters';
-import { ArrowUpCircle, Grid3x3 } from 'lucide-react';
+import { ArrowUpCircle, Grid3x3, Sparkles } from 'lucide-react';
 
 export default function ClusterNavigation() {
   const pathname = usePathname();
@@ -15,56 +15,81 @@ export default function ClusterNavigation() {
   const pillarPage = getPillarPage(pathname);
   
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-t-4 border-blue-500 rounded-lg p-6 my-8">
+    <div className="bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-50 border-2 border-indigo-200 rounded-xl p-8 my-8 shadow-sm">
+      {/* Header */}
+      <div className="flex items-center gap-3 mb-6">
+        <div className="p-2 bg-indigo-600 rounded-lg">
+          <Sparkles className="w-5 h-5 text-white" />
+        </div>
+        <div>
+          <h3 className="text-xl font-black text-gray-900">
+            {isCurrentPillar ? 'Explora Todos los Temas' : 'Contenido Relacionado'}
+          </h3>
+          <p className="text-sm text-gray-600">
+            {isCurrentPillar 
+              ? `${cluster.clusterPages.length} recursos sobre este tema`
+              : 'Descubre más información útil'
+            }
+          </p>
+        </div>
+      </div>
+      
       {/* Pillar Page Link (if not on pillar page) */}
       {!isCurrentPillar && pillarPage && (
         <div className="mb-6">
-          <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
-            <ArrowUpCircle size={16} />
-            <span className="font-semibold">Página Principal del Tema</span>
+          <div className="flex items-center gap-2 text-sm font-semibold text-indigo-700 mb-3">
+            <ArrowUpCircle size={18} />
+            <span>Guía Principal</span>
           </div>
           <Link 
             href={pillarPage.url}
-            className="block bg-white rounded-lg p-4 hover:shadow-md transition-all border-2 border-blue-200 hover:border-blue-500"
+            className="block bg-white rounded-xl p-5 hover:shadow-lg transition-all border-2 border-indigo-300 hover:border-indigo-500 group"
           >
-            <h3 className="font-bold text-lg text-blue-900 mb-1">
-              📚 {pillarPage.title}
-            </h3>
-            <p className="text-gray-600 text-sm">
-              {pillarPage.description}
-            </p>
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <h4 className="font-bold text-lg text-indigo-900 mb-2 group-hover:text-indigo-600 transition-colors">
+                  📚 {pillarPage.title}
+                </h4>
+                <p className="text-gray-600 text-sm">
+                  {pillarPage.description}
+                </p>
+              </div>
+              <div className="ml-4 text-indigo-600 group-hover:translate-x-1 transition-transform">
+                →
+              </div>
+            </div>
           </Link>
         </div>
       )}
       
       {/* Cluster Pages */}
       <div>
-        <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
-          <Grid3x3 size={16} />
-          <span className="font-semibold">
-            {isCurrentPillar ? 'Temas Relacionados' : 'Explora Más Sobre Este Tema'}
+        <div className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
+          <Grid3x3 size={18} />
+          <span>
+            {isCurrentPillar ? 'Todos los Temas' : 'Más Sobre Este Tema'}
           </span>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {cluster.clusterPages
             .filter(page => page.slug !== pathname) // Exclude current page
-            .slice(0, 6)
+            .slice(0, isCurrentPillar ? 9 : 6) // Show more on pillar pages
             .map((page) => (
               <Link
                 key={page.slug}
                 href={page.slug}
-                className="bg-white rounded-lg p-3 hover:shadow-md transition-all border border-gray-200 hover:border-blue-400 group"
+                className="bg-white rounded-lg p-4 hover:shadow-md transition-all border-2 border-gray-100 hover:border-indigo-400 group"
               >
-                <div className="flex items-start gap-2">
+                <div className="flex items-start gap-3">
                   {page.icon && (
-                    <span className="text-xl flex-shrink-0">{page.icon}</span>
+                    <span className="text-2xl flex-shrink-0 group-hover:scale-110 transition-transform">{page.icon}</span>
                   )}
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-sm text-gray-900 group-hover:text-blue-600 transition-colors truncate">
+                    <h5 className="font-bold text-sm text-gray-900 group-hover:text-indigo-600 transition-colors mb-1 line-clamp-2">
                       {page.title}
-                    </h4>
-                    <p className="text-xs text-gray-600 mt-0.5 line-clamp-2">
+                    </h5>
+                    <p className="text-xs text-gray-600 line-clamp-2">
                       {page.description}
                     </p>
                   </div>
@@ -74,14 +99,15 @@ export default function ClusterNavigation() {
         </div>
       </div>
       
-      {/* View All Link for Pillar Pages */}
-      {isCurrentPillar && cluster.clusterPages.length > 6 && (
-        <div className="mt-4 text-center">
+      {/* View All Link for cluster pages */}
+      {!isCurrentPillar && pillarPage && cluster.clusterPages.length > 6 && (
+        <div className="mt-6 text-center">
           <Link 
-            href={pillarPage?.url || '#'}
-            className="text-blue-600 hover:text-blue-700 text-sm font-semibold inline-flex items-center gap-1"
+            href={pillarPage.url}
+            className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold text-sm group"
           >
-            Ver todos los {cluster.clusterPages.length} temas →
+            <span>Ver todos los {cluster.clusterPages.length} temas</span>
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
         </div>
       )}

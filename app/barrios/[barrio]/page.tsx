@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getAllProviders } from '@/lib/data';
 import QuickCallForm from '@/components/QuickCallForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import ClusterNavigation from '@/components/ClusterNavigation';
 import { MapPin, Zap, TrendingUp, Shield } from 'lucide-react';
 
 // Definir los barrios de Bogotá
@@ -379,6 +380,15 @@ export default async function InternetBarrioPage({ params }: { params: Promise<{
                 </p>
               </details>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Cluster Navigation */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <ClusterNavigation />
           </div>
         </div>
       </section>

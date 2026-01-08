@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAllProviders } from '@/lib/data';
 import QuickCallForm from '@/components/QuickCallForm';
+import ClusterNavigation from '@/components/ClusterNavigation';
 
 interface ViviendaInfo {
   nombre: string;
@@ -389,6 +390,15 @@ export default async function ViviendaPage({
               Te ayudamos a encontrar el mejor plan para tus necesidades
             </p>
             <QuickCallForm />
+          </div>
+        </section>
+
+        {/* Content Cluster Navigation */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <ClusterNavigation />
+            </div>
           </div>
         </section>
       </main>

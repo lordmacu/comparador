@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getAllProviders } from '@/lib/data';
 import QuickCallForm from '@/components/QuickCallForm';
+import ClusterNavigation from '@/components/ClusterNavigation';
 import { Zap, TrendingUp, Shield, Wifi, Download, Upload } from 'lucide-react';
 
 // Definir las velocidades disponibles
@@ -334,6 +335,15 @@ export default async function VelocidadPage({ params }: { params: Promise<{ velo
                   </Link>
                 ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Cluster Navigation */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <ClusterNavigation />
           </div>
         </div>
       </section>

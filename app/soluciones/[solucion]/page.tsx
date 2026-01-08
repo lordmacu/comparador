@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import QuickCallForm from '@/components/QuickCallForm';
+import ClusterNavigation from '@/components/ClusterNavigation';
 import FAQSection from '@/components/FAQSection';
 import { Phone, Shield, Zap, Clock, TrendingUp, CheckCircle, AlertCircle, Settings } from 'lucide-react';
 import { FAQ } from '@/lib/types';
@@ -812,6 +813,15 @@ export default async function SolucionPage({
           }),
         }}
       />
+
+      {/* Content Cluster Navigation */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <ClusterNavigation />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
