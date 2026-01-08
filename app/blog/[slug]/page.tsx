@@ -113,6 +113,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // Detectar si el contenido es HTML o Markdown
   const isHtmlContent = post.content.includes('<p>') || post.content.includes('<h2>') || post.content.includes('<ul>');
 
+  // Limpiar símbolos de Markdown del HTML
+  const cleanHtmlFromMarkdown = (html: string): string => {
+    if (!isHtmlContent) return html;
+    
+    return html
+      // Eliminar ## antes de títulos HTML
+      .replace(/##\s*(<h[2-6])/g, '$1')
+      // Eliminar ** alrededor de <strong>
+      .replace(/\*\*(<strong>)/g, '$1')
+      .replace(/(<\/strong>)\*\*/g, '$1')
+      // Eliminar * alrededor de <em>
+      .replace(/\*(<em>)/g, '$1')
+      .replace(/(<\/em>)\*/g, '$1')
+      // Eliminar - al inicio de <li>
+      .replace(/(<li>)\s*-\s*/g, '$1')
+      // Limpiar ## sueltos que no estén dentro de tags
+      .replace(/^##\s+/gm, '');
+  };
+
+  const cleanContentBeforeCta = cleanHtmlFromMarkdown(contentBeforeCta);
+  const cleanContentAfterCta = cleanHtmlFromMarkdown(contentAfterCta);
+
   const markdownComponents: Components = {
     h1: ({ children }) => (
       <h1 className="text-3xl font-bold text-gray-900 mt-8 mb-4">{children}</h1>
@@ -507,14 +529,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <>
                       <div 
                         className="blog-html-content"
-                        dangerouslySetInnerHTML={{ __html: contentBeforeCta }} 
+                        dangerouslySetInnerHTML={{ __html: cleanContentBeforeCta }} 
                       />
                       
                       <InlineBlogCallWidget postSlug={post.slug} />
                       
                       <div 
                         className="blog-html-content"
-                        dangerouslySetInnerHTML={{ __html: contentAfterCta }} 
+                        dangerouslySetInnerHTML={{ __html: cleanContentAfterCta }} 
                       />
                     </>
                   ) : (
