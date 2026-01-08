@@ -139,7 +139,7 @@ export default async function ComparativaPage({ params }: { params: Promise<{ op
 
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-8">
               <div className="flex flex-col items-center">
-                <div className="bg-white rounded-lg p-4 mb-2">
+                <div className={`${nombre1 === 'ETB' ? '' : 'bg-white'} rounded-lg p-4 mb-2`}>
                   <Image
                     src={provider1.brand.logo}
                     alt={`${nombre1} logo`}
@@ -154,7 +154,7 @@ export default async function ComparativaPage({ params }: { params: Promise<{ op
               <div className="text-3xl font-black">VS</div>
 
               <div className="flex flex-col items-center">
-                <div className="bg-white rounded-lg p-4 mb-2">
+                <div className={`${nombre2 === 'ETB' ? '' : 'bg-white'} rounded-lg p-4 mb-2`}>
                   <Image
                     src={provider2.brand.logo}
                     alt={`${nombre2} logo`}
