@@ -155,6 +155,12 @@
       "namedRegex": "^/etb(?:/)?$"
     },
     {
+      "page": "/faq",
+      "regex": "^/faq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/faq(?:/)?$"
+    },
+    {
       "page": "/guia-completa",
       "regex": "^/guia\\-completa(?:/)?$",
       "routeKeys": {},

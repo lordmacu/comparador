@@ -12,6 +12,7 @@
   "/comparar/[...operadores]/page": "/comparar/[...operadores]",
   "/empresa/page": "/empresa",
   "/etb/page": "/etb",
+  "/faq/page": "/faq",
   "/guia-completa/page": "/guia-completa",
   "/manifest.webmanifest/route": "/manifest.webmanifest",
   "/movistar/page": "/movistar",

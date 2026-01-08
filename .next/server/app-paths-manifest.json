@@ -12,6 +12,7 @@
   "/comparar/[...operadores]/page": "app/comparar/[...operadores]/page.js",
   "/empresa/page": "app/empresa/page.js",
   "/etb/page": "app/etb/page.js",
+  "/faq/page": "app/faq/page.js",
   "/guia-completa/page": "app/guia-completa/page.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/movistar/page": "app/movistar/page.js",

@@ -1,7 +1,7 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/movistar/page.js")
 R.c("server/chunks/ssr/[root-of-the-server]__0572a229._.js")
 R.c("server/chunks/ssr/_2062ab9a._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__cea8c20c._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__6342a068._.js")
 R.c("server/chunks/ssr/components_BenefitCard_tsx_f5612942._.js")
 R.c("server/chunks/ssr/_78179264._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_4b9a0874._.js")

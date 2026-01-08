@@ -28,6 +28,9 @@ export default function Header() {
             <a href="/calculadora" className="text-gray-700 hover:text-blue-600 font-bold transition-colors bg-blue-50 px-3 py-2 rounded-lg">
               📊 Calculadora
             </a>
+            <a href="/faq" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              ❓ FAQ
+            </a>
             <a href="/empresa" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               🏢 Empresa
             </a>
