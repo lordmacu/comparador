@@ -39,16 +39,20 @@ rm -rf .next/server/app/blog/*.rsc
 rm -rf .next/server/app/sitemap.xml.body
 
 echo ""
-echo "🔨 Reconstruyendo proyecto..."
-npm run build
-
-echo ""
-echo "🔄 Reiniciando aplicación..."
+echo "� Reiniciando aplicación..."
 pm2 restart internet-colombia
 
 echo ""
-echo "⏳ Esperando 10 segundos para que la app inicie..."
-sleep 10
+echo "⏳ Esperando 5 segundos para que la app inicie..."
+sleep 5
+
+echo ""
+echo "🔥 Forzando regeneración de páginas..."
+curl -s http://localhost:3000/blog > /dev/null
+curl -s http://localhost:3000/sitemap.xml > /dev/null
+
+echo "⏳ Esperando 5 segundos más..."
+sleep 5
 
 echo ""
 echo "📊 Verificación automática:"
