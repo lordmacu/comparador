@@ -42,13 +42,13 @@ fi
 # Configurar cron job para generación automática de posts (si no existe)
 if ! crontab -l 2>/dev/null | grep -q "generate-blog-post.mjs"; then
   echo "📅 Configurando cron job para posts automáticos..."
-  (crontab -l 2>/dev/null; cat << 'CRON'
-# CURRENT_DIR=$(pwd)
+  CURRENT_DIR=$(pwd)
   (crontab -l 2>/dev/null; cat << CRON
 # Auto-generar posts de blog - Lunes, Miércoles, Viernes a las 9 AM
 0 9 * * 1 cd $CURRENT_DIR && /usr/bin/node scripts/generate-blog-post.mjs >> /var/log/blog-generator.log 2>&1
 0 9 * * 3 cd $CURRENT_DIR && /usr/bin/node scripts/generate-blog-post.mjs >> /var/log/blog-generator.log 2>&1
-0 9 * * 5 cd $CURRENT_DIR
+0 9 * * 5 cd $CURRENT_DIR && /usr/bin/node scripts/generate-blog-post.mjs >> /var/log/blog-generator.log 2>&1
+CRON
   ) | crontab -
   echo "✅ Cron jobs configurados para generar posts automáticamente"
 fi
