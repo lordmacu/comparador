@@ -119,6 +119,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/guia-completa/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/guia-completa">> = Specific
+  const handler = {} as typeof import("../../app/guia-completa/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/movistar/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/movistar">> = Specific

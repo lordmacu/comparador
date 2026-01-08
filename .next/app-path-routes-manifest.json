@@ -11,6 +11,7 @@
   "/claro/page": "/claro",
   "/comparar/[...operadores]/page": "/comparar/[...operadores]",
   "/etb/page": "/etb",
+  "/guia-completa/page": "/guia-completa",
   "/manifest.webmanifest/route": "/manifest.webmanifest",
   "/movistar/page": "/movistar",
   "/page": "/",

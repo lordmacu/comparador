@@ -11,6 +11,7 @@
   "/claro/page": "app/claro/page.js",
   "/comparar/[...operadores]/page": "app/comparar/[...operadores]/page.js",
   "/etb/page": "app/etb/page.js",
+  "/guia-completa/page": "app/guia-completa/page.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/movistar/page": "app/movistar/page.js",
   "/page": "app/page.js",

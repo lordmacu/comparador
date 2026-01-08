@@ -149,6 +149,12 @@
       "namedRegex": "^/etb(?:/)?$"
     },
     {
+      "page": "/guia-completa",
+      "regex": "^/guia\\-completa(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guia\\-completa(?:/)?$"
+    },
+    {
       "page": "/manifest.webmanifest",
       "regex": "^/manifest\\.webmanifest(?:/)?$",
       "routeKeys": {},

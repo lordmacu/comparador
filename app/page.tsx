@@ -158,6 +158,22 @@ export default function HomePage() {
               <p className="text-gray-600 text-sm">Ofertas exclusivas mensuales</p>
             </div>
           </div>
+
+          {/* Guía Completa Banner */}
+          <div className="mt-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
+            <h3 className="text-2xl md:text-3xl font-black mb-3">
+              📖 Nueva: Guía Completa 2026
+            </h3>
+            <p className="text-lg mb-6 text-purple-100">
+              Todo sobre internet en Bogotá en una sola página: operadores, velocidades, barrios y más
+            </p>
+            <a
+              href="/guia-completa"
+              className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-purple-50 transition-all shadow-lg"
+            >
+              Ver Guía Completa →
+            </a>
+          </div>
         </div>
       </section>
 
