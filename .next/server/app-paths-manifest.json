@@ -22,5 +22,6 @@
   "/soluciones/[solucion]/page": "app/soluciones/[solucion]/page.js",
   "/testimonios/page": "app/testimonios/page.js",
   "/velocidades/[velocidad]/page": "app/velocidades/[velocidad]/page.js",
+  "/videos/page": "app/videos/page.js",
   "/viviendas/[vivienda]/page": "app/viviendas/[vivienda]/page.js"
 }

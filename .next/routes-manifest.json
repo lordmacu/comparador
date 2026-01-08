@@ -195,6 +195,12 @@
       "regex": "^/testimonios(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/testimonios(?:/)?$"
+    },
+    {
+      "page": "/videos",
+      "regex": "^/videos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/videos(?:/)?$"
     }
   ],
   "dataRoutes": [],

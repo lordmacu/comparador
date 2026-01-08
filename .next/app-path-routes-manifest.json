@@ -22,5 +22,6 @@
   "/soluciones/[solucion]/page": "/soluciones/[solucion]",
   "/testimonios/page": "/testimonios",
   "/velocidades/[velocidad]/page": "/velocidades/[velocidad]",
+  "/videos/page": "/videos",
   "/viviendas/[vivienda]/page": "/viviendas/[vivienda]"
 }

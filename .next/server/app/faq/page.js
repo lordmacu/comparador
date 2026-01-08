@@ -2,7 +2,7 @@ var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/faq/page.js
 R.c("server/chunks/ssr/[root-of-the-server]__0794c628._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_4b9a0874._.js")
 R.c("server/chunks/ssr/_0a2df3eb._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__6d4fd0b5._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__de06801c._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_174ae28d._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_77ec7569._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_ece394eb.js")
