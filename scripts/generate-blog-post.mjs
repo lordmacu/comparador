@@ -1,7 +1,11 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import fs from "fs/promises";
 import path from "path";
+import { exec } from "child_process";
+import { promisify } from "util";
 import dotenv from "dotenv";
+
+const execAsync = promisify(exec);
 
 // Cargar variables de entorno desde .env
 dotenv.config();
@@ -398,6 +402,16 @@ GENERA LA IMAGEN AHORA.`;
     // Mostrar preview del JSON generado
     console.log(`\n${colors.dim}${colors.gray}--- Preview JSON ---${colors.reset}`);
     console.log(JSON.stringify(postData, null, 2));
+
+    // Reiniciar PM2 para cargar el nuevo post (solo en servidor)
+    try {
+      console.log(`\n${colors.cyan}🔄 Reiniciando aplicación PM2...${colors.reset}`);
+      await execAsync('pm2 restart internet-colombia');
+      console.log(`${colors.green}✅ Aplicación reiniciada exitosamente${colors.reset}`);
+    } catch (pm2Error) {
+      // PM2 no disponible (probablemente corriendo en local)
+      console.log(`${colors.yellow}⚠️  PM2 no disponible (modo local)${colors.reset}`);
+    }
 
   } catch (err) {
     log(`ERROR: ${err.message}`, "error");
