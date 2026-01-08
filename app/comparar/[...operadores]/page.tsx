@@ -221,13 +221,15 @@ export default async function ComparativaPage({ params }: { params: Promise<{ op
               {/* Provider 1 */}
               <div className="bg-white rounded-lg p-6 border-2 border-blue-500">
                 <div className="flex items-center gap-3 mb-6">
-                  <Image
-                    src={provider1.brand.logo}
-                    alt={`${nombre1} logo`}
-                    width={80}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
+                  <div className={`${nombre1 === 'ETB' ? 'bg-[#0033A0] p-3 rounded-lg' : ''}`}>
+                    <Image
+                      src={provider1.brand.logo}
+                      alt={`${nombre1} logo`}
+                      width={80}
+                      height={40}
+                      className="h-10 w-auto"
+                    />
+                  </div>
                 </div>
 
                 <div className="mb-6">
@@ -271,13 +273,15 @@ export default async function ComparativaPage({ params }: { params: Promise<{ op
               {/* Provider 2 */}
               <div className="bg-white rounded-lg p-6 border-2 border-purple-500">
                 <div className="flex items-center gap-3 mb-6">
-                  <Image
-                    src={provider2.brand.logo}
-                    alt={`${nombre2} logo`}
-                    width={80}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
+                  <div className={`${nombre2 === 'ETB' ? 'bg-[#0033A0] p-3 rounded-lg' : ''}`}>
+                    <Image
+                      src={provider2.brand.logo}
+                      alt={`${nombre2} logo`}
+                      width={80}
+                      height={40}
+                      className="h-10 w-auto"
+                    />
+                  </div>
                 </div>
 
                 <div className="mb-6">
