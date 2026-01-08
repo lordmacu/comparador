@@ -26,7 +26,7 @@ const transporter = nodemailer.createTransport({
 async function sendBlogNotificationEmail(blogPost) {
   const mailOptions = {
     from: `"Internet Colombia - Blog" <${process.env.SMTP_USER}>`,
-    to: 'informacion@cristiangarcia.co',
+    to: 'yo@cristiangarcia.co',
     subject: `✨ Nuevo blog post generado: ${blogPost.title}`,
     html: `
       <!DOCTYPE html>
@@ -645,7 +645,7 @@ GENERA LA IMAGEN AHORA.`;
     console.log(`\n${colors.cyan}📧 Enviando notificación por correo...${colors.reset}`);
     const emailResult = await sendBlogNotificationEmail(postData);
     if (emailResult.success) {
-      console.log(`${colors.green}✅ Notificación enviada correctamente a informacion@cristiangarcia.co${colors.reset}`);
+      console.log(`${colors.green}✅ Notificación enviada correctamente a yo@cristiangarcia.co${colors.reset}`);
     } else {
       console.log(`${colors.yellow}⚠️  No se pudo enviar la notificación por correo${colors.reset}`);
     }
