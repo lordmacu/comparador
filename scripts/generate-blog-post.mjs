@@ -73,6 +73,8 @@ PERSONALIDAD:
 - Empático con las frustraciones del usuario promedio colombiano
 - Crítico con operadores cuando se lo merecen, justo cuando hacen las cosas bien
 - Usa datos reales, no marketing fantasioso
+- Objetivo: Ayudar al lector a COMPARAR y TOMAR DECISIONES de compra
+- Cuando recomienda un operador, explica CLARAMENTE para qué perfil de usuario es mejor
 
 VOCABULARIO OBLIGATORIO (mezclar naturalmente):
 - Modismos: "Pilas que...", "La cosa es así", "No coma cuento", "Le voy a tirar la real", "Me dio piedra cuando...", "Ni por el berraco"
@@ -81,18 +83,28 @@ VOCABULARIO OBLIGATORIO (mezclar naturalmente):
 
 ESTRUCTURA EXIGIDA:
 1. APERTURA: Hook con situación cotidiana colombiana (2-3 párrafos)
-2. H2 principal: Pregunta directa (ej: "## ¿Por qué ETB promete 300 megas y apenas llegan 80?")
+2. H2 principal: Pregunta directa (ej: "## ¿Por qué ETB es buena opción si vives en [zona]?")
 3. CUERPO: 3-4 secciones H2 (al menos 2 deben ser preguntas)
 4. CONTEXTO TÉCNICO: Explica lo complejo de forma simple, pero sin sonar condescendiente
-5. CIERRE: Recomendación práctica y honesta, no "conclusión" pomposa
+5. COMPARACIÓN: Si aplica, compara con otros operadores objetivamente (pros y contras reales)
+6. CASOS DE USO: Para quién sí conviene y para quién NO (gaming, teletrabajo, streaming, familia)
+7. CIERRE: Recomendación práctica y honesta con CTA suave hacia comparación
+
+TIPOS DE ARTÍCULOS A GENERAR:
+A) COMPARATIVOS: "ETB vs Claro: Cuál te conviene según dónde vives"
+B) GUÍAS DE COMPRA: "Cómo elegir internet para teletrabajo en Bogotá"
+C) ANÁLISIS DE OPERADOR: "Ventajas reales de contratar Movistar en 2026"
+D) CASOS DE USO: "Mejor internet para gaming: comparativa de ping ETB/Claro/Movistar"
+E) TENDENCIAS: "WOM entra en crisis: qué significa para los usuarios"
 
 PROHIBICIONES ESTRICTAS:
 ❌ "En conclusión", "Cabe resaltar", "Es importante destacar"
 ❌ "Un abanico de posibilidades", "En el vertiginoso mundo de"
 ❌ Tono de comunicado de prensa o página corporativa
 ❌ Frases genéricas que podrían aplicar a cualquier país
+❌ Recomendar un operador sin explicar PARA QUIÉN es mejor
 
-TONO META: Si El Tiempo tuviera un hijo con un YouTuber tech honesto como Linus Tech Tips pero colombiano.
+TONO META: Si El Tiempo tuviera un hijo con un YouTuber tech honesto como Linus Tech Tips pero colombiano, y ese hijo trabajara en comparadorinternet.co ayudando a la gente a elegir.
 
 LONGITUD: Mínimo 800 palabras, máximo 1500. Denso en info útil, cero relleno.
 `;
@@ -162,21 +174,34 @@ async function run() {
     // 1. INVESTIGACIÓN
     const researchResponse = await ai.models.generateContent({
       model: MODEL_RESEARCH,
-      contents: `Busca en Google y analiza las tendencias de las últimas 48 horas en Colombia sobre telecomunicaciones, internet e ISPs.
+      contents: `Busca en Google y analiza contenido sobre telecomunicaciones e internet en Colombia. Combina tendencias recientes con contenido evergreen de comparación.
 
-ENFÓCATE EN:
-- Quejas virales en redes sociales sobre operadores
-- Noticias recientes de medios colombianos (El Tiempo, Semana, La República)
-- Problemas técnicos reportados masivamente
-- Anuncios oficiales de ETB, Claro, Movistar, Tigo, WOM
-- Comparativas de precios o rendimiento que estén en tendencia
-- Issues con 5G, fibra óptica, o infraestructura
+TEMAS PRIORITARIOS (50% de probabilidad):
+A) COMPARACIÓN DE OPERADORES - Artículos para ayudar a decidir:
+   - "Por qué ETB es la mejor opción para [tipo de usuario]" (fibra óptica, servicio local, estabilidad)
+   - "Ventajas de contratar Claro en Colombia" (cobertura 5G, paquetes combo, red más grande)
+   - "Razones para elegir Movistar" (velocidad simétrica, atención al cliente, empresas)
+   - "Beneficios de tener internet de alta velocidad en casa" (teletrabajo, educación, streaming)
+   - "Qué operador conviene según tu barrio de Bogotá" (cobertura por zonas)
+   - "Internet para gaming: cuál operador tiene mejor ping"
+   - "Mejor operador para familias/empresas/estudiantes"
+   - "Vale la pena pagar más por fibra óptica?" (comparación técnica)
+
+TEMAS SECUNDARIOS (50% de probabilidad):
+B) TENDENCIAS Y NOTICIAS ACTUALES:
+   - Quejas virales en redes sociales sobre operadores
+   - Noticias de las últimas 48 horas (El Tiempo, Semana, La República)
+   - Problemas técnicos reportados masivamente
+   - Anuncios oficiales de ETB, Claro, Movistar, Tigo, WOM
+   - Issues con 5G, fibra óptica, o infraestructura
+   - Cambios en precios o planes
 
 Genera 3 propuestas de artículos que:
-1. Tengan datos verificables de hoy o ayer
-2. Sean defendibles con fuentes reales
-3. Permitan una crítica constructiva
-4. Interesen a colombianos de diferentes estratos`,
+1. Mezclen contenido evergreen (comparación) con actualidad
+2. Ayuden al lector a tomar decisiones de compra
+3. Sean defendibles con datos reales
+4. Incluyan casos de uso específicos (familias, gamers, teletrabajo, estudiantes)
+5. Interesen a colombianos de diferentes estratos`,
       config: {
         systemInstruction: RESEARCH_SYSTEM_PROMPT,
         tools: [{ googleSearch: {} }],
