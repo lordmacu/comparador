@@ -17,13 +17,17 @@ const COMPARATIVAS = [
 ];
 
 export async function generateStaticParams() {
-  return COMPARATIVAS.map(([op1, op2]) => ({
+  console.log('[COMPARAR] generateStaticParams called');
+  const params = COMPARATIVAS.map(([op1, op2]) => ({
     operadores: [op1, op2],
   }));
+  console.log('[COMPARAR] Generated params:', JSON.stringify(params));
+  return params;
 }
 
-export async function generateMetadata({ params }: { params: { operadores: string[] } }): Promise<Metadata> {
-  const [slug1, slug2] = params.operadores || [];
+export async function generateMetadata({ params }: { params: Promise<{ operadores: string[] }> }): Promise<Metadata> {
+  const { operadores } = await params;
+  const [slug1, slug2] = operadores || [];
   
   if (!slug1 || !slug2) {
     return { title: 'Comparador de Internet en Colombia' };
@@ -65,15 +69,21 @@ export async function generateMetadata({ params }: { params: { operadores: strin
 
 export const revalidate = 3600;
 
-export default function ComparativaPage({ params }: { params: { operadores: string[] } }) {
-  const [slug1, slug2] = params.operadores || [];
+export default async function ComparativaPage({ params }: { params: Promise<{ operadores: string[] }> }) {
+  const { operadores } = await params;
+  console.log('[COMPARAR] operadores array:', operadores);
+  
+  const [slug1, slug2] = operadores || [];
+  console.log('[COMPARAR] slug1:', slug1, 'slug2:', slug2);
   
   if (!slug1 || !slug2) {
+    console.log('[COMPARAR] Missing slugs, returning 404');
     notFound();
   }
 
   const provider1 = getProviderBySlug(slug1);
   const provider2 = getProviderBySlug(slug2);
+  console.log('[COMPARAR] provider1:', provider1?.name, 'provider2:', provider2?.name);
 
   if (!provider1 || !provider2) {
     notFound();
