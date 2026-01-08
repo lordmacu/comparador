@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import { usePathname } from 'next/navigation';
+import { useAnalytics } from '@/lib/hooks/useAnalytics';
 
 interface QuickCallFormProps {
   buttonColor?: string;
@@ -13,6 +14,12 @@ export default function QuickCallForm({ buttonColor = '#2563eb', provider }: Qui
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const pathname = usePathname();
+  const { trackForm, trackFormInit } = useAnalytics();
+
+  const handleInputFocus = () => {
+    const detectedProvider = provider || pathname?.split('/')[1] || 'unknown';
+    trackFormInit(`quick_call_${detectedProvider}`);
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,6 +48,9 @@ export default function QuickCallForm({ buttonColor = '#2563eb', provider }: Qui
       }
 
       console.log('✅ Solicitud enviada:', data);
+
+      // Track conversion exitosa
+      trackForm(`quick_call_${detectedProvider}`, detectedProvider || 'unknown');
 
       setSubmitStatus('success');
       setPhone('');
@@ -84,6 +94,7 @@ export default function QuickCallForm({ buttonColor = '#2563eb', provider }: Qui
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+          onFocus={handleInputFocus}
           placeholder="Tu celular"
           pattern="[0-9]{10}"
           required

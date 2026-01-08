@@ -1,20 +1,26 @@
+'use client';
+
 import { Provider } from '@/lib/types';
 import { getWhatsAppLink } from '@/lib/data';
+import { useAnalytics } from '@/lib/hooks/useAnalytics';
 
 interface WhatsAppButtonProps {
   provider: Provider;
   customMessage?: string;
   className?: string;
   size?: 'sm' | 'md' | 'lg';
+  source?: string; // Para tracking de dónde se hizo click
 }
 
 export default function WhatsAppButton({
   provider,
   customMessage,
   className = '',
-  size = 'md'
+  size = 'md',
+  source = 'unknown'
 }: WhatsAppButtonProps) {
   const whatsappUrl = getWhatsAppLink(provider, customMessage);
+  const { trackWhatsApp } = useAnalytics();
 
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
@@ -22,11 +28,16 @@ export default function WhatsAppButton({
     lg: 'px-8 py-4 text-lg'
   };
 
+  const handleClick = () => {
+    trackWhatsApp(provider.name, source);
+  };
+
   return (
     <a
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer nofollow"
+      onClick={handleClick}
       className={`
         inline-flex items-center justify-center gap-2
         bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg

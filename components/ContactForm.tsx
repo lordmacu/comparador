@@ -3,6 +3,7 @@
 import { useState, FormEvent } from 'react';
 import { Provider } from '@/lib/types';
 import { Phone, Send } from 'lucide-react';
+import { useAnalytics } from '@/lib/hooks/useAnalytics';
 
 interface ContactFormProps {
   provider: Provider;
@@ -13,6 +14,12 @@ export default function ContactForm({ provider, title }: ContactFormProps) {
   const [phone, setPhone] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const { trackForm, trackFormInit } = useAnalytics();
+
+  const handleInputFocus = () => {
+    // Track cuando el usuario empieza a llenar el formulario
+    trackFormInit(`call_request_${provider.slug}`);
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -37,6 +44,9 @@ export default function ContactForm({ provider, title }: ContactFormProps) {
       }
 
       console.log('✅ Solicitud enviada:', data);
+
+      // Track conversion exitosa
+      trackForm(`call_request_${provider.slug}`, provider.name);
 
       setSubmitStatus('success');
       setPhone('');
@@ -90,6 +100,7 @@ export default function ContactForm({ provider, title }: ContactFormProps) {
           required
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+          onFocus={handleInputFocus}
           className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
           placeholder="Ej: 3001234567"
           pattern="[0-9]{10}"
