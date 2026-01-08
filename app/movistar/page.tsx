@@ -25,12 +25,16 @@ export const metadata: Metadata = {
   description: `${provider.hero.subtitle}. Servicios de internet Movistar: ${provider.coverage.technology}. Consulta planes y descuentos exclusivos online.`,
   keywords: [
     'internet Movistar Colombia',
-    'fibra óptica Movistar',
-    'Movistar 900 Mbps',
-    'descuentos Movistar',
-    'Disney+ Movistar',
-    'Movistar Total',
-    'streaming Movistar'
+    'Movistar fibra simétrica',
+    'Movistar Disney+ incluido',
+    'planes Movistar 2026',
+    'Movistar vs Claro velocidad',
+    'Movistar Total internet',
+    'velocidad upload Movistar',
+    'Movistar empresas',
+    'mejor plan Movistar teletrabajo',
+    'descuentos Movistar 2026',
+    'opiniones Movistar Colombia'
   ],
   alternates: {
     canonical: 'https://comparadorinternet.co/movistar',

@@ -24,13 +24,17 @@ export const metadata: Metadata = {
   title: `Internet ${provider.name} Bogotá 2025 | ${provider.tagline}`,
   description: `${provider.hero.subtitle}. Internet ETB con fibra óptica simétrica. Consulta promociones especiales para Bogotá y municipios cercanos.`,
   keywords: [
-    'internet ETB',
-    'ETB Bogotá',
-    'fibra óptica ETB',
-    'internet ETB Chía',
+    'internet ETB Bogotá',
+    'ETB fibra simétrica',
+    'ETB vs Claro vs Movistar',
+    'planes ETB 2026',
+    'ETB internet gaming',
     'WiFi 360 ETB',
-    'promociones ETB',
-    'streaming ETB'
+    'ETB Chía Cajicá',
+    'cobertura ETB Bogotá',
+    'ETB soporte técnico',
+    'opiniones ETB 2026',
+    'por qué ETB solo Bogotá'
   ],
   alternates: {
     canonical: 'https://comparadorinternet.co/etb',

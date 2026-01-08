@@ -336,53 +336,41 @@ async function run() {
     log("Iniciando investigación de tendencias en Colombia...", "info");
     
     // 1. INVESTIGACIÓN
-    const researchResponse = await ai.models.generateContent({
+    log("Consultando modelo de investigación (gemini-3-flash-preview)...", "info");
+    const researchPromise = ai.models.generateContent({
       model: MODEL_RESEARCH,
-      contents: `Busca en Google y analiza contenido sobre telecomunicaciones e internet en Colombia. El objetivo principal es AYUDAR A LOS LECTORES A DECIDIR QUÉ OPERADOR CONTRATAR.
+      contents: `Busca en Google las ÚLTIMAS NOTICIAS y tendencias sobre internet en Colombia (ETB, Claro, Movistar, Tigo, WOM).
 
-🎯 PRIORIDAD MÁXIMA (70% de artículos) - CONTENIDO DE CONVERSIÓN:
-A) POR QUÉ CONTRATAR CADA OPERADOR - Enfócate en beneficios específicos:
-   
-   ETB (Empresa de Telecomunicaciones de Bogotá):
-   - "Por qué ETB es la mejor opción si vives en [barrio de Bogotá]"
-   - "ETB vs la competencia: razones reales para quedarte con fibra local"
-   - "Ventajas de ETB: fibra óptica propia, servicio técnico en Bogotá, estabilidad"
-   - "¿Cuándo conviene ETB? Gaming, teletrabajo, familias numerosas"
-   
-   CLARO (Claro Colombia):
-   - "Por qué Claro es buena opción: 5G, combos, cobertura nacional"
-   - "Ventajas de contratar Claro: red más grande, paquetes todo incluido"
-   - "Claro para empresas vs residencial: cuál te conviene"
-   - "¿Vale la pena el 5G de Claro en Bogotá? Análisis real"
-   
-   MOVISTAR (Telefónica Movistar):
-   - "Razones para elegir Movistar: velocidad simétrica, soporte empresarial"
-   - "Por qué Movistar es buena opción para teletrabajo profesional"
-   - "Movistar Fibra: ventajas reales vs cable tradicional"
-   - "¿Cuándo conviene Movistar? Empresas, freelancers, gamers exigentes"
+🎯 OBJETIVO: Generar artículos SEO que posicionen en Google y atraigan tráfico para vender planes de internet.
 
-B) COMPARACIONES DIRECTAS PARA DECISIÓN DE COMPRA:
-   - "ETB vs Claro vs Movistar: cuál conviene según tu zona en Bogotá"
-   - "Mejor internet para gaming 2026: ping real de ETB/Claro/Movistar"
-   - "Internet para teletrabajo: comparativa de estabilidad y soporte"
-   - "Fibra óptica vs cable: diferencias reales y cuál elegir"
-   - "Planes baratos vs premium: qué obtienes por tu dinero"
+📰 PRIORIZA NOTICIAS ACTUALES (50%):
+• Lanzamientos nuevos: planes 5G, ofertas, expansión de cobertura
+• Noticias corporativas: fusiones, inversiones, nuevos servicios
+• Eventos relevantes: caídas de servicio, mejoras de red, quejas masivas
+• Anuncios oficiales de operadores con impacto en usuarios
 
-📰 CONTENIDO SECUNDARIO (30% de artículos) - NOTICIAS Y TENDENCIAS:
-   - Quejas virales sobre operadores (úsalas para educar al lector)
-   - Noticias recientes que afecten decisiones de compra
-   - Cambios de precios, nuevos planes, ofertas
-   - Problemas técnicos masivos (y qué operador es más confiable)
-   - Anuncios oficiales de ETB, Claro, Movistar, Tigo, WOM
+⚡ COMPARATIVAS SEO (30%):
+• "ETB vs Claro vs Movistar 2026" con datos actualizados
+• "Mejor internet para [gaming/teletrabajo/streaming] en Bogotá"
+• Comparativas de velocidad, precio, cobertura, ping
+• Rankings: "Top 3 operadores para [caso de uso]"
 
-🎯 OBJETIVO FINAL: Cada artículo debe ayudar al lector a responder "¿Cuál operador me conviene?" con datos reales, casos de uso específicos y recomendaciones honestas.
+🏆 VENTAJAS Y BENEFICIOS (20%):
+• Por qué contratar ETB: fibra propia, cobertura Bogotá
+• Ventajas Claro: 5G, red más grande, combos
+• Beneficios Movistar: velocidad simétrica, soporte empresarial
 
-Genera 3 propuestas de artículos que:
-1. Sean útiles para tomar una decisión de compra informada
-2. Expliquen claramente PARA QUIÉN conviene cada operador (no solo "es bueno")
-3. Incluyan pros y contras honestos (no solo marketing)
-4. Tengan casos de uso reales (familias, gamers, teletrabajo, estudiantes, empresas)
-5. Terminen con recomendación práctica que motive a comparar planes`,
+📋 KEYWORDS SEO PRIORITARIAS (usar en títulos):
+• "ETB vs Claro vs Movistar"
+• "mejor internet [gaming/teletrabajo/streaming] Bogotá"
+• "planes internet 2026"
+• "5G Bogotá"
+• "fibra óptica vs cable"
+• "internet [barrio] Bogotá"
+• "opiniones [operador] 2026"
+• "velocidad internet Colombia"
+
+📋 ENTREGA: 3 propuestas con estas keywords en el título. Cada artículo debe rankear en Google para búsquedas comerciales.`,
       config: {
         systemInstruction: RESEARCH_SYSTEM_PROMPT,
         tools: [{ googleSearch: {} }],
@@ -407,6 +395,14 @@ Genera 3 propuestas de artículos que:
         }
       }
     });
+
+    // Aplicar timeout de 60 segundos
+    const timeoutPromise = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Timeout: La investigación tardó más de 60 segundos')), 60000)
+    );
+    
+    log("Esperando respuesta del modelo (máximo 60 segundos)...", "info");
+    const researchResponse = await Promise.race([researchPromise, timeoutPromise]);
 
     const researchData = JSON.parse(researchResponse.text || '{"topics":[]}');
     const selectedTopic = researchData.topics[0];
@@ -455,26 +451,36 @@ REQUISITOS ESTRICTOS:
 - NO uses <p>, <h2>, <ul>, <li>, <strong>, <em> ni ningún HTML tag
 - Ejemplo correcto: "## ¿Por qué?\n\nAquí está la **verdad** que nadie dice..."
 
-🇨🇴 LOCALIZACIÓN OBLIGATORIA:
-- Menciona: Barrios de Bogotá, estratos, clima, centros comerciales
-- Usa: Modismos naturales (no forzados), precios en pesos colombianos
-- Referencias: Técnicos de los operadores, routers específicos, módulos de atención
+🇨🇴 LOCALIZACIÓN SEO:
+- Keywords locales: "Bogotá", "Colombia", barrios específicos
+- Menciona: Precios en COP, zonas de cobertura, estratos
+- Referencias: TransMilenio, centros comerciales, localidades bogotanas
 
-🎯 TONO:
-- Como un amigo tech que te cuenta la verdad con un tinto
-- Crítico pero justo, sarcástico pero constructivo
-- Técnico pero accesible (explica términos complejos)
+🎯 TONO PERIODÍSTICO:
+- Informativo pero cercano (como El Tiempo o Portafolio tech)
+- Objetivo con datos verificables
+- Crítico cuando sea necesario, destacando ventajas reales
+- Accesible sin ser demasiado informal
 
-⚡ DATOS:
-- Incluye cifras específicas cuando sea posible
-- Menciona experiencias reales (aunque sean hipotéticas verosímiles)
-- Compara opciones (precios, velocidades, latencias)
+⚡ DATOS SEO OBLIGATORIOS:
+- Cifras actualizadas 2026: precios, velocidades, cobertura
+- Comparativas con datos medibles (ping, Mbps, disponibilidad)
+- Tabla comparativa cuando sea posible
+- Keywords naturales: "mejor internet", "planes [operador]", "vs", "2026"
 
-🚫 EVITA:
-- Frases de marketing corporativo
-- Generalizaciones que apliquen a cualquier país
-- Tecnicismos sin explicar
-- Tono condescendiente o muy formal`,
+💰 ENFOQUE COMERCIAL:
+- Destaca ventajas comerciales de cada operador
+- Menciona ofertas, promociones, planes populares
+- Facilita la decisión de compra con datos concretos
+
+🔗 CTA FINAL OBLIGATORIO:
+Cierra con: "Compara los planes actualizados de [operadores] en comparadorinternet.co y encuentra la mejor oferta para tu hogar o negocio." O variaciones naturales que inviten a comparar en el sitio.
+
+🚫 PROHIBIDO:
+- "En conclusión", frases de relleno
+- Opiniones sin sustento
+- HTML tags (solo Markdown)
+- Tecnicismos sin explicar`,
       config: {
         systemInstruction: WRITING_SYSTEM_PROMPT,
         responseMimeType: "application/json",

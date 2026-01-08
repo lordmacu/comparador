@@ -21,14 +21,20 @@ export const metadata: Metadata = {
   description: 'Descubre los mejores servicios de internet en Colombia. Compara beneficios de Claro, Movistar y ETB. Fibra óptica, cobertura nacional y atención personalizada.',
   keywords: [
     'internet Colombia',
-    'servicios internet',
+    'comparador internet',
     'internet Claro',
     'internet Movistar',
     'internet ETB',
     'fibra óptica Colombia',
-    'internet hogar',
-    'comparador internet',
-    'mejor internet Colombia 2025'
+    'mejor internet Bogotá 2026',
+    'comparar planes internet Bogotá',
+    'internet gaming Bogotá',
+    'internet teletrabajo Colombia',
+    'planes internet hogar',
+    'contratar internet Colombia',
+    'ofertas internet 2026',
+    'ETB vs Claro vs Movistar',
+    'internet rápido Colombia'
   ],
   alternates: {
     canonical: 'https://comparadorinternet.co',

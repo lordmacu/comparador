@@ -25,12 +25,16 @@ export const metadata: Metadata = {
   description: `${provider.hero.subtitle}. Conoce los servicios de internet Claro: ${provider.coverage.technology}. Contacta para consultar planes disponibles en tu zona.`,
   keywords: [
     'internet Claro Colombia',
-    'fibra óptica Claro',
-    'servicios Claro 2025',
-    'internet hogar Claro',
-    '5G Claro',
-    'Claro TV+',
-    'cobertura Claro'
+    'Claro 5G Bogotá',
+    'planes Claro internet 2026',
+    'Claro vs ETB vs Movistar',
+    'Claro fibra óptica',
+    'Claro TV+ internet combo',
+    'cobertura 5G Claro',
+    'Claro internet gaming',
+    'opiniones Claro 2026',
+    'velocidad Claro Colombia',
+    'planes Claro hogar'
   ],
   alternates: {
     canonical: 'https://comparadorinternet.co/claro',
