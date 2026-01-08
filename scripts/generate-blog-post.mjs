@@ -281,6 +281,16 @@ REQUISITOS ESTRICTOS:
 - Cada sección: 150-250 palabras
 - Cierre: Consejo práctico, no "conclusión"
 
+🔤 FORMATO CRÍTICO - MARKDOWN PURO:
+- USA MARKDOWN, NO HTML
+- Párrafos: Texto normal, saltos de línea con doble enter
+- Títulos nivel 2: ## Título (sin tags <h2>)
+- Negritas: **texto** (sin tags <strong>)
+- Cursivas: *texto* (sin tags <em>)
+- Listas: - Item o 1. Item (sin tags <ul>/<li>)
+- NO uses <p>, <h2>, <ul>, <li>, <strong>, <em> ni ningún HTML tag
+- Ejemplo correcto: "## ¿Por qué?\n\nAquí está la **verdad** que nadie dice..."
+
 🇨🇴 LOCALIZACIÓN OBLIGATORIA:
 - Menciona: Barrios de Bogotá, estratos, clima, centros comerciales
 - Usa: Modismos naturales (no forzados), precios en pesos colombianos

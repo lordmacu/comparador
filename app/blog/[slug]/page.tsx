@@ -110,6 +110,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const { before: contentBeforeCta, after: contentAfterCta } = splitMarkdownForInlineCta(post.content);
 
+  // Detectar si el contenido es HTML o Markdown
+  const isHtmlContent = post.content.includes('<p>') || post.content.includes('<h2>') || post.content.includes('<ul>');
+
   const markdownComponents: Components = {
     h1: ({ children }) => (
       <h1 className="text-3xl font-bold text-gray-900 mt-8 mb-4">{children}</h1>
@@ -500,15 +503,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
                 {/* Content */}
                 <div className="prose prose-lg max-w-none">
-                  <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
-                    {contentBeforeCta}
-                  </ReactMarkdown>
+                  {isHtmlContent ? (
+                    <>
+                      <div 
+                        className="blog-html-content"
+                        dangerouslySetInnerHTML={{ __html: contentBeforeCta }} 
+                      />
+                      
+                      <InlineBlogCallWidget postSlug={post.slug} />
+                      
+                      <div 
+                        className="blog-html-content"
+                        dangerouslySetInnerHTML={{ __html: contentAfterCta }} 
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                        {contentBeforeCta}
+                      </ReactMarkdown>
 
-                  <InlineBlogCallWidget postSlug={post.slug} />
+                      <InlineBlogCallWidget postSlug={post.slug} />
 
-                  <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
-                    {contentAfterCta}
-                  </ReactMarkdown>
+                      <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                        {contentAfterCta}
+                      </ReactMarkdown>
+                    </>
+                  )}
                 </div>
 
                 {/* Contact Form - Bottom of Article */}
