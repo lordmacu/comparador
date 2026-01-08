@@ -51,9 +51,12 @@ type BarrioSlug = keyof typeof BARRIOS;
 export const revalidate = 3600; // Revalidar cada hora
 
 export async function generateStaticParams() {
-  return Object.keys(BARRIOS).map((barrio) => ({
+  console.log('[BARRIOS] generateStaticParams called');
+  const params = Object.keys(BARRIOS).map((barrio) => ({
     barrio,
   }));
+  console.log('[BARRIOS] Generated params:', params);
+  return params;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ barrio: string }> }): Promise<Metadata> {
@@ -91,8 +94,12 @@ export async function generateMetadata({ params }: { params: Promise<{ barrio: s
 }
 
 export default async function InternetBarrioPage({ params }: { params: Promise<{ barrio: string }> }) {
+  console.log('[BARRIOS] Params received:', params);
   const { barrio: barrioSlug } = await params;
+  console.log('[BARRIOS] barrioSlug:', barrioSlug);
+  console.log('[BARRIOS] Available barrios:', Object.keys(BARRIOS));
   const barrio = BARRIOS[barrioSlug as BarrioSlug];
+  console.log('[BARRIOS] Found barrio:', barrio ? barrio.nombre : 'NOT FOUND');
   const providers = getAllProviders();
 
   if (!barrio) {

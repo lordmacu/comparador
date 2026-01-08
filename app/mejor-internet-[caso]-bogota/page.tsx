@@ -71,9 +71,12 @@ type CasoUsoSlug = keyof typeof CASOS_USO;
 export const revalidate = 3600; // Revalidar cada hora
 
 export async function generateStaticParams() {
-  return Object.keys(CASOS_USO).map((caso) => ({
+  console.log('[CASOS] generateStaticParams called');
+  const params = Object.keys(CASOS_USO).map((caso) => ({
     caso,
   }));
+  console.log('[CASOS] Generated params:', params);
+  return params;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ caso: string }> }): Promise<Metadata> {
@@ -109,8 +112,12 @@ export async function generateMetadata({ params }: { params: Promise<{ caso: str
 }
 
 export default async function CasoUsoPage({ params }: { params: Promise<{ caso: string }> }) {
+  console.log('[CASOS] Params received:', params);
   const { caso: casoSlug } = await params;
+  console.log('[CASOS] casoSlug:', casoSlug);
+  console.log('[CASOS] Available casos:', Object.keys(CASOS_USO));
   const caso = CASOS_USO[casoSlug as CasoUsoSlug];
+  console.log('[CASOS] Found caso:', caso ? caso.nombre : 'NOT FOUND');
   const providers = getAllProviders();
 
   if (!caso) {
