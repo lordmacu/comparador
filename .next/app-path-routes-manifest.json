@@ -8,6 +8,7 @@
   "/blog/page": "/blog",
   "/calculadora/page": "/calculadora",
   "/casos/[caso]/page": "/casos/[caso]",
+  "/ciudades/[ciudad]/page": "/ciudades/[ciudad]",
   "/claro/page": "/claro",
   "/comparar/[...operadores]/page": "/comparar/[...operadores]",
   "/empresa/page": "/empresa",

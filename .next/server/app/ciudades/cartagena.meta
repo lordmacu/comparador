@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/ciudades/layout,_N_T_/ciudades/[ciudad]/layout,_N_T_/ciudades/[ciudad]/page,_N_T_/ciudades/cartagena"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/ciudades/$d$ciudad/__PAGE__",
+    "/ciudades/$d$ciudad",
+    "/ciudades",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -8,6 +8,7 @@
   "/blog/page": "app/blog/page.js",
   "/calculadora/page": "app/calculadora/page.js",
   "/casos/[caso]/page": "app/casos/[caso]/page.js",
+  "/ciudades/[ciudad]/page": "app/ciudades/[ciudad]/page.js",
   "/claro/page": "app/claro/page.js",
   "/comparar/[...operadores]/page": "app/comparar/[...operadores]/page.js",
   "/empresa/page": "app/empresa/page.js",

@@ -32,15 +32,15 @@ self.__SERVER_FILES_MANIFEST={
       "loaderFile": "",
       "domains": [],
       "disableStaticImages": false,
-      "minimumCacheTTL": 14400,
+      "minimumCacheTTL": 31536000,
       "formats": [
         "image/avif",
         "image/webp"
       ],
       "maximumRedirects": 3,
       "dangerouslyAllowLocalIP": false,
-      "dangerouslyAllowSVG": false,
-      "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
+      "dangerouslyAllowSVG": true,
+      "contentSecurityPolicy": "default-src 'self'; script-src 'none'; sandbox;",
       "contentDispositionType": "attachment",
       "localPatterns": [
         {
@@ -95,7 +95,7 @@ self.__SERVER_FILES_MANIFEST={
     "basePath": "",
     "expireTime": 31536000,
     "generateEtags": true,
-    "poweredByHeader": true,
+    "poweredByHeader": false,
     "cacheHandlers": {},
     "cacheMaxMemorySize": 52428800,
     "compress": true,

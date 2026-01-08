@@ -2,14 +2,17 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { generateWebSiteSchema, renderJsonLd } from "@/lib/schemas";
-import ChatWidget from "@/components/ChatWidget";
 import Header from "@/components/Header";
 import { OrganizationSchema, WebsiteSchema } from "@/components/SchemaMarkup";
+import { WebVitals } from "@/components/WebVitals";
+import { ClientProviders } from "@/components/ClientProviders";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   preload: true,
+  adjustFontFallback: true,
+  fallback: ['system-ui', 'arial'],
 });
 
 export const metadata: Metadata = {
@@ -126,9 +129,6 @@ export default function RootLayout({
           {children}
         </main>
 
-        {/* Chatbot flotante */}
-        <ChatWidget />
-
         {/* Footer optimizado para SEO */}
         <footer className="bg-gray-900 text-gray-300 py-12 mt-16">
           <div className="container mx-auto px-4">
@@ -165,6 +165,12 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        
+        {/* Client Components */}
+        <ClientProviders />
+        
+        {/* Web Vitals Monitoring */}
+        <WebVitals />
       </body>
     </html>
   );
