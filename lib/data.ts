@@ -9,6 +9,11 @@ export function getProvider(slug: 'claro' | 'movistar' | 'etb'): Provider {
   return providersData.providers[slug];
 }
 
+// Helper para obtener un proveedor por slug (más flexible)
+export function getProviderBySlug(slug: string): Provider | undefined {
+  return providersData.providers[slug as keyof typeof providersData.providers];
+}
+
 // Helper para obtener todos los proveedores
 export function getAllProviders(): Provider[] {
   return Object.values(providersData.providers);

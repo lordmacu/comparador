@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/mejor-internet-[caso]-bogota/layout,_N_T_/mejor-internet-[caso]-bogota/page,_N_T_/mejor-internet-[caso]-bogota"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!bWVqb3ItaW50ZXJuZXQtW2Nhc29dLWJvZ290YQ/__PAGE__",
+    "/!bWVqb3ItaW50ZXJuZXQtW2Nhc29dLWJvZ290YQ",
+    "/_index",
+    "/_head"
+  ]
+}
