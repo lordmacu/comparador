@@ -98,8 +98,8 @@ export function Analytics() {
         />
       )}
 
-      {/* Google Tag Manager (opcional - descomentar si se usa GTM) */}
-      {/* {process.env.NEXT_PUBLIC_GTM_ID && (
+      {/* Google Tag Manager */}
+      {process.env.NEXT_PUBLIC_GTM_ID && (
         <>
           <Script
             id="google-tag-manager"
@@ -123,7 +123,7 @@ export function Analytics() {
             />
           </noscript>
         </>
-      )} */}
+      )}
     </>
   );
 }
