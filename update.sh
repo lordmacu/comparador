@@ -30,7 +30,15 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "🔄 Restarting application with PM2..."
+echo "� Reinstalling Sharp for Linux..."
+rm -rf node_modules/sharp
+npm install --os=linux --cpu=x64 sharp
+
+if [ $? -ne 0 ]; then
+  echo "⚠️  Sharp installation failed, but continuing..."
+fi
+
+echo "�🔄 Restarting application with PM2..."
 pm2 restart internet-colombia
 
 if [ $? -ne 0 ]; then
