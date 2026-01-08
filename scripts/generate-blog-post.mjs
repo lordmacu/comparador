@@ -4,11 +4,175 @@ import path from "path";
 import { exec } from "child_process";
 import { promisify } from "util";
 import dotenv from "dotenv";
+import nodemailer from "nodemailer";
 
 const execAsync = promisify(exec);
 
 // Cargar variables de entorno desde .env
 dotenv.config();
+
+// Configuración del transportador de correo
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASSWORD,
+  },
+});
+
+// Función para enviar notificación por correo
+async function sendBlogNotificationEmail(blogPost) {
+  const mailOptions = {
+    from: `"Internet Colombia - Blog" <${process.env.SMTP_USER}>`,
+    to: 'informacion@cristiangarcia.co',
+    subject: `✨ Nuevo blog post generado: ${blogPost.title}`,
+    html: `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <style>
+          body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+          }
+          .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+          }
+          .content {
+            background: #f9f9f9;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-top: none;
+          }
+          .info-row {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+          }
+          .label {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+          .value {
+            font-size: 16px;
+            color: #333;
+            margin-top: 5px;
+          }
+          .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+          }
+          .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+          }
+          .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            color: #666;
+            font-size: 12px;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="header">
+          <h1 style="margin: 0;">✨ Nuevo Blog Post Generado</h1>
+        </div>
+
+        <div class="content">
+          <div class="info-row">
+            <div class="label">Título</div>
+            <div class="value title">${blogPost.title}</div>
+          </div>
+
+          <div class="info-row">
+            <div class="label">Descripción</div>
+            <div class="value">${blogPost.description}</div>
+          </div>
+
+          <div class="info-row">
+            <div class="label">Slug</div>
+            <div class="value">${blogPost.slug}</div>
+          </div>
+
+          <div class="info-row">
+            <div class="label">Fecha de Publicación</div>
+            <div class="value">${new Date(blogPost.publishedAt).toLocaleString('es-CO', {
+              timeZone: 'America/Bogota',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit',
+            })}</div>
+          </div>
+
+          <div class="info-row">
+            <div class="label">Imagen</div>
+            <div class="value">${blogPost.image}</div>
+          </div>
+
+          <div style="text-align: center;">
+            <a href="https://comparadorinternet.co/blog/${blogPost.slug}" class="button">Ver Post en el Sitio</a>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p>Este correo fue generado automáticamente por el sistema de blog de Internet Colombia.</p>
+          <p style="margin-top: 10px; color: #999;">Timestamp: ${blogPost.publishedAt}</p>
+        </div>
+      </body>
+      </html>
+    `,
+    text: `
+Nuevo blog post generado
+
+Título: ${blogPost.title}
+Descripción: ${blogPost.description}
+Slug: ${blogPost.slug}
+Fecha: ${new Date(blogPost.publishedAt).toLocaleString('es-CO', { timeZone: 'America/Bogota' })}
+Imagen: ${blogPost.image}
+
+Ver post: https://comparadorinternet.co/blog/${blogPost.slug}
+
+---
+Internet Colombia - Sistema de Blog
+    `.trim(),
+  };
+
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log('✅ Correo de notificación enviado:', info.messageId);
+    return { success: true, messageId: info.messageId };
+  } catch (error) {
+    console.error('❌ Error al enviar correo de notificación:', error);
+    // No lanzamos el error para que no falle todo el proceso si falla el correo
+    return { success: false, error: error.message };
+  }
+}
 
 // ==================== CONSTANTES ====================
 const MODEL_RESEARCH = 'gemini-3-flash-preview';
@@ -476,6 +640,15 @@ GENERA LA IMAGEN AHORA.`;
     // Mostrar preview del JSON generado
     console.log(`\n${colors.dim}${colors.gray}--- Preview JSON ---${colors.reset}`);
     console.log(JSON.stringify(postData, null, 2));
+
+    // Enviar notificación por correo
+    console.log(`\n${colors.cyan}📧 Enviando notificación por correo...${colors.reset}`);
+    const emailResult = await sendBlogNotificationEmail(postData);
+    if (emailResult.success) {
+      console.log(`${colors.green}✅ Notificación enviada correctamente a informacion@cristiangarcia.co${colors.reset}`);
+    } else {
+      console.log(`${colors.yellow}⚠️  No se pudo enviar la notificación por correo${colors.reset}`);
+    }
 
     // Reiniciar PM2 para cargar el nuevo post (solo en servidor)
     try {
