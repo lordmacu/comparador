@@ -201,13 +201,15 @@ export default async function InternetBarrioPage({ params }: { params: Promise<{
               {providers.map((provider) => (
                 <div key={provider.slug} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center gap-3 mb-4">
-                    <Image
-                      src={provider.brand.logo}
-                      alt={`${provider.name} logo`}
-                      width={60}
-                      height={30}
-                      className="h-8 w-auto"
-                    />
+                    <div className={`${provider.name === 'ETB' ? 'bg-[#0033A0] p-3 rounded-lg' : ''}`}>
+                      <Image
+                        src={provider.brand.logo}
+                        alt={`${provider.name} logo`}
+                        width={60}
+                        height={30}
+                        className="h-8 w-auto"
+                      />
+                    </div>
                   </div>
                   
                   <div className="mb-4">
