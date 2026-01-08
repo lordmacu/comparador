@@ -452,10 +452,15 @@ GENERA LA IMAGEN AHORA.`;
 
     // Reiniciar PM2 para cargar el nuevo post (solo en servidor)
     try {
-      console.log(`\n${colors.cyan}🔄 Limpiando caché y reiniciando aplicación PM2...${colors.reset}`);
-      // Limpiar caché ISR de Next.js
+      console.log(`\n${colors.cyan}🔄 Limpiando caché y páginas pregeneradas...${colors.reset}`);
+      // Limpiar caché ISR de Next.js y páginas pregeneradas
       await execAsync('rm -rf .next/cache');
+      await execAsync('rm -rf .next/server/app/blog.html');
+      await execAsync('rm -rf .next/server/app/blog.rsc');
+      await execAsync('rm -rf .next/server/app/sitemap.xml.body');
+      
       // Reiniciar aplicación
+      console.log(`${colors.cyan}🔄 Reiniciando aplicación PM2...${colors.reset}`);
       await execAsync('pm2 restart internet-colombia');
       console.log(`${colors.green}✅ Aplicación reiniciada exitosamente${colors.reset}`);
       
