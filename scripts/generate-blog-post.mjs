@@ -174,25 +174,51 @@ async function run() {
     // 1. INVESTIGACIÓN
     const researchResponse = await ai.models.generateContent({
       model: MODEL_RESEARCH,
-      contents: `Busca en Google y analiza contenido sobre telecomunicaciones e internet en Colombia. Combina tendencias recientes con contenido evergreen de comparación.
+      contents: `Busca en Google y analiza contenido sobre telecomunicaciones e internet en Colombia. El objetivo principal es AYUDAR A LOS LECTORES A DECIDIR QUÉ OPERADOR CONTRATAR.
 
-TEMAS PRIORITARIOS (50% de probabilidad):
-A) COMPARACIÓN DE OPERADORES - Artículos para ayudar a decidir:
-   - "Por qué ETB es la mejor opción para [tipo de usuario]" (fibra óptica, servicio local, estabilidad)
-   - "Ventajas de contratar Claro en Colombia" (cobertura 5G, paquetes combo, red más grande)
-   - "Razones para elegir Movistar" (velocidad simétrica, atención al cliente, empresas)
-   - "Beneficios de tener internet de alta velocidad en casa" (teletrabajo, educación, streaming)
-   - "Qué operador conviene según tu barrio de Bogotá" (cobertura por zonas)
-   - "Internet para gaming: cuál operador tiene mejor ping"
-   - "Mejor operador para familias/empresas/estudiantes"
-   - "Vale la pena pagar más por fibra óptica?" (comparación técnica)
+🎯 PRIORIDAD MÁXIMA (70% de artículos) - CONTENIDO DE CONVERSIÓN:
+A) POR QUÉ CONTRATAR CADA OPERADOR - Enfócate en beneficios específicos:
+   
+   ETB (Empresa de Telecomunicaciones de Bogotá):
+   - "Por qué ETB es la mejor opción si vives en [barrio de Bogotá]"
+   - "ETB vs la competencia: razones reales para quedarte con fibra local"
+   - "Ventajas de ETB: fibra óptica propia, servicio técnico en Bogotá, estabilidad"
+   - "¿Cuándo conviene ETB? Gaming, teletrabajo, familias numerosas"
+   
+   CLARO (Claro Colombia):
+   - "Por qué Claro es buena opción: 5G, combos, cobertura nacional"
+   - "Ventajas de contratar Claro: red más grande, paquetes todo incluido"
+   - "Claro para empresas vs residencial: cuál te conviene"
+   - "¿Vale la pena el 5G de Claro en Bogotá? Análisis real"
+   
+   MOVISTAR (Telefónica Movistar):
+   - "Razones para elegir Movistar: velocidad simétrica, soporte empresarial"
+   - "Por qué Movistar es buena opción para teletrabajo profesional"
+   - "Movistar Fibra: ventajas reales vs cable tradicional"
+   - "¿Cuándo conviene Movistar? Empresas, freelancers, gamers exigentes"
 
-TEMAS SECUNDARIOS (50% de probabilidad):
-B) TENDENCIAS Y NOTICIAS ACTUALES:
-   - Quejas virales en redes sociales sobre operadores
-   - Noticias de las últimas 48 horas (El Tiempo, Semana, La República)
-   - Problemas técnicos reportados masivamente
+B) COMPARACIONES DIRECTAS PARA DECISIÓN DE COMPRA:
+   - "ETB vs Claro vs Movistar: cuál conviene según tu zona en Bogotá"
+   - "Mejor internet para gaming 2026: ping real de ETB/Claro/Movistar"
+   - "Internet para teletrabajo: comparativa de estabilidad y soporte"
+   - "Fibra óptica vs cable: diferencias reales y cuál elegir"
+   - "Planes baratos vs premium: qué obtienes por tu dinero"
+
+📰 CONTENIDO SECUNDARIO (30% de artículos) - NOTICIAS Y TENDENCIAS:
+   - Quejas virales sobre operadores (úsalas para educar al lector)
+   - Noticias recientes que afecten decisiones de compra
+   - Cambios de precios, nuevos planes, ofertas
+   - Problemas técnicos masivos (y qué operador es más confiable)
    - Anuncios oficiales de ETB, Claro, Movistar, Tigo, WOM
+
+🎯 OBJETIVO FINAL: Cada artículo debe ayudar al lector a responder "¿Cuál operador me conviene?" con datos reales, casos de uso específicos y recomendaciones honestas.
+
+Genera 3 propuestas de artículos que:
+1. Sean útiles para tomar una decisión de compra informada
+2. Expliquen claramente PARA QUIÉN conviene cada operador (no solo "es bueno")
+3. Incluyan pros y contras honestos (no solo marketing)
+4. Tengan casos de uso reales (familias, gamers, teletrabajo, estudiantes, empresas)
+5. Terminen con recomendación práctica que motive a comparar planes`,
    - Issues con 5G, fibra óptica, o infraestructura
    - Cambios en precios o planes
 
