@@ -8,7 +8,11 @@ export function middleware(request: NextRequest) {
   const barrioMatch = pathname.match(/^\/internet-([a-z-]+)-bogota$/);
   if (barrioMatch) {
     const barrio = barrioMatch[1];
-    const validBarrios = ['suba', 'kennedy', 'usaquen', 'chapinero', 'engativa', 'ciudad-bolivar'];
+    const validBarrios = [
+      'suba', 'kennedy', 'usaquen', 'chapinero', 'engativa', 'ciudad-bolivar',
+      'teusaquillo', 'fontibon', 'puente-aranda', 'bosa', 'san-cristobal',
+      'barrios-unidos', 'tunjuelito', 'rafael-uribe-uribe'
+    ];
     
     if (validBarrios.includes(barrio)) {
       // Reescribir a la ruta interna

@@ -43,6 +43,54 @@ const BARRIOS = {
     descripcion: 'Localidad en expansión con creciente acceso a internet de calidad',
     poblacion: '700 mil',
     caracteristicas: ['Expansión de servicios', 'Planes económicos', 'Mejora de infraestructura']
+  },
+  teusaquillo: {
+    nombre: 'Teusaquillo',
+    descripcion: 'Localidad central de Bogotá con excelente conectividad e infraestructura',
+    poblacion: '150 mil',
+    caracteristicas: ['Zona universitaria', 'Alta demanda empresarial', 'Infraestructura moderna']
+  },
+  fontibon: {
+    nombre: 'Fontibón',
+    descripcion: 'Localidad cerca al aeropuerto con crecimiento comercial y residencial',
+    poblacion: '400 mil',
+    caracteristicas: ['Zona comercial activa', 'Crecimiento industrial', 'Buena cobertura']
+  },
+  'puente-aranda': {
+    nombre: 'Puente Aranda',
+    descripcion: 'Centro industrial y comercial con alta demanda de internet empresarial',
+    poblacion: '260 mil',
+    caracteristicas: ['Zona industrial', 'Comercio mayorista', 'Internet empresarial']
+  },
+  bosa: {
+    nombre: 'Bosa',
+    descripcion: 'Localidad con gran población residencial y creciente cobertura de internet',
+    poblacion: '750 mil',
+    caracteristicas: ['Zona residencial', 'Planes familiares', 'Expansión de fibra óptica']
+  },
+  'san-cristobal': {
+    nombre: 'San Cristóbal',
+    descripcion: 'Localidad del sur-oriente con mejora continua en servicios de internet',
+    poblacion: '400 mil',
+    caracteristicas: ['Zona residencial', 'Planes accesibles', 'Mejora de cobertura']
+  },
+  'barrios-unidos': {
+    nombre: 'Barrios Unidos',
+    descripcion: 'Localidad central con excelente infraestructura de telecomunicaciones',
+    poblacion: '240 mil',
+    caracteristicas: ['Ubicación estratégica', 'Alta conectividad', 'Servicios premium']
+  },
+  tunjuelito: {
+    nombre: 'Tunjuelito',
+    descripcion: 'Localidad con creciente acceso a internet de alta velocidad',
+    poblacion: '200 mil',
+    caracteristicas: ['Zona residencial', 'Planes económicos', 'Fibra óptica en expansión']
+  },
+  'rafael-uribe-uribe': {
+    nombre: 'Rafael Uribe Uribe',
+    descripcion: 'Localidad del sur con amplia oferta de planes de internet',
+    poblacion: '375 mil',
+    caracteristicas: ['Zona comercial y residencial', 'Variedad de planes', 'Buena cobertura']
   }
 };
 

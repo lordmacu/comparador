@@ -11,7 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogPosts = getAllPosts();
 
   // Barrios de Bogotá
-  const barrios = ['suba', 'kennedy', 'usaquen', 'chapinero', 'engativa', 'ciudad-bolivar'];
+  const barrios = [
+    'suba', 'kennedy', 'usaquen', 'chapinero', 'engativa', 'ciudad-bolivar',
+    'teusaquillo', 'fontibon', 'puente-aranda', 'bosa', 'san-cristobal',
+    'barrios-unidos', 'tunjuelito', 'rafael-uribe-uribe'
+  ];
   
   // Casos de uso
   const casos = ['gaming', 'teletrabajo', 'streaming'];
