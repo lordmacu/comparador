@@ -47,6 +47,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
+// Validate ../../app/barrios/[barrio]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/barrios/[barrio]">> = Specific
+  const handler = {} as typeof import("../../app/barrios/[barrio]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/blog/[slug]/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/blog/[slug]">> = Specific
@@ -60,6 +69,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/blog">> = Specific
   const handler = {} as typeof import("../../app/blog/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/casos/[caso]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/casos/[caso]">> = Specific
+  const handler = {} as typeof import("../../app/casos/[caso]/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -87,24 +105,6 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/etb">> = Specific
   const handler = {} as typeof import("../../app/etb/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../app/internet-[barrio]-bogota/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/internet-[barrio]-bogota">> = Specific
-  const handler = {} as typeof import("../../app/internet-[barrio]-bogota/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../app/mejor-internet-[caso]-bogota/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/mejor-internet-[caso]-bogota">> = Specific
-  const handler = {} as typeof import("../../app/mejor-internet-[caso]-bogota/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

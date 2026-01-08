@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fbarrios\u002F[barrio]","\u002Fblog\u002F[slug]","\u002Fcasos\u002F[caso]","\u002Fcomparar\u002F[...operadores]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

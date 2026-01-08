@@ -1,6 +1,37 @@
 {
   "version": 3,
-  "middleware": {},
-  "sortedMiddleware": [],
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/node_modules_next_dist_esm_build_templates_edge-wrapper_3b93bb62.js",
+        "server/edge/chunks/[root-of-the-server]__db54bf8a._.js",
+        "server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_f739badf.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/internet-([^\\/#\\?]+?)-bogota(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/internet-:barrio-bogota"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/mejor-internet-([^\\/#\\?]+?)-bogota(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/mejor-internet-:caso-bogota"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "76AQx8NKJIkPKz1X0rB4_",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "sUaaK+6Y8MJVO1RoLgNM4tg03/KptZMWiZUqOMP2Swk=",
+        "__NEXT_PREVIEW_MODE_ID": "df2f394723c5b4472ca0987a170c5b7e",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "171d79625a8e327c86d041fc3fe1ee3559d403e07a780144eceb1ef624b427a7",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "842dc8bc631149ce784c4c836c8a6f4fe54b81a8ee96474d14c25247cb1394a2"
+      }
+    }
+  },
+  "sortedMiddleware": [
+    "/"
+  ],
   "functions": {}
 }

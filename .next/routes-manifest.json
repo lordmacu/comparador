@@ -37,12 +37,28 @@
   },
   "dynamicRoutes": [
     {
+      "page": "/barrios/[barrio]",
+      "regex": "^/barrios/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPbarrio": "nxtPbarrio"
+      },
+      "namedRegex": "^/barrios/(?<nxtPbarrio>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/blog/[slug]",
       "regex": "^/blog/([^/]+?)(?:/)?$",
       "routeKeys": {
         "nxtPslug": "nxtPslug"
       },
       "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/casos/[caso]",
+      "regex": "^/casos/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcaso": "nxtPcaso"
+      },
+      "namedRegex": "^/casos/(?<nxtPcaso>[^/]+?)(?:/)?$"
     },
     {
       "page": "/comparar/[...operadores]",
@@ -103,26 +119,10 @@
       "namedRegex": "^/etb(?:/)?$"
     },
     {
-      "page": "/internet-[barrio]-bogota",
-      "regex": "^/([^/]+?)(?:/)?$",
-      "routeKeys": {
-        "nxtPbarrio": "nxtPbarrio"
-      },
-      "namedRegex": "^/(?<nxtPbarrio>[^/]+?)(?:/)?$"
-    },
-    {
       "page": "/manifest.webmanifest",
       "regex": "^/manifest\\.webmanifest(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/manifest\\.webmanifest(?:/)?$"
-    },
-    {
-      "page": "/mejor-internet-[caso]-bogota",
-      "regex": "^/([^/]+?)(?:/)?$",
-      "routeKeys": {
-        "nxtPcaso": "nxtPcaso"
-      },
-      "namedRegex": "^/(?<nxtPcaso>[^/]+?)(?:/)?$"
     },
     {
       "page": "/movistar",
