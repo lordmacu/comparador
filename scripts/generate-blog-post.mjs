@@ -219,15 +219,6 @@ Genera 3 propuestas de artículos que:
 3. Incluyan pros y contras honestos (no solo marketing)
 4. Tengan casos de uso reales (familias, gamers, teletrabajo, estudiantes, empresas)
 5. Terminen con recomendación práctica que motive a comparar planes`,
-   - Issues con 5G, fibra óptica, o infraestructura
-   - Cambios en precios o planes
-
-Genera 3 propuestas de artículos que:
-1. Mezclen contenido evergreen (comparación) con actualidad
-2. Ayuden al lector a tomar decisiones de compra
-3. Sean defendibles con datos reales
-4. Incluyan casos de uso específicos (familias, gamers, teletrabajo, estudiantes)
-5. Interesen a colombianos de diferentes estratos`,
       config: {
         systemInstruction: RESEARCH_SYSTEM_PROMPT,
         tools: [{ googleSearch: {} }],
