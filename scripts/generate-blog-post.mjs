@@ -458,6 +458,16 @@ GENERA LA IMAGEN AHORA.`;
       // Reiniciar aplicación
       await execAsync('pm2 restart internet-colombia');
       console.log(`${colors.green}✅ Aplicación reiniciada exitosamente${colors.reset}`);
+      
+      // Esperar que la app inicie
+      console.log(`${colors.cyan}⏳ Esperando 5 segundos para que la app inicie...${colors.reset}`);
+      await new Promise(resolve => setTimeout(resolve, 5000));
+      
+      // Forzar regeneración inmediata de páginas con ISR
+      console.log(`${colors.cyan}🔥 Forzando regeneración de /blog y /sitemap.xml...${colors.reset}`);
+      await execAsync('curl -s http://localhost:3000/blog > /dev/null');
+      await execAsync('curl -s http://localhost:3000/sitemap.xml > /dev/null');
+      console.log(`${colors.green}✅ Páginas regeneradas - El post debería aparecer inmediatamente${colors.reset}`);
     } catch (pm2Error) {
       // PM2 no disponible (probablemente corriendo en local)
       console.log(`${colors.yellow}⚠️  PM2 no disponible (modo local)${colors.reset}`);
