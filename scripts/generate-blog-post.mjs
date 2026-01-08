@@ -641,14 +641,19 @@ GENERA LA IMAGEN AHORA.`;
     console.log(`\n${colors.dim}${colors.gray}--- Preview JSON ---${colors.reset}`);
     console.log(JSON.stringify(postData, null, 2));
 
-    // Enviar notificación por correo
+    // Enviar notificación por correo (no bloqueante)
     console.log(`\n${colors.cyan}📧 Enviando notificación por correo...${colors.reset}`);
-    const emailResult = await sendBlogNotificationEmail(postData);
-    if (emailResult.success) {
-      console.log(`${colors.green}✅ Notificación enviada correctamente a yo@cristiangarcia.co${colors.reset}`);
-    } else {
-      console.log(`${colors.yellow}⚠️  No se pudo enviar la notificación por correo${colors.reset}`);
-    }
+    sendBlogNotificationEmail(postData)
+      .then(result => {
+        if (result.success) {
+          console.log(`${colors.green}✅ Notificación enviada correctamente a yo@cristiangarcia.co${colors.reset}`);
+        } else {
+          console.log(`${colors.yellow}⚠️  No se pudo enviar la notificación por correo${colors.reset}`);
+        }
+      })
+      .catch(err => {
+        console.log(`${colors.yellow}⚠️  Error al enviar correo: ${err.message}${colors.reset}`);
+      });
 
     // Reiniciar PM2 para cargar el nuevo post (solo en servidor)
     try {
