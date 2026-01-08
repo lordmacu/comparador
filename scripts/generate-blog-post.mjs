@@ -26,7 +26,9 @@ const IMAGE_STYLES = [
   "fotografía humanista, familias colombianas usando internet en casa, ambiente cálido y cercano, texturas reales",
   "estilo reportaje social, diversos bogotanos (estudiantes, trabajadores) conectándose, colores saturados, energía urbana",
   "fotografía arquitectónica con personas, skyline de Bogotá, tecnología integrada, golden hour, composición dinámica",
-  "estilo lifestyle tech, jóvenes emprendedores colombianos, espacios de coworking bogotanos, paleta minimalista moderna"
+  "estilo lifestyle tech, jóvenes emprendedores colombianos, espacios de coworking bogotanos, paleta minimalista moderna",
+  "ilustración estilo Studio Ghibli, personas colombianas en Bogotá con tecnología, colores pastel acuarelados, atmósfera mágica y nostálgica",
+  "arte estilo anime Ghibli, escena cotidiana bogotana con internet y dispositivos, cielos dramáticos, detalles arquitectónicos colombianos"
 ];
 
 const RESEARCH_SYSTEM_PROMPT = `
