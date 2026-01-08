@@ -13,6 +13,9 @@ export interface BlogPost {
   tags: string[];
   readingTime: number;
   image?: string;
+  // Campos opcionales generados por Gemini AI
+  localNuances?: string[];
+  seoScore?: number;
 }
 
 // Función para cargar un post desde JSON

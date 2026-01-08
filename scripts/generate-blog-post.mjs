@@ -258,11 +258,9 @@ REQUISITOS ESTRICTOS:
             category: { type: Type.STRING },
             tags: { type: Type.ARRAY, items: { type: Type.STRING } },
             content: { type: Type.STRING },
-            readingTime: { type: Type.NUMBER },
-            seoScore: { type: Type.NUMBER },
-            localNuances: { type: Type.ARRAY, items: { type: Type.STRING } }
+            readingTime: { type: Type.NUMBER }
           },
-          required: ["slug", "title", "content", "localNuances"]
+          required: ["slug", "title", "content", "description", "author", "category", "tags", "readingTime"]
         }
       }
     });
@@ -270,7 +268,6 @@ REQUISITOS ESTRICTOS:
     const postData = JSON.parse(writingResponse.text || '{}');
     
     log("Artículo generado exitosamente.", "success");
-    log(`Toques locales detectados: ${postData.localNuances.join(', ')}`);
 
     // 3. GENERAR IMAGEN
     setStatus('Generating Image', 'amber-900');
