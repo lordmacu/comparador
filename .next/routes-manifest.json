@@ -131,6 +131,12 @@
       "namedRegex": "^/blog/feed\\.xml(?:/)?$"
     },
     {
+      "page": "/calculadora",
+      "regex": "^/calculadora(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/calculadora(?:/)?$"
+    },
+    {
       "page": "/claro",
       "regex": "^/claro(?:/)?$",
       "routeKeys": {},

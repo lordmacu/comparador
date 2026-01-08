@@ -74,6 +74,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/calculadora/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/calculadora">> = Specific
+  const handler = {} as typeof import("../../app/calculadora/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/casos/[caso]/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/casos/[caso]">> = Specific
@@ -176,6 +185,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 
 
 
+
+// Validate ../../app/calculadora/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/calculadora">> = Specific
+  const handler = {} as typeof import("../../app/calculadora/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
 
 // Validate ../../app/layout.tsx
 {

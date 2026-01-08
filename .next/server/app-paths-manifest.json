@@ -6,6 +6,7 @@
   "/blog/[slug]/page": "app/blog/[slug]/page.js",
   "/blog/feed.xml/route": "app/blog/feed.xml/route.js",
   "/blog/page": "app/blog/page.js",
+  "/calculadora/page": "app/calculadora/page.js",
   "/casos/[caso]/page": "app/casos/[caso]/page.js",
   "/claro/page": "app/claro/page.js",
   "/comparar/[...operadores]/page": "app/comparar/[...operadores]/page.js",

@@ -6,6 +6,7 @@
   "/blog/[slug]/page": "/blog/[slug]",
   "/blog/feed.xml/route": "/blog/feed.xml",
   "/blog/page": "/blog",
+  "/calculadora/page": "/calculadora",
   "/casos/[caso]/page": "/casos/[caso]",
   "/claro/page": "/claro",
   "/comparar/[...operadores]/page": "/comparar/[...operadores]",
