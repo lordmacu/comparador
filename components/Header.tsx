@@ -1,7 +1,6 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { Globe } from 'lucide-react';
 
 export default function Header() {
   const pathname = usePathname();
@@ -17,31 +16,30 @@ export default function Header() {
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold text-blue-600 flex items-center gap-2">
-            <Globe size={28} />
+          <a href="/" className="text-2xl font-bold text-blue-600">
             Internet Colombia
           </a>
           <div className="flex gap-4">
             <a href="/guia-completa" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              📖 Guía
+              Guía
             </a>
-            <a href="/calculadora" className="text-gray-700 hover:text-blue-600 font-bold transition-colors bg-blue-50 px-3 py-2 rounded-lg">
-              📊 Calculadora
+            <a href="/calculadora" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Calculadora
             </a>
             <a href="/videos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              🎥 Videos
+              Videos
             </a>
             <a href="/planes" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              💰 Planes
+              Planes
             </a>
             <a href="/testimonios" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              ⭐ Testimonios
+              Testimonios
             </a>
             <a href="/faq" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              ❓ FAQ
+              FAQ
             </a>
             <a href="/empresa" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              🏢 Empresa
+              Empresa
             </a>
             <a href="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Blog
