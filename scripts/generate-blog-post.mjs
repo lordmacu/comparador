@@ -15,20 +15,35 @@ const MODEL_RESEARCH = 'gemini-3-flash-preview';
 const MODEL_WRITING = 'gemini-3-pro-preview';
 const MODEL_IMAGE = 'gemini-2.5-flash-image';
 
-// Estilos visuales variados para las imágenes
+// Estilos visuales variados para las imágenes (20 estilos únicos)
 const IMAGE_STYLES = [
-  "fotografía documental urbana, personas reales en su día a día en Bogotá, tonos cálidos naturales",
-  "estilo periodístico profesional, colombianos usando tecnología, iluminación natural, calles de Bogotá de fondo",
-  "fotografía lifestyle moderna, gente joven bogotana con dispositivos, colores vibrantes, arquitectura colombiana",
-  "estilo editorial tech, personas diversas (diferentes estratos) en contexto urbano bogotano, paleta azul-verde-naranja",
-  "fotografía street photography, vida cotidiana en Bogotá con tecnología, contraste alto, grano cinematográfico",
-  "estilo publicitario premium, colombianos profesionales, ambiente corporativo moderno de Bogotá, tonos fríos elegantes",
-  "fotografía humanista, familias colombianas usando internet en casa, ambiente cálido y cercano, texturas reales",
-  "estilo reportaje social, diversos bogotanos (estudiantes, trabajadores) conectándose, colores saturados, energía urbana",
-  "fotografía arquitectónica con personas, skyline de Bogotá, tecnología integrada, golden hour, composición dinámica",
-  "estilo lifestyle tech, jóvenes emprendedores colombianos, espacios de coworking bogotanos, paleta minimalista moderna",
-  "ilustración estilo Studio Ghibli, personas colombianas en Bogotá con tecnología, colores pastel acuarelados, atmósfera mágica y nostálgica",
-  "arte estilo anime Ghibli, escena cotidiana bogotana con internet y dispositivos, cielos dramáticos, detalles arquitectónicos colombianos"
+  // Fotografía realista (7 variantes)
+  "fotografía documental urbana tipo National Geographic, personas reales en TransMilenio o calles de Bogotá usando celulares, luz difusa de día nublado típico bogotano, textura granulada",
+  "estilo fotoperiodismo Reuters, colombianos diversos (vendedor ambulante, oficinista, estudiante) con smartphones, fondo desenfocado de ladrillos rojos y buses, colores vibrantes pero naturales",
+  "fotografía lifestyle editorial tipo Vogue, grupo multigeneracional colombiano en sala moderna con laptops y tablets, ventanas grandes con cerros de Bogotá al fondo, tonos cálidos terracota",
+  "street photography estilo Magnum, primer plano de manos colombianas sosteniendo celular en bus lleno, rostros parcialmente visibles reflejados en ventanas, blanco y negro con toques de color en pantallas",
+  "fotografía arquitectónica humanizada, vista aérea 45° de family en apartamento bogotano (visible alfombra, sofá, plantas), todos en diferentes dispositivos, iluminación cálida interior vs ciudad gris exterior",
+  "estilo documental tecnológico tipo Wired, técnico colombiano de ISP en poste de Bogotá empalmando fibra óptica, close-up de manos con herramientas, fondo desenfocado de cables y ciudad",
+  "fotografía corporativa editorial tipo Forbes, emprendedor colombiano en oficina moderna de Chapinero, MacBook con gráficos visibles, panorámica de Bogotá nocturna tras ventanal, tonos azul-naranja complementarios",
+  
+  // Estilos ilustrados/artísticos (7 variantes)
+  "ilustración digital estilo New Yorker, escena isométrica de edificios bogotanos conectados por líneas de fibra óptica brillantes, personas como siluetas coloridas en ventanas, paleta limitada (azul, amarillo, rojo)",
+  "arte vectorial flat design moderno tipo Dropbox, colombianos geométricos diversos usando devices, formas abstractas de cerros y edificios al fondo, colores planos saturados (verde esmeralda, fucsia, amarillo canario)",
+  "ilustración watercolor digital, familia colombiana en living bogotano con laptops y tablets, acuarela suave con salpicaduras, arquitectura colonial visible por ventanas, tonos pastel cálidos",
+  "arte estilo comic europeo tipo Moebius, vista panorámica cyberpunk-lite de Bogotá del futuro con antenas y satélites, personas en primer plano con hologramas, líneas limpias, colores neón sobre base oscura",
+  "ilustración editorial tipo The Guardian, collage semi-abstracto con rostros colombianos fotográficos mezclados con elementos gráficos (routers, cables, señales WiFi), textura de periódico, paleta rojo-negro-blanco",
+  "arte digital tipo Pixar/Disney, escena 3D render de cafetería bogotana (Juan Valdez style) llena de personas cartoon con laptops, luz volumétrica, colores saturados cálidos, texturas suaves",
+  "ilustración minimalista tipo Apple Marketing, siluetas negras de colombianos con devices contra degradado vibrante (naranja-rosa-morado), formas geométricas simples de Monserrate y edificios, composición limpia",
+  
+  // Estilos anime/Ghibli (3 variantes mejoradas)
+  "Studio Ghibli estilo Spirited Away, joven colombiana en café bogotano mágico-realista con laptop, clientes fantasmales translúcidos en fondo, colores acuarelados pastel, nubes volumétricas por ventanas, detalles arquitectónicos coloniales",
+  "anime Ghibli tipo Whisper of the Heart, estudiante colombiano en biblioteca de barrio bogotano rodeado de libros y tablets, luz dorada de atardecer entrando por ventanales, polvo brillante flotando, cerros verdes y ciudad al fondo, paleta cálida nostálgica",
+  "Ghibli estilo Porco Rosso, técnico colombiano aventurero en azotea bogotana reparando antena gigante con herramientas steampunk, cielo dramático con nubes esponjosas, vista de tejados rojos infinitos, tonos sepia-azul-naranja",
+  
+  // Estilos experimentales (3 variantes)
+  "fotografía tipo Wes Anderson, composición perfectamente simétrica de oficina colombiana retro-futurista, empleados idénticos en desks con computadores antiguos, paleta pastel (rosa pálido, verde menta, amarillo crema), centro absoluto",
+  "collage mixto tipo David Hockney, múltiples fotografías superpuestas de mismo colombiano en diferentes momentos del día usando internet (desayuno, trabajo, noche), perspectivas cambiantes, colores saturados contrastantes",
+  "fotografía infrarroja falso color, paisaje urbano de Bogotá con personas usando celulares, vegetación en rosa-magenta brillante, cielo dramático naranja, piel en tonos cian, edificios en amarillo-verde"
 ];
 
 const RESEARCH_SYSTEM_PROMPT = `
