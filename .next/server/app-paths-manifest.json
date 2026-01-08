@@ -10,6 +10,7 @@
   "/casos/[caso]/page": "app/casos/[caso]/page.js",
   "/claro/page": "app/claro/page.js",
   "/comparar/[...operadores]/page": "app/comparar/[...operadores]/page.js",
+  "/empresa/page": "app/empresa/page.js",
   "/etb/page": "app/etb/page.js",
   "/guia-completa/page": "app/guia-completa/page.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",

@@ -10,6 +10,7 @@
   "/casos/[caso]/page": "/casos/[caso]",
   "/claro/page": "/claro",
   "/comparar/[...operadores]/page": "/comparar/[...operadores]",
+  "/empresa/page": "/empresa",
   "/etb/page": "/etb",
   "/guia-completa/page": "/guia-completa",
   "/manifest.webmanifest/route": "/manifest.webmanifest",

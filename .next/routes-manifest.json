@@ -143,6 +143,12 @@
       "namedRegex": "^/claro(?:/)?$"
     },
     {
+      "page": "/empresa",
+      "regex": "^/empresa(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/empresa(?:/)?$"
+    },
+    {
       "page": "/etb",
       "regex": "^/etb(?:/)?$",
       "routeKeys": {},
