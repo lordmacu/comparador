@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/viviendas/layout,_N_T_/viviendas/[vivienda]/layout,_N_T_/viviendas/[vivienda]/page,_N_T_/viviendas/apartamento"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/viviendas/$d$vivienda/__PAGE__",
+    "/viviendas/$d$vivienda",
+    "/viviendas",
+    "/_index",
+    "/_head"
+  ]
+}

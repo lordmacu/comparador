@@ -50,6 +50,20 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  // Vivienda routes: /internet-para-apartamento-bogota -> /viviendas/apartamento
+  const viviendaMatch = pathname.match(/^\/internet-para-(apartamento|casa|oficina|edificio)-bogota$/);
+  if (viviendaMatch) {
+    const vivienda = viviendaMatch[1];
+    const validViviendas = ['apartamento', 'casa', 'oficina', 'edificio'];
+    
+    if (validViviendas.includes(vivienda)) {
+      // Reescribir a la ruta interna
+      const url = request.nextUrl.clone();
+      url.pathname = `/viviendas/${vivienda}`;
+      return NextResponse.rewrite(url);
+    }
+  }
+
   return NextResponse.next();
 }
 
@@ -58,5 +72,6 @@ export const config = {
     '/internet-:barrio-bogota',
     '/mejor-internet-:caso-bogota',
     '/internet-:velocidad-bogota',
+    '/internet-para-:vivienda-bogota'
   ],
 };

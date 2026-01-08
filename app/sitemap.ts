@@ -23,6 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Velocidades
   const velocidades = ['100-megas', '200-megas', '300-megas', '500-megas', 'fibra-optica'];
   
+  // Tipos de vivienda
+  const viviendas = ['apartamento', 'casa', 'oficina', 'edificio'];
+  
   // Comparativas de operadores
   const comparativas = [
     ['etb', 'claro'],
@@ -66,6 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...velocidades.map((velocidad) => ({
       url: `${baseUrl}/internet-${velocidad}-bogota`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+    ...viviendas.map((vivienda) => ({
+      url: `${baseUrl}/internet-para-${vivienda}-bogota`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,

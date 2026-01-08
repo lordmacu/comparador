@@ -75,6 +75,14 @@
         "nxtPvelocidad": "nxtPvelocidad"
       },
       "namedRegex": "^/velocidades/(?<nxtPvelocidad>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/viviendas/[vivienda]",
+      "regex": "^/viviendas/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPvivienda": "nxtPvivienda"
+      },
+      "namedRegex": "^/viviendas/(?<nxtPvivienda>[^/]+?)(?:/)?$"
     }
   ],
   "staticRoutes": [
