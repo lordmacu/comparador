@@ -239,33 +239,38 @@ export default async function ViviendaPage({
     <>
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section */}
-        <section className="py-16 px-4">
+        <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-16 px-4">
           <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 {vivienda.titulo}
               </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-blue-100 mb-8">
                 {vivienda.descripcion}
               </p>
-              
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">
+                <h2 className="font-bold text-lg mb-4">Te llamamos gratis para consultar planes para tu {vivienda.nombre}:</h2>
+                <QuickCallForm buttonColor="#2563eb" />
+              </div>
+
               {/* Quick Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-blue-600">{vivienda.velocidadRecomendada}</div>
-                  <div className="text-sm text-gray-600">Velocidad</div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl font-bold">{vivienda.velocidadRecomendada}</div>
+                  <div className="text-sm text-blue-200">Velocidad</div>
                 </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-green-600">{vivienda.tipoUsuarios}</div>
-                  <div className="text-sm text-gray-600">Usuarios</div>
+                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl font-bold">{vivienda.tipoUsuarios}</div>
+                  <div className="text-sm text-blue-200">Usuarios</div>
                 </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-purple-600">{vivienda.instalacion}</div>
-                  <div className="text-sm text-gray-600">Instalación</div>
+                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl font-bold">{vivienda.instalacion}</div>
+                  <div className="text-sm text-blue-200">Instalación</div>
                 </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-orange-600">{vivienda.precioPromedio}</div>
-                  <div className="text-sm text-gray-600">Precio/mes</div>
+                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl font-bold">{vivienda.precioPromedio}</div>
+                  <div className="text-sm text-blue-200">Precio/mes</div>
                 </div>
               </div>
             </div>
