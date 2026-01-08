@@ -179,6 +179,12 @@
       "namedRegex": "^/movistar(?:/)?$"
     },
     {
+      "page": "/planes",
+      "regex": "^/planes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/planes(?:/)?$"
+    },
+    {
       "page": "/robots.txt",
       "regex": "^/robots\\.txt(?:/)?$",
       "routeKeys": {},

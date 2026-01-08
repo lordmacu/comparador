@@ -17,6 +17,7 @@
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/movistar/page": "app/movistar/page.js",
   "/page": "app/page.js",
+  "/planes/page": "app/planes/page.js",
   "/robots.txt/route": "app/robots.txt/route.js",
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/soluciones/[solucion]/page": "app/soluciones/[solucion]/page.js",

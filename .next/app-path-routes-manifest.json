@@ -17,6 +17,7 @@
   "/manifest.webmanifest/route": "/manifest.webmanifest",
   "/movistar/page": "/movistar",
   "/page": "/",
+  "/planes/page": "/planes",
   "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
   "/soluciones/[solucion]/page": "/soluciones/[solucion]",

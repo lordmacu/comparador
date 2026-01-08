@@ -31,6 +31,9 @@ export default function Header() {
             <a href="/videos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               🎥 Videos
             </a>
+            <a href="/planes" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              💰 Planes
+            </a>
             <a href="/testimonios" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               ⭐ Testimonios
             </a>

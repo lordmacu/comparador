@@ -4,6 +4,7 @@ import "./globals.css";
 import { generateWebSiteSchema, renderJsonLd } from "@/lib/schemas";
 import ChatWidget from "@/components/ChatWidget";
 import Header from "@/components/Header";
+import { OrganizationSchema, WebsiteSchema } from "@/components/SchemaMarkup";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -99,6 +100,10 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={renderJsonLd(websiteSchema)}
         />
+        
+        {/* Organization and Website Schema */}
+        <OrganizationSchema />
+        <WebsiteSchema />
 
         {/* Preconnect para optimización */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
