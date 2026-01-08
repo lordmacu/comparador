@@ -1,0 +1,83 @@
+
+> internet@1.0.0 build
+> next build
+
+▲ Next.js 16.1.1 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.1s
+  Running TypeScript ...
+  Collecting page data using 9 workers ...
+[COMPARAR] generateStaticParams called
+[COMPARAR] Generated params: [{"operadores":["etb","claro"]},{"operadores":["etb","movistar"]},{"operadores":["claro","movistar"]},{"operadores":["claro","etb"]},{"operadores":["movistar","etb"]},{"operadores":["movistar","claro"]}]
+  Generating static pages using 9 workers (0/39) ...
+[COMPARAR] operadores array: [ 'etb', 'claro' ]
+[COMPARAR] slug1: etb slug2: claro
+[COMPARAR] provider1: ETB provider2: Claro Colombia
+[COMPARAR] operadores array: [ 'etb', 'movistar' ]
+[COMPARAR] slug1: etb slug2: movistar
+[COMPARAR] provider1: ETB provider2: Movistar Colombia
+[COMPARAR] operadores array: [ 'claro', 'movistar' ]
+[COMPARAR] slug1: claro slug2: movistar
+[COMPARAR] provider1: Claro Colombia provider2: Movistar Colombia
+  Generating static pages using 9 workers (9/39) 
+[COMPARAR] operadores array: [ 'movistar', 'etb' ]
+[COMPARAR] slug1: movistar slug2: etb
+[COMPARAR] provider1: Movistar Colombia provider2: ETB
+[COMPARAR] operadores array: [ 'claro', 'etb' ]
+[COMPARAR] slug1: claro slug2: etb
+[COMPARAR] provider1: Claro Colombia provider2: ETB
+[COMPARAR] operadores array: [ 'movistar', 'claro' ]
+[COMPARAR] slug1: movistar slug2: claro
+[COMPARAR] provider1: Movistar Colombia provider2: Claro Colombia
+[BARRIOS] Params received: Promise { {} }
+[BARRIOS] barrioSlug: undefined
+[BARRIOS] Available barrios: [
+  'suba',
+  'kennedy',
+  'usaquen',
+  'chapinero',
+  'engativa',
+  'ciudad-bolivar'
+]
+[BARRIOS] Found barrio: NOT FOUND
+[CASOS] Params received: Promise { {} }
+[CASOS] casoSlug: undefined
+[CASOS] Available casos: [ 'gaming', 'teletrabajo', 'streaming' ]
+[CASOS] Found caso: NOT FOUND
+  Generating static pages using 9 workers (19/39) 
+  Generating static pages using 9 workers (29/39) 
+✓ Generating static pages using 9 workers (39/39) in 309.9ms
+  Finalizing page optimization ...
+
+Route (app)                                                     Revalidate  Expire
+┌ ○ /                                                                   1h      1y
+├ ○ /_not-found
+├ ƒ /api/call-request
+├ ○ /blog                                                               1h      1y
+├ ● /blog/[slug]                                                        1h      1y
+│ ├ /blog/fusion-tigo-movistar-colombia-duopolio-analisis-2026          1h      1y
+│ ├ /blog/claro-dominancia-5g-expansion-colombia                        1h      1y
+│ ├ /blog/checklist-para-contratar-internet-en-bogota                   1h      1y
+│ └ [+16 more paths]
+├ ƒ /blog/feed.xml
+├ ○ /claro                                                              1h      1y
+├ ● /comparar/[...operadores]                                           1h      1y
+│ ├ /comparar/etb/claro                                                 1h      1y
+│ ├ /comparar/etb/movistar                                              1h      1y
+│ ├ /comparar/claro/movistar                                            1h      1y
+│ └ [+3 more paths]
+├ ○ /etb                                                                1h      1y
+├ ○ /internet-[barrio]-bogota                                           1h      1y
+├ ○ /manifest.webmanifest
+├ ○ /mejor-internet-[caso]-bogota                                       1h      1y
+├ ○ /movistar                                                           1h      1y
+├ ○ /robots.txt
+└ ○ /sitemap.xml                                                        1h      1y
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

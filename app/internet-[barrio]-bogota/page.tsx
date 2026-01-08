@@ -49,6 +49,7 @@ const BARRIOS = {
 type BarrioSlug = keyof typeof BARRIOS;
 
 export const revalidate = 3600; // Revalidar cada hora
+export const dynamicParams = false; // Solo generar rutas definidas
 
 export async function generateStaticParams() {
   console.log('[BARRIOS] generateStaticParams called');

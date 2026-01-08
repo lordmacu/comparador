@@ -69,6 +69,7 @@ const CASOS_USO = {
 type CasoUsoSlug = keyof typeof CASOS_USO;
 
 export const revalidate = 3600; // Revalidar cada hora
+export const dynamicParams = false; // Solo generar rutas definidas
 
 export async function generateStaticParams() {
   console.log('[CASOS] generateStaticParams called');

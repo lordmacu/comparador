@@ -10,6 +10,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const providerSlugs = getProviderSlugs();
   const blogPosts = getAllPosts();
 
+  // Barrios de Bogotá
+  const barrios = ['suba', 'kennedy', 'usaquen', 'chapinero', 'engativa', 'ciudad-bolivar'];
+  
+  // Casos de uso
+  const casos = ['gaming', 'teletrabajo', 'streaming'];
+  
+  // Comparativas de operadores
+  const comparativas = [
+    ['etb', 'claro'],
+    ['etb', 'movistar'],
+    ['claro', 'movistar'],
+    ['claro', 'etb'],
+    ['movistar', 'etb'],
+    ['movistar', 'claro']
+  ];
+
   const routes = [
     {
       url: baseUrl,
@@ -25,6 +41,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...providerSlugs.map((slug) => ({
       url: `${baseUrl}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+    ...barrios.map((barrio) => ({
+      url: `${baseUrl}/internet-${barrio}-bogota`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+    ...casos.map((caso) => ({
+      url: `${baseUrl}/mejor-internet-${caso}-bogota`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+    ...comparativas.map(([op1, op2]) => ({
+      url: `${baseUrl}/comparar/${op1}/${op2}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
