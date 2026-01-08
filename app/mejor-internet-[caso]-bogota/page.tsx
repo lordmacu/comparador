@@ -74,8 +74,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { caso: string } }): Promise<Metadata> {
-  const caso = CASOS_USO[params.caso as CasoUsoSlug];
+export async function generateMetadata({ params }: { params: Promise<{ caso: string }> }): Promise<Metadata> {
+  const { caso: casoSlug } = await params;
+  const caso = CASOS_USO[casoSlug as CasoUsoSlug];
   
   if (!caso) {
     return {
@@ -95,20 +96,21 @@ export async function generateMetadata({ params }: { params: { caso: string } })
       `velocidad internet ${caso.nombre.toLowerCase()}`,
     ],
     alternates: {
-      canonical: `https://comparadorinternet.co/mejor-internet-${params.caso}-bogota`,
+      canonical: `https://comparadorinternet.co/mejor-internet-${casoSlug}-bogota`,
     },
     openGraph: {
       title: `Mejor Internet para ${caso.nombre} en Bogotá 2026`,
       description: caso.descripcion,
-      url: `https://comparadorinternet.co/mejor-internet-${params.caso}-bogota`,
+      url: `https://comparadorinternet.co/mejor-internet-${casoSlug}-bogota`,
     },
   };
 }
 
 export const revalidate = 3600;
 
-export default function CasoUsoPage({ params }: { params: { caso: string } }) {
-  const caso = CASOS_USO[params.caso as CasoUsoSlug];
+export default async function CasoUsoPage({ params }: { params: Promise<{ caso: string }> }) {
+  const { caso: casoSlug } = await params;
+  const caso = CASOS_USO[casoSlug as CasoUsoSlug];
   const providers = getAllProviders();
 
   if (!caso) {
@@ -118,8 +120,8 @@ export default function CasoUsoPage({ params }: { params: { caso: string } }) {
   const Icon = caso.icon;
 
   // Determinar el mejor operador según el caso
-  const mejorOperador = params.caso === 'gaming' ? 'Claro' : 
-                        params.caso === 'teletrabajo' ? 'Movistar' :
+  const mejorOperador = casoSlug === 'gaming' ? 'Claro' : 
+                        casoSlug === 'teletrabajo' ? 'Movistar' :
                         'ETB';
 
   return (
@@ -302,7 +304,7 @@ export default function CasoUsoPage({ params }: { params: { caso: string } }) {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {params.caso === 'gaming' && (
+              {casoSlug === 'gaming' && (
                 <>
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
                     <h3 className="font-bold text-lg mb-3">🎮 Conexión por Cable</h3>
@@ -335,7 +337,7 @@ export default function CasoUsoPage({ params }: { params: { caso: string } }) {
                 </>
               )}
 
-              {params.caso === 'teletrabajo' && (
+              {casoSlug === 'teletrabajo' && (
                 <>
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
                     <h3 className="font-bold text-lg mb-3">💼 Router Profesional</h3>
@@ -368,7 +370,7 @@ export default function CasoUsoPage({ params }: { params: { caso: string } }) {
                 </>
               )}
 
-              {params.caso === 'streaming' && (
+              {casoSlug === 'streaming' && (
                 <>
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
                     <h3 className="font-bold text-lg mb-3">📺 4K Streaming</h3>
@@ -429,11 +431,11 @@ export default function CasoUsoPage({ params }: { params: { caso: string } }) {
                   ¿Cuál operador es mejor para {caso.nombre.toLowerCase()}?
                 </summary>
                 <p className="mt-4 text-gray-700">
-                  {params.caso === 'gaming' && 
+                  {casoSlug === 'gaming' && 
                     'Claro destaca por su baja latencia y estabilidad. ETB también es excelente con velocidad simétrica ideal para streaming mientras juegas.'}
-                  {params.caso === 'teletrabajo' && 
+                  {casoSlug === 'teletrabajo' && 
                     'Movistar ofrece la mejor velocidad simétrica crucial para videollamadas y subir archivos. ETB destaca en soporte técnico local.'}
-                  {params.caso === 'streaming' && 
+                  {casoSlug === 'streaming' && 
                     'Los tres operadores funcionan bien. ETB y Movistar tienen velocidad simétrica, Claro ofrece gran estabilidad. Elige según tu zona.'}
                 </p>
               </details>
@@ -443,11 +445,11 @@ export default function CasoUsoPage({ params }: { params: { caso: string } }) {
                   ¿WiFi o cable es mejor para {caso.nombre.toLowerCase()}?
                 </summary>
                 <p className="mt-4 text-gray-700">
-                  {params.caso === 'gaming' && 
+                  {casoSlug === 'gaming' && 
                     'Cable Ethernet es MUCHO mejor. Reduce latencia en 10-20ms y elimina pérdidas de paquetes del WiFi.'}
-                  {params.caso === 'teletrabajo' && 
+                  {casoSlug === 'teletrabajo' && 
                     'Para el escritorio de trabajo, usa cable. Para movilidad en casa, WiFi 6 de calidad es suficiente.'}
-                  {params.caso === 'streaming' && 
+                  {casoSlug === 'streaming' && 
                     'WiFi es suficiente para streaming 4K si tienes buen router. Cable da más estabilidad pero no es crítico.'}
                 </p>
               </details>

@@ -54,8 +54,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { barrio: string } }): Promise<Metadata> {
-  const barrio = BARRIOS[params.barrio as BarrioSlug];
+export async function generateMetadata({ params }: { params: Promise<{ barrio: string }> }): Promise<Metadata> {
+  const { barrio: barrioSlug } = await params;
+  const barrio = BARRIOS[barrioSlug as BarrioSlug];
   
   if (!barrio) {
     return {
@@ -77,20 +78,21 @@ export async function generateMetadata({ params }: { params: { barrio: string } 
       `mejor internet ${barrio.nombre} 2026`
     ],
     alternates: {
-      canonical: `https://comparadorinternet.co/internet-${params.barrio}-bogota`,
+      canonical: `https://comparadorinternet.co/internet-${barrioSlug}-bogota`,
     },
     openGraph: {
       title: `Internet en ${barrio.nombre} Bogotá 2026`,
       description: `Compara planes de internet en ${barrio.nombre}`,
-      url: `https://comparadorinternet.co/internet-${params.barrio}-bogota`,
+      url: `https://comparadorinternet.co/internet-${barrioSlug}-bogota`,
     },
   };
 }
 
 export const revalidate = 3600; // ISR: 1 hora
 
-export default function InternetBarrioPage({ params }: { params: { barrio: string } }) {
-  const barrio = BARRIOS[params.barrio as BarrioSlug];
+export default async function InternetBarrioPage({ params }: { params: Promise<{ barrio: string }> }) {
+  const { barrio: barrioSlug } = await params;
+  const barrio = BARRIOS[barrioSlug as BarrioSlug];
   const providers = getAllProviders();
 
   if (!barrio) {
