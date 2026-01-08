@@ -26,6 +26,12 @@ export default function Header() {
             <a href="/calculadora" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Calculadora
             </a>
+            <a href="/recursos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Recursos
+            </a>
+            <a href="/herramientas" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Herramientas
+            </a>
             <a href="/videos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Videos
             </a>

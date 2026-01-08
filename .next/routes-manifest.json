@@ -167,6 +167,12 @@
       "namedRegex": "^/guia\\-completa(?:/)?$"
     },
     {
+      "page": "/herramientas",
+      "regex": "^/herramientas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/herramientas(?:/)?$"
+    },
+    {
       "page": "/manifest.webmanifest",
       "regex": "^/manifest\\.webmanifest(?:/)?$",
       "routeKeys": {},
@@ -183,6 +189,12 @@
       "regex": "^/planes(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/planes(?:/)?$"
+    },
+    {
+      "page": "/recursos",
+      "regex": "^/recursos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/recursos(?:/)?$"
     },
     {
       "page": "/robots.txt",
