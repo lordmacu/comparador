@@ -48,6 +48,8 @@ const BARRIOS = {
 
 type BarrioSlug = keyof typeof BARRIOS;
 
+export const revalidate = 3600; // Revalidar cada hora
+
 export async function generateStaticParams() {
   return Object.keys(BARRIOS).map((barrio) => ({
     barrio,
@@ -87,8 +89,6 @@ export async function generateMetadata({ params }: { params: Promise<{ barrio: s
     },
   };
 }
-
-export const revalidate = 3600; // ISR: 1 hora
 
 export default async function InternetBarrioPage({ params }: { params: Promise<{ barrio: string }> }) {
   const { barrio: barrioSlug } = await params;

@@ -68,6 +68,8 @@ const CASOS_USO = {
 
 type CasoUsoSlug = keyof typeof CASOS_USO;
 
+export const revalidate = 3600; // Revalidar cada hora
+
 export async function generateStaticParams() {
   return Object.keys(CASOS_USO).map((caso) => ({
     caso,
@@ -105,8 +107,6 @@ export async function generateMetadata({ params }: { params: Promise<{ caso: str
     },
   };
 }
-
-export const revalidate = 3600;
 
 export default async function CasoUsoPage({ params }: { params: Promise<{ caso: string }> }) {
   const { caso: casoSlug } = await params;
