@@ -725,7 +725,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/sitemap.xml",
       "dataRoute": null,
       "allowHeader": [

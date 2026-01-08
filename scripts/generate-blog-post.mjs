@@ -407,7 +407,10 @@ GENERA LA IMAGEN AHORA.`;
 
     // Reiniciar PM2 para cargar el nuevo post (solo en servidor)
     try {
-      console.log(`\n${colors.cyan}🔄 Reiniciando aplicación PM2...${colors.reset}`);
+      console.log(`\n${colors.cyan}🔄 Limpiando caché y reiniciando aplicación PM2...${colors.reset}`);
+      // Limpiar caché ISR de Next.js
+      await execAsync('rm -rf .next/cache');
+      // Reiniciar aplicación
       await execAsync('pm2 restart internet-colombia');
       console.log(`${colors.green}✅ Aplicación reiniciada exitosamente${colors.reset}`);
     } catch (pm2Error) {
