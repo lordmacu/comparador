@@ -418,8 +418,8 @@ GENERA LA IMAGEN AHORA.`;
     setStatus('Complete', 'green-900');
     console.log(`${colors.bright}${colors.green}🎉 ¡Post Generado Exitosamente!${colors.reset}`);
     console.log(`${colors.cyan}📁 Archivo:${colors.reset} ${filePath}`);
-    console.log(`${colors.cyan}🇨🇴 Toques locales:${colors.reset} ${postData.localNuances.join(", ")}`);
-    console.log(`${colors.cyan}📊 Score SEO:${colors.reset} ${postData.seoScore || 'N/A'}/100`);
+    console.log(`${colors.cyan}📝 Título:${colors.reset} ${postData.title}`);
+    console.log(`${colors.cyan}📊 Tiempo de lectura:${colors.reset} ${postData.readingTime} min`);
     
     // Mostrar preview del JSON generado
     console.log(`\n${colors.dim}${colors.gray}--- Preview JSON ---${colors.reset}`);
