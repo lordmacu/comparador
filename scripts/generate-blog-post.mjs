@@ -380,10 +380,18 @@ GENERA LA IMAGEN AHORA.`;
     }
 
     // 4. GUARDAR RESULTADO
-    // Agregar campos faltantes
-    if (!postData.publishedAt) {
-      postData.publishedAt = new Date().toISOString();
+    // Forzar fecha actual (ignorar fecha generada por Gemini)
+    const currentDate = new Date().toISOString();
+    const geminiDate = postData.publishedAt;
+    postData.publishedAt = currentDate;
+    
+    // Validar y reportar fecha
+    if (geminiDate && geminiDate !== currentDate) {
+      log(`⚠️  Fecha corregida: Gemini generó ${geminiDate}, usando ${currentDate}`, "info");
+    } else {
+      log(`✓ Fecha de publicación: ${currentDate}`, "success");
     }
+    
     if (!postData.readingTime) {
       const words = postData.content.split(/\s+/).length;
       postData.readingTime = Math.ceil(words / 200); // ~200 palabras por minuto
