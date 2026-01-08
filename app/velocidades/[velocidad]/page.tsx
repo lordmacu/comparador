@@ -276,6 +276,27 @@ export default async function VelocidadPage({ params }: { params: Promise<{ velo
               ))}
             </div>
 
+            {/* Banner Calculadora */}
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl p-8 mb-8 text-center shadow-lg">
+              <div className="max-w-2xl mx-auto">
+                <h3 className="text-2xl font-black text-gray-900 mb-3">
+                  💡 ¿Es {velocidad.velocidad} la velocidad correcta para ti?
+                </h3>
+                <p className="text-gray-800 mb-5 text-lg">
+                  Descúbrelo con nuestra calculadora inteligente en <strong>menos de 1 minuto</strong>
+                </p>
+                <a
+                  href="/calculadora"
+                  className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  📊 Calcular mi Velocidad Ideal
+                </a>
+                <p className="text-sm text-gray-700 mt-3">
+                  ✅ Gratis • ✅ Sin registro • ✅ Resultados instantáneos
+                </p>
+              </div>
+            </div>
+
             <div className="bg-blue-50 rounded-lg p-6">
               <h3 className="font-bold text-lg mb-3">💡 Consejo para elegir {velocidad.velocidad}</h3>
               <p className="text-gray-700">

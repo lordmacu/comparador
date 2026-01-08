@@ -22,6 +22,9 @@ export default function Header() {
             Internet Colombia
           </a>
           <div className="flex gap-4">
+            <a href="/calculadora" className="text-gray-700 hover:text-blue-600 font-bold transition-colors bg-blue-50 px-3 py-2 rounded-lg">
+              📊 Calculadora
+            </a>
             <a href="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Blog
             </a>

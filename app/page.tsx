@@ -91,6 +91,12 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
+                href="/calculadora"
+                className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-2"
+              >
+                📊 Calcula tu Velocidad Ideal
+              </a>
+              <a
                 href="#comparador"
                 className="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
@@ -151,6 +157,39 @@ export default function HomePage() {
               <h3 className="font-bold text-lg mb-2">Promociones</h3>
               <p className="text-gray-600 text-sm">Ofertas exclusivas mensuales</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Calculadora de Velocidad - CTA */}
+      <section className="py-16 bg-gradient-to-br from-yellow-50 to-orange-50 border-t-4 border-yellow-400">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold text-sm mb-4">
+              🎯 HERRAMIENTA GRATUITA
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black mb-6">
+              ¿No sabes cuánta velocidad necesitas?
+            </h2>
+            <p className="text-xl text-gray-700 mb-8">
+              Usa nuestra <strong>calculadora inteligente</strong> y descubre en 30 segundos<br />
+              la velocidad perfecta según tu hogar y actividades
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="/calculadora"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 flex items-center gap-3"
+              >
+                <span className="text-3xl">📊</span>
+                <div className="text-left">
+                  <div>Calcular Ahora</div>
+                  <div className="text-sm font-normal opacity-90">100% Gratis • Resultados Instantáneos</div>
+                </div>
+              </a>
+            </div>
+            <p className="text-sm text-gray-600 mt-6">
+              ✅ Sin registro • ✅ Recomendaciones personalizadas • ✅ Planes de ETB, Claro y Movistar
+            </p>
           </div>
         </div>
       </section>

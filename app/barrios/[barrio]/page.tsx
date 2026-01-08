@@ -241,6 +241,24 @@ export default async function InternetBarrioPage({ params }: { params: Promise<{
               ))}
             </div>
 
+            {/* Banner Calculadora */}
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl p-8 mb-8 text-center shadow-lg">
+              <div className="max-w-2xl mx-auto">
+                <h3 className="text-2xl font-black text-gray-900 mb-3">
+                  🔍 ¿No sabes qué velocidad necesitas en {barrio.nombre}?
+                </h3>
+                <p className="text-gray-800 mb-5 text-lg">
+                  Nuestra calculadora te dice en <strong>30 segundos</strong> la velocidad perfecta para tu hogar
+                </p>
+                <a
+                  href="/calculadora"
+                  className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  📊 Calcular Velocidad Gratis
+                </a>
+              </div>
+            </div>
+
             <div className="bg-blue-50 rounded-lg p-6">
               <h3 className="font-bold text-lg mb-3">💡 Consejo para residentes de {barrio.nombre}</h3>
               <p className="text-gray-700">
