@@ -32,14 +32,37 @@ for post in "${POSTS[@]}"; do
 done
 
 echo ""
-echo "🧹 Limpiando caché de Next.js..."
+echo "🧹 Limpiando caché y páginas pregeneradas de Next.js..."
 rm -rf .next/cache
+rm -rf .next/server/app/blog/*.html
+rm -rf .next/server/app/blog/*.rsc
+rm -rf .next/server/app/sitemap.xml.body
+
+echo ""
+echo "🔨 Reconstruyendo proyecto..."
+npm run build
 
 echo ""
 echo "🔄 Reiniciando aplicación..."
 pm2 restart internet-colombia
 
 echo ""
-echo "✅ Proceso completado. Espera 30 segundos y verifica:"
-echo "   • curl -s http://localhost:3000/sitemap.xml | grep -c '/blog/'"
-echo "   • curl -s http://localhost:3000/blog | grep -c '<article'"
+echo "⏳ Esperando 10 segundos para que la app inicie..."
+sleep 10
+
+echo ""
+echo "📊 Verificación automática:"
+SITEMAP_COUNT=$(curl -s http://localhost:3000/sitemap.xml | grep -c '/blog/')
+BLOG_COUNT=$(curl -s http://localhost:3000/blog | grep -c '<article')
+
+echo "   • Posts en sitemap: $SITEMAP_COUNT (debe ser 23)"
+echo "   • Posts en /blog: $BLOG_COUNT (debe ser 23)"
+
+if [ "$SITEMAP_COUNT" -eq 23 ] && [ "$BLOG_COUNT" -eq 23 ]; then
+  echo ""
+  echo "✅ ¡ÉXITO! Todos los posts aparecen correctamente"
+else
+  echo ""
+  echo "⚠️  Aún faltan posts. Revisa los logs:"
+  echo "   pm2 logs internet-colombia --lines 50"
+fi
