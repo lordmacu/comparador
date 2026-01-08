@@ -16,6 +16,7 @@ import QuickCallForm from '@/components/QuickCallForm';
 import { Gift, Film, Play, Tv, Theater, Tent, Flame, ClipboardList } from 'lucide-react';
 import FAQSection from '@/components/FAQSection';
 import ProviderBlogSection from '@/components/ProviderBlogSection';
+import ClusterNavigation from '@/components/ClusterNavigation';
 import type { Metadata } from 'next';
 
 const provider = getProvider('etb');
@@ -305,6 +306,15 @@ export default function ETBPage() {
         providerSlug={provider.slug}
         accentColor={provider.brand.primaryColor}
       />
+
+      {/* Content Cluster Navigation */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <ClusterNavigation />
+          </div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <FAQSection faqs={provider.faqs} accentColor={provider.brand.primaryColor} />

@@ -196,6 +196,62 @@ export function generateHowToContactSchema(provider: Provider) {
   };
 }
 
+// Schema.org CollectionPage for pillar pages
+export function generateCollectionPageSchema(options: {
+  name: string;
+  description: string;
+  url: string;
+  numberOfItems: number;
+  itemListElement: Array<{
+    name: string;
+    url: string;
+    description?: string;
+  }>;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": options.name,
+    "description": options.description,
+    "url": options.url,
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": options.numberOfItems,
+      "itemListElement": options.itemListElement.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "WebPage",
+          "name": item.name,
+          "url": item.url,
+          "description": item.description || item.name
+        }
+      }))
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://comparadorinternet.co",
+            "name": "Inicio"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": options.url,
+            "name": options.name
+          }
+        }
+      ]
+    }
+  };
+}
+
 // Función helper para insertar scripts JSON-LD en el HTML
 export function renderJsonLd(data: object) {
   return {

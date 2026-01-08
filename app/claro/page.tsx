@@ -15,6 +15,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import QuickCallForm from '@/components/QuickCallForm';
 import FAQSection from '@/components/FAQSection';
 import ProviderBlogSection from '@/components/ProviderBlogSection';
+import ClusterNavigation from '@/components/ClusterNavigation';
 import { ClipboardList } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -242,6 +243,15 @@ export default function ClaroPage() {
         providerSlug={provider.slug}
         accentColor={provider.brand.primaryColor}
       />
+
+      {/* Content Cluster Navigation */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <ClusterNavigation />
+          </div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <FAQSection faqs={provider.faqs} accentColor={provider.brand.primaryColor} />
