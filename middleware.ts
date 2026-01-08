@@ -64,6 +64,20 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  // Soluciones routes: /soluciones/cambiar-de-operador-bogota -> /soluciones/cambiar-de-operador
+  const solucionMatch = pathname.match(/^\/soluciones\/(cambiar-de-operador|mejorar-velocidad|internet-lento|cortes-de-internet)-bogota$/);
+  if (solucionMatch) {
+    const solucion = solucionMatch[1];
+    const validSoluciones = ['cambiar-de-operador', 'mejorar-velocidad', 'internet-lento', 'cortes-de-internet'];
+    
+    if (validSoluciones.includes(solucion)) {
+      // Reescribir a la ruta interna
+      const url = request.nextUrl.clone();
+      url.pathname = `/soluciones/${solucion}`;
+      return NextResponse.rewrite(url);
+    }
+  }
+
   return NextResponse.next();
 }
 
@@ -72,6 +86,7 @@ export const config = {
     '/internet-:barrio-bogota',
     '/mejor-internet-:caso-bogota',
     '/internet-:velocidad-bogota',
-    '/internet-para-:vivienda-bogota'
+    '/internet-para-:vivienda-bogota',
+    '/soluciones/:solucion-bogota',
   ],
 };

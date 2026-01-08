@@ -69,6 +69,14 @@
       "namedRegex": "^/comparar/(?<nxtPoperadores>.+?)(?:/)?$"
     },
     {
+      "page": "/soluciones/[solucion]",
+      "regex": "^/soluciones/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPsolucion": "nxtPsolucion"
+      },
+      "namedRegex": "^/soluciones/(?<nxtPsolucion>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/velocidades/[velocidad]",
       "regex": "^/velocidades/([^/]+?)(?:/)?$",
       "routeKeys": {

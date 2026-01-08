@@ -25,12 +25,16 @@
         {
           "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/internet-para-([^\\/#\\?]+?)-bogota(\\\\.json)?[\\/#\\?]?$",
           "originalSource": "/internet-para-:vivienda-bogota"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/soluciones(?:\\/([^\\/#\\?]+?))-bogota(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/soluciones/:solucion-bogota"
         }
       ],
       "wasm": [],
       "assets": [],
       "env": {
-        "__NEXT_BUILD_ID": "fdVbugM1Gm5QTUt9e3Heo",
+        "__NEXT_BUILD_ID": "374q5WH6EsZMc7HPj5eBx",
         "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "sUaaK+6Y8MJVO1RoLgNM4tg03/KptZMWiZUqOMP2Swk=",
         "__NEXT_PREVIEW_MODE_ID": "df2f394723c5b4472ca0987a170c5b7e",
         "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "171d79625a8e327c86d041fc3fe1ee3559d403e07a780144eceb1ef624b427a7",

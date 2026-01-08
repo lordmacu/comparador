@@ -15,6 +15,7 @@
   "/page": "/",
   "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
+  "/soluciones/[solucion]/page": "/soluciones/[solucion]",
   "/velocidades/[velocidad]/page": "/velocidades/[velocidad]",
   "/viviendas/[vivienda]/page": "/viviendas/[vivienda]"
 }

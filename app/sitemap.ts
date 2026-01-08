@@ -26,6 +26,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Tipos de vivienda
   const viviendas = ['apartamento', 'casa', 'oficina', 'edificio'];
   
+  // Soluciones
+  const soluciones = ['cambiar-de-operador', 'mejorar-velocidad', 'internet-lento', 'cortes-de-internet'];
+  
   // Comparativas de operadores
   const comparativas = [
     ['etb', 'claro'],
@@ -75,6 +78,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...viviendas.map((vivienda) => ({
       url: `${baseUrl}/internet-para-${vivienda}-bogota`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+    ...soluciones.map((solucion) => ({
+      url: `${baseUrl}/soluciones/${solucion}-bogota`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,

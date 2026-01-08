@@ -1,6 +1,6 @@
 var R=require("../../../chunks/ssr/[turbopack]_runtime.js")("server/app/velocidades/[velocidad]/page.js")
-R.c("server/chunks/ssr/node_modules_7cb201e7._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__393eec3b._.js")
+R.c("server/chunks/ssr/node_modules_c802609e._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__d4af0dd8._.js")
 R.c("server/chunks/ssr/_0ee99035._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_4b9a0874._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__6d4fd0b5._.js")
