@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAllProviders } from '@/lib/data';
 import QuickCallForm from '@/components/QuickCallForm';
-import Header from '@/components/Header';
 
 interface ViviendaInfo {
   nombre: string;
@@ -238,7 +237,6 @@ export default async function ViviendaPage({
 
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section */}
         <section className="py-16 px-4">
