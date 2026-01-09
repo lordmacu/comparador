@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Header() {
   const pathname = usePathname();
@@ -36,14 +37,14 @@ export default function Header() {
             <a href="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Blog
             </a>
-            <a href="/claro" className="text-gray-700 hover:text-red-600 font-medium transition-colors">
-              Claro
+            <a href="/claro" className="flex items-center hover:opacity-80 transition-opacity" title="Claro">
+              <Image src="/images/claro-logo.svg" alt="Claro" width={60} height={24} className="h-6 w-auto" />
             </a>
-            <a href="/movistar" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
-              Movistar
+            <a href="/movistar" className="flex items-center hover:opacity-80 transition-opacity" title="Movistar">
+              <Image src="/images/movistar-logo.png" alt="Movistar" width={70} height={24} className="h-6 w-auto" />
             </a>
-            <a href="/etb" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              ETB
+            <a href="/etb" className="flex items-center hover:opacity-80 transition-opacity" title="ETB">
+              <Image src="/images/etb-logo.svg" alt="ETB" width={50} height={24} className="h-6 w-auto" style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(93%) saturate(1571%) hue-rotate(187deg) brightness(95%) contrast(101%)' }} />
             </a>
             
             {/* Dropdown "Más" */}
@@ -114,14 +115,14 @@ export default function Header() {
             <a href="/blog" className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 rounded transition-colors">
               Blog
             </a>
-            <a href="/claro" className="block py-2 text-gray-700 hover:text-red-600 hover:bg-red-50 px-4 rounded transition-colors">
-              Claro
+            <a href="/claro" className="flex items-center py-2 hover:bg-red-50 px-4 rounded transition-colors">
+              <Image src="/images/claro-logo.svg" alt="Claro" width={70} height={28} className="h-7 w-auto" />
             </a>
-            <a href="/movistar" className="block py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 px-4 rounded transition-colors">
-              Movistar
+            <a href="/movistar" className="flex items-center py-2 hover:bg-green-50 px-4 rounded transition-colors">
+              <Image src="/images/movistar-logo.png" alt="Movistar" width={80} height={28} className="h-7 w-auto" />
             </a>
-            <a href="/etb" className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 rounded transition-colors">
-              ETB
+            <a href="/etb" className="flex items-center py-2 hover:bg-blue-50 px-4 rounded transition-colors">
+              <Image src="/images/etb-logo.svg" alt="ETB" width={60} height={28} className="h-7 w-auto" style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(93%) saturate(1571%) hue-rotate(187deg) brightness(95%) contrast(101%)' }} />
             </a>
             <div className="border-t border-gray-200 my-2"></div>
             <a href="/calculadora" className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 rounded transition-colors">
