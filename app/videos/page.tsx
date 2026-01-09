@@ -23,7 +23,7 @@ const videosStructuredData = {
             "@type": "VideoObject",
             "name": "Cómo Elegir Internet en Bogotá 2026",
             "description": "Guía completa para elegir el mejor operador de internet en Bogotá considerando velocidad, precio y cobertura",
-            "thumbnailUrl": "https://img.youtube.com/vi/IrGctYWNuSI/maxresdefault.jpg",
+            "thumbnailUrl": "https://img.youtube.com/vi/IrGctYWNuSI/hqdefault.jpg",
             "uploadDate": "2026-01-09",
             "duration": "PT8M30S",
             "embedUrl": "https://www.youtube.com/embed/IrGctYWNuSI",
@@ -33,7 +33,7 @@ const videosStructuredData = {
             "@type": "VideoObject", 
             "name": "ETB vs Claro vs Movistar: Comparación Completa",
             "description": "Comparación detallada entre los principales operadores de internet en Bogotá: velocidad, precio, cobertura y soporte",
-            "thumbnailUrl": "https://img.youtube.com/vi/0cEU3-5uiOU/maxresdefault.jpg",
+            "thumbnailUrl": "https://img.youtube.com/vi/0cEU3-5uiOU/hqdefault.jpg",
             "uploadDate": "2026-01-09",
             "duration": "PT12M15S",
             "embedUrl": "https://www.youtube.com/embed/0cEU3-5uiOU",
@@ -170,11 +170,18 @@ const VideoCard = ({ video }: { video: Video }) => {
   return (
     <div className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${video.featured ? 'ring-2 ring-blue-200' : ''}`}>
       {/* Video Thumbnail */}
-      <div className="relative aspect-video bg-gray-200 group cursor-pointer">
+      <div 
+        className="relative aspect-video bg-gray-200 group cursor-pointer"
+        onClick={() => window.open(`https://www.youtube.com/watch?v=${video.youtubeId}`, '_blank')}
+      >
         <img
-          src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
+          src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
           alt={video.title}
           className="w-full h-full object-cover"
+          onError={(e) => {
+            const target = e.target as HTMLImageElement;
+            target.src = `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`;
+          }}
         />
         <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-40 transition-all">
           <div className="bg-red-600 rounded-full p-4 group-hover:scale-110 transition-transform">
