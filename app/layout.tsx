@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://comparadorinternet.co'),
   title: {
     default: "Comparador de Internet en Colombia 2025 | Claro, Movistar, ETB",
-    template: "%s | Comparador Internet Colombia"
+    template: "%s | Tu Comparador"
   },
   description: "Descubre los servicios de internet en Colombia. Compara beneficios de Claro, Movistar y ETB. Consulta planes, promociones y cobertura disponible en tu zona.",
   keywords: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "internet Bogotá",
     "mejor internet Colombia 2025"
   ],
-  authors: [{ name: "Comparador Internet Colombia" }],
-  creator: "Comparador Internet Colombia",
-  publisher: "Comparador Internet Colombia",
+  authors: [{ name: "Tu Comparador" }],
+  creator: "Tu Comparador",
+  publisher: "Tu Comparador",
   robots: {
     index: true,
     follow: true,
