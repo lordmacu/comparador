@@ -1,5 +1,5 @@
 #!/bin/bash
-# deploy-optimized.sh - Deploy with automatic cache purge and health checks
+# deploy-optimized.sh - Simple deploy using server's update.sh + Cloudflare purge
 
 set -e  # Exit on error
 
@@ -16,8 +16,8 @@ SERVER_USER="ubuntu"
 SSH_KEY="/Users/cristian/Downloads/comparador.pem"
 APP_DIR="/home/ubuntu/apps/comparador"
 DOMAIN="comparadorinternet.co"
-CLOUDFLARE_ZONE_ID="${CLOUDFLARE_ZONE_ID:-}"  # Set via environment variable
-CLOUDFLARE_API_TOKEN="${CLOUDFLARE_API_TOKEN:-}"  # Set via environment variable
+CLOUDFLARE_ZONE_ID="${CLOUDFLARE_ZONE_ID:-}"
+CLOUDFLARE_API_TOKEN="${CLOUDFLARE_API_TOKEN:-}"
 
 # Function to print colored messages
 print_step() {
@@ -45,16 +45,7 @@ fi
 
 COMMIT_MSG="$1"
 
-# Step 1: Build locally
-print_step "Building project locally..."
-if npm run build; then
-    print_success "Build successful!"
-else
-    print_error "Build failed. Fix errors and try again."
-    exit 1
-fi
-
-# Step 2: Git operations
+# Step 1: Git operations
 print_step "Committing changes..."
 git add .
 if git commit -m "$COMMIT_MSG"; then
@@ -71,36 +62,19 @@ else
     exit 1
 fi
 
-# Step 3: Deploy to server
+# Step 2: Deploy to server using existing update.sh
 print_step "Deploying to server..."
 ssh -i "$SSH_KEY" "$SERVER_USER@$SERVER" << 'ENDSSH'
     set -e
     cd /home/ubuntu/apps/comparador
     
-    echo "� Resetting local changes..."
-    git reset --hard HEAD
-    git clean -fd
-    
-    echo "�📥 Pulling latest changes..."
-    git pull origin main
-    
-    echo "📦 Installing dependencies..."
-    npm ci --production
-    
-    echo "🔄 Restarting PM2..."
-    pm2 restart nextjs-app
-    pm2 save
-    
-    echo "⏳ Waiting for app to start..."
-    sleep 5
-    
-    echo "🔍 Checking PM2 status..."
-    pm2 list
+    echo "🚀 Running update script..."
+    bash update.sh
 ENDSSH
 
 print_success "Deployed to server"
 
-# Step 4: Health check
+# Step 3: Health check
 print_step "Performing health check..."
 sleep 3
 HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}" "https://$DOMAIN")
@@ -113,7 +87,7 @@ else
     exit 1
 fi
 
-# Step 5: Purge Cloudflare cache
+# Step 4: Purge Cloudflare cache
 if [ -n "$CLOUDFLARE_ZONE_ID" ] && [ -n "$CLOUDFLARE_API_TOKEN" ]; then
     print_step "Purging Cloudflare cache..."
     

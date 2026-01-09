@@ -39,11 +39,11 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "�🔄 Restarting application with PM2..."
-pm2 restart internet-colombia
+pm2 restart nextjs-app
 
 if [ $? -ne 0 ]; then
   echo "⚠️  PM2 restart failed, trying to start..."
-  pm2 start npm --name "internet-colombia" -- start
+  pm2 start npm --name "nextjs-app" -- start
   pm2 save
 fi
 
