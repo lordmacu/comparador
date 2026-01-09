@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { getAllProviders } from '@/lib/data';
 import QuickCallForm from '@/components/QuickCallForm';
 import ClusterNavigation from '@/components/ClusterNavigation';
-import { Gamepad2, Briefcase, Video, Zap, Shield, TrendingUp } from 'lucide-react';
+import { Gamepad2, Briefcase, Video, Zap, Shield, TrendingUp, Lightbulb, Tv, Trophy, Check, Clock, Target, Camera, Lock, Smartphone, Wifi } from 'lucide-react';
 
 // Definir los casos de uso
 const CASOS_USO = {
@@ -212,7 +212,7 @@ export default async function CasoUsoPage({ params }: { params: Promise<{ caso: 
             </div>
 
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-3">💡 Recomendación del Experto</h3>
+              <h3 className="font-bold text-lg mb-3"><Lightbulb className="w-5 h-5 inline mr-2" /> Recomendación del Experto</h3>
               <p className="text-gray-700">
                 Para {caso.nombre.toLowerCase()}, recomendamos planes de al menos <strong>{caso.velocidadMinima}</strong>, 
                 pero idealmente <strong>{caso.velocidadRecomendada}</strong> para una experiencia óptima sin interrupciones.
@@ -244,7 +244,7 @@ export default async function CasoUsoPage({ params }: { params: Promise<{ caso: 
                   >
                     {esMejor && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-bold">
-                        🏆 Mejor para {caso.nombre}
+                        <Trophy className="w-5 h-5 inline" /> Mejor para {caso.nombre}
                       </div>
                     )}
 
@@ -281,7 +281,10 @@ export default async function CasoUsoPage({ params }: { params: Promise<{ caso: 
                       <div className="font-semibold mb-2 text-sm">Ideal para:</div>
                       <ul className="text-sm space-y-1">
                         {provider.whyChoose?.slice(0, 2).map((ventaja, i) => (
-                          <li key={i} className="text-gray-700">✓ {ventaja}</li>
+                          <li key={i} className="text-gray-700 flex items-start gap-2">
+                            <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-1" />
+                            <span>{ventaja}</span>
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -316,7 +319,7 @@ export default async function CasoUsoPage({ params }: { params: Promise<{ caso: 
               {casoSlug === 'gaming' && (
                 <>
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3">🎮 Conexión por Cable</h3>
+                    <h3 className="font-bold text-lg mb-3"><Gamepad2 className="w-5 h-5 inline mr-2" /> Conexión por Cable</h3>
                     <p className="text-sm text-gray-700">
                       Usa cable Ethernet en lugar de WiFi para reducir latencia. 
                       Un cable Cat 6 directo al router puede reducir el ping en 10-20ms.
@@ -330,14 +333,18 @@ export default async function CasoUsoPage({ params }: { params: Promise<{ caso: 
                     </p>
                   </div>
                   <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3">🕒 Horarios</h3>
+                    <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                      <Clock className="w-5 h-5" /> Horarios
+                    </h3>
                     <p className="text-sm text-gray-700">
                       Juega en horas de menor congestión (9 AM - 3 PM) para 
                       obtener la mejor latencia posible.
                     </p>
                   </div>
                   <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3">🎯 Servidor Cercano</h3>
+                    <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                      <Target className="w-5 h-5" /> Servidor Cercano
+                    </h3>
                     <p className="text-sm text-gray-700">
                       Selecciona servidores en Brasil o Miami para obtener el menor 
                       ping desde Colombia (30-60ms típicamente).
@@ -349,21 +356,25 @@ export default async function CasoUsoPage({ params }: { params: Promise<{ caso: 
               {casoSlug === 'teletrabajo' && (
                 <>
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3">💼 Router Profesional</h3>
+                    <h3 className="font-bold text-lg mb-3"><Briefcase className="w-5 h-5 inline mr-2" /> Router Profesional</h3>
                     <p className="text-sm text-gray-700">
                       Invierte en un router de calidad con WiFi 6 para mejor cobertura 
                       y estabilidad en toda tu casa.
                     </p>
                   </div>
                   <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3">📹 Videollamadas HD</h3>
+                    <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                      <Camera className="w-5 h-5" /> Videollamadas HD
+                    </h3>
                     <p className="text-sm text-gray-700">
                       Para Zoom/Teams, necesitas mínimo 3 Mbps subida y bajada. 
                       Un plan de 300 Mbps simétrico es ideal.
                     </p>
                   </div>
                   <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3">🔒 VPN Corporativa</h3>
+                    <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                      <Lock className="w-5 h-5" /> VPN Corporativa
+                    </h3>
                     <p className="text-sm text-gray-700">
                       Si usas VPN, considera 30-40% más velocidad de la que necesitas, 
                       ya que las VPN reducen el rendimiento.
@@ -382,21 +393,25 @@ export default async function CasoUsoPage({ params }: { params: Promise<{ caso: 
               {casoSlug === 'streaming' && (
                 <>
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3">📺 4K Streaming</h3>
+                    <h3 className="font-bold text-lg mb-3"><Tv className="w-5 h-5 inline mr-2" /> 4K Streaming</h3>
                     <p className="text-sm text-gray-700">
                       Netflix 4K requiere 25 Mbps por TV. Con 500 Mbps puedes 
                       ver 4K en 3-4 TV simultáneamente sin problemas.
                     </p>
                   </div>
                   <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3">📱 Múltiples Dispositivos</h3>
+                    <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                      <Smartphone className="w-5 h-5" /> Múltiples Dispositivos
+                    </h3>
                     <p className="text-sm text-gray-700">
                       Calcula 50 Mbps por persona para streaming + navegación. 
                       Familia de 4: mínimo 200 Mbps, ideal 500 Mbps.
                     </p>
                   </div>
                   <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3">📶 WiFi Óptimo</h3>
+                    <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                      <Wifi className="w-5 h-5" /> WiFi Óptimo
+                    </h3>
                     <p className="text-sm text-gray-700">
                       Ubica el router en el centro de tu casa. Para casas grandes, 
                       usa repetidores o sistema mesh WiFi.

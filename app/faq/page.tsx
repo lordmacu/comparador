@@ -1,13 +1,15 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { 
+import {
   ChevronDown,
   ChevronUp,
   HelpCircle,
   Search,
   Phone,
   Calculator,
-  BookOpen
+  BookOpen,
+  Lightbulb,
+  MessageCircle
 } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
 
@@ -254,7 +256,7 @@ export default function FAQPage() {
               />
             </div>
             <p className="text-center text-gray-600 mt-4">
-              💡 <strong>Tip:</strong> Usa Ctrl+F para buscar rápidamente cualquier palabra clave
+              <Lightbulb className="w-5 h-5 inline" /> <strong>Tip:</strong> Usa Ctrl+F para buscar rápidamente cualquier palabra clave
             </p>
           </div>
         </div>
@@ -383,13 +385,13 @@ export default function FAQPage() {
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-all shadow-lg hover:shadow-xl"
               >
-                💬 WhatsApp Directo
+                <MessageCircle className="w-5 h-5 inline" /> WhatsApp Directo
               </a>
               <Link 
                 href="/empresa" 
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl"
               >
-                📞 Llamada Programada
+                <Phone className="w-5 h-5 inline" /> Llamada Programada
               </Link>
             </div>
             <p className="text-sm text-gray-500 mt-4">

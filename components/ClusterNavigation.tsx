@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { getClusterForPage, getPillarPage, isPillarPage } from '@/lib/clusters';
-import { ArrowUpCircle, Grid3x3, Sparkles } from 'lucide-react';
+import { ArrowUpCircle, Grid3x3, Sparkles, BookOpen } from 'lucide-react';
 
 export default function ClusterNavigation() {
   const pathname = usePathname();
@@ -48,7 +48,7 @@ export default function ClusterNavigation() {
             <div className="flex items-start justify-between">
               <div className="flex-1">
                 <h4 className="font-bold text-lg text-indigo-900 mb-2 group-hover:text-indigo-600 transition-colors">
-                  📚 {pillarPage.title}
+                  <BookOpen className="w-5 h-5 inline" /> {pillarPage.title}
                 </h4>
                 <p className="text-gray-600 text-sm">
                   {pillarPage.description}

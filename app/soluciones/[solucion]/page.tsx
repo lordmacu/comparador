@@ -3,8 +3,25 @@ import { notFound } from 'next/navigation';
 import QuickCallForm from '@/components/QuickCallForm';
 import ClusterNavigation from '@/components/ClusterNavigation';
 import FAQSection from '@/components/FAQSection';
-import { Phone, Shield, Zap, Clock, TrendingUp, CheckCircle, AlertCircle, Settings } from 'lucide-react';
+import { Phone, Shield, Zap, Clock, TrendingUp, CheckCircle, AlertCircle, Settings, AlertTriangle, Smartphone, Home, DollarSign, Plug, Radio, Building2, Search, Lightbulb, BarChart3, RefreshCw, Gift } from 'lucide-react';
 import { FAQ } from '@/lib/types';
+
+// Mapa de emojis a componentes Lucide
+const iconMap: Record<string, any> = {
+  '⚠️': AlertTriangle,
+  '📱': Smartphone,
+  '🏠': Home,
+  '💰': DollarSign,
+  '🔌': Plug,
+  '📡': Radio,
+  '🏢': Building2,
+  '🔍': Search,
+  '📞': Phone,
+  '💡': Lightbulb,
+  '📊': BarChart3,
+  '🔄': RefreshCw,
+  '🎁': Gift,
+};
 
 // Datos de soluciones
 const SOLUCIONES: Record<string, {
@@ -688,7 +705,9 @@ export default async function SolucionPage({
                   <h3 className="text-xl font-bold mb-2">{paso.titulo}</h3>
                   <p className="text-gray-700 mb-4">{paso.descripcion}</p>
                   <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
-                    <p className="font-semibold text-blue-900 mb-2">💡 Tips:</p>
+                    <p className="font-semibold text-blue-900 mb-2 flex items-center gap-2">
+                      <Lightbulb className="w-4 h-4" /> Tips:
+                    </p>
                     <ul className="space-y-1 text-blue-800 text-sm">
                       {paso.tips.map((tip, index) => (
                         <li key={index}>• {tip}</li>
@@ -709,17 +728,22 @@ export default async function SolucionPage({
             Consideraciones Importantes
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {solucion.consideraciones.map((consideracion, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl">{consideracion.icono}</span>
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">{consideracion.titulo}</h3>
-                    <p className="text-gray-700">{consideracion.descripcion}</p>
+            {solucion.consideraciones.map((consideracion, index) => {
+              const IconComponent = iconMap[consideracion.icono];
+              return (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      {IconComponent && <IconComponent size={32} className="text-blue-600" />}
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-2">{consideracion.titulo}</h3>
+                      <p className="text-gray-700">{consideracion.descripcion}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -740,7 +764,9 @@ export default async function SolucionPage({
                 <p className="text-gray-700 mb-4">{proveedor.razon}</p>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-3 mb-4">
                   <p className="text-sm text-green-800">
-                    <span className="font-semibold">🎁 Promoción:</span> {proveedor.promocion}
+                    <span className="font-semibold flex items-center gap-2">
+                      <Gift className="w-4 h-4 inline" /> Promoción:
+                    </span> {proveedor.promocion}
                   </p>
                 </div>
                 <a

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ChevronRight, Download, ExternalLink, Calculator, FileText, BookOpen, Video, Users, Building, HelpCircle } from 'lucide-react';
+import { ChevronRight, Download, ExternalLink, Calculator, FileText, BookOpen, Video, Users, Building, HelpCircle, BarChart3, Link as LinkIcon } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
 
 export const metadata: Metadata = {
@@ -309,25 +309,25 @@ export default function RecursosPage() {
         {/* Main Content */}
         <div className="container mx-auto px-4 py-12">
           <ResourceCategory
-            title="🧮 Herramientas y Calculadoras"
+            title="Herramientas y Calculadoras"
             description="Determina exactamente qué necesitas y mide el rendimiento de tu conexión"
             resources={toolsAndCalculators}
           />
           
           <ResourceCategory
-            title="📚 Guías y Contenido Educativo"
+            title="Guías y Contenido Educativo"
             description="Aprende todo sobre internet en Colombia con nuestras guías completas"
             resources={guidesAndContent}
           />
-          
+
           <ResourceCategory
-            title="📊 Comparaciones y Planes"
+            title="Comparaciones y Planes"
             description="Compara opciones y encuentra el plan perfecto para tus necesidades"
             resources={comparisonsAndPlans}
           />
-          
+
           <ResourceCategory
-            title="🔗 Enlaces Útiles Externos"
+            title="Enlaces Útiles Externos"
             description="Sitios oficiales y recursos adicionales para complementar tu búsqueda"
             resources={externalResources}
           />

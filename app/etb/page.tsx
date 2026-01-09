@@ -13,7 +13,7 @@ import ServiceCard from '@/components/ServiceCard';
 import ContactForm from '@/components/ContactForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import QuickCallForm from '@/components/QuickCallForm';
-import { Gift, Film, Play, Tv, Theater, Tent, Flame, ClipboardList } from 'lucide-react';
+import { Gift, Film, Play, Tv, Theater, Tent, Flame, ClipboardList, Check } from 'lucide-react';
 import FAQSection from '@/components/FAQSection';
 import ProviderBlogSection from '@/components/ProviderBlogSection';
 import ClusterNavigation from '@/components/ClusterNavigation';
@@ -176,7 +176,7 @@ export default function ETBPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {provider.whyChoose.map((reason, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <span className="text-green-500 text-xl flex-shrink-0 mt-1">✓</span>
+                  <Check className="text-green-500 w-5 h-5 flex-shrink-0 mt-1" />
                   <span className="text-gray-700">{reason}</span>
                 </div>
               ))}

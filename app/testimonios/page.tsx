@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Star, CheckCircle, Calendar, ThumbsUp } from "lucide-react";
+import { Star, CheckCircle, Calendar, ThumbsUp, BookOpen } from "lucide-react";
 import QuickCallForm from "@/components/QuickCallForm";
 
 export const metadata: Metadata = {
@@ -548,7 +548,7 @@ export default function TestimoniosPage() {
                   href="/guia-completa"
                   className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                 >
-                  📖 Guía Completa
+                  <BookOpen className="w-5 h-5 inline" /> Guía Completa
                 </Link>
                 <Link
                   href="/comparar"

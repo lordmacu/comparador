@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { getAllProviders } from '@/lib/data';
 import QuickCallForm from '@/components/QuickCallForm';
 import ClusterNavigation from '@/components/ClusterNavigation';
-import { Zap, TrendingUp, Shield, Wifi, Download, Upload } from 'lucide-react';
+import { Zap, TrendingUp, Shield, Wifi, Download, Upload, CheckCircle2, Gamepad2, Users, Lightbulb, Briefcase, Calculator, Tv } from 'lucide-react';
 
 // Definir las velocidades disponibles
 const VELOCIDADES = {
@@ -210,19 +210,19 @@ export default async function VelocidadPage({ params }: { params: Promise<{ velo
               <h3 className="font-bold text-lg mb-4">Detalles de uso con {velocidad.velocidad}</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <span className="font-semibold text-blue-900">📺 Streaming:</span>
+                  <span className="font-semibold text-blue-900"><Tv className="w-5 h-5 inline" /> Streaming:</span>
                   <p className="text-gray-700">{velocidad.detalles.streaming}</p>
                 </div>
                 <div>
-                  <span className="font-semibold text-blue-900">🎮 Gaming:</span>
+                  <span className="font-semibold text-blue-900"><Gamepad2 className="w-5 h-5 inline" /> Gaming:</span>
                   <p className="text-gray-700">{velocidad.detalles.gaming}</p>
                 </div>
                 <div>
-                  <span className="font-semibold text-blue-900">💼 Trabajo:</span>
+                  <span className="font-semibold text-blue-900"><Briefcase className="w-5 h-5 inline" /> Trabajo:</span>
                   <p className="text-gray-700">{velocidad.detalles.trabajo}</p>
                 </div>
                 <div>
-                  <span className="font-semibold text-blue-900">👥 Usuarios:</span>
+                  <span className="font-semibold text-blue-900"><Users className="w-5 h-5 inline" /> Usuarios:</span>
                   <p className="text-gray-700">{velocidad.detalles.usuarios}</p>
                 </div>
               </div>
@@ -281,7 +281,7 @@ export default async function VelocidadPage({ params }: { params: Promise<{ velo
             <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl p-8 mb-8 text-center shadow-lg">
               <div className="max-w-2xl mx-auto">
                 <h3 className="text-2xl font-black text-gray-900 mb-3">
-                  💡 ¿Es {velocidad.velocidad} la velocidad correcta para ti?
+                  <Lightbulb className="w-5 h-5 inline" /> ¿Es {velocidad.velocidad} la velocidad correcta para ti?
                 </h3>
                 <p className="text-gray-800 mb-5 text-lg">
                   Descúbrelo con nuestra calculadora inteligente en <strong>menos de 1 minuto</strong>
@@ -290,16 +290,16 @@ export default async function VelocidadPage({ params }: { params: Promise<{ velo
                   href="/calculadora"
                   className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
-                  📊 Calcular mi Velocidad Ideal
+                  <Calculator className="w-5 h-5 inline" /> Calcular mi Velocidad Ideal
                 </a>
                 <p className="text-sm text-gray-700 mt-3">
-                  ✅ Gratis • ✅ Sin registro • ✅ Resultados instantáneos
+                  <CheckCircle2 className="w-4 h-4 inline" /> Gratis • <CheckCircle2 className="w-4 h-4 inline" /> Sin registro • <CheckCircle2 className="w-4 h-4 inline" /> Resultados instantáneos
                 </p>
               </div>
             </div>
 
             <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-3">💡 Consejo para elegir {velocidad.velocidad}</h3>
+              <h3 className="font-bold text-lg mb-3"><Lightbulb className="w-5 h-5 inline" /> Consejo para elegir {velocidad.velocidad}</h3>
               <p className="text-gray-700">
                 {velocidadSlug === 'fibra-optica' 
                   ? 'La fibra óptica ofrece la mejor estabilidad y velocidades simétricas. Todos los operadores en Bogotá ofrecen esta tecnología. Verifica disponibilidad en tu dirección exacta.'

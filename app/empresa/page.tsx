@@ -1,16 +1,18 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Star, 
-  Users, 
-  Shield, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Star,
+  Users,
+  Shield,
+  Building2,
+  Calculator,
+  BookOpen,
   Award,
   CheckCircle,
-  Building2,
   Globe,
   Headphones
 } from 'lucide-react';
@@ -188,7 +190,7 @@ export default function EmpresaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full font-bold text-sm mb-6">
-              🏢 EMPRESA COLOMBIANA
+              <Building2 className="w-5 h-5 inline" /> EMPRESA COLOMBIANA
             </div>
             <h1 className="text-4xl md:text-6xl font-black mb-6">
               Líderes en Asesoría de <span className="text-yellow-400">Telecomunicaciones</span>
@@ -202,13 +204,13 @@ export default function EmpresaPage() {
                 href="#contacto" 
                 className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                📞 Hablar con un Asesor
+                <Phone className="w-5 h-5 inline" /> Hablar con un Asesor
               </a>
               <a 
                 href="/calculadora" 
                 className="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                📊 Usar Calculadora
+                <Calculator className="w-5 h-5 inline" /> Usar Calculadora
               </a>
             </div>
           </div>
@@ -421,7 +423,7 @@ export default function EmpresaPage() {
             </div>
             <div className="text-center mt-6">
               <p className="text-gray-600 mb-4">
-                📍 Nos ubicamos en el corazón de Chapinero, zona empresarial de Bogotá
+                <MapPin className="w-5 h-5 inline" /> Nos ubicamos en el corazón de Chapinero, zona empresarial de Bogotá
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
@@ -460,13 +462,13 @@ export default function EmpresaPage() {
               href="/calculadora" 
               className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              📊 Usar Calculadora Gratis
+              <Calculator className="w-5 h-5 inline" /> Usar Calculadora Gratis
             </Link>
             <Link 
               href="/guia-completa" 
               className="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              📖 Ver Guía Completa
+              <BookOpen className="w-5 h-5 inline" /> Ver Guía Completa
             </Link>
           </div>
         </div>

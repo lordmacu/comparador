@@ -5,7 +5,7 @@ import { getAllProviders } from '@/lib/data';
 import QuickCallForm from '@/components/QuickCallForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ClusterNavigation from '@/components/ClusterNavigation';
-import { MapPin, Zap, TrendingUp, Shield } from 'lucide-react';
+import { MapPin, Zap, TrendingUp, Shield, Search, Calculator, Lightbulb, Check } from 'lucide-react';
 
 // Definir los barrios de Bogotá
 const BARRIOS = {
@@ -246,7 +246,7 @@ export default async function InternetBarrioPage({ params }: { params: Promise<{
             <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl p-8 mb-8 text-center shadow-lg">
               <div className="max-w-2xl mx-auto">
                 <h3 className="text-2xl font-black text-gray-900 mb-3">
-                  🔍 ¿No sabes qué velocidad necesitas en {barrio.nombre}?
+                  <Search className="w-5 h-5 inline mr-2" /> ¿No sabes qué velocidad necesitas en {barrio.nombre}?
                 </h3>
                 <p className="text-gray-800 mb-5 text-lg">
                   Nuestra calculadora te dice en <strong>30 segundos</strong> la velocidad perfecta para tu hogar
@@ -255,13 +255,13 @@ export default async function InternetBarrioPage({ params }: { params: Promise<{
                   href="/calculadora"
                   className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
-                  📊 Calcular Velocidad Gratis
+                  <Calculator className="w-5 h-5 inline mr-2" /> Calcular Velocidad Gratis
                 </a>
               </div>
             </div>
 
             <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-3">💡 Consejo para residentes de {barrio.nombre}</h3>
+              <h3 className="font-bold text-lg mb-3"><Lightbulb className="w-5 h-5 inline mr-2" /> Consejo para residentes de {barrio.nombre}</h3>
               <p className="text-gray-700">
                 Los tres operadores ofrecen cobertura en {barrio.nombre}. ETB suele tener ventajas en soporte técnico local, 
                 Claro ofrece la mayor cobertura 5G, y Movistar destaca en velocidad simétrica. Te recomendamos comparar 
@@ -292,10 +292,10 @@ export default async function InternetBarrioPage({ params }: { params: Promise<{
                   Ideal para familias de 3-5 personas. Streaming, gaming y teletrabajo simultáneo.
                 </p>
                 <ul className="space-y-2 mb-4 text-sm">
-                  <li>✓ 500 Mbps de velocidad</li>
-                  <li>✓ Perfecto para 4-5 dispositivos</li>
-                  <li>✓ Streaming 4K en varios TV</li>
-                  <li>✓ Gaming sin lag</li>
+                  <li><Check className="w-4 h-4 inline mr-1" /> 500 Mbps de velocidad</li>
+                  <li><Check className="w-4 h-4 inline mr-1" /> Perfecto para 4-5 dispositivos</li>
+                  <li><Check className="w-4 h-4 inline mr-1" /> Streaming 4K en varios TV</li>
+                  <li><Check className="w-4 h-4 inline mr-1" /> Gaming sin lag</li>
                 </ul>
               </div>
 
@@ -305,10 +305,10 @@ export default async function InternetBarrioPage({ params }: { params: Promise<{
                   Económico y eficiente para parejas o familias pequeñas.
                 </p>
                 <ul className="space-y-2 mb-4 text-sm">
-                  <li>✓ 200-300 Mbps</li>
-                  <li>✓ 2-3 dispositivos simultáneos</li>
-                  <li>✓ Streaming HD</li>
-                  <li>✓ Navegación fluida</li>
+                  <li><Check className="w-4 h-4 inline mr-1" /> 200-300 Mbps</li>
+                  <li><Check className="w-4 h-4 inline mr-1" /> 2-3 dispositivos simultáneos</li>
+                  <li><Check className="w-4 h-4 inline mr-1" /> Streaming HD</li>
+                  <li><Check className="w-4 h-4 inline mr-1" /> Navegación fluida</li>
                 </ul>
               </div>
             </div>

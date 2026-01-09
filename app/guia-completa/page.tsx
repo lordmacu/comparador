@@ -129,8 +129,9 @@ export default function GuiaCompletaPage() {
       <section id="tabla-contenidos" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-black text-center mb-4">
-              📑 Índice de Contenidos
+            <h2 className="text-3xl md:text-4xl font-black text-center mb-4 flex items-center justify-center gap-3">
+              <FileText className="w-10 h-10 text-blue-600" />
+              Índice de Contenidos
             </h2>
             <p className="text-center text-gray-600 mb-12">
               Salta directamente a lo que necesitas
@@ -226,7 +227,7 @@ export default function GuiaCompletaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-black mb-6">
-              📊 1. Calculadora de Velocidad
+              <Calculator className="w-5 h-5 inline" /> 1. Calculadora de Velocidad
             </h2>
             <p className="text-xl text-gray-700 mb-8">
               Descubre en <strong>30 segundos</strong> cuánta velocidad necesitas según tu hogar
@@ -235,10 +236,10 @@ export default function GuiaCompletaPage() {
               href="/calculadora"
               className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-12 py-6 rounded-xl font-bold text-2xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105"
             >
-              🚀 Ir a la Calculadora
+              <Rocket className="w-5 h-5 inline" /> Ir a la Calculadora
             </a>
             <p className="text-sm text-gray-600 mt-4">
-              ✅ Gratis • ✅ Sin registro • ✅ Recomendaciones personalizadas
+              <CheckCircle2 className="w-5 h-5 inline" /> Gratis • <CheckCircle2 className="w-5 h-5 inline" /> Sin registro • <CheckCircle2 className="w-5 h-5 inline" /> Recomendaciones personalizadas
             </p>
           </div>
         </div>
@@ -248,8 +249,8 @@ export default function GuiaCompletaPage() {
       <section id="operadores" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-black mb-4">
-              👥 2. Operadores en Bogotá
+            <h2 className="text-3xl md:text-4xl font-black mb-4 flex items-center gap-3">
+              <Users className="w-8 h-8" /> 2. Operadores en Bogotá
             </h2>
             <p className="text-gray-600 mb-8">
               Comparación completa de los 3 principales proveedores
@@ -324,7 +325,7 @@ export default function GuiaCompletaPage() {
             </div>
 
             <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-3">💡 ¿Cuál elegir?</h3>
+              <h3 className="font-bold text-lg mb-3"><Lightbulb className="w-5 h-5 inline" /> ¿Cuál elegir?</h3>
               <div className="space-y-2 text-gray-700">
                 <p>• <strong>ETB:</strong> Si valoras el soporte técnico local y conoces Bogotá</p>
                 <p>• <strong>Claro:</strong> Si necesitas la mejor cobertura móvil incluida</p>
@@ -340,7 +341,7 @@ export default function GuiaCompletaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-black mb-4">
-              ⚡ 3. Guía de Velocidades
+              <Zap className="w-5 h-5 inline" /> 3. Guía de Velocidades
             </h2>
             <p className="text-gray-600 mb-8">
               ¿Qué velocidad necesitas? Comparación detallada
@@ -369,7 +370,7 @@ export default function GuiaCompletaPage() {
             </div>
 
             <div className="bg-yellow-50 rounded-lg p-6 mt-8 border-l-4 border-yellow-400">
-              <h3 className="font-bold text-lg mb-3">📌 Regla de Oro</h3>
+              <h3 className="font-bold text-lg mb-3"><Pin className="w-5 h-5 inline" /> Regla de Oro</h3>
               <p className="text-gray-700">
                 Calcula <strong>20 Mbps por persona</strong> + necesidades específicas (gaming: +50 Mbps, streaming 4K: +25 Mbps, teletrabajo: +30 Mbps)
               </p>
@@ -382,8 +383,8 @@ export default function GuiaCompletaPage() {
       <section id="barrios" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-black mb-4">
-              📍 4. Internet por Barrio
+            <h2 className="text-3xl md:text-4xl font-black mb-4 flex items-center gap-3">
+              <Pin className="w-8 h-8" /> 4. Internet por Barrio
             </h2>
             <p className="text-gray-600 mb-8">
               Cobertura, operadores y recomendaciones para 14 localidades de Bogotá
@@ -408,7 +409,7 @@ export default function GuiaCompletaPage() {
             </div>
 
             <div className="bg-green-50 rounded-lg p-6 mt-8">
-              <h3 className="font-bold text-lg mb-3">✅ Cobertura Completa</h3>
+              <h3 className="font-bold text-lg mb-3"><CheckCircle2 className="w-5 h-5 inline" /> Cobertura Completa</h3>
               <p className="text-gray-700">
                 Los 3 operadores (ETB, Claro, Movistar) tienen cobertura en todas estas localidades. 
                 Haz clic en tu barrio para ver detalles específicos y planes disponibles.
@@ -423,7 +424,7 @@ export default function GuiaCompletaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-black mb-4">
-              🏠 5. Por Tipo de Vivienda
+              <Home className="w-5 h-5 inline" /> 5. Por Tipo de Vivienda
             </h2>
             <p className="text-gray-600 mb-8">
               Recomendaciones según donde vives o trabajas
@@ -452,7 +453,7 @@ export default function GuiaCompletaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-black mb-4">
-              🎯 6. Casos de Uso
+              <Target className="w-5 h-5 inline" /> 6. Casos de Uso
             </h2>
             <p className="text-gray-600 mb-8">
               Internet optimizado para tu actividad principal
@@ -480,7 +481,7 @@ export default function GuiaCompletaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-black mb-4">
-              🔧 7. Soluciones a Problemas Comunes
+              <Wrench className="w-5 h-5 inline" /> 7. Soluciones a Problemas Comunes
             </h2>
             <p className="text-gray-600 mb-8">
               ¿Tienes problemas con tu internet actual? Encuentra la solución
@@ -514,7 +515,7 @@ export default function GuiaCompletaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-black mb-4 text-center">
-              💎 8. Consejos de Expertos
+              <Award className="w-5 h-5 inline" /> 8. Consejos de Expertos
             </h2>
             <p className="text-gray-600 mb-12 text-center">
               Tips que los operadores no te cuentan
@@ -522,42 +523,42 @@ export default function GuiaCompletaPage() {
 
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-6 border-l-4 border-green-500">
-                <h3 className="font-bold text-lg mb-2">✅ Siempre negocia el precio</h3>
+                <h3 className="font-bold text-lg mb-2"><CheckCircle2 className="w-5 h-5 inline" /> Siempre negocia el precio</h3>
                 <p className="text-gray-700">
                   Los operadores tienen margen de negociación del 20-30%. Llama, menciona ofertas de la competencia y pide descuentos.
                 </p>
               </div>
 
               <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-6 border-l-4 border-blue-500">
-                <h3 className="font-bold text-lg mb-2">📞 Guarda números de soporte</h3>
+                <h3 className="font-bold text-lg mb-2"><Phone className="w-5 h-5 inline" /> Guarda números de soporte</h3>
                 <p className="text-gray-700">
                   ETB: 555-5555 • Claro: #611 • Movistar: #611. Ten estos números siempre a mano.
                 </p>
               </div>
 
               <div className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg p-6 border-l-4 border-purple-500">
-                <h3 className="font-bold text-lg mb-2">⚡ Prioriza fibra óptica</h3>
+                <h3 className="font-bold text-lg mb-2"><Zap className="w-5 h-5 inline" /> Prioriza fibra óptica</h3>
                 <p className="text-gray-700">
                   Si está disponible en tu zona, siempre elige fibra sobre cable. Mayor velocidad, estabilidad y velocidades simétricas.
                 </p>
               </div>
 
               <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg p-6 border-l-4 border-orange-500">
-                <h3 className="font-bold text-lg mb-2">🔒 Protege tu WiFi</h3>
+                <h3 className="font-bold text-lg mb-2"><Lock className="w-5 h-5 inline" /> Protege tu WiFi</h3>
                 <p className="text-gray-700">
                   Usa contraseñas fuertes (mínimo 12 caracteres), WPA3 si tu router lo soporta, y cambia las credenciales por defecto.
                 </p>
               </div>
 
               <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-lg p-6 border-l-4 border-red-500">
-                <h3 className="font-bold text-lg mb-2">📊 Mide tu velocidad real</h3>
+                <h3 className="font-bold text-lg mb-2"><Calculator className="w-5 h-5 inline" /> Mide tu velocidad real</h3>
                 <p className="text-gray-700">
                   Usa Speedtest.net o Fast.com para verificar que recibes la velocidad contratada. Si es menor al 70%, reclama.
                 </p>
               </div>
 
               <div className="bg-gradient-to-r from-yellow-50 to-lime-50 rounded-lg p-6 border-l-4 border-yellow-500">
-                <h3 className="font-bold text-lg mb-2">💰 Evita permanencias largas</h3>
+                <h3 className="font-bold text-lg mb-2"><DollarSign className="w-5 h-5 inline" /> Evita permanencias largas</h3>
                 <p className="text-gray-700">
                   Prefiere contratos mes a mes o máximo 6 meses. La tecnología avanza rápido y querrás flexibilidad.
                 </p>
@@ -587,13 +588,13 @@ export default function GuiaCompletaPage() {
                 href="/calculadora"
                 className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all shadow-lg"
               >
-                📊 Calcular Velocidad
+                <Calculator className="w-5 h-5 inline" /> Calcular Velocidad
               </a>
               <a
                 href="/"
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all"
               >
-                🏠 Volver al Inicio
+                <Home className="w-5 h-5 inline" /> Volver al Inicio
               </a>
             </div>
           </div>

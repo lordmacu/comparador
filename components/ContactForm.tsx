@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import { Provider } from '@/lib/types';
-import { Phone, Send } from 'lucide-react';
+import { Phone, Send, CheckCircle } from 'lucide-react';
 import { useAnalytics } from '@/lib/hooks/useAnalytics';
 
 interface ContactFormProps {
@@ -64,7 +64,7 @@ export default function ContactForm({ provider, title }: ContactFormProps) {
   if (submitStatus === 'success') {
     return (
       <div className="bg-green-50 border-2 border-green-200 rounded-xl p-8 text-center">
-        <div className="text-green-600 text-6xl mb-4">✓</div>
+        <CheckCircle className="text-green-600 w-16 h-16 mb-4 mx-auto" />
         <h3 className="text-2xl font-bold text-green-800 mb-3">
           ¡Solicitud Recibida!
         </h3>

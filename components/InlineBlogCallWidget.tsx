@@ -1,7 +1,7 @@
 'use client';
 
 import { FormEvent, useMemo, useState } from 'react';
-import { Phone, ShieldCheck, Sparkles } from 'lucide-react';
+import { Phone, ShieldCheck, Sparkles, Check } from 'lucide-react';
 
 interface InlineBlogCallWidgetProps {
   postSlug: string;
@@ -79,7 +79,7 @@ export default function InlineBlogCallWidget({ postSlug }: InlineBlogCallWidgetP
             {submitStatus === 'success' ? (
               <div className="text-center">
                 <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-700">
-                  ✓
+                  <Check className="w-6 h-6" />
                 </div>
                 <p className="text-base font-bold text-gray-900">¡Listo! Te llamaremos pronto</p>
                 <p className="mt-1 text-sm text-gray-600">Revisa que tu número esté correcto.</p>

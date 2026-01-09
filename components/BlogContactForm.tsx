@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { Phone, Send } from 'lucide-react';
+import { Phone, Send, CheckCircle } from 'lucide-react';
 
 export default function BlogContactForm() {
   const [phone, setPhone] = useState('');
@@ -48,7 +48,7 @@ export default function BlogContactForm() {
   if (submitStatus === 'success') {
     return (
       <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 text-center">
-        <div className="text-green-600 text-4xl mb-3">✓</div>
+        <CheckCircle className="text-green-600 w-12 h-12 mb-3 mx-auto" />
         <h3 className="text-lg font-bold text-green-800 mb-2">
           ¡Solicitud Recibida!
         </h3>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Wifi, Clock, Activity, Zap, Calculator, TestTube, Router, Signal } from 'lucide-react';
+import { Wifi, Clock, Activity, Zap, Calculator, TestTube, Router, Signal, Lightbulb, BarChart3, Target, Package } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
 import RelatedLinks from '@/components/RelatedLinks';
 
@@ -285,7 +285,7 @@ export default function HerramientasClient() {
                 <button 
                   className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                   onClick={() => {
-                    alert('💡 Recomendaciones WiFi:\n\n• Ubica el router en posición central\n• Evita obstáculos como paredes gruesas\n• Usa la banda de 5GHz para menos interferencia\n• Actualiza el firmware del router regularmente');
+                    alert('Recomendaciones WiFi:\n\n• Ubica el router en posición central\n• Evita obstáculos como paredes gruesas\n• Usa la banda de 5GHz para menos interferencia\n• Actualiza el firmware del router regularmente');
                   }}
                 >
                   <Wifi className="inline mr-2" size={16} />
@@ -364,13 +364,15 @@ export default function HerramientasClient() {
           {/* Information Section */}
           <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold mb-4 text-center">
-                📊 ¿Cómo interpretar los resultados?
+              <h2 className="text-2xl font-bold mb-4 text-center flex items-center justify-center gap-2">
+                <BarChart3 className="w-6 h-6" /> ¿Cómo interpretar los resultados?
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="font-semibold mb-2">🎯 Latencia (Ping):</h3>
+                  <h3 className="font-semibold mb-2 flex items-center gap-2">
+                    <Target className="w-5 h-5" /> Latencia (Ping):
+                  </h3>
                   <ul className="space-y-1 text-sm text-blue-100">
                     <li>• &lt;20ms: Excelente para gaming competitivo</li>
                     <li>• 20-50ms: Bueno para la mayoría de actividades</li>
@@ -378,9 +380,11 @@ export default function HerramientasClient() {
                     <li>• &gt;100ms: Puede causar retrasos perceptibles</li>
                   </ul>
                 </div>
-                
+
                 <div>
-                  <h3 className="font-semibold mb-2">📦 Pérdida de Paquetes:</h3>
+                  <h3 className="font-semibold mb-2 flex items-center gap-2">
+                    <Package className="w-5 h-5" /> Pérdida de Paquetes:
+                  </h3>
                   <ul className="space-y-1 text-sm text-blue-100">
                     <li>• 0%: Conexión perfecta</li>
                     <li>• &lt;1%: Excelente calidad</li>

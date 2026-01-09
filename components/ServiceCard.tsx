@@ -1,5 +1,6 @@
 import { Service, Provider } from '@/lib/types';
 import WhatsAppButton from './WhatsAppButton';
+import { Check, Lightbulb } from 'lucide-react';
 
 interface ServiceCardProps {
   service: Service;
@@ -41,7 +42,7 @@ export default function ServiceCard({ service, provider }: ServiceCardProps) {
           <ul className="space-y-1">
             {service.options.map((option, idx) => (
               <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
-                <span className="text-green-500 mt-0.5">✓</span>
+                <span className="text-green-500 mt-0.5"><Check className="w-4 h-4" /></span>
                 {option}
               </li>
             ))}
@@ -56,7 +57,7 @@ export default function ServiceCard({ service, provider }: ServiceCardProps) {
           <ul className="space-y-1">
             {service.features.map((feature, idx) => (
               <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
-                <span className="text-green-500 mt-0.5">✓</span>
+                <span className="text-green-500 mt-0.5"><Check className="w-4 h-4" /></span>
                 {feature}
               </li>
             ))}
@@ -67,7 +68,7 @@ export default function ServiceCard({ service, provider }: ServiceCardProps) {
       {/* Ideal para */}
       {service.ideal && (
         <div className="bg-blue-50 rounded-lg p-3 mb-4">
-          <div className="text-xs font-semibold text-blue-900 mb-1">💡 Ideal para:</div>
+          <div className="text-xs font-semibold text-blue-900 mb-1"><Lightbulb className="w-4 h-4 inline" /> Ideal para:</div>
           <div className="text-sm text-blue-700">{service.ideal}</div>
         </div>
       )}

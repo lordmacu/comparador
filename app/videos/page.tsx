@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import { Play, Clock, Eye, Calendar, Star } from "lucide-react";
+import { Play, Clock, Eye, Calendar, Star, BookOpen } from "lucide-react";
 import QuickCallForm from "@/components/QuickCallForm";
 
 // Schema.org structured data for video content
@@ -436,7 +436,7 @@ export default function VideosPage() {
                   href="/guia-completa"
                   className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors"
                 >
-                  📖 Guía Completa
+                  <BookOpen className="w-5 h-5 inline" /> Guía Completa
                 </Link>
               </div>
 

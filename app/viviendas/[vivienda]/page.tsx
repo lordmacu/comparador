@@ -3,7 +3,27 @@ import { notFound } from 'next/navigation';
 import { getAllProviders } from '@/lib/data';
 import QuickCallForm from '@/components/QuickCallForm';
 import ClusterNavigation from '@/components/ClusterNavigation';
-import { Home, Smartphone, DollarSign, Wrench, House, Users, Gamepad2, Shield, Briefcase, Cloud, Lock, Building2, BarChart3, Gem, Gift } from 'lucide-react';
+import { Home, Smartphone, DollarSign, Wrench, House, Users, Gamepad2, Shield, Briefcase, Cloud, Lock, Building2, BarChart3, Gem, Gift, Check } from 'lucide-react';
+
+// Mapa de emojis a componentes Lucide
+const iconMap: Record<string, any> = {
+  '🏠': Home,
+  '📱': Smartphone,
+  '💰': DollarSign,
+  '🔧': Wrench,
+  '🏡': House,
+  '👨‍👩‍👧‍👦': Users,
+  '🎮': Gamepad2,
+  '🛡️': Shield,
+  '💼': Briefcase,
+  '☁️': Cloud,
+  '👥': Users,
+  '🔒': Lock,
+  '🏢': Building2,
+  '📊': BarChart3,
+  '💎': Gem,
+  '🎁': Gift,
+};
 
 interface ViviendaInfo {
   nombre: string;
@@ -286,13 +306,18 @@ export default async function ViviendaPage({
               ¿Por Qué Elegir Internet para {vivienda.nombre}?
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              {vivienda.caracteristicas.map((caracteristica, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
-                  <div className="text-4xl mb-4">{caracteristica.icono}</div>
-                  <h3 className="text-xl font-bold mb-3">{caracteristica.titulo}</h3>
-                  <p className="text-gray-600">{caracteristica.descripcion}</p>
-                </div>
-              ))}
+              {vivienda.caracteristicas.map((caracteristica, index) => {
+                const IconComponent = iconMap[caracteristica.icono];
+                return (
+                  <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+                    <div className="mb-4">
+                      {IconComponent && <IconComponent size={40} className="text-blue-600" />}
+                    </div>
+                    <h3 className="text-xl font-bold mb-3">{caracteristica.titulo}</h3>
+                    <p className="text-gray-600">{caracteristica.descripcion}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -307,7 +332,7 @@ export default async function ViviendaPage({
               <ul className="space-y-4">
                 {vivienda.consideraciones.map((consideracion, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <span className="text-blue-600 text-xl mt-1">✓</span>
+                    <span className="text-blue-600 text-xl mt-1"><Check className="w-5 h-5 inline" /></span>
                     <span className="text-gray-700 text-lg">{consideracion}</span>
                   </li>
                 ))}
@@ -339,7 +364,7 @@ export default async function ViviendaPage({
                   <div className="space-y-3 mb-6">
                     {provider.mainBenefits.slice(0, 3).map((benefit, idx) => (
                       <div key={idx} className="flex items-start gap-2">
-                        <span className="text-green-600 mt-1">✓</span>
+                        <span className="text-green-600 mt-1"><Check className="w-5 h-5 inline" /></span>
                         <span className="text-gray-700 text-sm">{benefit.title}</span>
                       </div>
                     ))}

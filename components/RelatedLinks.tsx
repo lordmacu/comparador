@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronRight, ExternalLink } from 'lucide-react';
+import { ChevronRight, ExternalLink, Link2 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 interface RelatedLink {
@@ -294,7 +294,7 @@ export default function RelatedLinks({
     <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mt-8">
       <div className="mb-4">
         <h3 className="text-lg font-semibold text-gray-900 mb-2">
-          🔗 También te puede interesar
+          <Link2 className="w-5 h-5 inline" /> También te puede interesar
         </h3>
         <p className="text-sm text-gray-600">
           Herramientas y recursos relacionados para ayudarte a encontrar el mejor internet
