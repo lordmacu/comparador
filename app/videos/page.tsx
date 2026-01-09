@@ -185,8 +185,8 @@ const VideoCard = ({ video }: { video: Video }) => {
             }
           }}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-40 transition-all">
-          <div className="bg-red-600 rounded-full p-4 group-hover:scale-110 transition-transform">
+        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 flex items-center justify-center transition-all">
+          <div className="bg-red-600 rounded-full p-4 group-hover:scale-110 transition-transform opacity-90 group-hover:opacity-100">
             <Play className="w-8 h-8 text-white fill-current" />
           </div>
         </div>
