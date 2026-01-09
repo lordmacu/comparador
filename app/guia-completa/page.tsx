@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { BookOpen, MapPin, Zap, Home, Wrench, Users, TrendingUp, Calculator, CheckCircle, ArrowRight } from 'lucide-react';
+import { BookOpen, MapPin, Zap, Home, Wrench, Users, TrendingUp, Calculator, CheckCircle, ArrowRight, Building2, Building, Landmark, Construction, Gamepad2, Briefcase, Tv, RefreshCw, TrendingDown, AlertTriangle, List, Rocket, Target, Lock, DollarSign, FileText, Lightbulb, Pin, Phone, Award, CheckCircle2 } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
 
 export const metadata: Metadata = {
@@ -66,23 +66,23 @@ export default function GuiaCompletaPage() {
   ];
 
   const viviendas = [
-    { slug: 'apartamento', nombre: 'Apartamento', icon: '🏢' },
-    { slug: 'casa', nombre: 'Casa', icon: '🏠' },
-    { slug: 'oficina', nombre: 'Oficina', icon: '🏛️' },
-    { slug: 'edificio', nombre: 'Edificio', icon: '🏗️' },
+    { slug: 'apartamento', nombre: 'Apartamento', IconComponent: Building2 },
+    { slug: 'casa', nombre: 'Casa', IconComponent: Home },
+    { slug: 'oficina', nombre: 'Oficina', IconComponent: Landmark },
+    { slug: 'edificio', nombre: 'Edificio', IconComponent: Construction },
   ];
 
   const casos = [
-    { slug: 'gaming', nombre: 'Gaming', desc: 'Baja latencia y alta velocidad', icon: '🎮' },
-    { slug: 'teletrabajo', nombre: 'Teletrabajo', desc: 'Videoconferencias estables', icon: '💼' },
-    { slug: 'streaming', nombre: 'Streaming', desc: '4K sin buffering', icon: '📺' },
+    { slug: 'gaming', nombre: 'Gaming', desc: 'Baja latencia y alta velocidad', IconComponent: Gamepad2 },
+    { slug: 'teletrabajo', nombre: 'Teletrabajo', desc: 'Videoconferencias estables', IconComponent: Briefcase },
+    { slug: 'streaming', nombre: 'Streaming', desc: '4K sin buffering', IconComponent: Tv },
   ];
 
   const soluciones = [
-    { slug: 'cambiar-de-operador', nombre: 'Cambiar de Operador', icon: '🔄' },
-    { slug: 'mejorar-velocidad', nombre: 'Mejorar Velocidad', icon: '⚡' },
-    { slug: 'internet-lento', nombre: 'Internet Lento', icon: '🐌' },
-    { slug: 'cortes-de-internet', nombre: 'Cortes de Internet', icon: '⚠️' },
+    { slug: 'cambiar-de-operador', nombre: 'Cambiar de Operador', IconComponent: RefreshCw },
+    { slug: 'mejorar-velocidad', nombre: 'Mejorar Velocidad', IconComponent: Zap },
+    { slug: 'internet-lento', nombre: 'Internet Lento', IconComponent: TrendingDown },
+    { slug: 'cortes-de-internet', nombre: 'Cortes de Internet', IconComponent: AlertTriangle },
   ];
 
   return (
@@ -108,15 +108,17 @@ export default function GuiaCompletaPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#calculadora-rapida"
-                className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-2"
               >
-                📊 Calcular mi Velocidad
+                <Calculator className="w-6 h-6" />
+                Calcular mi Velocidad
               </a>
               <a
                 href="#tabla-contenidos"
-                className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2"
               >
-                📖 Ver Índice Completo
+                <BookOpen className="w-6 h-6" />
+                Ver Índice Completo
               </a>
             </div>
           </div>
@@ -434,7 +436,9 @@ export default function GuiaCompletaPage() {
                   href={`/viviendas/${vivienda.slug}`}
                   className="bg-white rounded-xl p-6 hover:shadow-lg transition-all border-2 border-gray-200 hover:border-blue-500 text-center"
                 >
-                  <div className="text-5xl mb-3">{vivienda.icon}</div>
+                  <div className="flex justify-center mb-3">
+                    <vivienda.IconComponent size={48} className="text-blue-600" />
+                  </div>
                   <h3 className="font-bold text-xl">{vivienda.nombre}</h3>
                 </Link>
               ))}
@@ -461,7 +465,7 @@ export default function GuiaCompletaPage() {
                   href={`/casos/${caso.slug}`}
                   className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-lg transition-all border-2 border-blue-200 hover:border-blue-500"
                 >
-                  <div className="text-4xl mb-3">{caso.icon}</div>
+                  <caso.IconComponent size={40} className="text-blue-600 mb-3" />
                   <h3 className="font-bold text-xl mb-2">{caso.nombre}</h3>
                   <p className="text-gray-600">{caso.desc}</p>
                 </Link>
@@ -490,7 +494,7 @@ export default function GuiaCompletaPage() {
                   className="bg-white rounded-xl p-6 hover:shadow-lg transition-all border-2 border-gray-200 hover:border-blue-500"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="text-4xl">{solucion.icon}</div>
+                    <solucion.IconComponent size={40} className="text-blue-600" />
                     <div>
                       <h3 className="font-bold text-xl">{solucion.nombre}</h3>
                       <p className="text-blue-600 text-sm flex items-center gap-1 mt-1">

@@ -3,7 +3,6 @@
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${i.GA_TRACKING_ID}', {
-                  page_path: window.location.pathname,
                   send_page_view: true,
                   cookie_flags: 'SameSite=None;Secure'
                 });

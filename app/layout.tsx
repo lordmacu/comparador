@@ -162,7 +162,7 @@ export default function RootLayout({
             </div>
 
             <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-              <p>© {new Date().getFullYear()} Comparador Internet Colombia. Todos los derechos reservados.</p>
+              <p>© 2025 Comparador Internet Colombia. Todos los derechos reservados.</p>
             </div>
           </div>
         </footer>

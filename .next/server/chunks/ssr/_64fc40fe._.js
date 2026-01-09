@@ -3,7 +3,6 @@ module.exports=[38679,a=>{"use strict";var b=a.i(87924),c=a.i(50944);function d(
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${f.GA_TRACKING_ID}', {
-                  page_path: window.location.pathname,
                   send_page_view: true,
                   cookie_flags: 'SameSite=None;Secure'
                 });
