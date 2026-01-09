@@ -51,10 +51,9 @@ export default function Header() {
               {/* Submenu - todos los links en HTML para SEO */}
               {isMoreOpen && (
                 <div 
-                  className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2"
-                  onMouseEnter={() => setIsMoreOpen(true)}
-                  onMouseLeave={() => setIsMoreOpen(false)}
+                  className="absolute right-0 top-full pt-2 w-48"
                 >
+                  <div className="bg-white border border-gray-200 rounded-lg shadow-lg py-2">
                   <a href="/guia-completa" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Guía Completa
                   </a>
@@ -84,6 +83,7 @@ export default function Header() {
                   <a href="/empresa" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Empresa
                   </a>
+                  </div>
                 </div>
               )}
             </div>
