@@ -1,9 +1,9 @@
 #!/bin/bash
 # update.sh - Server-side update script for EC2
 
-# Load environment variables
-if [ -f ~/.bashrc ]; then
-  source ~/.bashrc
+# Load environment variables from .env file if it exists
+if [ -f ~/.cloudflare.env ]; then
+  source ~/.cloudflare.env
 fi
 
 echo "🧹 Descartando cambios locales..."
