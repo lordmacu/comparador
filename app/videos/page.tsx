@@ -23,21 +23,21 @@ const videosStructuredData = {
             "@type": "VideoObject",
             "name": "Cómo Elegir Internet en Bogotá 2026",
             "description": "Guía completa para elegir el mejor operador de internet en Bogotá considerando velocidad, precio y cobertura",
-            "thumbnailUrl": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-            "uploadDate": "2025-12-01",
+            "thumbnailUrl": "https://img.youtube.com/vi/IrGctYWNuSI/maxresdefault.jpg",
+            "uploadDate": "2026-01-09",
             "duration": "PT8M30S",
-            "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-            "contentUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            "embedUrl": "https://www.youtube.com/embed/IrGctYWNuSI",
+            "contentUrl": "https://www.youtube.com/watch?v=IrGctYWNuSI"
           },
           {
             "@type": "VideoObject", 
             "name": "ETB vs Claro vs Movistar: Comparación Completa",
             "description": "Comparación detallada entre los principales operadores de internet en Bogotá: velocidad, precio, cobertura y soporte",
-            "thumbnailUrl": "https://img.youtube.com/vi/oHg5SJYRHA0/maxresdefault.jpg",
-            "uploadDate": "2025-11-28",
+            "thumbnailUrl": "https://img.youtube.com/vi/0cEU3-5uiOU/maxresdefault.jpg",
+            "uploadDate": "2026-01-09",
             "duration": "PT12M15S",
-            "embedUrl": "https://www.youtube.com/embed/oHg5SJYRHA0",
-            "contentUrl": "https://www.youtube.com/watch?v=oHg5SJYRHA0"
+            "embedUrl": "https://www.youtube.com/embed/0cEU3-5uiOU",
+            "contentUrl": "https://www.youtube.com/watch?v=0cEU3-5uiOU"
           }
         ]
       }
@@ -63,10 +63,10 @@ const videos: Video[] = [
     id: "1",
     title: "Cómo Elegir Internet en Bogotá 2026",
     description: "Guía completa paso a paso para elegir el mejor operador de internet en Bogotá. Analizamos velocidad, precio, cobertura y factores clave para tomar la mejor decisión.",
-    youtubeId: "dQw4w9WgXcQ", // Placeholder - replace with real video IDs
+    youtubeId: "IrGctYWNuSI",
     duration: "8:30",
     views: "15.2K",
-    uploadDate: "2025-12-01",
+    uploadDate: "2026-01-09",
     category: "Guías",
     difficulty: "Principiante",
     featured: true
@@ -75,10 +75,10 @@ const videos: Video[] = [
     id: "2", 
     title: "ETB vs Claro vs Movistar: Comparación Completa",
     description: "Comparación exhaustiva entre los tres principales operadores de internet en Bogotá. Velocidades reales, precios, cobertura y calidad de servicio al cliente.",
-    youtubeId: "oHg5SJYRHA0",
+    youtubeId: "0cEU3-5uiOU",
     duration: "12:15",
     views: "23.8K", 
-    uploadDate: "2025-11-28",
+    uploadDate: "2026-01-09",
     category: "Comparaciones",
     difficulty: "Intermedio",
     featured: true
@@ -87,10 +87,10 @@ const videos: Video[] = [
     id: "3",
     title: "Mejores Velocidades para Gaming en Bogotá",
     description: "Todo lo que necesitas saber sobre velocidades de internet para gaming. Ping, latencia, operadores recomendados y configuración óptima.",
-    youtubeId: "9bZkp7q19f0",
+    youtubeId: "R6-goqBiUi4",
     duration: "10:45",
     views: "18.7K",
-    uploadDate: "2025-11-25", 
+    uploadDate: "2026-01-09", 
     category: "Gaming",
     difficulty: "Intermedio"
   },

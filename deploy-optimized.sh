@@ -122,7 +122,7 @@ if [ -n "$CLOUDFLARE_ZONE_ID" ] && [ -n "$CLOUDFLARE_API_TOKEN" ]; then
          -H "Content-Type: application/json" \
          --data '{"purge_everything":true}')
     
-    if echo "$PURGE_RESPONSE" | grep -q '"success":true'; then
+    if echo "$PURGE_RESPONSE" | grep -q '"success":[[:space:]]*true'; then
         print_success "Cloudflare cache purged successfully"
     else
         print_warning "Failed to purge Cloudflare cache automatically"
