@@ -1,6 +1,11 @@
 #!/bin/bash
 # update.sh - Server-side update script for EC2
 
+# Load environment variables
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi
+
 echo "🧹 Descartando cambios locales..."
 git reset --hard HEAD
 
