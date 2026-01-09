@@ -175,15 +175,17 @@ const VideoCard = ({ video }: { video: Video }) => {
         onClick={() => window.open(`https://www.youtube.com/watch?v=${video.youtubeId}`, '_blank')}
       >
         <img
-          src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
+          src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
           alt={video.title}
           className="w-full h-full object-cover"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
-            target.src = `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`;
+            if (!target.src.includes('hqdefault')) {
+              target.src = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
+            }
           }}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-40 transition-all">
+        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-40 transition-all">
           <div className="bg-red-600 rounded-full p-4 group-hover:scale-110 transition-transform">
             <Play className="w-8 h-8 text-white fill-current" />
           </div>
