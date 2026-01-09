@@ -77,7 +77,11 @@ ssh -i "$SSH_KEY" "$SERVER_USER@$SERVER" << 'ENDSSH'
     set -e
     cd /home/ubuntu/apps/comparador
     
-    echo "📥 Pulling latest changes..."
+    echo "� Resetting local changes..."
+    git reset --hard HEAD
+    git clean -fd
+    
+    echo "�📥 Pulling latest changes..."
     git pull origin main
     
     echo "📦 Installing dependencies..."
