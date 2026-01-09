@@ -1,10 +1,8 @@
 #!/bin/bash
 # update.sh - Server-side update script for EC2
 
-# Load environment variables from .env file if it exists
-if [ -f ~/.cloudflare.env ]; then
-  source ~/.cloudflare.env
-fi
+# Load Cloudflare credentials
+[ -f ~/.cloudflare.env ] && . ~/.cloudflare.env
 
 echo "🧹 Descartando cambios locales..."
 git reset --hard HEAD
@@ -68,7 +66,7 @@ if [ -n "$CLOUDFLARE_ZONE_ID" ] && [ -n "$CLOUDFLARE_API_TOKEN" ]; then
   fi
 else
   echo "⚠️  Cloudflare credentials not set. Skipping cache purge."
-  echo "Set CLOUDFLARE_ZONE_ID and CLOUDFLARE_API_TOKEN in ~/.bashrc"
+  echo "Create ~/.cloudflare.env with CLOUDFLARE_ZONE_ID and CLOUDFLARE_API_TOKEN"
 fi
 # Configurar cron job para generación automática de posts (si no existe)
 if ! crontab -l 2>/dev/null | grep -q "generate-blog-post.mjs"; then
