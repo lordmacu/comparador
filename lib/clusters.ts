@@ -3,7 +3,8 @@ export interface ClusterPage {
   slug: string;
   title: string;
   description: string;
-  icon?: string;
+  icon?: string; // Legacy emoji - will be replaced with iconName
+  iconName?: string; // Lucide icon name
 }
 
 export interface ContentCluster {
@@ -25,9 +26,9 @@ export const contentClusters: ContentCluster[] = [
       description: 'Comparación completa de operadores: ETB, Claro y Movistar'
     },
     clusterPages: [
-      { slug: '/etb', title: 'Internet ETB', description: 'Planes, cobertura y beneficios ETB', icon: '🔵' },
-      { slug: '/claro', title: 'Internet Claro', description: 'Planes, cobertura y beneficios Claro', icon: '🔴' },
-      { slug: '/movistar', title: 'Internet Movistar', description: 'Planes, cobertura y beneficios Movistar', icon: '🟢' },
+      { slug: '/etb', title: 'Internet ETB', description: 'Planes, cobertura y beneficios ETB', iconName: 'CircleDot' },
+      { slug: '/claro', title: 'Internet Claro', description: 'Planes, cobertura y beneficios Claro', iconName: 'Circle' },
+      { slug: '/movistar', title: 'Internet Movistar', description: 'Planes, cobertura y beneficios Movistar', iconName: 'CheckCircle' },
       { slug: '/comparar/etb/claro', title: 'ETB vs Claro', description: 'Comparación directa ETB vs Claro' },
       { slug: '/comparar/etb/movistar', title: 'ETB vs Movistar', description: 'Comparación directa ETB vs Movistar' },
       { slug: '/comparar/claro/movistar', title: 'Claro vs Movistar', description: 'Comparación directa Claro vs Movistar' },
@@ -42,11 +43,11 @@ export const contentClusters: ContentCluster[] = [
       description: 'Velocidades disponibles y cuál necesitas según tu uso'
     },
     clusterPages: [
-      { slug: '/velocidades/100-megas', title: 'Internet 100 Mbps', description: 'Ideal para 2-3 personas', icon: '⚡' },
-      { slug: '/velocidades/200-megas', title: 'Internet 200 Mbps', description: 'Ideal para 3-4 personas', icon: '⚡⚡' },
-      { slug: '/velocidades/300-megas', title: 'Internet 300 Mbps', description: 'Ideal para 4-5 personas', icon: '⚡⚡⚡' },
-      { slug: '/velocidades/500-megas', title: 'Internet 500 Mbps', description: 'Ideal para 5+ personas', icon: '🚀' },
-      { slug: '/velocidades/fibra-optica', title: 'Fibra Óptica', description: 'Tecnología más avanzada y rápida', icon: '💎' }
+      { slug: '/velocidades/100-megas', title: 'Internet 100 Mbps', description: 'Ideal para 2-3 personas', iconName: 'Zap' },
+      { slug: '/velocidades/200-megas', title: 'Internet 200 Mbps', description: 'Ideal para 3-4 personas', iconName: 'Zap' },
+      { slug: '/velocidades/300-megas', title: 'Internet 300 Mbps', description: 'Ideal para 4-5 personas', iconName: 'Zap' },
+      { slug: '/velocidades/500-megas', title: 'Internet 500 Mbps', description: 'Ideal para 5+ personas', iconName: 'Rocket' },
+      { slug: '/velocidades/fibra-optica', title: 'Fibra Óptica', description: 'Tecnología más avanzada y rápida', iconName: 'Gem' }
     ]
   },
   {
@@ -57,20 +58,20 @@ export const contentClusters: ContentCluster[] = [
       description: 'Disponibilidad y operadores en cada barrio de Bogotá'
     },
     clusterPages: [
-      { slug: '/barrios/suba', title: 'Internet en Suba', description: 'Cobertura y planes en Suba', icon: '📍' },
-      { slug: '/barrios/kennedy', title: 'Internet en Kennedy', description: 'Cobertura y planes en Kennedy', icon: '📍' },
-      { slug: '/barrios/usaquen', title: 'Internet en Usaquén', description: 'Cobertura y planes en Usaquén', icon: '📍' },
-      { slug: '/barrios/chapinero', title: 'Internet en Chapinero', description: 'Cobertura y planes en Chapinero', icon: '📍' },
-      { slug: '/barrios/engativa', title: 'Internet en Engativá', description: 'Cobertura y planes en Engativá', icon: '📍' },
-      { slug: '/barrios/ciudad-bolivar', title: 'Internet en Ciudad Bolívar', description: 'Cobertura y planes en Ciudad Bolívar', icon: '📍' },
-      { slug: '/barrios/teusaquillo', title: 'Internet en Teusaquillo', description: 'Cobertura y planes en Teusaquillo', icon: '📍' },
-      { slug: '/barrios/fontibon', title: 'Internet en Fontibón', description: 'Cobertura y planes en Fontibón', icon: '📍' },
-      { slug: '/barrios/puente-aranda', title: 'Internet en Puente Aranda', description: 'Cobertura y planes en Puente Aranda', icon: '📍' },
-      { slug: '/barrios/bosa', title: 'Internet en Bosa', description: 'Cobertura y planes en Bosa', icon: '📍' },
-      { slug: '/barrios/san-cristobal', title: 'Internet en San Cristóbal', description: 'Cobertura y planes en San Cristóbal', icon: '📍' },
-      { slug: '/barrios/barrios-unidos', title: 'Internet en Barrios Unidos', description: 'Cobertura y planes en Barrios Unidos', icon: '📍' },
-      { slug: '/barrios/tunjuelito', title: 'Internet en Tunjuelito', description: 'Cobertura y planes en Tunjuelito', icon: '📍' },
-      { slug: '/barrios/rafael-uribe-uribe', title: 'Internet en Rafael Uribe Uribe', description: 'Cobertura y planes en Rafael Uribe Uribe', icon: '📍' }
+      { slug: '/barrios/suba', title: 'Internet en Suba', description: 'Cobertura y planes en Suba', iconName: 'MapPin' },
+      { slug: '/barrios/kennedy', title: 'Internet en Kennedy', description: 'Cobertura y planes en Kennedy', iconName: 'MapPin' },
+      { slug: '/barrios/usaquen', title: 'Internet en Usaquén', description: 'Cobertura y planes en Usaquén', iconName: 'MapPin' },
+      { slug: '/barrios/chapinero', title: 'Internet en Chapinero', description: 'Cobertura y planes en Chapinero', iconName: 'MapPin' },
+      { slug: '/barrios/engativa', title: 'Internet en Engativá', description: 'Cobertura y planes en Engativá', iconName: 'MapPin' },
+      { slug: '/barrios/ciudad-bolivar', title: 'Internet en Ciudad Bolívar', description: 'Cobertura y planes en Ciudad Bolívar', iconName: 'MapPin' },
+      { slug: '/barrios/teusaquillo', title: 'Internet en Teusaquillo', description: 'Cobertura y planes en Teusaquillo', iconName: 'MapPin' },
+      { slug: '/barrios/fontibon', title: 'Internet en Fontibón', description: 'Cobertura y planes en Fontibón', iconName: 'MapPin' },
+      { slug: '/barrios/puente-aranda', title: 'Internet en Puente Aranda', description: 'Cobertura y planes en Puente Aranda', iconName: 'MapPin' },
+      { slug: '/barrios/bosa', title: 'Internet en Bosa', description: 'Cobertura y planes en Bosa', iconName: 'MapPin' },
+      { slug: '/barrios/san-cristobal', title: 'Internet en San Cristóbal', description: 'Cobertura y planes en San Cristóbal', iconName: 'MapPin' },
+      { slug: '/barrios/barrios-unidos', title: 'Internet en Barrios Unidos', description: 'Cobertura y planes en Barrios Unidos', iconName: 'MapPin' },
+      { slug: '/barrios/tunjuelito', title: 'Internet en Tunjuelito', description: 'Cobertura y planes en Tunjuelito', iconName: 'MapPin' },
+      { slug: '/barrios/rafael-uribe-uribe', title: 'Internet en Rafael Uribe Uribe', description: 'Cobertura y planes en Rafael Uribe Uribe', iconName: 'MapPin' }
     ]
   },
   {
@@ -81,9 +82,9 @@ export const contentClusters: ContentCluster[] = [
       description: 'Encuentra el mejor internet según tu necesidad'
     },
     clusterPages: [
-      { slug: '/casos/gaming', title: 'Internet para Gaming', description: 'Baja latencia para juegos online', icon: '🎮' },
-      { slug: '/casos/teletrabajo', title: 'Internet para Teletrabajo', description: 'Videoconferencias estables', icon: '💼' },
-      { slug: '/casos/streaming', title: 'Internet para Streaming', description: '4K sin buffering', icon: '📺' }
+      { slug: '/casos/gaming', title: 'Internet para Gaming', description: 'Baja latencia para juegos online', iconName: 'Gamepad2' },
+      { slug: '/casos/teletrabajo', title: 'Internet para Teletrabajo', description: 'Videoconferencias estables', iconName: 'Briefcase' },
+      { slug: '/casos/streaming', title: 'Internet para Streaming', description: '4K sin buffering', iconName: 'Tv' }
     ]
   },
   {
@@ -94,10 +95,10 @@ export const contentClusters: ContentCluster[] = [
       description: 'Soluciones adaptadas a tu espacio'
     },
     clusterPages: [
-      { slug: '/viviendas/apartamento', title: 'Internet para Apartamento', description: 'Soluciones para espacios reducidos', icon: '🏢' },
-      { slug: '/viviendas/casa', title: 'Internet para Casa', description: 'Cobertura para casas grandes', icon: '🏠' },
-      { slug: '/viviendas/oficina', title: 'Internet para Oficina', description: 'Soluciones corporativas', icon: '🏛️' },
-      { slug: '/viviendas/edificio', title: 'Internet para Edificio', description: 'Conexión para edificios completos', icon: '🏗️' }
+      { slug: '/viviendas/apartamento', title: 'Internet para Apartamento', description: 'Soluciones para espacios reducidos', iconName: 'Building2' },
+      { slug: '/viviendas/casa', title: 'Internet para Casa', description: 'Cobertura para casas grandes', iconName: 'Home' },
+      { slug: '/viviendas/oficina', title: 'Internet para Oficina', description: 'Soluciones corporativas', iconName: 'Building' },
+      { slug: '/viviendas/edificio', title: 'Internet para Edificio', description: 'Conexión para edificios completos', iconName: 'Landmark' }
     ]
   },
   {
@@ -108,10 +109,10 @@ export const contentClusters: ContentCluster[] = [
       description: 'Resuelve los problemas más comunes'
     },
     clusterPages: [
-      { slug: '/soluciones/cambiar-de-operador', title: 'Cambiar de Operador', description: 'Proceso y recomendaciones', icon: '🔄' },
-      { slug: '/soluciones/mejorar-velocidad', title: 'Mejorar Velocidad', description: 'Optimiza tu conexión actual', icon: '⚡' },
-      { slug: '/soluciones/internet-lento', title: 'Internet Lento', description: 'Diagnóstico y soluciones', icon: '🐌' },
-      { slug: '/soluciones/cortes-de-internet', title: 'Cortes de Internet', description: 'Evita desconexiones', icon: '⚠️' }
+      { slug: '/soluciones/cambiar-de-operador', title: 'Cambiar de Operador', description: 'Proceso y recomendaciones', iconName: 'RefreshCw' },
+      { slug: '/soluciones/mejorar-velocidad', title: 'Mejorar Velocidad', description: 'Optimiza tu conexión actual', iconName: 'Zap' },
+      { slug: '/soluciones/internet-lento', title: 'Internet Lento', description: 'Diagnóstico y soluciones', iconName: 'TrendingDown' },
+      { slug: '/soluciones/cortes-de-internet', title: 'Cortes de Internet', description: 'Evita desconexiones', iconName: 'WifiOff' }
     ]
   }
 ];

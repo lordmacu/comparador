@@ -11,7 +11,7 @@ import {
 } from '@/lib/schemas';
 import BenefitCard from '@/components/BenefitCard';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import { Clock, Tag } from 'lucide-react';
+import { Clock, Tag, BarChart3, BookOpen, CheckCircle2 } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
 import { Zap, Globe, Phone, Gift } from 'lucide-react';
 import type { Metadata } from 'next';
@@ -94,7 +94,8 @@ export default function HomePage() {
                 href="/calculadora"
                 className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-2"
               >
-                📊 Calcula tu Velocidad Ideal
+                <BarChart3 className="w-6 h-6" />
+                Calcula tu Velocidad Ideal
               </a>
               <a
                 href="#comparador"
@@ -161,8 +162,9 @@ export default function HomePage() {
 
           {/* Guía Completa Banner */}
           <div className="mt-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
-            <h3 className="text-2xl md:text-3xl font-black mb-3">
-              📖 Nueva: Guía Completa 2026
+            <h3 className="text-2xl md:text-3xl font-black mb-3 flex items-center justify-center gap-2">
+              <BookOpen className="w-8 h-8" />
+              Nueva: Guía Completa 2026
             </h3>
             <p className="text-lg mb-6 text-purple-100">
               Todo sobre internet en Bogotá en una sola página: operadores, velocidades, barrios y más
@@ -181,8 +183,9 @@ export default function HomePage() {
       <section className="py-16 bg-gradient-to-br from-yellow-50 to-orange-50 border-t-4 border-yellow-400">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold text-sm mb-4">
-              🎯 HERRAMIENTA GRATUITA
+            <div className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold text-sm mb-4">
+              <Zap className="w-4 h-4" />
+              HERRAMIENTA GRATUITA
             </div>
             <h2 className="text-3xl md:text-5xl font-black mb-6">
               ¿No sabes cuánta velocidad necesitas?
@@ -196,7 +199,7 @@ export default function HomePage() {
                 href="/calculadora"
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 flex items-center gap-3"
               >
-                <span className="text-3xl">📊</span>
+                <BarChart3 className="w-8 h-8" />
                 <div className="text-left">
                   <div>Calcular Ahora</div>
                   <div className="text-sm font-normal opacity-90">100% Gratis • Resultados Instantáneos</div>
@@ -204,7 +207,7 @@ export default function HomePage() {
               </a>
             </div>
             <p className="text-sm text-gray-600 mt-6">
-              ✅ Sin registro • ✅ Recomendaciones personalizadas • ✅ Planes de ETB, Claro y Movistar
+              <CheckCircle2 className="w-4 h-4 inline" /> Sin registro • <CheckCircle2 className="w-4 h-4 inline" /> Recomendaciones personalizadas • <CheckCircle2 className="w-4 h-4 inline" /> Planes de ETB, Claro y Movistar
             </p>
           </div>
         </div>

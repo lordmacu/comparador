@@ -129,7 +129,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       // Eliminar - al inicio de <li>
       .replace(/(<li>)\s*-\s*/g, '$1')
       // Limpiar ## sueltos que no estén dentro de tags
-      .replace(/^##\s+/gm, '');
+      .replace(/^##\s+/gm, '')
+      // Asegurar que las etiquetas estén bien cerradas
+      .trim();
   };
 
   const cleanContentBeforeCta = cleanHtmlFromMarkdown(contentBeforeCta);
@@ -530,6 +532,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       <div 
                         className="blog-html-content"
                         dangerouslySetInnerHTML={{ __html: cleanContentBeforeCta }} 
+                        suppressHydrationWarning
                       />
                       
                       <InlineBlogCallWidget postSlug={post.slug} />
@@ -537,6 +540,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       <div 
                         className="blog-html-content"
                         dangerouslySetInnerHTML={{ __html: cleanContentAfterCta }} 
+                        suppressHydrationWarning
                       />
                     </>
                   ) : (

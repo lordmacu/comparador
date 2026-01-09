@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Star, Wifi, Clock, MapPin, Phone, Shield, Zap } from "lucide-react";
+import { Star, Wifi, Clock, MapPin, Phone, Shield, Zap, Flame, PartyPopper, Calculator, Video } from "lucide-react";
 import QuickCallForm from "@/components/QuickCallForm";
 
 // Schema.org structured data for internet plans with Product markup
@@ -383,8 +383,9 @@ const PlanCard = ({ plan }: { plan: Plan }) => {
       <div className={`bg-gradient-to-r ${colors.bg} text-white p-6 relative`}>
         {plan.popular && (
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-            <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-bold">
-              🔥 Más Popular
+            <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+              <Flame className="w-4 h-4" />
+              Más Popular
             </span>
           </div>
         )}
@@ -482,7 +483,7 @@ const PlanCard = ({ plan }: { plan: Plan }) => {
         {plan.promo && (
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-4">
             <div className="flex items-center space-x-2">
-              <span className="text-yellow-600">🎉</span>
+              <PartyPopper className="w-5 h-5 text-yellow-600" />
               <span className="text-yellow-800 font-medium text-sm">{plan.promo}</span>
             </div>
           </div>
@@ -713,21 +714,24 @@ export default function PlanesPage() {
               <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
                 <Link
                   href="/calculadora"
-                  className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                  className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
                 >
-                  🧮 Calculadora de Internet
+                  <Calculator className="w-5 h-5" />
+                  Calculadora de Internet
                 </Link>
                 <Link
                   href="/testimonios"
-                  className="bg-yellow-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
+                  className="bg-yellow-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors flex items-center justify-center gap-2"
                 >
-                  ⭐ Ver Opiniones Reales
+                  <Star className="w-5 h-5" />
+                  Ver Opiniones Reales
                 </Link>
                 <Link
                   href="/videos"
-                  className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
+                  className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors flex items-center justify-center gap-2"
                 >
-                  🎥 Videos Comparativos
+                  <Video className="w-5 h-5" />
+                  Videos Comparativos
                 </Link>
               </div>
 

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getAllProviders } from '@/lib/data';
 import QuickCallForm from '@/components/QuickCallForm';
 import ClusterNavigation from '@/components/ClusterNavigation';
+import { Home, Smartphone, DollarSign, Wrench, House, Users, Gamepad2, Shield, Briefcase, Cloud, Lock, Building2, BarChart3, Gem, Gift } from 'lucide-react';
 
 interface ViviendaInfo {
   nombre: string;

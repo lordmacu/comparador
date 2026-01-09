@@ -20,9 +20,15 @@ export const isFacebookPixelEnabled = () => {
 export const pageview = (url: string) => {
   if (!isAnalyticsEnabled()) return;
   
-  window.gtag('config', GA_TRACKING_ID, {
-    page_path: url,
-  });
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    try {
+      window.gtag('config', GA_TRACKING_ID, {
+        page_path: url,
+      });
+    } catch (error) {
+      console.error('[Analytics] Error in pageview:', error);
+    }
+  }
 };
 
 // Event Types
@@ -58,24 +64,42 @@ export const event = (name: EventNames, params?: EventParams) => {
     return;
   }
 
-  window.gtag('event', name, {
-    ...params,
-    timestamp: new Date().toISOString(),
-  });
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    try {
+      window.gtag('event', name, {
+        ...params,
+        timestamp: new Date().toISOString(),
+      });
+    } catch (error) {
+      console.error('[Analytics] Error tracking event:', error);
+    }
+  }
 };
 
 // Facebook Pixel - Page View
 export const fbPageview = () => {
   if (!isFacebookPixelEnabled()) return;
   
-  window.fbq('track', 'PageView');
+  if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+    try {
+      window.fbq('track', 'PageView');
+    } catch (error) {
+      console.error('[Analytics] Error in fbPageview:', error);
+    }
+  }
 };
 
 // Facebook Pixel - Events
 export const fbEvent = (name: string, params?: Record<string, any>) => {
   if (!isFacebookPixelEnabled()) return;
   
-  window.fbq('track', name, params);
+  if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+    try {
+      window.fbq('track', name, params);
+    } catch (error) {
+      console.error('[Analytics] Error in fbEvent:', error);
+    }
+  }
 };
 
 // Conversion Events
@@ -257,15 +281,9 @@ export const initializeAnalytics = () => {
 // TypeScript declarations for global window objects
 declare global {
   interface Window {
-    gtag: (
-      command: string,
-      targetId: string,
-      config?: Record<string, any>
-    ) => void;
-    fbq: (
-      command: string,
-      eventName: string,
-      params?: Record<string, any>
-    ) => void;
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+    fbq: (...args: any[]) => void;
+    _fbq: any;
   }
 }

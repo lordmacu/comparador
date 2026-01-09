@@ -29,14 +29,18 @@ export function WebVitals() {
       // }).catch(console.error);
 
       // Example: Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', metric.name, {
-          value: Math.round(
-            metric.name === 'CLS' ? metric.value * 1000 : metric.value
-          ),
-          event_label: metric.id,
-          non_interaction: true,
-        });
+      if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+        try {
+          (window as any).gtag('event', metric.name, {
+            value: Math.round(
+              metric.name === 'CLS' ? metric.value * 1000 : metric.value
+            ),
+            event_label: metric.id,
+            non_interaction: true,
+          });
+        } catch (error) {
+          console.error('[Web Vitals] Error sending to gtag:', error);
+        }
       }
     }
   });
