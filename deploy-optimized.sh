@@ -16,8 +16,6 @@ SERVER_USER="ubuntu"
 SSH_KEY="/Users/cristian/Downloads/comparador.pem"
 APP_DIR="/home/ubuntu/apps/comparador"
 DOMAIN="comparadorinternet.co"
-CLOUDFLARE_ZONE_ID="${CLOUDFLARE_ZONE_ID:-}"
-CLOUDFLARE_API_TOKEN="${CLOUDFLARE_API_TOKEN:-}"
 
 # Function to print colored messages
 print_step() {
@@ -85,33 +83,6 @@ else
     print_error "Site returned HTTP $HTTP_STATUS"
     print_warning "You may need to check the logs: ssh -i $SSH_KEY $SERVER_USER@$SERVER 'pm2 logs nextjs-app --lines 50'"
     exit 1
-fi
-
-# Step 4: Purge Cloudflare cache
-if [ -n "$CLOUDFLARE_ZONE_ID" ] && [ -n "$CLOUDFLARE_API_TOKEN" ]; then
-    print_step "Purging Cloudflare cache..."
-    
-    PURGE_RESPONSE=$(curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
-         -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
-         -H "Content-Type: application/json" \
-         --data '{"purge_everything":true}')
-    
-    if echo "$PURGE_RESPONSE" | grep -q '"success":[[:space:]]*true'; then
-        print_success "Cloudflare cache purged successfully"
-    else
-        print_warning "Failed to purge Cloudflare cache automatically"
-        echo "Response: $PURGE_RESPONSE"
-        echo ""
-        print_warning "Please purge manually at: https://dash.cloudflare.com"
-    fi
-else
-    print_warning "Cloudflare credentials not set. Skipping cache purge."
-    echo ""
-    echo "To enable automatic cache purging, set environment variables:"
-    echo "  export CLOUDFLARE_ZONE_ID='your-zone-id'"
-    echo "  export CLOUDFLARE_API_TOKEN='your-api-token'"
-    echo ""
-    echo "Or purge manually at: https://dash.cloudflare.com"
 fi
 
 # Final summary

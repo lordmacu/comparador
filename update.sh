@@ -46,7 +46,25 @@ if [ $? -ne 0 ]; then
   pm2 start npm --name "nextjs-app" -- start
   pm2 save
 fi
-
+# Purge Cloudflare cache
+if [ -n "$CLOUDFLARE_ZONE_ID" ] && [ -n "$CLOUDFLARE_API_TOKEN" ]; then
+  echo "🔄 Purging Cloudflare cache..."
+  
+  PURGE_RESPONSE=$(curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
+       -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+       -H "Content-Type: application/json" \
+       --data '{"purge_everything":true}')
+  
+  if echo "$PURGE_RESPONSE" | grep -q '"success":[[:space:]]*true'; then
+    echo "✅ Cloudflare cache purged successfully"
+  else
+    echo "⚠️  Failed to purge Cloudflare cache"
+    echo "Response: $PURGE_RESPONSE"
+  fi
+else
+  echo "⚠️  Cloudflare credentials not set. Skipping cache purge."
+  echo "Set CLOUDFLARE_ZONE_ID and CLOUDFLARE_API_TOKEN in ~/.bashrc"
+fi
 # Configurar cron job para generación automática de posts (si no existe)
 if ! crontab -l 2>/dev/null | grep -q "generate-blog-post.mjs"; then
   echo "📅 Configurando cron job para posts automáticos..."
