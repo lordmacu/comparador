@@ -43,7 +43,16 @@ fi
 
 COMMIT_MSG="$1"
 
-# Step 1: Git operations
+# Step 1: Build locally
+print_step "Building project locally..."
+if npm run build; then
+    print_success "Build successful!"
+else
+    print_error "Build failed. Fix errors and try again."
+    exit 1
+fi
+
+# Step 2: Git operations
 print_step "Committing changes..."
 git add .
 if git commit -m "$COMMIT_MSG"; then
@@ -60,7 +69,7 @@ else
     exit 1
 fi
 
-# Step 2: Deploy to server using existing update.sh
+# Step 3: Deploy to server using existing update.sh
 print_step "Deploying to server..."
 ssh -i "$SSH_KEY" "$SERVER_USER@$SERVER" << 'ENDSSH'
     set -e

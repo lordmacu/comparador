@@ -1,6 +1,6 @@
-:HL["/_next/static/chunks/8efd0deb6abbcabb.css","style"]
+:HL["/_next/static/chunks/f771c337460a859a.css","style"]
 :HL["/_next/static/media/83afe278b6a6bb3c.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/images/claro-logo.svg","image"]
 :HL["/images/movistar-logo.png","image"]
 :HL["/images/etb-logo.svg","image"]
-0:{"buildId":"EyWYn3uAC3XLX9zX0QxzH","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"viviendas","paramType":null,"paramKey":"viviendas","hasRuntimePrefetch":false,"slots":{"children":{"name":"vivienda","paramType":"d","paramKey":"apartamento","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"EDBHtU-7DNykIgkCUuzZa","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"viviendas","paramType":null,"paramKey":"viviendas","hasRuntimePrefetch":false,"slots":{"children":{"name":"vivienda","paramType":"d","paramKey":"apartamento","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
