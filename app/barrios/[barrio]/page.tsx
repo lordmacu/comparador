@@ -6,92 +6,121 @@ import QuickCallForm from '@/components/QuickCallForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ClusterNavigation from '@/components/ClusterNavigation';
 import { MapPin, Zap, TrendingUp, Shield, Search, Calculator, Lightbulb, Check } from 'lucide-react';
+import { generateLocalAreaSchema, renderJsonLd } from '@/lib/schemas';
 
-// Definir los barrios de Bogotá
+// Definir los barrios de Bogotá con coordenadas geográficas
 const BARRIOS = {
   suba: {
     nombre: 'Suba',
     descripcion: 'Una de las localidades más grandes de Bogotá con excelente cobertura de internet',
     poblacion: '1.3 millones',
-    caracteristicas: ['Zona residencial y comercial', 'Alta demanda de internet', 'Cobertura completa de operadores']
+    caracteristicas: ['Zona residencial y comercial', 'Alta demanda de internet', 'Cobertura completa de operadores'],
+    latitude: 4.7543,
+    longitude: -74.0857
   },
   kennedy: {
     nombre: 'Kennedy',
     descripcion: 'La localidad más poblada de Bogotá con amplia infraestructura de telecomunicaciones',
     poblacion: '1.2 millones',
-    caracteristicas: ['Zona comercial activa', 'Alta conectividad', 'Múltiples operadores disponibles']
+    caracteristicas: ['Zona comercial activa', 'Alta conectividad', 'Múltiples operadores disponibles'],
+    latitude: 4.6276,
+    longitude: -74.1492
   },
   usaquen: {
     nombre: 'Usaquén',
     descripcion: 'Zona norte de Bogotá con alta demanda de internet de calidad',
     poblacion: '500 mil',
-    caracteristicas: ['Zona residencial premium', 'Alto uso empresarial', 'Mejor infraestructura']
+    caracteristicas: ['Zona residencial premium', 'Alto uso empresarial', 'Mejor infraestructura'],
+    latitude: 4.7110,
+    longitude: -74.0299
   },
   chapinero: {
     nombre: 'Chapinero',
     descripcion: 'Centro empresarial y residencial con necesidades de internet de alta velocidad',
     poblacion: '140 mil',
-    caracteristicas: ['Zona empresarial', 'Teletrabajo intensivo', 'Demanda de velocidad']
+    caracteristicas: ['Zona empresarial', 'Teletrabajo intensivo', 'Demanda de velocidad'],
+    latitude: 4.6533,
+    longitude: -74.0616
   },
   engativa: {
     nombre: 'Engativá',
     descripcion: 'Localidad con creciente demanda de servicios de internet para familias',
     poblacion: '900 mil',
-    caracteristicas: ['Zona familiar', 'Uso residencial alto', 'Buena cobertura']
+    caracteristicas: ['Zona familiar', 'Uso residencial alto', 'Buena cobertura'],
+    latitude: 4.7110,
+    longitude: -74.1143
   },
   'ciudad-bolivar': {
     nombre: 'Ciudad Bolívar',
     descripcion: 'Localidad en expansión con creciente acceso a internet de calidad',
     poblacion: '700 mil',
-    caracteristicas: ['Expansión de servicios', 'Planes económicos', 'Mejora de infraestructura']
+    caracteristicas: ['Expansión de servicios', 'Planes económicos', 'Mejora de infraestructura'],
+    latitude: 4.5731,
+    longitude: -74.1804
   },
   teusaquillo: {
     nombre: 'Teusaquillo',
     descripcion: 'Localidad central de Bogotá con excelente conectividad e infraestructura',
     poblacion: '150 mil',
-    caracteristicas: ['Zona universitaria', 'Alta demanda empresarial', 'Infraestructura moderna']
+    caracteristicas: ['Zona universitaria', 'Alta demanda empresarial', 'Infraestructura moderna'],
+    latitude: 4.6389,
+    longitude: -74.0918
   },
   fontibon: {
     nombre: 'Fontibón',
     descripcion: 'Localidad cerca al aeropuerto con crecimiento comercial y residencial',
     poblacion: '400 mil',
-    caracteristicas: ['Zona comercial activa', 'Crecimiento industrial', 'Buena cobertura']
+    caracteristicas: ['Zona comercial activa', 'Crecimiento industrial', 'Buena cobertura'],
+    latitude: 4.6798,
+    longitude: -74.1456
   },
   'puente-aranda': {
     nombre: 'Puente Aranda',
     descripcion: 'Centro industrial y comercial con alta demanda de internet empresarial',
     poblacion: '260 mil',
-    caracteristicas: ['Zona industrial', 'Comercio mayorista', 'Internet empresarial']
+    caracteristicas: ['Zona industrial', 'Comercio mayorista', 'Internet empresarial'],
+    latitude: 4.6173,
+    longitude: -74.1157
   },
   bosa: {
     nombre: 'Bosa',
     descripcion: 'Localidad con gran población residencial y creciente cobertura de internet',
     poblacion: '750 mil',
-    caracteristicas: ['Zona residencial', 'Planes familiares', 'Expansión de fibra óptica']
+    caracteristicas: ['Zona residencial', 'Planes familiares', 'Expansión de fibra óptica'],
+    latitude: 4.6188,
+    longitude: -74.1913
   },
   'san-cristobal': {
     nombre: 'San Cristóbal',
     descripcion: 'Localidad del sur-oriente con mejora continua en servicios de internet',
     poblacion: '400 mil',
-    caracteristicas: ['Zona residencial', 'Planes accesibles', 'Mejora de cobertura']
+    caracteristicas: ['Zona residencial', 'Planes accesibles', 'Mejora de cobertura'],
+    latitude: 4.5673,
+    longitude: -74.0834
   },
   'barrios-unidos': {
     nombre: 'Barrios Unidos',
     descripcion: 'Localidad central con excelente infraestructura de telecomunicaciones',
     poblacion: '240 mil',
-    caracteristicas: ['Ubicación estratégica', 'Alta conectividad', 'Servicios premium']
+    caracteristicas: ['Ubicación estratégica', 'Alta conectividad', 'Servicios premium'],
+    latitude: 4.6723,
+    longitude: -74.0862
   },
   tunjuelito: {
     nombre: 'Tunjuelito',
     descripcion: 'Localidad con creciente acceso a internet de alta velocidad',
     poblacion: '200 mil',
-    caracteristicas: ['Zona residencial', 'Planes económicos', 'Fibra óptica en expansión']
+    caracteristicas: ['Zona residencial', 'Planes económicos', 'Fibra óptica en expansión'],
+    latitude: 4.5822,
+    longitude: -74.1294
   },
   'rafael-uribe-uribe': {
     nombre: 'Rafael Uribe Uribe',
     descripcion: 'Localidad del sur con amplia oferta de planes de internet',
     poblacion: '375 mil',
-    caracteristicas: ['Zona comercial y residencial', 'Variedad de planes', 'Buena cobertura']
+    caracteristicas: ['Zona comercial y residencial', 'Variedad de planes', 'Buena cobertura'],
+    latitude: 4.5737,
+    longitude: -74.1179
   }
 };
 
@@ -156,8 +185,18 @@ export default async function InternetBarrioPage({ params }: { params: Promise<{
     return <div>Barrio no encontrado</div>;
   }
 
+  // Generate LocalArea Schema with GeoCoordinates
+  const localAreaSchema = generateLocalAreaSchema({
+    barrio: barrio.nombre,
+    latitude: barrio.latitude,
+    longitude: barrio.longitude
+  });
+
   return (
     <>
+      {/* LocalArea Schema with GeoCoordinates */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(localAreaSchema)} />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-16">
         <div className="container mx-auto px-4">

@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { getAllProviders, getProviderBySlug } from '@/lib/data';
 import QuickCallForm from '@/components/QuickCallForm';
 import { Check, Zap, Shield } from 'lucide-react';
+import { generateComparisonSchema, renderJsonLd } from '@/lib/schemas';
 
 // Definir las comparativas permitidas
 const COMPARATIVAS = [
@@ -92,6 +93,9 @@ export default async function ComparativaPage({ params }: { params: Promise<{ op
   const nombre1 = provider1.name;
   const nombre2 = provider2.name;
 
+  // Generate Comparison Schema
+  const comparisonSchema = generateComparisonSchema(provider1, provider2);
+
   // Comparación de características
   const comparacion = [
     {
@@ -124,6 +128,9 @@ export default async function ComparativaPage({ params }: { params: Promise<{ op
 
   return (
     <>
+      {/* Comparison Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(comparisonSchema)} />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 text-white py-16">
         <div className="container mx-auto px-4">
