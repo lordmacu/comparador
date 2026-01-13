@@ -313,8 +313,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/mejor-internet-bogota-2026`,
       lastModified: new Date(),
-      changeFrequency: 'daily' as const,
-      priority: 1.0,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    // Nuevas Páginas ETB (Phase 4)
+    {
+      url: `${baseUrl}/etb/servicio-al-cliente`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/etb/planes`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/etb/test-de-velocidad`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
     },
     ...providerSlugs.map((slug) => ({
       url: `${baseUrl}/${slug}`,
