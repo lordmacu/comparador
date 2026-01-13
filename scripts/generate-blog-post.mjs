@@ -634,7 +634,7 @@ GENERA LA IMAGEN AHORA.`;
             
             // Generar thumbnail 400x200 para lista de posts
             log("Generando thumbnail 400x200...", "info");
-            const thumbnailPath = path.join(imagesDir, `${postData.slug}-thumb.webp`);
+            const thumbnailPath = path.join(imageDir, `${postData.slug}-thumb.webp`);
             await sharp(imagePath)
               .resize(400, 200, { fit: 'cover', position: 'center' })
               .webp({ quality: 70, effort: 6 })

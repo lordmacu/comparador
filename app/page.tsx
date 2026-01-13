@@ -379,14 +379,15 @@ export default function HomePage() {
               >
                 <Link href={`/blog/${post.slug}`}>
                   {/* Featured Image */}
-                  {post.image && (
+                  {(post.thumbnailImage || post.image) && (
                     <div className="relative w-full h-48 bg-gray-100">
-                      <Image
-                        src={post.image}
+                      <img
+                        src={post.thumbnailImage || post.image}
                         alt={post.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        width={400}
+                        height={200}
                       />
                     </div>
                   )}
