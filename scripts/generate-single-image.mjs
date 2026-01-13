@@ -4,6 +4,7 @@ import path from "path";
 import { exec } from "child_process";
 import { promisify } from "util";
 import dotenv from "dotenv";
+import sharp from "sharp";
 
 const execAsync = promisify(exec);
 dotenv.config();
@@ -115,16 +116,26 @@ GENERA LA IMAGEN AHORA.`;
     if (imageResponse.candidates && imageResponse.candidates[0]) {
       for (const part of imageResponse.candidates[0].content.parts) {
         if (part.inlineData) {
-        // Guardar imagen en disco
+        // Guardar imagen en disco con compresión
         const imageDir = path.resolve(process.cwd(), "public/blog-images");
         const imagePath = path.join(imageDir, `${slug}.webp`);
+        const tempPath = path.join(imageDir, `${slug}.temp.webp`);
         
         // Crear directorio si no existe
         await fs.mkdir(imageDir, { recursive: true });
         
-        // Convertir base64 a buffer y guardar
+        // Convertir base64 a buffer y guardar temporalmente
         const imageBuffer = Buffer.from(part.inlineData.data, 'base64');
-        await fs.writeFile(imagePath, imageBuffer);
+        await fs.writeFile(tempPath, imageBuffer);
+        
+        // Comprimir con sharp (calidad 80, máximo 300KB target)
+        await sharp(tempPath)
+          .webp({ quality: 80, effort: 6 })
+          .resize(1200, 630, { fit: 'cover', position: 'center' })
+          .toFile(imagePath);
+        
+        // Eliminar temporal
+        await fs.unlink(tempPath);
         
         // Ajustar permisos para que nginx pueda servir la imagen
         try {
@@ -135,7 +146,24 @@ GENERA LA IMAGEN AHORA.`;
         }
         
         console.log(`✅ Imagen guardada: ${imagePath}`);
-        console.log(`📏 Tamaño: ${(imageBuffer.length / 1024).toFixed(2)} KB`);
+        console.log(`📏 Tamaño original: ${(imageBuffer.length / 1024).toFixed(2)} KB`);
+        
+        // Comprimir imagen para reducir tamaño
+        try {
+          console.log("🗜️  Comprimiendo imagen...");
+          const sharp = (await import('sharp')).default;
+          await sharp(imagePath)
+            .webp({ quality: 75, effort: 6 })
+            .toFile(imagePath + '.tmp');
+          await fs.rename(imagePath + '.tmp', imagePath);
+          await execAsync(`chmod 644 "${imagePath}"`);
+          
+          const statsAfter = await fs.stat(imagePath);
+          const reduction = ((1 - imageBuffer.length / statsAfter.size) * 100).toFixed(1);
+          console.log(`✅ Imagen comprimida: ${(statsAfter.size / 1024).toFixed(2)} KB (reducción: ${Math.abs(reduction)}%)`);
+        } catch (compError) {
+          console.log(`⚠️  Advertencia: No se pudo comprimir: ${compError.message}`);
+        }
         
         return imagePath;
       }

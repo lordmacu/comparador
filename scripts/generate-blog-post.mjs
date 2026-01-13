@@ -615,6 +615,26 @@ GENERA LA IMAGEN AHORA.`;
             log(`Advertencia: No se pudieron ajustar permisos de imagen: ${permError.message}`, "error");
           }
           
+          // Comprimir imagen para reducir tamaño
+          try {
+            const statsBefore = await fs.stat(imagePath);
+            log(`Tamaño original: ${(statsBefore.size / 1024).toFixed(2)} KB`, "info");
+            log("Comprimiendo imagen...", "info");
+            
+            const sharp = (await import('sharp')).default;
+            await sharp(imagePath)
+              .webp({ quality: 75, effort: 6 })
+              .toFile(imagePath + '.tmp');
+            await fs.rename(imagePath + '.tmp', imagePath);
+            await execAsync(`chmod 644 "${imagePath}"`);
+            
+            const statsAfter = await fs.stat(imagePath);
+            const reduction = ((1 - statsAfter.size / statsBefore.size) * 100).toFixed(1);
+            log(`Imagen comprimida: ${(statsAfter.size / 1024).toFixed(2)} KB (reducción: ${reduction}%)`, "success");
+          } catch (compError) {
+            log(`Advertencia: No se pudo comprimir la imagen: ${compError.message}`, "error");
+          }
+          
           postData.image = `/blog-images/${postData.slug}.webp`;
           log("Imagen generada y guardada exitosamente.", "success");
         }
