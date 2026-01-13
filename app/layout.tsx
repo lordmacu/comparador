@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { renderJsonLd } from "@/lib/schemas";
 // Removed static generateLocalBusinessSchema import
@@ -9,14 +8,6 @@ import { WebVitals } from "@/components/WebVitals";
 import { ClientProviders } from "@/components/ClientProviders";
 import { Analytics } from "@/components/Analytics";
 import DynamicLocalBusiness from "@/components/DynamicLocalBusiness";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-  adjustFontFallback: true,
-  fallback: ['system-ui', 'arial'],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://comparadorinternet.co'),
@@ -124,10 +115,6 @@ export default function RootLayout({
         <OrganizationSchema />
         <WebsiteSchema />
 
-        {/* Preconnect para optimización */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
         {/* DNS Prefetch para WhatsApp */}
         <link rel="dns-prefetch" href="https://wa.me" />
 
@@ -137,7 +124,7 @@ export default function RootLayout({
         {/* RSS Feed */}
         <link rel="alternate" type="application/rss+xml" title="Blog de Internet Colombia" href="/blog/feed.xml" />
       </head>
-      <body className={inter.className}>
+      <body>
         {/* Header condicional */}
         <Header />
 

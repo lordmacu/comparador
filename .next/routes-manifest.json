@@ -365,6 +365,12 @@
       "namedRegex": "^/movistar(?:/)?$"
     },
     {
+      "page": "/news-sitemap.xml",
+      "regex": "^/news\\-sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/news\\-sitemap\\.xml(?:/)?$"
+    },
+    {
       "page": "/ofertas",
       "regex": "^/ofertas(?:/)?$",
       "routeKeys": {},

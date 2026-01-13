@@ -1,7 +1,11 @@
 import { getAllPosts } from '@/lib/blog';
 
+function escapeCdata(value: string): string {
+  return value.replaceAll(']]>', ']]]]><![CDATA[>');
+}
+
 export async function GET() {
-  const posts = getAllPosts();
+  const posts = getAllPosts().slice(0, 50);
   const baseUrl = 'https://comparadorinternet.co';
 
   const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
@@ -17,15 +21,15 @@ export async function GET() {
       .map(
         (post) => `
     <item>
-      <title><![CDATA[${post.title}]]></title>
+      <title><![CDATA[${escapeCdata(post.title)}]]></title>
       <link>${baseUrl}/blog/${post.slug}</link>
       <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
-      <description><![CDATA[${post.description}]]></description>
-      <content:encoded><![CDATA[${post.content.replace(/\n/g, '<br/>')}]]></content:encoded>
+      <description><![CDATA[${escapeCdata(post.description)}]]></description>
+      <content:encoded><![CDATA[${escapeCdata(post.content.replace(/\n/g, '<br/>'))}]]></content:encoded>
       <author>noreply@comparadorinternet.co (${post.author})</author>
       <pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate>
-      <category>${post.category}</category>
-      ${post.tags.map(tag => `<category>${tag}</category>`).join('\n      ')}
+      <category><![CDATA[${escapeCdata(post.category)}]]></category>
+      ${post.tags.map(tag => `<category><![CDATA[${escapeCdata(tag)}]]></category>`).join('\n      ')}
     </item>`
       )
       .join('')}

@@ -42,6 +42,7 @@
   "/internet-solo-sin-telefono/page": "/internet-solo-sin-telefono",
   "/manifest.webmanifest/route": "/manifest.webmanifest",
   "/movistar/page": "/movistar",
+  "/news-sitemap.xml/route": "/news-sitemap.xml",
   "/ofertas/page": "/ofertas",
   "/page": "/",
   "/planes-claro-bogota/page": "/planes-claro-bogota",

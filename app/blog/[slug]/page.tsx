@@ -202,10 +202,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // Article JSON-LD Schema
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": ["BlogPosting", "NewsArticle"],
     "headline": post.title,
     "description": post.description,
     "image": post.image || "https://comparadorinternet.co/og-image.jpg",
+    "thumbnailUrl": post.thumbnailImage || post.image || "https://comparadorinternet.co/og-image.jpg",
     "datePublished": post.publishedAt,
     "dateModified": post.updatedAt || post.publishedAt,
     "author": {
@@ -224,6 +225,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       "@type": "WebPage",
       "@id": `https://comparadorinternet.co/blog/${post.slug}`
     },
+    "url": `https://comparadorinternet.co/blog/${post.slug}`,
     "articleSection": post.category,
     "keywords": post.tags.join(", "),
     "wordCount": wordCount,
