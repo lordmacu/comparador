@@ -126,8 +126,29 @@ export default function CompararIndexPage() {
             </div>
           </div>
         </section>
+
+        <section className="pb-14">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+              <h2 className="text-2xl font-black text-gray-900 mb-3">Comparativas enfocadas en Bogotá</h2>
+              <p className="text-gray-600 mb-6">
+                Si tu objetivo es contratar internet en Bogotá, estas páginas priorizan cobertura por dirección, edificio y disponibilidad real.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/claro-vs-movistar-bogota" className="px-4 py-2 rounded-lg bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors">
+                  Claro vs Movistar (Bogotá)
+                </Link>
+                <Link href="/etb-vs-claro-bogota" className="px-4 py-2 rounded-lg bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors">
+                  ETB vs Claro (Bogotá)
+                </Link>
+                <Link href="/etb-vs-movistar-bogota" className="px-4 py-2 rounded-lg bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors">
+                  ETB vs Movistar (Bogotá)
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
 }
-

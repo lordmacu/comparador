@@ -602,6 +602,9 @@ export default function PlanesPage() {
                   <Link href="/planes-claro-bogota" className="px-4 py-2 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 transition-colors text-sm">
                     Ver planes
                   </Link>
+                  <Link href="/cobertura-claro-bogota" className="px-4 py-2 rounded-lg bg-red-50 text-red-700 font-semibold hover:bg-red-100 transition-colors text-sm">
+                    Cobertura
+                  </Link>
                   <Link href="/asesor-claro-bogota" className="px-4 py-2 rounded-lg bg-gray-100 text-gray-900 font-semibold hover:bg-gray-200 transition-colors text-sm">
                     Hablar con asesor
                   </Link>
@@ -613,6 +616,9 @@ export default function PlanesPage() {
                 <div className="flex flex-wrap gap-2">
                   <Link href="/planes-movistar-bogota" className="px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors text-sm">
                     Ver planes
+                  </Link>
+                  <Link href="/cobertura-movistar-bogota" className="px-4 py-2 rounded-lg bg-emerald-50 text-emerald-800 font-semibold hover:bg-emerald-100 transition-colors text-sm">
+                    Cobertura
                   </Link>
                   <Link href="/asesor-movistar-bogota" className="px-4 py-2 rounded-lg bg-gray-100 text-gray-900 font-semibold hover:bg-gray-200 transition-colors text-sm">
                     Hablar con asesor
@@ -626,6 +632,9 @@ export default function PlanesPage() {
                   <Link href="/planes-etb-bogota" className="px-4 py-2 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors text-sm">
                     Ver planes
                   </Link>
+                  <Link href="/cobertura-etb-bogota" className="px-4 py-2 rounded-lg bg-blue-50 text-blue-800 font-semibold hover:bg-blue-100 transition-colors text-sm">
+                    Cobertura
+                  </Link>
                   <Link href="/asesor-etb-bogota" className="px-4 py-2 rounded-lg bg-gray-100 text-gray-900 font-semibold hover:bg-gray-200 transition-colors text-sm">
                     Hablar con asesor
                   </Link>
@@ -637,6 +646,18 @@ export default function PlanesPage() {
               <Link href="/contratar-internet-bogota" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors">
                 Contratar internet en Bogotá
                 <Zap className="w-5 h-5" />
+              </Link>
+            </div>
+
+            <div className="mt-4 flex flex-wrap justify-center gap-3 text-sm">
+              <Link href="/claro-vs-movistar-bogota" className="px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-900 font-semibold hover:bg-gray-50 transition-colors">
+                Claro vs Movistar (Bogotá)
+              </Link>
+              <Link href="/etb-vs-claro-bogota" className="px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-900 font-semibold hover:bg-gray-50 transition-colors">
+                ETB vs Claro (Bogotá)
+              </Link>
+              <Link href="/etb-vs-movistar-bogota" className="px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-900 font-semibold hover:bg-gray-50 transition-colors">
+                ETB vs Movistar (Bogotá)
               </Link>
             </div>
           </div>

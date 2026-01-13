@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { google } = require('googleapis');
 const nodemailer = require('nodemailer');
+const { execSync } = require('child_process');
 
 // Cargar variables de entorno (intentar .env.local, luego .env)
 require('dotenv').config({ path: path.join(__dirname, '../.env.local') });
@@ -101,7 +102,19 @@ async function sendEmailReport(reportData) {
 }
 
 async function checkGSC() {
-    console.log('🚀 Iniciando conexión con Google Search Console API...\n');
+    console.log('🚀 Iniciando Google Search Console Monitor...\n');
+
+    // 0. ACTUALIZAR INVENTARIO AUTOMÁTICAMENTE
+    console.log('📦 Actualizando inventario de páginas...');
+    try {
+        execSync('node scripts/inventory_metadata.js 2>/dev/null > public/metadata_inventory.json', {
+            cwd: path.join(__dirname, '..'),
+            stdio: 'pipe'
+        });
+        console.log('   ✅ Inventario actualizado exitosamente\n');
+    } catch (error) {
+        console.error('   ⚠️  Error actualizando inventario (continuando con el existente):', error.message, '\n');
+    }
 
     // 1. Verificar credenciales
     if (!fs.existsSync(KEY_FILE)) {

@@ -82,6 +82,56 @@ export default function BogotaZonasPage() {
           </div>
         </section>
 
+        {/* Cobertura por Operador (BOFU) */}
+        <section className="py-10 -mt-8 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">Verificar cobertura por operador</h2>
+              <p className="text-gray-600 mb-5">
+                Si ya tienes operador en mente, valida cobertura por dirección/edificio y contrata solo internet.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/cobertura-claro-bogota"
+                  className="px-4 py-2 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 transition-colors"
+                >
+                  Cobertura Claro Bogotá
+                </Link>
+                <Link
+                  href="/cobertura-movistar-bogota"
+                  className="px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Cobertura Movistar Bogotá
+                </Link>
+                <Link
+                  href="/cobertura-etb-bogota"
+                  className="px-4 py-2 rounded-lg bg-blue-800 text-white font-semibold hover:bg-blue-900 transition-colors"
+                >
+                  Cobertura ETB Bogotá
+                </Link>
+                <Link
+                  href="/claro-vs-movistar-bogota"
+                  className="px-4 py-2 rounded-lg bg-slate-100 text-slate-900 font-semibold hover:bg-slate-200 transition-colors"
+                >
+                  Claro vs Movistar (Bogotá)
+                </Link>
+                <Link
+                  href="/etb-vs-claro-bogota"
+                  className="px-4 py-2 rounded-lg bg-slate-100 text-slate-900 font-semibold hover:bg-slate-200 transition-colors"
+                >
+                  ETB vs Claro (Bogotá)
+                </Link>
+                <Link
+                  href="/etb-vs-movistar-bogota"
+                  className="px-4 py-2 rounded-lg bg-slate-100 text-slate-900 font-semibold hover:bg-slate-200 transition-colors"
+                >
+                  ETB vs Movistar (Bogotá)
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Recomendación por Zona */}
         <section className="py-16 -mt-12 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
