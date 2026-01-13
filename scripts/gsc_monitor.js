@@ -16,6 +16,37 @@ const KEY_FILE = process.env.GOOGLE_APPLICATION_CREDENTIALS || path.join(__dirna
 const INVENTORY_PATH = path.join(__dirname, '../public/metadata_inventory.json');
 const HISTORY_PATH = path.join(__dirname, '../public/gsc_history.json');
 
+function normalizePageUrl(url) {
+    if (!url) return url;
+    return String(url).trim().replace(/\/$/, '');
+}
+
+function buildPageUrl(route, { trailingSlash = false } = {}) {
+    const base = SITE_URL.replace(/\/$/, '');
+    const pathPart = route === '/' ? '' : (route || '');
+    let url = `${base}${pathPart}`;
+    if (trailingSlash) {
+        url = url.endsWith('/') ? url : `${url}/`;
+    } else {
+        url = normalizePageUrl(url);
+    }
+    return url;
+}
+
+function isClusterRoute(route) {
+    const r = String(route || '');
+    return (
+        r.startsWith('/internet-') ||
+        r.startsWith('/mejor-internet-') ||
+        r.startsWith('/internet-para-') ||
+        r.startsWith('/soluciones/') ||
+        r.startsWith('/barrios/') ||
+        r.startsWith('/casos/') ||
+        r.startsWith('/velocidades/') ||
+        r.startsWith('/ciudades/')
+    );
+}
+
 // ============================================
 // NUEVA FUNCIÓN: Guardar historial
 // ============================================
@@ -159,10 +190,10 @@ function getTopPerformers(report) {
 // NUEVA FUNCIÓN: Páginas sin datos
 // ============================================
 function getPagesWithoutData(pages, report) {
-    const pagesWithData = [...new Set(report.map(r => r.page))];
+    const pagesWithData = [...new Set(report.map(r => normalizePageUrl(r.page)))];
     const pagesWithoutData = pages
         .map(p => ({
-            url: `${SITE_URL}${p.route === '/' ? '' : p.route}`,
+            url: normalizePageUrl(buildPageUrl(p.route)),
             route: p.route,
             title: p.title
         }))
@@ -170,9 +201,9 @@ function getPagesWithoutData(pages, report) {
 
     // Priorizar páginas importantes (no rutas dinámicas genéricas)
     const prioritized = pagesWithoutData.sort((a, b) => {
-        // Prioridad 1: Páginas principales (sin /blog/, /barrios/, etc)
-        const aIsMain = !a.route.includes('/blog/') && !a.route.includes('/barrios/') && !a.route.includes('/ciudades/');
-        const bIsMain = !b.route.includes('/blog/') && !b.route.includes('/barrios/') && !b.route.includes('/ciudades/');
+        // Prioridad 1: Páginas principales (no blog, no clusters dinámicos)
+        const aIsMain = !a.route.includes('/blog/') && !isClusterRoute(a.route);
+        const bIsMain = !b.route.includes('/blog/') && !isClusterRoute(b.route);
         if (aIsMain && !bIsMain) return -1;
         if (!aIsMain && bIsMain) return 1;
 
@@ -182,7 +213,7 @@ function getPagesWithoutData(pages, report) {
         if (aIsBlog && !bIsBlog) return -1;
         if (!aIsBlog && bIsBlog) return 1;
 
-        return 0;
+        return String(a.route).localeCompare(String(b.route));
     });
 
     return prioritized.slice(0, 20); // Top 20
@@ -352,9 +383,9 @@ async function sendEnhancedEmailReport(reportData, comparison, devices, opportun
     let pagesWithoutDataHtml = '';
     if (pagesWithoutData.length > 0) {
         // Categorizar páginas
-        const mainPages = pagesWithoutData.filter(p => !p.route.includes('/blog/') && !p.route.includes('/barrios/') && !p.route.includes('/ciudades/') && !p.route.includes('/comparar/') && !p.route.includes('/velocidades/'));
-        const blogPages = pagesWithoutData.filter(p => p.route.includes('/blog/'));
-        const locationPages = pagesWithoutData.filter(p => p.route.includes('/barrios/') || p.route.includes('/ciudades/'));
+        const blogPages = pagesWithoutData.filter(p => String(p.route).includes('/blog/'));
+        const locationPages = pagesWithoutData.filter(p => !blogPages.includes(p) && isClusterRoute(p.route));
+        const mainPages = pagesWithoutData.filter(p => !blogPages.includes(p) && !locationPages.includes(p) && !String(p.route).startsWith('/comparar/'));
         const otherPages = pagesWithoutData.filter(p => !mainPages.includes(p) && !blogPages.includes(p) && !locationPages.includes(p));
 
         pagesWithoutDataHtml = `
@@ -581,48 +612,63 @@ async function checkGSC() {
 
     // Consultar cada página
     for (const page of pages) {
-        let pageUrl = `${SITE_URL}${page.route === '/' ? '' : page.route}`;
+        const pageUrlCandidates = [
+            buildPageUrl(page.route, { trailingSlash: false }),
+            buildPageUrl(page.route, { trailingSlash: true }),
+        ].filter((u, index, arr) => arr.indexOf(u) === index);
 
-        console.log(`🔎 Consultando: ${pageUrl}`);
+        console.log(`🔎 Consultando: ${pageUrlCandidates[0]}`);
 
-        try {
-            const res = await searchconsole.searchanalytics.query({
-                siteUrl: activeSiteUrl,
-                requestBody: {
-                    startDate: dateStringStart,
-                    endDate: dateStringEnd,
-                    dimensions: ['query'],
-                    dimensionFilterGroups: [{
-                        filters: [{
-                            dimension: 'page',
-                            operator: 'EQUALS',
-                            expression: pageUrl
-                        }]
-                    }],
-                    rowLimit: 10 // Aumentado a 10
-                },
-            });
+        let rows = [];
+        let matchedUrl = pageUrlCandidates[0];
+        let hadError = false;
 
-            const rows = res.data.rows || [];
-
-            if (rows.length > 0) {
-                console.log(`   ✅ ${rows.length} keywords encontradas`);
-                rows.forEach(row => {
-                    report.push({
-                        page: pageUrl,
-                        keyword: row.keys[0],
-                        position: parseFloat(row.position.toFixed(1)),
-                        clicks: row.clicks,
-                        impressions: row.impressions,
-                        ctr: row.ctr
-                    });
+        for (const candidateUrl of pageUrlCandidates) {
+            try {
+                const res = await searchconsole.searchanalytics.query({
+                    siteUrl: activeSiteUrl,
+                    requestBody: {
+                        startDate: dateStringStart,
+                        endDate: dateStringEnd,
+                        dimensions: ['query'],
+                        dimensionFilterGroups: [{
+                            filters: [{
+                                dimension: 'page',
+                                operator: 'EQUALS',
+                                expression: candidateUrl
+                            }]
+                        }],
+                        rowLimit: 10 // Aumentado a 10
+                    },
                 });
-            } else {
-                console.log(`   ⚠️  Sin datos`);
-            }
 
-        } catch (error) {
-            console.error(`   ❌ Error: ${error.message}`);
+                rows = res.data.rows || [];
+                if (rows.length > 0) {
+                    matchedUrl = candidateUrl;
+                    break;
+                }
+            } catch (error) {
+                hadError = true;
+                rows = [];
+                console.error(`   ❌ Error consultando ${candidateUrl}: ${error.message}`);
+            }
+        }
+
+        if (rows.length > 0) {
+            console.log(`   ✅ ${rows.length} keywords encontradas`);
+            const normalizedPage = normalizePageUrl(matchedUrl);
+            rows.forEach(row => {
+                report.push({
+                    page: normalizedPage,
+                    keyword: row.keys[0],
+                    position: parseFloat(row.position.toFixed(1)),
+                    clicks: row.clicks,
+                    impressions: row.impressions,
+                    ctr: row.ctr
+                });
+            });
+        } else if (!hadError) {
+            console.log(`   ⚠️  Sin datos`);
         }
 
         await new Promise(r => setTimeout(r, 200));

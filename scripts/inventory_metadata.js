@@ -6,6 +6,14 @@ const glob = require('glob');
 // INVENTARIO MEJORADO CON BLOGS Y RUTAS DINÁMICAS
 // ============================================
 
+function formatSlug(slug) {
+    return String(slug)
+        .split('-')
+        .filter(Boolean)
+        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(' ');
+}
+
 function extractMetadata(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
 
@@ -98,10 +106,15 @@ const barrios = [
 
 barrios.forEach(barrio => {
     inventory.push({
-        route: `/barrios/${barrio}`,
-        title: `Internet ${barrio.replace('-', ' ')} Bogotá - Comparador`,
-        description: `Encuentra el mejor internet en ${barrio.replace('-', ' ')}.`,
-        keywords: [`internet ${barrio}`, `fibra optica ${barrio}`]
+        // Ruta SEO pública (canonical): /internet-{barrio}-bogota -> rewrite a /barrios/{barrio}
+        route: `/internet-${barrio}-bogota`,
+        title: `Internet en ${formatSlug(barrio)} Bogotá - Comparador`,
+        description: `Compara y contrata internet (fibra óptica / banda ancha) en ${formatSlug(barrio)}, Bogotá. Verifica cobertura y disponibilidad.`,
+        keywords: [
+            `internet ${formatSlug(barrio)} Bogotá`,
+            `fibra óptica ${formatSlug(barrio)}`,
+            `cobertura internet ${formatSlug(barrio)}`
+        ]
     });
 });
 
@@ -120,10 +133,15 @@ ciudades.forEach(ciudad => {
 const casos = ['gaming', 'teletrabajo', 'streaming'];
 casos.forEach(caso => {
     inventory.push({
-        route: `/casos/${caso}`,
-        title: `Internet para ${caso} - Comparador`,
-        description: `Mejor internet para ${caso} en Colombia.`,
-        keywords: [`internet ${caso}`]
+        // Ruta SEO pública (canonical): /mejor-internet-{caso}-bogota -> rewrite a /casos/{caso}
+        route: `/mejor-internet-${caso}-bogota`,
+        title: `Mejor Internet para ${formatSlug(caso)} en Bogotá - Comparador`,
+        description: `Guía para elegir el mejor internet para ${caso} en Bogotá: velocidad recomendada, estabilidad y operadores disponibles.`,
+        keywords: [
+            `mejor internet ${caso} Bogotá`,
+            `internet para ${caso} Bogotá`,
+            `planes internet ${caso}`
+        ]
     });
 });
 
@@ -131,10 +149,47 @@ casos.forEach(caso => {
 const velocidades = ['100-megas', '200-megas', '300-megas', '500-megas', 'fibra-optica'];
 velocidades.forEach(velocidad => {
     inventory.push({
-        route: `/velocidades/${velocidad}`,
-        title: `Internet ${velocidad} - Comparador`,
-        description: `Planes de internet ${velocidad}.`,
-        keywords: [`internet ${velocidad}`]
+        // Ruta SEO pública (canonical): /internet-{velocidad}-bogota -> rewrite a /velocidades/{velocidad}
+        route: `/internet-${velocidad}-bogota`,
+        title: `Internet ${formatSlug(velocidad)} en Bogotá - Comparador`,
+        description: `Planes de internet ${formatSlug(velocidad)} en Bogotá. Compara opciones y contrata con asesor.`,
+        keywords: [
+            `internet ${formatSlug(velocidad)} Bogotá`,
+            `planes ${formatSlug(velocidad)}`,
+            `internet ${formatSlug(velocidad)} precio`
+        ]
+    });
+});
+
+// Tipos de vivienda
+const viviendas = ['apartamento', 'casa', 'oficina', 'edificio'];
+viviendas.forEach(vivienda => {
+    inventory.push({
+        // Ruta SEO pública (canonical): /internet-para-{vivienda}-bogota -> rewrite a /viviendas/{vivienda}
+        route: `/internet-para-${vivienda}-bogota`,
+        title: `Internet para ${formatSlug(vivienda)} en Bogotá - Comparador`,
+        description: `Recomendaciones y planes de internet según tu tipo de vivienda (${formatSlug(vivienda)}) en Bogotá.`,
+        keywords: [
+            `internet para ${vivienda} Bogotá`,
+            `mejor internet ${vivienda} Bogotá`,
+            `planes internet ${vivienda}`
+        ]
+    });
+});
+
+// Soluciones (intención alta: resolver y contratar)
+const soluciones = ['cambiar-de-operador', 'mejorar-velocidad', 'internet-lento', 'cortes-de-internet'];
+soluciones.forEach(solucion => {
+    inventory.push({
+        // Ruta SEO pública (canonical): /soluciones/{solucion}-bogota -> rewrite a /soluciones/{solucion}
+        route: `/soluciones/${solucion}-bogota`,
+        title: `Solución: ${formatSlug(solucion)} en Bogotá - Comparador`,
+        description: `Guía práctica para ${solucion.replace(/-/g, ' ')} en Bogotá, con pasos y recomendación de operador según cobertura.`,
+        keywords: [
+            `${solucion.replace(/-/g, ' ')} Bogotá`,
+            `solución ${solucion.replace(/-/g, ' ')}`,
+            `internet ${solucion.replace(/-/g, ' ')}`
+        ]
     });
 });
 
@@ -157,7 +212,7 @@ comparativas.forEach(([op1, op2]) => {
     });
 });
 
-console.error(`   ✅ ${barrios.length + ciudades.length + casos.length + velocidades.length + comparativas.length} rutas dinámicas agregadas`);
+console.error(`   ✅ ${barrios.length + ciudades.length + casos.length + velocidades.length + viviendas.length + soluciones.length + comparativas.length} rutas dinámicas agregadas`);
 
 // ============================================
 // 4. GUARDAR INVENTARIO
