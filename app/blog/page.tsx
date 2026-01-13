@@ -110,12 +110,12 @@ export default function BlogPage() {
                 {post.image && (
                   <div className="relative w-full h-48 bg-gray-100">
                     <img
-                      src={post.image}
+                      src={post.thumbnailImage || post.image}
                       alt={post.title}
                       className="w-full h-full object-cover"
                       loading="lazy"
-                      width={640}
-                      height={384}
+                      width={400}
+                      height={200}
                     />
                   </div>
                 )}

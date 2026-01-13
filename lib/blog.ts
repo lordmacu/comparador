@@ -13,6 +13,7 @@ export interface BlogPost {
   tags: string[];
   readingTime: number;
   image?: string;
+  thumbnailImage?: string;
   // Campos opcionales generados por Gemini AI
   localNuances?: string[];
   seoScore?: number;
