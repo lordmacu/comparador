@@ -64,7 +64,9 @@ function compareWithPrevious(currentReport) {
             totalImpressionsChange: 0,
             totalClicksChange: 0,
             avgPositionChange: 0,
-            keywordChanges: []
+            keywordChanges: [],
+            newKeywords: [],
+            majorImprovements: [] // Improvements > 3 positions or > 20% clicks
         };
 
         // Calcular cambios totales
@@ -83,8 +85,21 @@ function compareWithPrevious(currentReport) {
         // Comparar keywords individuales
         current.forEach(curr => {
             const prev = previous.find(p => p.keyword === curr.keyword && p.page === curr.page);
-            if (prev) {
+
+            if (!prev) {
+                // NUEVA KEYWORD ENCONTRADA
+                comparison.newKeywords.push({
+                    keyword: curr.keyword,
+                    page: curr.page,
+                    position: curr.position,
+                    clicks: curr.clicks,
+                    impressions: curr.impressions
+                });
+            } else {
+                // YA EXISTÍA, VERIFICAR MEJORAS
                 const posChange = prev.position - curr.position; // Positivo = mejora
+                const clicksChange = curr.clicks - prev.clicks;
+
                 if (Math.abs(posChange) >= 2) {
                     comparison.keywordChanges.push({
                         keyword: curr.keyword,
@@ -94,8 +109,22 @@ function compareWithPrevious(currentReport) {
                         currPosition: curr.position
                     });
                 }
+
+                // DETECTAR "BIG WINS" (Mejora > 3 pos o aumento significativo de clics)
+                if (posChange >= 3 || (clicksChange > 0 && clicksChange >= 5)) {
+                    comparison.majorImprovements.push({
+                        keyword: curr.keyword,
+                        page: curr.page,
+                        type: posChange >= 3 ? 'Posición' : 'Clics',
+                        change: posChange >= 3 ? `+${posChange.toFixed(1)} pos` : `+${clicksChange} clics`,
+                        currentMetric: posChange >= 3 ? `Pos ${curr.position}` : `${curr.clicks} clics`
+                    });
+                }
             }
         });
+
+        // Ordenar Novedades por impresiones
+        comparison.newKeywords.sort((a, b) => b.impressions - a.impressions);
 
         return comparison;
     } catch (err) {
@@ -422,6 +451,54 @@ async function sendEnhancedEmailReport(reportData, comparison, devices, opportun
 
     executiveSummary += `</div>`;
 
+    // SECCIÓN ESPECIAL: NOVEDADES Y MEJORAS
+    let highlightsHtml = '';
+    if (comparison && (comparison.newKeywords.length > 0 || comparison.majorImprovements.length > 0)) {
+        highlightsHtml += `
+            <div style="background-color: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #16a34a; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #15803d; margin: 0 0 15px 0;">🚀 NOVEDADES Y MEJORAS DESTACADAS</h3>
+                
+                ${comparison.newKeywords.length > 0 ? `
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="color: #166534; font-size: 14px; margin-bottom: 10px;">✨ Nuevas Keywords Detectadas (${comparison.newKeywords.length})</h4>
+                        <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 6px; overflow: hidden;">
+                            <thead style="background: #dcfce7;">
+                                <tr>
+                                    <th style="padding: 8px; text-align: left; font-size: 12px; color: #14532d;">Keyword</th>
+                                    <th style="padding: 8px; text-align: center; font-size: 12px; color: #14532d;">Pos</th>
+                                    <th style="padding: 8px; text-align: center; font-size: 12px; color: #14532d;">Impr</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${comparison.newKeywords.slice(0, 5).map(k => `
+                                    <tr style="border-bottom: 1px solid #f0fdf4;">
+                                        <td style="padding: 8px; font-size: 12px;"><strong>${k.keyword}</strong></td>
+                                        <td style="padding: 8px; text-align: center; font-size: 12px;">${k.position}</td>
+                                        <td style="padding: 8px; text-align: center; font-size: 12px;">${k.impressions}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                        ${comparison.newKeywords.length > 5 ? `<p style="font-size: 11px; color: #166534; margin-top: 5px;">...y ${comparison.newKeywords.length - 5} más.</p>` : ''}
+                    </div>
+                ` : ''}
+
+                ${comparison.majorImprovements.length > 0 ? `
+                    <div>
+                        <h4 style="color: #166534; font-size: 14px; margin-bottom: 10px;">🔥 Grandes Saltos de Rendimiento</h4>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #14532d;">
+                            ${comparison.majorImprovements.slice(0, 5).map(i => `
+                                <li style="margin-bottom: 5px;">
+                                    <strong>${i.keyword}</strong>: Mejora de <span style="background: #bbf7d0; padding: 2px 4px; rounded: 4px;">${i.change}</span> (${i.currentMetric})
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+
     // Top Performers
     let topPerformersHtml = '';
     if (topPerformers.length > 0) {
@@ -491,9 +568,9 @@ async function sendEnhancedEmailReport(reportData, comparison, devices, opportun
             <h3 style="color: #1f2937; margin-top: 30px;">📱 MÓVIL vs DESKTOP</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px;">
                 ${Object.entries(devices).map(([device, data]) => {
-                    const percentage = ((data.impressions / total) * 100).toFixed(0);
-                    const deviceIcon = device === 'MOBILE' ? '📱' : device === 'DESKTOP' ? '🖥️' : '📟';
-                    return `
+            const percentage = ((data.impressions / total) * 100).toFixed(0);
+            const deviceIcon = device === 'MOBILE' ? '📱' : device === 'DESKTOP' ? '🖥️' : '📟';
+            return `
                         <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 15px;">
                             <div style="font-size: 24px; margin-bottom: 5px;">${deviceIcon}</div>
                             <div style="font-weight: bold; color: #1f2937;">${device}</div>
@@ -501,7 +578,7 @@ async function sendEnhancedEmailReport(reportData, comparison, devices, opportun
                             <div style="font-size: 12px; color: #9ca3af;">Pos Prom: ${data.position.toFixed(1)}</div>
                         </div>
                     `;
-                }).join('')}
+        }).join('')}
             </div>
         `;
     }
@@ -607,6 +684,7 @@ async function sendEnhancedEmailReport(reportData, comparison, devices, opportun
             <p style="color: #6b7280; font-size: 14px;">Período analizado: últimos 30 días</p>
 
             ${executiveSummary}
+            ${highlightsHtml}
             ${topPerformersHtml}
             ${opportunitiesHtml}
             ${devicesHtml}
