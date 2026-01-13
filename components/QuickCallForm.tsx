@@ -88,8 +88,8 @@ export default function QuickCallForm({ buttonColor = '#2563eb', provider }: Qui
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col md:inline-flex md:flex-row items-center gap-3 bg-white rounded-xl p-5 shadow-xl">
-      <div className="relative w-full md:w-auto">
+    <form onSubmit={handleSubmit} className="flex flex-col items-stretch gap-3 bg-white rounded-xl p-5 shadow-xl w-full max-w-sm mx-auto">
+      <div className="relative w-full">
         <input
           type="tel"
           value={phone}
@@ -98,13 +98,13 @@ export default function QuickCallForm({ buttonColor = '#2563eb', provider }: Qui
           placeholder="Tu celular"
           pattern="[0-9]{10}"
           required
-          className="w-full md:w-52 px-5 py-4 text-base text-gray-900 border-2 border-gray-300 rounded-lg focus:ring-2 focus:border-transparent outline-none"
+          className="w-full px-5 py-4 text-base text-gray-900 border-2 border-gray-300 rounded-lg focus:ring-2 focus:border-transparent outline-none"
         />
       </div>
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full md:w-auto px-7 py-4 text-base font-bold rounded-lg transition-all text-white hover:opacity-90"
+        className="w-full px-7 py-4 text-base font-bold rounded-lg transition-all text-white hover:opacity-90"
         style={{
           backgroundColor: isSubmitting ? '#9ca3af' : buttonColor,
           cursor: isSubmitting ? 'not-allowed' : 'pointer'
