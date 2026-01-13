@@ -47,6 +47,33 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
+// Validate ../../app/asesor-claro-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/asesor-claro-bogota">> = Specific
+  const handler = {} as typeof import("../../app/asesor-claro-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/asesor-etb-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/asesor-etb-bogota">> = Specific
+  const handler = {} as typeof import("../../app/asesor-etb-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/asesor-movistar-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/asesor-movistar-bogota">> = Specific
+  const handler = {} as typeof import("../../app/asesor-movistar-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/asesores/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/asesores">> = Specific
@@ -132,6 +159,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/comparar/[...operadores]">> = Specific
   const handler = {} as typeof import("../../app/comparar/[...operadores]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/comparar/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/comparar">> = Specific
+  const handler = {} as typeof import("../../app/comparar/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

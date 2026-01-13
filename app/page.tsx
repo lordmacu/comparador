@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { getAllProviders, getComparableBenefits } from '@/lib/data';
 import { getAllPosts } from '@/lib/blog';
 import {
-  generateWebSiteSchema,
   generateServiceListSchema,
   generateBreadcrumbSchema,
   generateAggregateOfferSchema,
@@ -56,7 +55,6 @@ export default function HomePage() {
   const comparison = getComparableBenefits();
 
   // Schemas para SEO e IAs
-  const websiteSchema = generateWebSiteSchema();
   const serviceListSchema = generateServiceListSchema(providers);
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Inicio', url: 'https://comparadorinternet.co' }
@@ -66,7 +64,6 @@ export default function HomePage() {
   return (
     <>
       {/* JSON-LD Schemas */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(websiteSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(serviceListSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(breadcrumbSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(aggregateOfferSchema)} />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { generateWebSiteSchema, renderJsonLd } from "@/lib/schemas";
+import { renderJsonLd } from "@/lib/schemas";
 import { generateLocalBusinessSchema } from "@/lib/schemas/local-business";
 import Header from "@/components/Header";
 import { OrganizationSchema, WebsiteSchema } from "@/components/SchemaMarkup";
@@ -19,9 +19,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://comparadorinternet.co'),
+  applicationName: 'Comparador Internet Colombia',
   title: {
     default: "Comparador de Internet en Colombia 2026 | Claro, Movistar, ETB",
-    template: "%s | Tu Comparador"
+    template: "%s | Comparador Internet Colombia"
   },
   description: "Descubre los servicios de internet en Colombia. Compara beneficios de Claro, Movistar y ETB. Consulta planes, promociones y cobertura disponible en tu zona.",
   keywords: [
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
     "internet Bogotá",
     "mejor internet Colombia 2026"
   ],
-  authors: [{ name: "Tu Comparador" }],
-  creator: "Tu Comparador",
-  publisher: "Tu Comparador",
+  authors: [{ name: "Comparador Internet Colombia" }],
+  creator: "Comparador Internet Colombia",
+  publisher: "Comparador Internet Colombia",
   robots: {
     index: true,
     follow: true,
@@ -89,7 +90,7 @@ export const metadata: Metadata = {
     other: [
       {
         rel: 'manifest',
-        url: '/site.webmanifest',
+        url: '/manifest.webmanifest',
       },
     ],
   },
@@ -103,7 +104,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const websiteSchema = generateWebSiteSchema();
   const localBusinessSchema = generateLocalBusinessSchema();
 
   return (
@@ -114,13 +114,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        
-        {/* JSON-LD Schema para SEO e IAs */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={renderJsonLd(websiteSchema)}
-        />
+        <link rel="manifest" href="/manifest.webmanifest" />
         
         {/* LocalBusiness Schema para SEO Local */}
         <script

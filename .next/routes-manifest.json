@@ -155,6 +155,24 @@
       "namedRegex": "^/api/call\\-request(?:/)?$"
     },
     {
+      "page": "/asesor-claro-bogota",
+      "regex": "^/asesor\\-claro\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/asesor\\-claro\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/asesor-etb-bogota",
+      "regex": "^/asesor\\-etb\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/asesor\\-etb\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/asesor-movistar-bogota",
+      "regex": "^/asesor\\-movistar\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/asesor\\-movistar\\-bogota(?:/)?$"
+    },
+    {
       "page": "/asesores",
       "regex": "^/asesores(?:/)?$",
       "routeKeys": {},
@@ -189,6 +207,12 @@
       "regex": "^/como\\-cambiar\\-operador\\-internet(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/como\\-cambiar\\-operador\\-internet(?:/)?$"
+    },
+    {
+      "page": "/comparar",
+      "regex": "^/comparar(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/comparar(?:/)?$"
     },
     {
       "page": "/contratar",

@@ -6,26 +6,19 @@
 export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "@id": "https://comparadorinternet.co/#localbusiness",
-    "name": "Asesor Internet Etb, Claro, Movistar",
-    "alternateName": "Comparador Internet Colombia",
+    "name": "Comparador Internet Colombia",
+    "alternateName": "Asesor de Internet Claro, Movistar y ETB",
     "image": "https://comparadorinternet.co/og-image.jpg",
-    "url": "https://comparadorinternet.co",
+    "url": "https://comparadorinternet.co/asesores",
     "telephone": "+573154645370",
-    "priceRange": "$45,000 - $180,000",
+    "priceRange": "$0 - $180,000",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Calle 100 # 19-61", // ACTUALIZAR con dirección real
       "addressLocality": "Bogotá",
       "addressRegion": "Cundinamarca",
-      "postalCode": "110111",
       "addressCountry": "CO"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "4.6943", // ACTUALIZAR con coordenadas reales
-      "longitude": "-74.0392"
     },
     "areaServed": [
       {
@@ -37,18 +30,6 @@ export function generateLocalBusinessSchema() {
         "name": "Colombia"
       }
     ],
-    "sameAs": [
-      // Agregar redes sociales cuando existan
-      // "https://www.facebook.com/comparadorinternetco",
-      // "https://twitter.com/comparadorinternet",
-      // "https://www.instagram.com/comparadorinternet",
-      // "https://www.linkedin.com/company/comparadorinternet"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "127"
-    },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",

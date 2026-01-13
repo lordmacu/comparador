@@ -552,7 +552,7 @@ export function generateVideoSchema(options: {
       "name": "Comparador Internet Colombia",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://comparadorinternet.co/images/logo.png"
+        "url": "https://comparadorinternet.co/icon.png"
       }
     }
   };
@@ -583,7 +583,7 @@ export function generateArticleSchema(options: {
       "name": "Comparador Internet Colombia",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://comparadorinternet.co/images/logo.png"
+        "url": "https://comparadorinternet.co/icon.png"
       }
     },
     "datePublished": options.publishedAt,
