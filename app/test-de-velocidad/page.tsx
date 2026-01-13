@@ -22,8 +22,8 @@ export default function SpeedTestPage() {
         setUploadSpeed(0);
         setPing(0);
 
-        const testFileUrl = 'https://workcred.org/Documents/Understanding-Certifications-Report-Dec-2020.pdf';
-        const fileSizeInBytes = 5 * 1024 * 1024; // Approx 5 MB for PDF report
+        const testFileUrl = 'https://library.e.abb.com/public/313b6ebaf237059fc1257d0a0048fd68/EN_ACS550_01_UM_H_A4.pdf';
+        const fileSizeInBytes = 4388310; // Approx 4.2 MB
 
         try {
             // Measure Ping
