@@ -17,19 +17,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'barrios-unidos', 'tunjuelito', 'rafael-uribe-uribe',
     'santa-fe', 'los-martires', 'antonio-narino', 'la-candelaria', 'usme', 'sumapaz'
   ];
-  
+
   // Casos de uso
   const casos = ['gaming', 'teletrabajo', 'streaming'];
-  
+
   // Velocidades
   const velocidades = ['100-megas', '200-megas', '300-megas', '500-megas', 'fibra-optica'];
-  
+
   // Tipos de vivienda
   const viviendas = ['apartamento', 'casa', 'oficina', 'edificio'];
-  
+
   // Soluciones
   const soluciones = ['cambiar-de-operador', 'mejorar-velocidad', 'internet-lento', 'cortes-de-internet'];
-  
+
   // Comparativas de operadores
   const comparativas = [
     ['etb', 'claro'],
@@ -268,7 +268,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
-    },    {
+    }, {
       url: `${baseUrl}/empresa`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
@@ -279,11 +279,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
-    },    {
+    }, {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 0.9,
+    },
+    // New High Intent Pages (Phase 3)
+    {
+      url: `${baseUrl}/test-de-velocidad`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/internet-gaming`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/internet-economico`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cambiar-de-operador`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/mejor-internet-bogota-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 1.0,
     },
     ...providerSlugs.map((slug) => ({
       url: `${baseUrl}/${slug}`,
