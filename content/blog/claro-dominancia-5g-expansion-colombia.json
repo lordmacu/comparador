@@ -28,16 +28,5 @@
     "No coma cuento",
     "Soltó la billetera"
   ],
-  "author": "El Tech-Cachaco",
-  "category": "Telecomunicaciones",
-  "description": "Análisis crudo sobre la victoria de Claro en la subasta 5G y cómo afecta la conectividad en regiones fuera de las grandes capitales.",
-  "seoScore": 92,
-  "tags": [
-    "Claro 5G",
-    "Colombia",
-    "Tigo-Movistar",
-    "Internet Móvil",
-    "Subasta Espectro"
-  ],
-  "image": "/blog-images/claro-dominancia-5g-expansion-colombia.webp"
+  "thumbnailImage": "/blog-images/claro-dominancia-5g-expansion-colombia-thumb.webp"
 }
