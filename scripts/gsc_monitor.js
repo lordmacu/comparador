@@ -161,9 +161,31 @@ function getTopPerformers(report) {
 function getPagesWithoutData(pages, report) {
     const pagesWithData = [...new Set(report.map(r => r.page))];
     const pagesWithoutData = pages
-        .map(p => `${SITE_URL}${p.route === '/' ? '' : p.route}`)
-        .filter(url => !pagesWithData.includes(url));
-    return pagesWithoutData.slice(0, 10); // Top 10
+        .map(p => ({
+            url: `${SITE_URL}${p.route === '/' ? '' : p.route}`,
+            route: p.route,
+            title: p.title
+        }))
+        .filter(item => !pagesWithData.includes(item.url));
+
+    // Priorizar páginas importantes (no rutas dinámicas genéricas)
+    const prioritized = pagesWithoutData.sort((a, b) => {
+        // Prioridad 1: Páginas principales (sin /blog/, /barrios/, etc)
+        const aIsMain = !a.route.includes('/blog/') && !a.route.includes('/barrios/') && !a.route.includes('/ciudades/');
+        const bIsMain = !b.route.includes('/blog/') && !b.route.includes('/barrios/') && !b.route.includes('/ciudades/');
+        if (aIsMain && !bIsMain) return -1;
+        if (!aIsMain && bIsMain) return 1;
+
+        // Prioridad 2: Blog posts
+        const aIsBlog = a.route.includes('/blog/');
+        const bIsBlog = b.route.includes('/blog/');
+        if (aIsBlog && !bIsBlog) return -1;
+        if (!aIsBlog && bIsBlog) return 1;
+
+        return 0;
+    });
+
+    return prioritized.slice(0, 20); // Top 20
 }
 
 // ============================================
@@ -326,18 +348,95 @@ async function sendEnhancedEmailReport(reportData, comparison, devices, opportun
         `;
     }
 
-    // Páginas sin datos
+    // Páginas sin datos (mejorado con categorización)
     let pagesWithoutDataHtml = '';
     if (pagesWithoutData.length > 0) {
+        // Categorizar páginas
+        const mainPages = pagesWithoutData.filter(p => !p.route.includes('/blog/') && !p.route.includes('/barrios/') && !p.route.includes('/ciudades/') && !p.route.includes('/comparar/') && !p.route.includes('/velocidades/'));
+        const blogPages = pagesWithoutData.filter(p => p.route.includes('/blog/'));
+        const locationPages = pagesWithoutData.filter(p => p.route.includes('/barrios/') || p.route.includes('/ciudades/'));
+        const otherPages = pagesWithoutData.filter(p => !mainPages.includes(p) && !blogPages.includes(p) && !locationPages.includes(p));
+
         pagesWithoutDataHtml = `
-            <div style="background-color: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
-                <h3 style="color: #991b1b; margin-top: 0;">⚠️ PÁGINAS SIN DATOS (${pagesWithoutData.length}/${pages.length})</h3>
-                <p style="color: #7f1d1d; font-size: 13px; margin: 5px 0;">Páginas nuevas o que no están rankeando aún:</p>
-                <ul style="margin: 10px 0; padding-left: 20px; color: #991b1b; font-size: 13px;">
-                    ${pagesWithoutData.slice(0, 5).map(url => `<li>${url.replace(SITE_URL, '')}</li>`).join('')}
-                    ${pagesWithoutData.length > 5 ? `<li><i>...y ${pagesWithoutData.length - 5} más</i></li>` : ''}
-                </ul>
-                <p style="color: #7f1d1d; font-size: 12px; margin: 10px 0 0 0;">💡 Considera crear backlinks o mejorar el contenido de estas páginas</p>
+            <div style="background-color: #fee2e2; padding: 20px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
+                <h3 style="color: #991b1b; margin-top: 0;">⚠️ PÁGINAS SIN DATOS - NECESITAN ATENCIÓN (${pagesWithoutData.length}/${pages.length})</h3>
+                <p style="color: #7f1d1d; font-size: 14px; margin: 5px 0 15px 0;"><strong>💡 Acción recomendada:</strong> Crear backlinks internos/externos y optimizar contenido</p>
+
+                ${mainPages.length > 0 ? `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #991b1b; margin: 10px 0 8px 0; font-size: 14px;">🎯 PÁGINAS PRINCIPALES (Prioridad Alta):</h4>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+                            ${mainPages.map((p, i) => `
+                                <tr style="border-bottom: 1px solid #fecaca;">
+                                    <td style="padding: 6px 4px; color: #7f1d1d; width: 30px;">${i + 1}.</td>
+                                    <td style="padding: 6px 4px;">
+                                        <a href="${p.url}" target="_blank" style="color: #991b1b; text-decoration: none; font-weight: 500;">
+                                            ${p.route}
+                                        </a>
+                                    </td>
+                                    <td style="padding: 6px 4px; color: #7f1d1d; font-size: 11px; max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                        ${p.title}
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </table>
+                    </div>
+                ` : ''}
+
+                ${blogPages.length > 0 ? `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #991b1b; margin: 10px 0 8px 0; font-size: 14px;">📝 BLOG POSTS (${blogPages.length}):</h4>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+                            ${blogPages.slice(0, 10).map((p, i) => `
+                                <tr style="border-bottom: 1px solid #fecaca;">
+                                    <td style="padding: 6px 4px; color: #7f1d1d; width: 30px;">${i + 1}.</td>
+                                    <td style="padding: 6px 4px;">
+                                        <a href="${p.url}" target="_blank" style="color: #991b1b; text-decoration: none;">
+                                            ${p.route.replace('/blog/', '')}
+                                        </a>
+                                    </td>
+                                </tr>
+                            `).join('')}
+                            ${blogPages.length > 10 ? `
+                                <tr>
+                                    <td colspan="2" style="padding: 6px 4px; color: #7f1d1d; font-style: italic; font-size: 11px;">
+                                        ...y ${blogPages.length - 10} posts más
+                                    </td>
+                                </tr>
+                            ` : ''}
+                        </table>
+                    </div>
+                ` : ''}
+
+                ${locationPages.length > 0 ? `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #991b1b; margin: 10px 0 8px 0; font-size: 14px;">🏘️ PÁGINAS DE UBICACIÓN (${locationPages.length}):</h4>
+                        <div style="font-size: 12px; color: #7f1d1d;">
+                            ${locationPages.slice(0, 15).map(p => p.route).join(', ')}
+                            ${locationPages.length > 15 ? ` ...y ${locationPages.length - 15} más` : ''}
+                        </div>
+                    </div>
+                ` : ''}
+
+                ${otherPages.length > 0 ? `
+                    <div style="margin-bottom: 10px;">
+                        <h4 style="color: #991b1b; margin: 10px 0 8px 0; font-size: 14px;">🔗 OTRAS PÁGINAS (${otherPages.length}):</h4>
+                        <div style="font-size: 12px; color: #7f1d1d;">
+                            ${otherPages.map(p => p.route).join(', ')}
+                        </div>
+                    </div>
+                ` : ''}
+
+                <div style="margin-top: 15px; padding: 12px; background-color: #fef2f2; border-radius: 4px; border: 1px dashed #fca5a5;">
+                    <p style="margin: 0; font-size: 12px; color: #7f1d1d;"><strong>💡 Tips para mejorar:</strong></p>
+                    <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 11px; color: #991b1b;">
+                        <li>Crea enlaces internos desde páginas que SÍ rankean</li>
+                        <li>Publica contenido en redes sociales linkando a estas páginas</li>
+                        <li>Agrega estas URLs al sitemap (si no están)</li>
+                        <li>Revisa que el contenido sea único y de calidad</li>
+                        <li>Considera guest posting con backlinks a páginas principales</li>
+                    </ul>
+                </div>
             </div>
         `;
     }
