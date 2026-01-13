@@ -97,13 +97,39 @@ export default function ChatWidget() {
         console.error('Error loading chat state:', e);
       }
     } else {
-      // Auto-abrir después de 3 segundos solo si es primera vez
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-        addBotMessage('¡Hola! 👋 Soy Laura, asesora virtual. ¿Te ayudo a encontrar el plan de internet perfecto para ti?');
-      }, 3000);
+      // Lógica de auto-apertura inteligente
+      let hasTriggered = false;
 
-      return () => clearTimeout(timer);
+      const triggerChat = () => {
+        if (hasTriggered) return;
+        hasTriggered = true;
+
+        console.log('🤖 Chat auto-triggered');
+        setIsOpen(true);
+        // En desktop abrir la ventana, en móvil solo mostrar el botón para no ser intrusivo
+        if (window.innerWidth > 768) {
+          setIsMinimized(false);
+        }
+        
+        addBotMessage('¡Hola! 👋 Soy Laura, asesora virtual. ¿Te ayudo a encontrar el plan de internet perfecto para ti?');
+      };
+
+      // 1. Tiempo: 7 segundos es un buen balance (no muy agresivo, pero presente)
+      const timer = setTimeout(triggerChat, 7000);
+
+      // 2. Scroll: Si el usuario baja más de 600px, probablemente tiene interés
+      const handleScroll = () => {
+        if (!hasTriggered && window.scrollY > 600) {
+          triggerChat();
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        clearTimeout(timer);
+        window.removeEventListener('scroll', handleScroll);
+      };
     }
   }, []);
 

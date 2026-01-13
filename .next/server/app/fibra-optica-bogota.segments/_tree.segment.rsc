@@ -3,4 +3,4 @@
 :HL["/images/etb-logo.png","image"]
 :HL["/images/movistar-logo.png","image"]
 :HL["/images/claro-logo.png","image"]
-0:{"buildId":"W8TuzVW7fnU5D2AGPRXm0","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"fibra-optica-bogota","paramType":null,"paramKey":"fibra-optica-bogota","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"iXsTg9g1Wz_isJoJN5aXS","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"fibra-optica-bogota","paramType":null,"paramKey":"fibra-optica-bogota","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

@@ -25,4 +25,4 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-localpattern
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                 })(window,document,'script','dataLayer','GTM-PVKVH9Q7');
-              `}}),(0,t.jsx)("noscript",{children:(0,t.jsx)("iframe",{src:"https://www.googletagmanager.com/ns.html?id=GTM-PVKVH9Q7",height:"0",width:"0",style:{display:"none",visibility:"hidden"}})})]})]}):null}e.s(["Analytics",()=>l])},76642,e=>{e.v(t=>Promise.all(["static/chunks/a206cbc99864b988.js"].map(t=>e.l(t))).then(()=>t(87430)))}]);
+              `}}),(0,t.jsx)("noscript",{children:(0,t.jsx)("iframe",{src:"https://www.googletagmanager.com/ns.html?id=GTM-PVKVH9Q7",height:"0",width:"0",style:{display:"none",visibility:"hidden"}})})]})]}):null}e.s(["Analytics",()=>l])},76642,e=>{e.v(t=>Promise.all(["static/chunks/00ad1d1e33cdf18c.js"].map(t=>e.l(t))).then(()=>t(87430)))}]);
