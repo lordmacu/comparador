@@ -173,6 +173,24 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/claro/planes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/claro/planes">> = Specific
+  const handler = {} as typeof import("../../app/claro/planes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/claro/servicio-al-cliente/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/claro/servicio-al-cliente">> = Specific
+  const handler = {} as typeof import("../../app/claro/servicio-al-cliente/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/cobertura-claro-bogota/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/cobertura-claro-bogota">> = Specific
@@ -452,10 +470,37 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/movistar/movil/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/movistar/movil">> = Specific
+  const handler = {} as typeof import("../../app/movistar/movil/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/movistar/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/movistar">> = Specific
   const handler = {} as typeof import("../../app/movistar/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/movistar/planes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/movistar/planes">> = Specific
+  const handler = {} as typeof import("../../app/movistar/planes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/movistar/servicio-al-cliente/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/movistar/servicio-al-cliente">> = Specific
+  const handler = {} as typeof import("../../app/movistar/servicio-al-cliente/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

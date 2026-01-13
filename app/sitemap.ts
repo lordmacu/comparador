@@ -335,6 +335,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
+    // Nuevas Páginas Claro (Phase 5)
+    {
+      url: `${baseUrl}/claro/planes`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/claro/servicio-al-cliente`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    // Nuevas Páginas Movistar (Phase 5)
+    {
+      url: `${baseUrl}/movistar/planes`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/movistar/servicio-al-cliente`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/movistar/movil`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
     ...providerSlugs.map((slug) => ({
       url: `${baseUrl}/${slug}`,
       lastModified: new Date(),

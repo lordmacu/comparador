@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/claro/layout,_N_T_/claro/servicio-al-cliente/layout,_N_T_/claro/servicio-al-cliente/page,_N_T_/claro/servicio-al-cliente"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/claro/servicio-al-cliente/__PAGE__",
+    "/claro/servicio-al-cliente",
+    "/claro",
+    "/_index",
+    "/_head"
+  ]
+}

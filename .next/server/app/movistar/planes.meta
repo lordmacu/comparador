@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/movistar/layout,_N_T_/movistar/planes/layout,_N_T_/movistar/planes/page,_N_T_/movistar/planes"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/movistar/planes/__PAGE__",
+    "/movistar/planes",
+    "/movistar",
+    "/_index",
+    "/_head"
+  ]
+}

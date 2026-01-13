@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/claro/layout,_N_T_/claro/planes/layout,_N_T_/claro/planes/page,_N_T_/claro/planes"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/claro/planes/__PAGE__",
+    "/claro/planes",
+    "/claro",
+    "/_index",
+    "/_head"
+  ]
+}

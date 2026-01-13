@@ -215,6 +215,18 @@
       "namedRegex": "^/claro(?:/)?$"
     },
     {
+      "page": "/claro/planes",
+      "regex": "^/claro/planes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/claro/planes(?:/)?$"
+    },
+    {
+      "page": "/claro/servicio-al-cliente",
+      "regex": "^/claro/servicio\\-al\\-cliente(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/claro/servicio\\-al\\-cliente(?:/)?$"
+    },
+    {
       "page": "/claro-vs-movistar-bogota",
       "regex": "^/claro\\-vs\\-movistar\\-bogota(?:/)?$",
       "routeKeys": {},
@@ -411,6 +423,24 @@
       "regex": "^/movistar(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/movistar(?:/)?$"
+    },
+    {
+      "page": "/movistar/movil",
+      "regex": "^/movistar/movil(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/movistar/movil(?:/)?$"
+    },
+    {
+      "page": "/movistar/planes",
+      "regex": "^/movistar/planes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/movistar/planes(?:/)?$"
+    },
+    {
+      "page": "/movistar/servicio-al-cliente",
+      "regex": "^/movistar/servicio\\-al\\-cliente(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/movistar/servicio\\-al\\-cliente(?:/)?$"
     },
     {
       "page": "/news-sitemap.xml",
