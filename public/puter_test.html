@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Puter.js - Acceso Privado</title>
+    <script src="https://js.puter.com/v2/"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .error-container h1 {
+            color: #e74c3c;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .error-container p {
+            color: #7f8c8d;
+            font-size: 18px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #34495e;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section h2::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 2px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 80px;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: #95a5a6;
+        }
+
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+
+        .response {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #2c3e50;
+            min-height: 100px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .response:empty::before {
+            content: 'La respuesta aparecerá aquí...';
+            color: #adb5bd;
+            font-style: italic;
+        }
+
+        .loading {
+            border: 2px solid #667eea;
+            background: #f0f3ff;
+        }
+
+        .loading::before {
+            content: '⏳ Generando respuesta...';
+            color: #667eea;
+            font-style: italic;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .image-container {
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .image-container:empty::before {
+            content: 'La imagen aparecerá aquí...';
+            color: #adb5bd;
+            font-style: italic;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .info-box p {
+            color: #1565c0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .info-box strong {
+            color: #0d47a1;
+        }
+
+        .model-selector {
+            margin-bottom: 15px;
+        }
+
+        .model-selector label {
+            display: block;
+            color: #34495e;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .model-selector select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .model-selector select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        // Token de acceso - token único y seguro
+        // Para generar un nuevo token: openssl rand -hex 16
+        const ACCESS_TOKEN = 'puter-test-c7f4e9a2b8d1f6e3a9c4b7d2f1e8a5c3';
+
+        // Verificar token en URL
+        function verificarAcceso() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+
+            if (token !== ACCESS_TOKEN) {
+                document.getElementById('app').innerHTML = `
+                    <div class="container error-container">
+                        <h1>🔒</h1>
+                        <h1>Acceso Denegado</h1>
+                        <p>Token de acceso inválido o inexistente.</p>
+                    </div>
+                `;
+                return false;
+            }
+            return true;
+        }
+
+        // Renderizar la aplicación
+        function renderApp() {
+            document.getElementById('app').innerHTML = `
+                <div class="container">
+                    <h1>🧪 Prueba de Puter.js</h1>
+                    <p class="subtitle">Página de prueba privada - Acceso restringido por token</p>
+
+                    <div class="info-box">
+                        <p><strong>ℹ️ Información:</strong> Esta página usa Puter.js para acceder a modelos de IA sin API keys. La primera vez que uses una función, se te pedirá que inicies sesión con tu cuenta de Puter (gratuita). Tú pagas por tu propio uso, no el desarrollador.</p>
+                    </div>
+
+                    <!-- Sección 1: Chat con IA -->
+                    <div class="section">
+                        <h2>💬 Chat con IA (GPT)</h2>
+
+                        <div class="model-selector">
+                            <label for="chat-model">Modelo:</label>
+                            <select id="chat-model">
+                                <option value="gpt-5-nano">GPT-5 Nano (Rápido y económico)</option>
+                                <option value="gpt-4o">GPT-4o (Balanceado)</option>
+                                <option value="gpt-4">GPT-4 (Más potente)</option>
+                                <option value="claude-3.5-sonnet">Claude 3.5 Sonnet</option>
+                                <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
+                            </select>
+                        </div>
+
+                        <textarea id="prompt" placeholder="Escribe tu pregunta o prompt aquí...">Explícame en 3 frases qué es la inteligencia artificial.</textarea>
+
+                        <div class="button-group" style="margin: 15px 0;">
+                            <button onclick="enviarPrompt()">Enviar Prompt</button>
+                            <button onclick="limpiarChat()" class="btn-secondary">Limpiar</button>
+                        </div>
+
+                        <div id="response" class="response"></div>
+                    </div>
+
+                    <!-- Sección 2: Generación de imágenes -->
+                    <div class="section">
+                        <h2>🎨 Generación de Imágenes</h2>
+
+                        <div class="model-selector">
+                            <label for="image-model">Modelo:</label>
+                            <select id="image-model">
+                                <option value="gpt-image-1.5">GPT Image 1.5 (Recomendado)</option>
+                                <option value="dall-e-3">DALL-E 3</option>
+                                <option value="dall-e-2">DALL-E 2</option>
+                            </select>
+                        </div>
+
+                        <textarea id="image-prompt" placeholder="Describe la imagen que quieres generar...">Un gato astronauta flotando en el espacio con la Tierra de fondo, estilo cartoon colorido</textarea>
+
+                        <div class="button-group" style="margin: 15px 0;">
+                            <button onclick="generarImagen()">Generar Imagen</button>
+                            <button onclick="limpiarImagen()" class="btn-secondary">Limpiar</button>
+                        </div>
+
+                        <div id="image-container" class="image-container"></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Funciones de chat
+        async function enviarPrompt() {
+            const promptText = document.getElementById('prompt').value.trim();
+            const model = document.getElementById('chat-model').value;
+            const responseDiv = document.getElementById('response');
+
+            if (!promptText) {
+                alert('Por favor escribe un prompt');
+                return;
+            }
+
+            responseDiv.className = 'response loading';
+            responseDiv.textContent = '';
+
+            try {
+                console.log('Enviando prompt con modelo:', model);
+                const response = await puter.ai.chat(promptText, { model: model });
+
+                responseDiv.className = 'response';
+                responseDiv.textContent = response;
+
+                console.log('Respuesta recibida:', response);
+            } catch (error) {
+                responseDiv.className = 'response';
+                responseDiv.textContent = `❌ Error: ${error.message}\n\nDetalles: ${JSON.stringify(error, null, 2)}`;
+                console.error('Error completo:', error);
+            }
+        }
+
+        function limpiarChat() {
+            document.getElementById('prompt').value = '';
+            document.getElementById('response').textContent = '';
+            document.getElementById('response').className = 'response';
+        }
+
+        // Funciones de generación de imágenes
+        async function generarImagen() {
+            const promptText = document.getElementById('image-prompt').value.trim();
+            const model = document.getElementById('image-model').value;
+            const container = document.getElementById('image-container');
+
+            if (!promptText) {
+                alert('Por favor describe la imagen que quieres generar');
+                return;
+            }
+
+            container.innerHTML = '<p style="color: #667eea; font-style: italic;">🎨 Generando imagen...</p>';
+
+            try {
+                console.log('Generando imagen con modelo:', model);
+                const img = await puter.ai.txt2img(promptText, { model: model });
+
+                container.innerHTML = '';
+                container.appendChild(img);
+
+                console.log('Imagen generada exitosamente');
+            } catch (error) {
+                container.innerHTML = `<p style="color: #e74c3c;">❌ Error: ${error.message}</p>`;
+                console.error('Error completo:', error);
+            }
+        }
+
+        function limpiarImagen() {
+            document.getElementById('image-prompt').value = '';
+            document.getElementById('image-container').innerHTML = '';
+        }
+
+        // Inicializar
+        if (verificarAcceso()) {
+            renderApp();
+            console.log('✅ Acceso concedido');
+            console.log('📋 URL de acceso:', window.location.href);
+        } else {
+            console.log('❌ Acceso denegado - Token inválido');
+        }
+
+        // Mostrar el token en la consola para facilitar el acceso
+        console.log('🔑 Token de acceso:', ACCESS_TOKEN);
+        console.log('🔗 URL completa:', window.location.origin + window.location.pathname + '?token=' + ACCESS_TOKEN);
+    </script>
+</body>
+</html>
