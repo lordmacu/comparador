@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/internet-barato-colombia/layout,_N_T_/internet-barato-colombia/page,_N_T_/internet-barato-colombia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/internet-barato-colombia/__PAGE__",
+    "/internet-barato-colombia",
+    "/_index",
+    "/_head"
+  ]
+}

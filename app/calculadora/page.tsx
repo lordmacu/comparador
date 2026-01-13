@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import QuickCallForm from '@/components/QuickCallForm';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import LastUpdated from '@/components/LastUpdated';
 import { Calculator, Users, Wifi, Monitor, Gamepad, Video, Briefcase, Home, TrendingUp, CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function CalculadoraPage() {
@@ -145,6 +147,22 @@ export default function CalculadoraPage() {
           </div>
         </div>
       </section>
+
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs
+          items={[
+            { name: 'Herramientas', url: 'https://comparadorinternet.co/herramientas' },
+            { name: 'Calculadora de Velocidad', url: 'https://comparadorinternet.co/calculadora' }
+          ]}
+        />
+
+        <LastUpdated
+          date="2026-01-12"
+          nextReview="2026-02-12"
+          message="Algoritmo de cálculo actualizado con precios vigentes de enero 2026"
+          className="max-w-4xl mx-auto"
+        />
+      </div>
 
       {/* Calculadora */}
       <section className="py-12 px-4">

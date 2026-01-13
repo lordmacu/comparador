@@ -98,23 +98,6 @@ export default function GuiaCompletaPage() {
         dangerouslySetInnerHTML={renderJsonLd(howToSchema)}
       />
 
-      {/* Breadcrumbs y LastUpdated */}
-      <div className="container mx-auto px-4 py-6">
-        <Breadcrumbs
-          items={[
-            { name: 'Recursos', url: 'https://comparadorinternet.co/recursos' },
-            { name: 'Guía Completa', url: 'https://comparadorinternet.co/guia-completa' }
-          ]}
-        />
-
-        <LastUpdated
-          date="2026-01-12"
-          nextReview="2026-02-12"
-          message="Guía actualizada con información de todos los barrios y operadores de Bogotá"
-          className="max-w-4xl mx-auto"
-        />
-      </div>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -152,6 +135,23 @@ export default function GuiaCompletaPage() {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumbs y LastUpdated */}
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs
+          items={[
+            { name: 'Recursos', url: 'https://comparadorinternet.co/recursos' },
+            { name: 'Guía Completa', url: 'https://comparadorinternet.co/guia-completa' }
+          ]}
+        />
+
+        <LastUpdated
+          date="2026-01-12"
+          nextReview="2026-02-12"
+          message="Guía actualizada con información de todos los barrios y operadores de Bogotá"
+          className="max-w-4xl mx-auto"
+        />
+      </div>
 
       {/* Tabla de Contenidos */}
       <section id="tabla-contenidos" className="py-16 bg-gray-50">

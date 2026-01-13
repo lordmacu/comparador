@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/planes-claro-colombia/layout,_N_T_/planes-claro-colombia/page,_N_T_/planes-claro-colombia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/planes-claro-colombia/__PAGE__",
+    "/planes-claro-colombia",
+    "/_index",
+    "/_head"
+  ]
+}

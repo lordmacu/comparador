@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/instalacion-internet-bogota/layout,_N_T_/instalacion-internet-bogota/page,_N_T_/instalacion-internet-bogota"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/instalacion-internet-bogota/__PAGE__",
+    "/instalacion-internet-bogota",
+    "/_index",
+    "/_head"
+  ]
+}

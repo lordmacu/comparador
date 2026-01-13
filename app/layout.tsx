@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { generateWebSiteSchema, renderJsonLd } from "@/lib/schemas";
+import { generateLocalBusinessSchema } from "@/lib/schemas/local-business";
 import Header from "@/components/Header";
 import { OrganizationSchema, WebsiteSchema } from "@/components/SchemaMarkup";
 import { WebVitals } from "@/components/WebVitals";
@@ -19,7 +20,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://comparadorinternet.co'),
   title: {
-    default: "Comparador de Internet en Colombia 2025 | Claro, Movistar, ETB",
+    default: "Comparador de Internet en Colombia 2026 | Claro, Movistar, ETB",
     template: "%s | Tu Comparador"
   },
   description: "Descubre los servicios de internet en Colombia. Compara beneficios de Claro, Movistar y ETB. Consulta planes, promociones y cobertura disponible en tu zona.",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     "internet hogar",
     "comparador internet",
     "internet Bogotá",
-    "mejor internet Colombia 2025"
+    "mejor internet Colombia 2026"
   ],
   authors: [{ name: "Tu Comparador" }],
   creator: "Tu Comparador",
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     locale: 'es_CO',
     url: 'https://comparadorinternet.co',
     siteName: 'Comparador Internet Colombia',
-    title: 'Comparador de Internet en Colombia 2025 | Claro, Movistar, ETB',
+    title: 'Comparador de Internet en Colombia 2026 | Claro, Movistar, ETB',
     description: 'Descubre servicios de internet en Colombia. Compara beneficios y consulta planes disponibles.',
     images: [
       {
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Comparador de Internet en Colombia 2025',
+    title: 'Comparador de Internet en Colombia 2026',
     description: 'Compara servicios de internet: beneficios, cobertura y tecnologías disponibles',
     images: ['/og-image.jpg'],
   },
@@ -103,6 +104,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const websiteSchema = generateWebSiteSchema();
+  const localBusinessSchema = generateLocalBusinessSchema();
 
   return (
     <html lang="es-CO">
@@ -118,6 +120,12 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={renderJsonLd(websiteSchema)}
+        />
+        
+        {/* LocalBusiness Schema para SEO Local */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={renderJsonLd(localBusinessSchema)}
         />
         
         {/* Organization and Website Schema */}
@@ -169,7 +177,7 @@ export default function RootLayout({
               <div>
                 <h4 className="text-white font-semibold mb-4">Información</h4>
                 <p className="text-sm">
-                  Última actualización: Diciembre 2025
+                  Última actualización: Diciembre 2026
                   <br />
                   Precios sujetos a disponibilidad y zona de cobertura.
                 </p>
@@ -177,7 +185,7 @@ export default function RootLayout({
             </div>
 
             <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-              <p>© 2025 Comparador Internet Colombia. Todos los derechos reservados.</p>
+              <p>© 2026 Comparador Internet Colombia. Todos los derechos reservados.</p>
             </div>
           </div>
         </footer>

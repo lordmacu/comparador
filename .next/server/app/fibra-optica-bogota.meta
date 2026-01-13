@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/fibra-optica-bogota/layout,_N_T_/fibra-optica-bogota/page,_N_T_/fibra-optica-bogota"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/fibra-optica-bogota/__PAGE__",
+    "/fibra-optica-bogota",
+    "/_index",
+    "/_head"
+  ]
+}

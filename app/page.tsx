@@ -18,8 +18,8 @@ import { Zap, Globe, Phone, Gift } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Comparador de Internet en Colombia 2025 | Claro, Movistar, ETB',
-  description: 'Descubre los mejores servicios de internet en Colombia. Compara beneficios de Claro, Movistar y ETB. Fibra óptica, cobertura nacional y atención personalizada.',
+  title: 'Comparador Internet Colombia 2026 | Planes desde $42.000/mes',
+  description: 'Compara planes de internet desde $42.000/mes. Claro, Movistar y ETB con fibra óptica hasta 900 Mbps. Te ayudamos a encontrar el mejor plan para tu hogar. Cotiza gratis.',
   keywords: [
     'internet Colombia',
     'comparador internet',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     canonical: 'https://comparadorinternet.co',
   },
   openGraph: {
-    title: 'Comparador de Internet en Colombia 2025',
+    title: 'Comparador de Internet en Colombia 2026',
     description: 'Compara servicios de internet de Claro, Movistar y ETB',
     url: 'https://comparadorinternet.co',
     type: 'website',
@@ -92,23 +92,25 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/calculadora"
+                href="/planes"
                 className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 <BarChart3 className="w-6 h-6" />
-                Calcula tu Velocidad Ideal
+                Ver Todos los Planes
               </a>
               <a
-                href="#comparador"
-                className="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                href="/ofertas"
+                className="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-2"
               >
-                Comparar Servicios
+                <Gift className="w-6 h-6" />
+                Ofertas hasta 50% OFF
               </a>
               <a
-                href="#contacto"
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-700 transition-all"
+                href="/contratar"
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-700 transition-all flex items-center justify-center gap-2"
               >
-                Consultar Planes
+                <Phone className="w-6 h-6" />
+                Contratar Ahora
               </a>
             </div>
           </div>
@@ -157,15 +159,15 @@ export default function HomePage() {
               <h3 className="font-bold text-lg mb-2">Atención 24/7</h3>
               <p className="text-gray-600 text-sm">Soporte siempre disponible</p>
             </div>
-            <div className="text-center">
+            <a href="/ofertas" className="text-center block hover:scale-105 transition-transform">
               <div className="flex justify-center mb-4">
                 <div className="p-4 rounded-full bg-orange-100">
                   <Gift size={40} className="text-orange-600" strokeWidth={2} />
                 </div>
               </div>
               <h3 className="font-bold text-lg mb-2">Promociones</h3>
-              <p className="text-gray-600 text-sm">Ofertas exclusivas mensuales</p>
-            </div>
+              <p className="text-gray-600 text-sm">Ofertas exclusivas hasta 50% OFF →</p>
+            </a>
           </div>
 
           {/* Guía Completa Banner */}
@@ -236,7 +238,7 @@ export default function HomePage() {
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-xl shadow-lg overflow-hidden">
                 <caption className="sr-only">
-                  Comparación de servicios de internet en Colombia 2025 - Claro, Movistar y ETB
+                  Comparación de servicios de internet en Colombia 2026 - Claro, Movistar y ETB
                 </caption>
                 <thead className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
                   <tr>
@@ -339,6 +341,219 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Sección de Precios por Velocidad */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black mb-4">
+              💰 Precios Aproximados por Velocidad
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Encuentra el plan perfecto según tu presupuesto y necesidades
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Plan 300 Mbps */}
+            <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-all hover:shadow-xl">
+              <div className="text-center mb-6">
+                <p className="text-gray-600 mb-2 font-semibold">Plan Básico</p>
+                <div className="mb-4">
+                  <Zap className="w-12 h-12 mx-auto text-blue-600" />
+                </div>
+                <h3 className="text-5xl font-black text-blue-600 mb-2">300 Mbps</h3>
+                <div className="text-3xl font-bold text-gray-900">
+                  Desde <span className="text-blue-600">$45.000</span>
+                  <span className="text-lg text-gray-600">/mes</span>
+                </div>
+              </div>
+              
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700"><strong>1-2 personas</strong> en casa</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Streaming <strong>HD</strong></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Teletrabajo básico</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Navegación web rápida</span>
+                </li>
+              </ul>
+              
+              <div className="space-y-3">
+                <p className="text-sm text-center text-gray-600 font-medium">
+                  Te llamamos gratis para cotizar:
+                </p>
+                <QuickCallForm buttonColor="#2563eb" />
+              </div>
+            </div>
+
+            {/* Plan 500 Mbps - DESTACADO */}
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 border-4 border-yellow-400 relative hover:shadow-2xl transition-all transform hover:scale-105">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg">
+                ⭐ MÁS POPULAR
+              </div>
+              
+              <div className="text-center mb-6">
+                <p className="text-gray-700 mb-2 font-semibold">Plan Medio</p>
+                <div className="mb-4">
+                  <Zap className="w-12 h-12 mx-auto text-yellow-600" />
+                </div>
+                <h3 className="text-5xl font-black text-yellow-600 mb-2">500 Mbps</h3>
+                <div className="text-3xl font-bold text-gray-900">
+                  Desde <span className="text-yellow-600">$75.000</span>
+                  <span className="text-lg text-gray-600">/mes</span>
+                </div>
+              </div>
+              
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700"><strong>3-4 personas</strong> en casa</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Streaming <strong>4K</strong> sin pausas</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700"><strong>Teletrabajo</strong> + gaming</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Múltiples dispositivos</span>
+                </li>
+              </ul>
+              
+              <div className="space-y-3">
+                <p className="text-sm text-center text-gray-700 font-medium">
+                  Te llamamos gratis para cotizar:
+                </p>
+                <QuickCallForm buttonColor="#ca8a04" />
+              </div>
+            </div>
+
+            {/* Plan 900 Mbps */}
+            <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 hover:border-purple-400 transition-all hover:shadow-xl">
+              <div className="text-center mb-6">
+                <p className="text-gray-600 mb-2 font-semibold">Plan Premium</p>
+                <div className="mb-4">
+                  <Zap className="w-12 h-12 mx-auto text-purple-600" />
+                </div>
+                <h3 className="text-5xl font-black text-purple-600 mb-2">900 Mbps</h3>
+                <div className="text-3xl font-bold text-gray-900">
+                  Desde <span className="text-purple-600">$120.000</span>
+                  <span className="text-lg text-gray-600">/mes</span>
+                </div>
+              </div>
+              
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700"><strong>5+ personas</strong> en casa</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700"><strong>Gaming</strong> competitivo</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Múltiples <strong>4K</strong> simultáneos</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Smart home completo</span>
+                </li>
+              </ul>
+              
+              <div className="space-y-3">
+                <p className="text-sm text-center text-gray-600 font-medium">
+                  Te llamamos gratis para cotizar:
+                </p>
+                <QuickCallForm buttonColor="#9333ea" />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="bg-white rounded-xl p-6 max-w-3xl mx-auto shadow-md border border-gray-200">
+              <p className="text-gray-600 mb-4">
+                <strong>Nota:</strong> Los precios son aproximados y pueden variar según:
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-600">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                  <span>Zona de cobertura específica</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                  <span>Promociones vigentes</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                  <span>Duración del contrato</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 mt-4">
+                * Última actualización: Enero 2026
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Banner CTAs Internos */}
+      <section className="py-12 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6">
+              <a 
+                href="/planes" 
+                className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+              >
+                <BarChart3 className="w-12 h-12 mx-auto mb-4 text-blue-600 group-hover:scale-110 transition-transform" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Ver Todos los Planes</h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  Compara precios y beneficios de los 12 planes disponibles
+                </p>
+                <span className="text-blue-600 font-semibold text-sm">Explorar planes →</span>
+              </a>
+
+              <a 
+                href="/ofertas" 
+                className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+              >
+                <Gift className="w-12 h-12 mx-auto mb-4 text-orange-600 group-hover:scale-110 transition-transform" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Ofertas hasta 50% OFF</h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  Promociones exclusivas válidas hasta enero 2026
+                </p>
+                <span className="text-orange-600 font-semibold text-sm">Ver ofertas →</span>
+              </a>
+
+              <a 
+                href="/contratar" 
+                className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+              >
+                <Phone className="w-12 h-12 mx-auto mb-4 text-green-600 group-hover:scale-110 transition-transform" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Contratar en 4 Pasos</h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  Proceso 100% digital con instalación en 24-48 horas
+                </p>
+                <span className="text-green-600 font-semibold text-sm">Contratar ahora →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Beneficios por Proveedor */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -417,6 +632,64 @@ export default function HomePage() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Search Intent Clusters - SEO Boost */}
+      <section className="py-16 bg-slate-50 border-y border-slate-200">
+        <div className="container mx-auto px-4 max-w-6xl">
+           <h2 className="text-3xl font-bold text-center mb-10 text-slate-900">¿Qué estás buscando hoy?</h2>
+           
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {/* Card 1 */}
+              <Link href="/internet-barato-colombia" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+                 <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="font-bold text-xl">$</span>
+                 </div>
+                 <span className="font-bold text-slate-800">Internet Barato</span>
+              </Link>
+
+               {/* Card 2 */}
+              <Link href="/internet-gaming-bogota" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+                 <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="font-bold text-xl">🎮</span>
+                 </div>
+                 <span className="font-bold text-slate-800">Internet Gamer</span>
+              </Link>
+
+               {/* Card 3 */}
+              <Link href="/internet-edificios-bogota" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="font-bold text-xl">🏢</span>
+                 </div>
+                 <span className="font-bold text-slate-800">Para Edificios</span>
+              </Link>
+
+              {/* Card 4 */}
+              <Link href="/internet-bogota-cobertura" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+                 <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Globe className="w-6 h-6"/>
+                 </div>
+                 <span className="font-bold text-slate-800">Mapa Cobertura</span>
+              </Link>
+           </div>
+           
+           <div className="mt-8 text-center">
+             <p className="text-slate-500 mb-4 font-medium">Listas de Precios Oficiales (Enero 2026)</p>
+             <div className="flex flex-wrap justify-center gap-4">
+               <Link href="/planes-etb-bogota" className="text-blue-600 hover:text-blue-800 font-semibold underline decoration-2 underline-offset-4">
+                  Ver Tarifas ETB
+               </Link>
+               <span className="text-slate-300">|</span>
+                <Link href="/planes-claro-colombia" className="text-red-600 hover:text-red-800 font-semibold underline decoration-2 underline-offset-4">
+                  Ver Tarifas Claro
+               </Link>
+               <span className="text-slate-300">|</span>
+                <Link href="/planes-movistar-fibra" className="text-green-600 hover:text-green-800 font-semibold underline decoration-2 underline-offset-4">
+                  Ver Tarifas Movistar
+               </Link>
+             </div>
+           </div>
         </div>
       </section>
 

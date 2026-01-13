@@ -155,6 +155,12 @@
       "namedRegex": "^/api/call\\-request(?:/)?$"
     },
     {
+      "page": "/asesores",
+      "regex": "^/asesores(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/asesores(?:/)?$"
+    },
+    {
       "page": "/blog",
       "regex": "^/blog(?:/)?$",
       "routeKeys": {},
@@ -179,6 +185,18 @@
       "namedRegex": "^/claro(?:/)?$"
     },
     {
+      "page": "/como-cambiar-operador-internet",
+      "regex": "^/como\\-cambiar\\-operador\\-internet(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/como\\-cambiar\\-operador\\-internet(?:/)?$"
+    },
+    {
+      "page": "/contratar",
+      "regex": "^/contratar(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contratar(?:/)?$"
+    },
+    {
       "page": "/empresa",
       "regex": "^/empresa(?:/)?$",
       "routeKeys": {},
@@ -197,6 +215,12 @@
       "namedRegex": "^/faq(?:/)?$"
     },
     {
+      "page": "/fibra-optica-bogota",
+      "regex": "^/fibra\\-optica\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fibra\\-optica\\-bogota(?:/)?$"
+    },
+    {
       "page": "/guia-completa",
       "regex": "^/guia\\-completa(?:/)?$",
       "routeKeys": {},
@@ -207,6 +231,60 @@
       "regex": "^/herramientas(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/herramientas(?:/)?$"
+    },
+    {
+      "page": "/instalacion-internet-bogota",
+      "regex": "^/instalacion\\-internet\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/instalacion\\-internet\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/internet-barato-colombia",
+      "regex": "^/internet\\-barato\\-colombia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-barato\\-colombia(?:/)?$"
+    },
+    {
+      "page": "/internet-bogota-cobertura",
+      "regex": "^/internet\\-bogota\\-cobertura(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-bogota\\-cobertura(?:/)?$"
+    },
+    {
+      "page": "/internet-edificios-bogota",
+      "regex": "^/internet\\-edificios\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-edificios\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/internet-empresas-pymes",
+      "regex": "^/internet\\-empresas\\-pymes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-empresas\\-pymes(?:/)?$"
+    },
+    {
+      "page": "/internet-gaming-bogota",
+      "regex": "^/internet\\-gaming\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-gaming\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/internet-para-zoom-reuniones",
+      "regex": "^/internet\\-para\\-zoom\\-reuniones(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-para\\-zoom\\-reuniones(?:/)?$"
+    },
+    {
+      "page": "/internet-sin-permanencia",
+      "regex": "^/internet\\-sin\\-permanencia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-sin\\-permanencia(?:/)?$"
+    },
+    {
+      "page": "/internet-solo-sin-telefono",
+      "regex": "^/internet\\-solo\\-sin\\-telefono(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-solo\\-sin\\-telefono(?:/)?$"
     },
     {
       "page": "/manifest.webmanifest",
@@ -221,10 +299,34 @@
       "namedRegex": "^/movistar(?:/)?$"
     },
     {
+      "page": "/ofertas",
+      "regex": "^/ofertas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ofertas(?:/)?$"
+    },
+    {
       "page": "/planes",
       "regex": "^/planes(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/planes(?:/)?$"
+    },
+    {
+      "page": "/planes-claro-colombia",
+      "regex": "^/planes\\-claro\\-colombia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/planes\\-claro\\-colombia(?:/)?$"
+    },
+    {
+      "page": "/planes-etb-bogota",
+      "regex": "^/planes\\-etb\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/planes\\-etb\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/planes-movistar-fibra",
+      "regex": "^/planes\\-movistar\\-fibra(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/planes\\-movistar\\-fibra(?:/)?$"
     },
     {
       "page": "/recursos",

@@ -25,8 +25,8 @@ import type { Metadata } from 'next';
 const provider = getProvider('etb');
 
 export const metadata: Metadata = {
-  title: `Internet ${provider.name} Bogotá 2025 | ${provider.tagline}`,
-  description: `${provider.hero.subtitle}. Internet ETB con fibra óptica simétrica. Consulta promociones especiales para Bogotá y municipios cercanos.`,
+  title: `Internet ETB Bogotá 2026: Desde $42.000 | Fibra 900 Mbps Local`,
+  description: `Planes de internet ETB con fibra óptica hasta 900 Mbps desde $42.000/mes en Bogotá. Operador local con 140 años de experiencia. WiFi 360 y soporte técnico especializado. Contrata ya.`,
   keywords: [
     'internet ETB Bogotá',
     'ETB fibra simétrica',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     canonical: 'https://comparadorinternet.co/etb',
   },
   openGraph: {
-    title: `Internet ${provider.name} Bogotá 2025`,
+    title: `Internet ${provider.name} Bogotá 2026`,
     description: provider.hero.subtitle,
     url: 'https://comparadorinternet.co/etb',
     images: [
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Internet ${provider.name} Bogotá 2025`,
+    title: `Internet ${provider.name} Bogotá 2026`,
     description: provider.hero.subtitle,
     images: ['/og-image.jpg'],
   },
@@ -92,21 +92,6 @@ export default function ETBPage() {
       {serviceSchemas.map((schema, idx) => (
         <script key={idx} type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(schema)} />
       ))}
-
-      <div className="container mx-auto px-4 py-6">
-        <Breadcrumbs
-          items={[
-            { name: 'Proveedores', url: 'https://comparadorinternet.co/planes' },
-            { name: provider.name, url: `https://comparadorinternet.co/${provider.slug}` }
-          ]}
-        />
-
-        <LastUpdated
-          date="2026-01-12"
-          nextReview="2026-02-12"
-          message="Información actualizada de servicios, cobertura y promociones de ETB para Bogotá"
-        />
-      </div>
 
       {/* Hero ETB */}
       <section
@@ -170,6 +155,21 @@ export default function ETBPage() {
           </div>
         </div>
       </section>
+
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs
+          items={[
+            { name: 'Proveedores', url: 'https://comparadorinternet.co/planes' },
+            { name: provider.name, url: `https://comparadorinternet.co/${provider.slug}` }
+          ]}
+        />
+
+        <LastUpdated
+          date="2026-01-12"
+          nextReview="2026-02-12"
+          message="Información actualizada de servicios, cobertura y promociones de ETB para Bogotá"
+        />
+      </div>
 
       {/* Beneficios Principales */}
       <section className="py-16 bg-white">
@@ -282,6 +282,50 @@ export default function ETBPage() {
                 Consulta descuentos y promociones especiales para clientes ETB
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Banner CTAs Internos */}
+      <section className="py-12 bg-gradient-to-r from-blue-600 to-indigo-600">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-2">Compara y Ahorra con ETB</h3>
+            <p className="text-blue-100">Explora todas las opciones disponibles</p>
+          </div>
+          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+            <a 
+              href="/planes" 
+              className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Comparar Planes</h4>
+              <p className="text-gray-600 text-sm mb-3">
+                Ve todos los planes de ETB, Claro y Movistar lado a lado
+              </p>
+              <span className="text-blue-600 font-semibold text-sm">Ver comparación →</span>
+            </a>
+
+            <a 
+              href="/ofertas" 
+              className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Ofertas Activas</h4>
+              <p className="text-gray-600 text-sm mb-3">
+                Hasta 3 meses gratis + descuentos del 50%
+              </p>
+              <span className="text-orange-600 font-semibold text-sm">Ver ofertas →</span>
+            </a>
+
+            <a 
+              href="/contratar" 
+              className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Contratar Online</h4>
+              <p className="text-gray-600 text-sm mb-3">
+                Instalación en 24-48 horas en Bogotá
+              </p>
+              <span className="text-green-600 font-semibold text-sm">Contratar →</span>
+            </a>
           </div>
         </div>
       </section>

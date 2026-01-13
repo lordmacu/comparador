@@ -365,7 +365,7 @@ const SOLUCIONES: Record<string, {
       },
       {
         nombre: 'Movistar',
-        razon: 'Red renovada 2024-2025 con fibra FTTH + soporte técnico 24/7',
+        razon: 'Red renovada 2024-2026 con fibra FTTH + soporte técnico 24/7',
         promocion: 'Test de velocidad a domicilio sin costo',
         link: '/movistar'
       },

@@ -47,6 +47,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
+// Validate ../../app/asesores/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/asesores">> = Specific
+  const handler = {} as typeof import("../../app/asesores/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/barrios/[barrio]/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/barrios/[barrio]">> = Specific
@@ -110,10 +119,28 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/como-cambiar-operador-internet/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/como-cambiar-operador-internet">> = Specific
+  const handler = {} as typeof import("../../app/como-cambiar-operador-internet/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/comparar/[...operadores]/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/comparar/[...operadores]">> = Specific
   const handler = {} as typeof import("../../app/comparar/[...operadores]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/contratar/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/contratar">> = Specific
+  const handler = {} as typeof import("../../app/contratar/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -146,6 +173,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/fibra-optica-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/fibra-optica-bogota">> = Specific
+  const handler = {} as typeof import("../../app/fibra-optica-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/guia-completa/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/guia-completa">> = Specific
@@ -164,6 +200,87 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/instalacion-internet-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/instalacion-internet-bogota">> = Specific
+  const handler = {} as typeof import("../../app/instalacion-internet-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-barato-colombia/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-barato-colombia">> = Specific
+  const handler = {} as typeof import("../../app/internet-barato-colombia/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-bogota-cobertura/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-bogota-cobertura">> = Specific
+  const handler = {} as typeof import("../../app/internet-bogota-cobertura/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-edificios-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-edificios-bogota">> = Specific
+  const handler = {} as typeof import("../../app/internet-edificios-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-empresas-pymes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-empresas-pymes">> = Specific
+  const handler = {} as typeof import("../../app/internet-empresas-pymes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-gaming-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-gaming-bogota">> = Specific
+  const handler = {} as typeof import("../../app/internet-gaming-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-para-zoom-reuniones/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-para-zoom-reuniones">> = Specific
+  const handler = {} as typeof import("../../app/internet-para-zoom-reuniones/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-sin-permanencia/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-sin-permanencia">> = Specific
+  const handler = {} as typeof import("../../app/internet-sin-permanencia/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-solo-sin-telefono/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-solo-sin-telefono">> = Specific
+  const handler = {} as typeof import("../../app/internet-solo-sin-telefono/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/movistar/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/movistar">> = Specific
@@ -173,10 +290,46 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/ofertas/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ofertas">> = Specific
+  const handler = {} as typeof import("../../app/ofertas/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/">> = Specific
   const handler = {} as typeof import("../../app/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/planes-claro-colombia/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/planes-claro-colombia">> = Specific
+  const handler = {} as typeof import("../../app/planes-claro-colombia/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/planes-etb-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/planes-etb-bogota">> = Specific
+  const handler = {} as typeof import("../../app/planes-etb-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/planes-movistar-fibra/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/planes-movistar-fibra">> = Specific
+  const handler = {} as typeof import("../../app/planes-movistar-fibra/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

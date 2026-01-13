@@ -3,6 +3,9 @@
     "[project]/app/_not-found/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
+    "[project]/app/asesores/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
     "[project]/app/barrios/[barrio]/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
@@ -24,7 +27,13 @@
     "[project]/app/claro/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
+    "[project]/app/como-cambiar-operador-internet/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
     "[project]/app/comparar/[...operadores]/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/contratar/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
     "[project]/app/empresa/page": [
@@ -36,16 +45,58 @@
     "[project]/app/faq/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
+    "[project]/app/fibra-optica-bogota/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
     "[project]/app/guia-completa/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
     "[project]/app/herramientas/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
+    "[project]/app/instalacion-internet-bogota/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/internet-barato-colombia/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/internet-bogota-cobertura/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/internet-edificios-bogota/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/internet-empresas-pymes/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/internet-gaming-bogota/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/internet-para-zoom-reuniones/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/internet-sin-permanencia/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/internet-solo-sin-telefono/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
     "[project]/app/movistar/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
+    "[project]/app/ofertas/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
     "[project]/app/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/planes-claro-colombia/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/planes-etb-bogota/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/planes-movistar-fibra/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
     "[project]/app/planes/page": [

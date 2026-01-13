@@ -25,8 +25,8 @@ import type { Metadata } from 'next';
 const provider = getProvider('claro');
 
 export const metadata: Metadata = {
-  title: `Internet ${provider.name} Colombia 2025 | ${provider.tagline}`,
-  description: `${provider.hero.subtitle}. Conoce los servicios de internet Claro: ${provider.coverage.technology}. Contacta para consultar planes disponibles en tu zona.`,
+  title: `Internet Claro 2026: Planes desde $45.000 | Fibra 900 Mbps + 5G`,
+  description: `Planes de internet Claro con fibra óptica hasta 900 Mbps desde $45.000/mes. Tecnología 5G, Claro TV+ incluido y atención 24/7. Cotiza y contrata ya con promociones exclusivas.`,
   keywords: [
     'internet Claro Colombia',
     'Claro 5G Bogotá',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     canonical: 'https://comparadorinternet.co/claro',
   },
   openGraph: {
-    title: `Internet ${provider.name} Colombia 2025`,
+    title: `Internet ${provider.name} Colombia 2026`,
     description: provider.hero.subtitle,
     url: 'https://comparadorinternet.co/claro',
     images: [
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Internet ${provider.name} Colombia 2025`,
+    title: `Internet ${provider.name} Colombia 2026`,
     description: provider.hero.subtitle,
     images: ['/og-image.jpg'],
   },
@@ -97,23 +97,6 @@ export default function ClaroPage() {
           dangerouslySetInnerHTML={renderJsonLd(schema)}
         />
       ))}
-
-      {/* Breadcrumbs y LastUpdated */}
-      <div className="container mx-auto px-4 py-6">
-        <Breadcrumbs
-          items={[
-            { name: 'Proveedores', url: 'https://comparadorinternet.co/planes' },
-            { name: provider.name, url: `https://comparadorinternet.co/${provider.slug}` }
-          ]}
-        />
-
-        <LastUpdated
-          date="2026-01-12"
-          nextReview="2026-02-12"
-          message="Información actualizada de servicios, cobertura y promociones de Claro"
-          className="max-w-4xl mx-auto"
-        />
-      </div>
 
       {/* Hero Claro */}
       <section
@@ -173,6 +156,22 @@ export default function ClaroPage() {
         </div>
       </section>
 
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs
+          items={[
+            { name: 'Proveedores', url: 'https://comparadorinternet.co/planes' },
+            { name: provider.name, url: `https://comparadorinternet.co/${provider.slug}` }
+          ]}
+        />
+
+        <LastUpdated
+          date="2026-01-12"
+          nextReview="2026-02-12"
+          message="Información actualizada de servicios, cobertura y promociones de Claro"
+          className="max-w-4xl mx-auto"
+        />
+      </div>
+
       {/* Beneficios Principales */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -221,6 +220,50 @@ export default function ClaroPage() {
             {provider.services.map((service, idx) => (
               <ServiceCard key={idx} service={service} provider={provider} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Banner CTAs Internos */}
+      <section className="py-12 bg-gradient-to-r from-red-600 to-pink-600">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-2">Descubre Todas tus Opciones</h3>
+            <p className="text-red-100">Compara, ahorra y contrata online</p>
+          </div>
+          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+            <a 
+              href="/planes" 
+              className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Comparar Planes</h4>
+              <p className="text-gray-600 text-sm mb-3">
+                Compara Claro con ETB y Movistar
+              </p>
+              <span className="text-red-600 font-semibold text-sm">Ver comparación →</span>
+            </a>
+
+            <a 
+              href="/ofertas" 
+              className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Ofertas Exclusivas</h4>
+              <p className="text-gray-600 text-sm mb-3">
+                HBO Max + Paramount+ incluidos
+              </p>
+              <span className="text-orange-600 font-semibold text-sm">Ver ofertas →</span>
+            </a>
+
+            <a 
+              href="/contratar" 
+              className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Contratar Online</h4>
+              <p className="text-gray-600 text-sm mb-3">
+                Proceso 100% digital en 4 pasos
+              </p>
+              <span className="text-green-600 font-semibold text-sm">Contratar →</span>
+            </a>
           </div>
         </div>
       </section>

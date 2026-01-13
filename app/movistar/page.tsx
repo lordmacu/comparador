@@ -25,8 +25,8 @@ import type { Metadata } from 'next';
 const provider = getProvider('movistar');
 
 export const metadata: Metadata = {
-  title: `Internet ${provider.name} Colombia 2025 | ${provider.tagline}`,
-  description: `${provider.hero.subtitle}. Servicios de internet Movistar: ${provider.coverage.technology}. Consulta planes y descuentos exclusivos online.`,
+  title: `Internet Movistar 2026: Desde $50.000 | Ultra Fibra + Disney+ Gratis`,
+  description: `Planes de internet Movistar con Ultra Fibra hasta 900 Mbps desde $50.000/mes. Disney+ gratis 12 meses, WiFi 6 y fibra simétrica. Contrata online con descuentos exclusivos.`,
   keywords: [
     'internet Movistar Colombia',
     'Movistar fibra simétrica',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     canonical: 'https://comparadorinternet.co/movistar',
   },
   openGraph: {
-    title: `Internet ${provider.name} Colombia 2025`,
+    title: `Internet ${provider.name} Colombia 2026`,
     description: provider.hero.subtitle,
     url: 'https://comparadorinternet.co/movistar',
     images: [
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Internet ${provider.name} Colombia 2025`,
+    title: `Internet ${provider.name} Colombia 2026`,
     description: provider.hero.subtitle,
     images: ['/og-image.jpg'],
   },
@@ -92,21 +92,6 @@ export default function MovistarPage() {
       {serviceSchemas.map((schema, idx) => (
         <script key={idx} type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(schema)} />
       ))}
-
-      <div className="container mx-auto px-4 py-6">
-        <Breadcrumbs
-          items={[
-            { name: 'Proveedores', url: 'https://comparadorinternet.co/planes' },
-            { name: provider.name, url: `https://comparadorinternet.co/${provider.slug}` }
-          ]}
-        />
-
-        <LastUpdated
-          date="2026-01-12"
-          nextReview="2026-02-12"
-          message="Información actualizada de servicios, cobertura y promociones de Movistar"
-        />
-      </div>
 
       {/* Hero Movistar */}
       <section
@@ -173,6 +158,21 @@ export default function MovistarPage() {
         </div>
       </section>
 
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs
+          items={[
+            { name: 'Proveedores', url: 'https://comparadorinternet.co/planes' },
+            { name: provider.name, url: `https://comparadorinternet.co/${provider.slug}` }
+          ]}
+        />
+
+        <LastUpdated
+          date="2026-01-12"
+          nextReview="2026-02-12"
+          message="Información actualizada de servicios, cobertura y promociones de Movistar"
+        />
+      </div>
+
       {/* Beneficios Principales */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -221,6 +221,50 @@ export default function MovistarPage() {
             {provider.services.map((service, idx) => (
               <ServiceCard key={idx} service={service} provider={provider} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Banner CTAs Internos */}
+      <section className="py-12 bg-gradient-to-r from-green-600 to-emerald-600">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-2">Encuentra tu Plan Ideal</h3>
+            <p className="text-green-100">Compara precios y beneficios</p>
+          </div>
+          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+            <a 
+              href="/planes" 
+              className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Comparar Planes</h4>
+              <p className="text-gray-600 text-sm mb-3">
+                Movistar vs ETB vs Claro
+              </p>
+              <span className="text-green-600 font-semibold text-sm">Ver comparación →</span>
+            </a>
+
+            <a 
+              href="/ofertas" 
+              className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Ofertas Especiales</h4>
+              <p className="text-gray-600 text-sm mb-3">
+                Disney+ 12 meses + descuentos
+              </p>
+              <span className="text-orange-600 font-semibold text-sm">Ver ofertas →</span>
+            </a>
+
+            <a 
+              href="/contratar" 
+              className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Contratar Ahora</h4>
+              <p className="text-gray-600 text-sm mb-3">
+                Instalación en 24-48 horas
+              </p>
+              <span className="text-blue-600 font-semibold text-sm">Contratar →</span>
+            </a>
           </div>
         </div>
       </section>

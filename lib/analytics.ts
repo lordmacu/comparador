@@ -111,6 +111,16 @@ export const trackWhatsAppClick = (provider: string, source: string) => {
     location: source,
   });
 
+  // Google Analytics 4 - Enhanced Conversion (contact intent)
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'contact', {
+      method: 'whatsapp',
+      provider: provider,
+      content_type: 'cta_button',
+      location: source,
+    });
+  }
+
   fbEvent('Contact', {
     content_name: provider,
     content_category: 'whatsapp',
@@ -138,9 +148,21 @@ export const trackFormSubmit = (formName: string, provider?: string) => {
     provider,
   });
 
+  // Google Analytics 4 - Enhanced Conversion (lead generation)
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'generate_lead', {
+      currency: 'COP',
+      value: 50000, // Valor estimado promedio de un plan
+      provider: provider || 'general',
+      form_name: formName,
+    });
+  }
+
   fbEvent('Lead', {
     content_name: formName,
     content_category: 'form',
+    value: 50000,
+    currency: 'COP',
   });
 };
 

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/asesores/layout,_N_T_/asesores/page,_N_T_/asesores"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/asesores/__PAGE__",
+    "/asesores",
+    "/_index",
+    "/_head"
+  ]
+}

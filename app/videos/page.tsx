@@ -101,7 +101,7 @@ const videos: Video[] = [
     youtubeId: "JGwWNGJdvx8",
     duration: "14:20",
     views: "31.5K",
-    uploadDate: "2025-11-20",
+    uploadDate: "2026-11-20",
     category: "Teletrabajo", 
     difficulty: "Intermedio",
     featured: true
@@ -113,7 +113,7 @@ const videos: Video[] = [
     youtubeId: "kffacxfA7G4",
     duration: "7:55",
     views: "12.3K",
-    uploadDate: "2025-11-15",
+    uploadDate: "2026-11-15",
     category: "Instalación",
     difficulty: "Principiante"
   },
@@ -124,7 +124,7 @@ const videos: Video[] = [
     youtubeId: "DcM0C5hyxhg",
     duration: "9:30",
     views: "19.8K",
-    uploadDate: "2025-11-10",
+    uploadDate: "2026-11-10",
     category: "Guías",
     difficulty: "Intermedio"
   },
@@ -135,7 +135,7 @@ const videos: Video[] = [
     youtubeId: "L_jWHffIx5E",
     duration: "11:40", 
     views: "27.1K",
-    uploadDate: "2025-11-05",
+    uploadDate: "2026-11-05",
     category: "Guías",
     difficulty: "Intermedio"
   },
@@ -146,7 +146,7 @@ const videos: Video[] = [
     youtubeId: "fJ9rUzIMcZQ",
     duration: "16:25",
     views: "35.2K",
-    uploadDate: "2025-10-30",
+    uploadDate: "2026-10-30",
     category: "Guías",
     difficulty: "Avanzado"
   }
