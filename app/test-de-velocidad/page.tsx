@@ -22,8 +22,8 @@ export default function SpeedTestPage() {
         setUploadSpeed(0);
         setPing(0);
 
-        const testFileUrl = 'https://onlinetestcase.com/wp-content/uploads/2023/06/10-MB-MP3.mp3';
-        const fileSizeInBytes = 10 * 1024 * 1024; // 10 MB
+        const testFileUrl = 'https://workcred.org/Documents/Understanding-Certifications-Report-Dec-2020.pdf';
+        const fileSizeInBytes = 5 * 1024 * 1024; // Approx 5 MB for PDF report
 
         try {
             // Measure Ping
