@@ -2,6 +2,9 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { BookOpen, MapPin, Zap, Home, Wrench, Users, TrendingUp, Calculator, CheckCircle, ArrowRight, Building2, Building, Landmark, Construction, Gamepad2, Briefcase, Tv, RefreshCw, TrendingDown, AlertTriangle, List, Rocket, Target, Lock, DollarSign, FileText, Lightbulb, Pin, Phone, Award, CheckCircle2 } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
+import { generateCompleteGuideHowToSchema, renderJsonLd } from '@/lib/schemas';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import LastUpdated from '@/components/LastUpdated';
 
 export const metadata: Metadata = {
   title: 'Guía Completa de Internet en Bogotá 2026 | Todo lo que Necesitas Saber',
@@ -85,8 +88,33 @@ export default function GuiaCompletaPage() {
     { slug: 'cortes-de-internet', nombre: 'Cortes de Internet', IconComponent: AlertTriangle },
   ];
 
+  const howToSchema = generateCompleteGuideHowToSchema();
+
   return (
     <>
+      {/* HowTo Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={renderJsonLd(howToSchema)}
+      />
+
+      {/* Breadcrumbs y LastUpdated */}
+      <div className="container mx-auto px-4 py-6">
+        <Breadcrumbs
+          items={[
+            { name: 'Recursos', url: 'https://comparadorinternet.co/recursos' },
+            { name: 'Guía Completa', url: 'https://comparadorinternet.co/guia-completa' }
+          ]}
+        />
+
+        <LastUpdated
+          date="2026-01-12"
+          nextReview="2026-02-12"
+          message="Guía actualizada con información de todos los barrios y operadores de Bogotá"
+          className="max-w-4xl mx-auto"
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>

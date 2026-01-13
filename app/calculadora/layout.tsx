@@ -1,4 +1,7 @@
 import { Metadata } from 'next';
+import { generateCalculatorHowToSchema, renderJsonLd } from '@/lib/schemas';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import LastUpdated from '@/components/LastUpdated';
 
 export const metadata: Metadata = {
   title: 'Calculadora de Velocidad de Internet | ¿Cuántos Mbps Necesito? Bogotá 2026',
@@ -34,4 +37,38 @@ export const metadata: Metadata = {
   },
 };
 
-export { default } from './page';
+export default function CalculadoraLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const howToSchema = generateCalculatorHowToSchema();
+
+  return (
+    <>
+      {/* HowTo Schema para calculadora */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={renderJsonLd(howToSchema)}
+      />
+
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs
+          items={[
+            { name: 'Herramientas', url: 'https://comparadorinternet.co/herramientas' },
+            { name: 'Calculadora de Velocidad', url: 'https://comparadorinternet.co/calculadora' }
+          ]}
+        />
+
+        <LastUpdated
+          date="2026-01-12"
+          nextReview="2026-02-12"
+          message="Algoritmo de cálculo actualizado con precios vigentes de enero 2026"
+          className="max-w-4xl mx-auto mb-8"
+        />
+
+        {children}
+      </div>
+    </>
+  );
+}

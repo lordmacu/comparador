@@ -5,6 +5,7 @@ import {
   generateFAQSchema,
   generateBreadcrumbSchema,
   generateHowToContactSchema,
+  generateProductSchema,
   renderJsonLd
 } from '@/lib/schemas';
 import Image from 'next/image';
@@ -16,6 +17,8 @@ import QuickCallForm from '@/components/QuickCallForm';
 import FAQSection from '@/components/FAQSection';
 import ProviderBlogSection from '@/components/ProviderBlogSection';
 import ClusterNavigation from '@/components/ClusterNavigation';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import LastUpdated from '@/components/LastUpdated';
 import { ClipboardList, Check } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -66,6 +69,7 @@ export const revalidate = 3600;
 
 export default function ClaroPage() {
   const organizationSchema = generateOrganizationSchema(provider);
+  const productSchema = generateProductSchema(provider);
   const faqSchema = generateFAQSchema(provider);
   const howToSchema = generateHowToContactSchema(provider);
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -82,6 +86,7 @@ export default function ClaroPage() {
     <>
       {/* JSON-LD Schemas */}
       <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(organizationSchema)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(productSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(faqSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(howToSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={renderJsonLd(breadcrumbSchema)} />
@@ -92,6 +97,23 @@ export default function ClaroPage() {
           dangerouslySetInnerHTML={renderJsonLd(schema)}
         />
       ))}
+
+      {/* Breadcrumbs y LastUpdated */}
+      <div className="container mx-auto px-4 py-6">
+        <Breadcrumbs
+          items={[
+            { name: 'Proveedores', url: 'https://comparadorinternet.co/planes' },
+            { name: provider.name, url: `https://comparadorinternet.co/${provider.slug}` }
+          ]}
+        />
+
+        <LastUpdated
+          date="2026-01-12"
+          nextReview="2026-02-12"
+          message="Información actualizada de servicios, cobertura y promociones de Claro"
+          className="max-w-4xl mx-auto"
+        />
+      </div>
 
       {/* Hero Claro */}
       <section
