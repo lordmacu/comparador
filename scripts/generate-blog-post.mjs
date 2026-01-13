@@ -604,6 +604,14 @@ GENERA LA IMAGEN AHORA.`;
           const imageBuffer = Buffer.from(part.inlineData.data, 'base64');
           await fs.writeFile(imagePath, imageBuffer);
           
+          // Ajustar permisos para que nginx pueda servir la imagen
+          try {
+            await execAsync(`chmod 644 "${imagePath}"`);
+            log("Permisos de imagen ajustados correctamente.", "success");
+          } catch (permError) {
+            log(`Advertencia: No se pudieron ajustar permisos de imagen: ${permError.message}`, "error");
+          }
+          
           postData.image = `/blog-images/${postData.slug}.webp`;
           log("Imagen generada y guardada exitosamente.", "success");
         }
