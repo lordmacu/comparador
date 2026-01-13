@@ -4,7 +4,9 @@ import { Wifi, Tv, Phone, Check, Zap, Info, Smartphone } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
 
 export const metadata: Metadata = {
-    title: 'Movistar Internet Hogar Precios: Planes con TV y Netflix (2026)',
+    title: {
+        absolute: 'Movistar Internet Hogar Precios: Planes con TV y Netflix (2026)'
+    },
     description: 'Precios actualizados de Movistar Fibra Óptica 2026. Planes desde $49.990 con 50% de descuento en meses seleccionados. Internet + TV + Telefonía.',
     keywords: ['movistar internet hogar precios', 'planes movistar hogar internet y tv', 'movistar internet hogar precios colombia', 'movistar fibra optica bogota'],
 };

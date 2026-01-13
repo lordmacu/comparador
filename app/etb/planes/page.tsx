@@ -4,7 +4,9 @@ import { Wifi, Tv, Phone, Check, Zap, Info } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
 
 export const metadata: Metadata = {
-    title: 'Planes ETB Hogar Internet y TV: Precios Estrato 2 y 3 (2026)',
+    title: {
+        absolute: 'Planes ETB Hogar Internet y TV: Precios Estrato 2 y 3 (2026)'
+    },
     description: 'Consulta los precios actualizados de Internet ETB Fibra Óptica para Estrato 2 y 3. Combos con TV digital, Netflix y HBO incluidos. Velocidades hasta 900 Mbps.',
     keywords: ['planes ETB hogar internet y tv', 'etb internet hogar precios', 'planes etb hogar estrato 3', 'planes etb hogar estrato 2', 'etb duo', 'etb trio'],
 };

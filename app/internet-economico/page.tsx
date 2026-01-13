@@ -4,7 +4,9 @@ import { PiggyBank, Search, CheckCircle2, AlertCircle, TrendingDown, Phone, Arro
 import QuickCallForm from '@/components/QuickCallForm';
 
 export const metadata: Metadata = {
-    title: 'Internet Hogar Económico Bogotá 2026 | Planes desde $42.000',
+    title: {
+        absolute: 'Internet Hogar Económico Bogotá 2026 | Planes desde $42.000'
+    },
     description: '¿Buscas internet hogar barato en Bogotá? Compara planes económicos para Estrato 1, 2 y 3. Cobertura en Suba, Kennedy, Engativá y más. Instalación gratis.',
     keywords: ['internet hogar bogota', 'internet hogar economico bogota', 'plan solo internet hogar', 'internet barato bogota', 'planes internet bogota estrato 2'],
 };
