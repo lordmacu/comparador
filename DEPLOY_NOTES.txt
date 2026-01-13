@@ -1,0 +1,79 @@
+═══════════════════════════════════════════════════════════════════
+🚀 DEPLOY: GSC Monitor v2 con Análisis IA Automático
+═══════════════════════════════════════════════════════════════════
+
+Fecha: 2026-01-13
+Versión: gsc_monitor_v2.js
+
+CAMBIOS IMPLEMENTADOS:
+─────────────────────────────────────────────────────────────────
+
+1. ✅ Generación Automática de Archivo de Análisis para IA
+   - Nuevo archivo: public/gsc_ai_analysis_prompt.txt
+   - Se genera automáticamente en cada ejecución del script
+   - Se adjunta al email de reporte SEO
+
+2. ✅ Estructura del Archivo de Análisis:
+   
+   PARTE 1: PÁGINAS QUE RANKEAN (32 páginas)
+   ├── 🏆 Top Performers (posición 1-10)
+   │   └── Keyword, posición, impresiones, clics
+   ├── 🎯 Oportunidades (posición 11-20)
+   │   └── Keywords más fáciles de optimizar
+   └── 📈 Otras páginas rankeando (posición 21+)
+       └── Mejor posición y cantidad de keywords
+
+   PARTE 2: PÁGINAS SIN DATOS (20 páginas)
+   ├── 🎯 Páginas Principales (Prioridad Alta)
+   ├── 📝 Blog Posts
+   └── 🏘️ Páginas de Ubicación (barrios/ciudades)
+
+   PARTE 3: PROMPT LISTO PARA IA
+   └── 6 preguntas específicas para análisis Claude:
+       1. Diagnóstico de páginas sin datos
+       2. Estrategia de backlinks
+       3. Optimización de oportunidades
+       4. Comparación de patrones
+       5. Acciones prioritarias
+       6. Predicción de resultados
+
+3. ✅ Mejoras en el Email HTML:
+   - Sección "Páginas sin datos" ahora categorizada
+   - Aviso del archivo adjunto .txt
+   - Links clickeables a todas las páginas
+   - Instrucciones claras sobre cómo usar el archivo
+
+4. ✅ Actualización de .gitignore:
+   - Agregadas reglas para excluir archivos GSC generados
+   - public/gsc_*.txt, public/gsc_*.csv, public/gsc_*.json
+
+FLUJO AUTOMATIZADO:
+─────────────────────────────────────────────────────────────────
+
+1. Script ejecuta: node scripts/gsc_monitor_v2.js
+2. Regenera automáticamente: metadata_inventory.json
+3. Consulta GSC API y obtiene datos de ranking
+4. Analiza: top performers, oportunidades, páginas sin datos
+5. Guarda historial: gsc_history.json
+6. Genera CSV: gsc_ranking_report.csv
+7. ✨ NUEVO: Genera archivo de texto: gsc_ai_analysis_prompt.txt
+8. Envía email con HTML mejorado + archivo .txt adjunto
+
+USO DEL ARCHIVO GENERADO:
+─────────────────────────────────────────────────────────────────
+
+1. Abrir el email de reporte SEO
+2. Descargar el archivo adjunto: gsc_ai_analysis_prompt.txt
+3. Abrir el archivo y copiar TODO el contenido
+4. Pegarlo en Claude (o cualquier IA)
+5. Obtener análisis detallado con acciones específicas
+
+PRÓXIMOS PASOS:
+─────────────────────────────────────────────────────────────────
+
+- Desplegar cambios al servidor EC2
+- Configurar cron job si aún no existe
+- Verificar recepción del email con archivo adjunto
+- Probar el análisis con Claude usando el archivo
+
+═══════════════════════════════════════════════════════════════════

@@ -23,6 +23,9 @@ service-account-key.json
 public/metadata_inventory.*
 public/seo_audit_report.json
 public/*seo*_report.json
+public/gsc_*.csv
+public/gsc_*.json
+public/gsc_*.txt
 comparador-seo-*.json
 scripts/*seo-*.json
 scripts/*metadata*.json

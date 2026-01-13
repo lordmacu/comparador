@@ -156,18 +156,191 @@ function getTopPerformers(report) {
 }
 
 // ============================================
-// NUEVA FUNCIÓN: Páginas sin datos
+// NUEVA FUNCIÓN: Páginas sin datos con más info
 // ============================================
 function getPagesWithoutData(pages, report) {
     const pagesWithData = [...new Set(report.map(r => r.page))];
     const pagesWithoutData = pages
-        .map(p => `${SITE_URL}${p.route === '/' ? '' : p.route}`)
-        .filter(url => !pagesWithData.includes(url));
-    return pagesWithoutData.slice(0, 10); // Top 10
+        .map(p => ({
+            url: `${SITE_URL}${p.route === '/' ? '' : p.route}`,
+            route: p.route,
+            title: p.title
+        }))
+        .filter(item => !pagesWithData.includes(item.url));
+
+    // Priorizar: Main pages > Blog > Locations
+    const prioritized = pagesWithoutData.sort((a, b) => {
+        const aIsMain = !a.route.includes('/blog/') && !a.route.includes('/barrios/') && !a.route.includes('/ciudades/');
+        const bIsMain = !b.route.includes('/blog/') && !b.route.includes('/barrios/') && !b.route.includes('/ciudades/');
+        if (aIsMain && !bIsMain) return -1;
+        if (!aIsMain && bIsMain) return 1;
+        return 0;
+    });
+
+    return prioritized.slice(0, 20); // Top 20
 }
 
 // ============================================
-// EMAIL MEJORADO con análisis
+// NUEVA FUNCIÓN: Generar archivo de análisis para IA
+// ============================================
+function generateAIAnalysisPrompt(report, pagesWithoutData, topPerformers, opportunities) {
+    const timestamp = new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' });
+
+    let promptContent = `═══════════════════════════════════════════════════════════════════
+🤖 PROMPT DE ANÁLISIS SEO PARA IA - ComparadorInternet.co
+═══════════════════════════════════════════════════════════════════
+
+Fecha de generación: ${timestamp}
+Total de páginas monitoreadas: ${report.length + pagesWithoutData.length}
+Páginas con ranking: ${report.length}
+Páginas sin datos: ${pagesWithoutData.length}
+
+═══════════════════════════════════════════════════════════════════
+📊 PARTE 1: PÁGINAS QUE SÍ ESTÁN RANKEANDO (${report.length})
+═══════════════════════════════════════════════════════════════════
+
+`;
+
+    // Top Performers (posición 1-10)
+    if (topPerformers.length > 0) {
+        promptContent += `\n🏆 TOP PERFORMERS (Posición 1-10) - ${topPerformers.length} páginas:\n`;
+        promptContent += '─────────────────────────────────────────────────────────────────\n';
+        topPerformers.forEach((item, idx) => {
+            promptContent += `${idx + 1}. ${item.page}\n`;
+            promptContent += `   Keyword: "${item.keyword}"\n`;
+            promptContent += `   Posición: ${item.position} | Impresiones: ${item.impressions} | Clics: ${item.clicks}\n\n`;
+        });
+    }
+
+    // Oportunidades (posición 11-20)
+    if (opportunities.length > 0) {
+        promptContent += `\n🎯 OPORTUNIDADES (Posición 11-20) - ${opportunities.length} páginas:\n`;
+        promptContent += '─────────────────────────────────────────────────────────────────\n';
+        promptContent += 'NOTA: Estas son las más fáciles de optimizar para llegar a Top 10\n\n';
+        opportunities.forEach((item, idx) => {
+            promptContent += `${idx + 1}. ${item.page}\n`;
+            promptContent += `   Keyword: "${item.keyword}"\n`;
+            promptContent += `   Posición: ${item.position} | Impresiones: ${item.impressions} | Clics: ${item.clicks}\n\n`;
+        });
+    }
+
+    // Resto de páginas con ranking
+    const otherRanking = report.filter(r =>
+        !topPerformers.some(t => t.page === r.page && t.keyword === r.keyword) &&
+        !opportunities.some(o => o.page === r.page && o.keyword === o.keyword)
+    );
+
+    if (otherRanking.length > 0) {
+        promptContent += `\n📈 OTRAS PÁGINAS RANKEANDO (Posición 21+) - ${otherRanking.length} páginas:\n`;
+        promptContent += '─────────────────────────────────────────────────────────────────\n';
+        const uniquePages = [...new Set(otherRanking.map(r => r.page))];
+        uniquePages.slice(0, 20).forEach((page, idx) => {
+            const pageKeywords = otherRanking.filter(r => r.page === page);
+            const bestPosition = Math.min(...pageKeywords.map(k => k.position));
+            promptContent += `${idx + 1}. ${page}\n`;
+            promptContent += `   Mejor posición: ${bestPosition.toFixed(1)}\n`;
+            promptContent += `   Keywords: ${pageKeywords.length}\n\n`;
+        });
+    }
+
+    // Páginas sin datos
+    promptContent += `\n\n═══════════════════════════════════════════════════════════════════
+⚠️ PARTE 2: PÁGINAS SIN DATOS EN GSC (${pagesWithoutData.length})
+═══════════════════════════════════════════════════════════════════
+
+NOTA IMPORTANTE: Estas páginas NO aparecen en Google Search Console.
+Pueden ser nuevas, no estar indexadas, o no tener tráfico orgánico aún.
+
+`;
+
+    // Categorizar páginas sin datos
+    const mainPages = pagesWithoutData.filter(p =>
+        !p.route.includes('/blog/') &&
+        !p.route.includes('/barrios/') &&
+        !p.route.includes('/ciudades/')
+    );
+
+    const blogPages = pagesWithoutData.filter(p => p.route.includes('/blog/'));
+
+    const locationPages = pagesWithoutData.filter(p =>
+        p.route.includes('/barrios/') || p.route.includes('/ciudades/')
+    );
+
+    if (mainPages.length > 0) {
+        promptContent += `\n🎯 PÁGINAS PRINCIPALES (Prioridad Alta) - ${mainPages.length}:\n`;
+        promptContent += '─────────────────────────────────────────────────────────────────\n';
+        mainPages.forEach((item, idx) => {
+            promptContent += `${idx + 1}. ${item.url}\n`;
+            promptContent += `   Título: ${item.title}\n`;
+            promptContent += `   Ruta: ${item.route}\n\n`;
+        });
+    }
+
+    if (blogPages.length > 0) {
+        promptContent += `\n📝 BLOG POSTS - ${blogPages.length}:\n`;
+        promptContent += '─────────────────────────────────────────────────────────────────\n';
+        blogPages.forEach((item, idx) => {
+            promptContent += `${idx + 1}. ${item.url}\n`;
+            promptContent += `   Título: ${item.title}\n\n`;
+        });
+    }
+
+    if (locationPages.length > 0) {
+        promptContent += `\n🏘️ PÁGINAS DE UBICACIÓN (Barrios/Ciudades) - ${locationPages.length}:\n`;
+        promptContent += '─────────────────────────────────────────────────────────────────\n';
+        locationPages.forEach((item, idx) => {
+            promptContent += `${idx + 1}. ${item.url}\n`;
+            promptContent += `   Título: ${item.title}\n\n`;
+        });
+    }
+
+    // Prompt para IA
+    promptContent += `\n\n═══════════════════════════════════════════════════════════════════
+🤖 PROMPT PARA ANÁLISIS CON IA (COPIAR Y PEGAR EN CLAUDE)
+═══════════════════════════════════════════════════════════════════
+
+Eres un experto en SEO y análisis de rankings de Google. Analiza los datos anteriores de ComparadorInternet.co y proporciona:
+
+**1. DIAGNÓSTICO DE PÁGINAS SIN DATOS:**
+   - ¿Por qué estas páginas no aparecen en GSC?
+   - ¿Están indexadas en Google? ¿Cómo verificarlo?
+   - ¿Cuáles deberían priorizarse primero?
+
+**2. ESTRATEGIA DE BACKLINKS:**
+   - ¿A cuáles páginas sin datos debería crear backlinks primero?
+   - ¿Qué tipo de backlinks recomiendas para cada categoría (principales/blog/ubicación)?
+   - ¿Qué anchor text usar?
+
+**3. OPTIMIZACIÓN DE OPORTUNIDADES:**
+   - Analiza las keywords en posición 11-20
+   - ¿Qué optimizaciones específicas recomiendas para llevarlas a Top 10?
+   - ¿Hay oportunidades de contenido adicional?
+
+**4. COMPARACIÓN DE PATRONES:**
+   - ¿Qué tienen en común las páginas que SÍ rankean bien?
+   - ¿Qué les falta a las páginas sin datos comparado con las que sí rankean?
+   - ¿Hay patrones en las URLs, títulos o estructura?
+
+**5. ACCIONES PRIORITARIAS:**
+   - Dame una lista de 10 acciones concretas y priorizadas
+   - Ordena por impacto esperado vs esfuerzo requerido
+
+**6. PREDICCIÓN DE RESULTADOS:**
+   - ¿Cuánto tiempo tomaría ver resultados en las páginas sin datos?
+   - ¿Cuál sería el impacto estimado en tráfico orgánico?
+
+Por favor, sé específico y práctico. Necesito acciones ejecutables inmediatamente.
+
+═══════════════════════════════════════════════════════════════════
+FIN DEL ARCHIVO - Generado automáticamente por GSC Monitor v2
+═══════════════════════════════════════════════════════════════════
+`;
+
+    return promptContent;
+}
+
+// ============================================
+// EMAIL MEJORADO con análisis y archivo adjunto
 // ============================================
 async function sendEnhancedEmailReport(reportData, comparison, devices, opportunities, topPerformers, pagesWithoutData, pages) {
     if (!reportData || reportData.length === 0) {
@@ -189,6 +362,13 @@ async function sendEnhancedEmailReport(reportData, comparison, devices, opportun
             pass: process.env.SMTP_PASSWORD,
         },
     });
+
+    // Generar archivo de análisis para IA
+    console.log('📝 Generando archivo de análisis para IA...');
+    const aiPromptContent = generateAIAnalysisPrompt(reportData, pagesWithoutData, topPerformers, opportunities);
+    const aiPromptPath = path.join(__dirname, '../public/gsc_ai_analysis_prompt.txt');
+    fs.writeFileSync(aiPromptPath, aiPromptContent, 'utf8');
+    console.log('   ✅ Archivo generado: gsc_ai_analysis_prompt.txt');
 
     // Calcular métricas totales
     const totalImpressions = reportData.reduce((sum, r) => sum + r.impressions, 0);
@@ -326,18 +506,66 @@ async function sendEnhancedEmailReport(reportData, comparison, devices, opportun
         `;
     }
 
-    // Páginas sin datos
+    // Páginas sin datos - CATEGORIZADO
     let pagesWithoutDataHtml = '';
     if (pagesWithoutData.length > 0) {
+        // Categorizar
+        const mainPages = pagesWithoutData.filter(p =>
+            !p.route.includes('/blog/') &&
+            !p.route.includes('/barrios/') &&
+            !p.route.includes('/ciudades/')
+        );
+        const blogPages = pagesWithoutData.filter(p => p.route.includes('/blog/'));
+        const locationPages = pagesWithoutData.filter(p =>
+            p.route.includes('/barrios/') || p.route.includes('/ciudades/')
+        );
+
         pagesWithoutDataHtml = `
-            <div style="background-color: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
+            <div style="background-color: #fee2e2; padding: 20px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
                 <h3 style="color: #991b1b; margin-top: 0;">⚠️ PÁGINAS SIN DATOS (${pagesWithoutData.length}/${pages.length})</h3>
-                <p style="color: #7f1d1d; font-size: 13px; margin: 5px 0;">Páginas nuevas o que no están rankeando aún:</p>
-                <ul style="margin: 10px 0; padding-left: 20px; color: #991b1b; font-size: 13px;">
-                    ${pagesWithoutData.slice(0, 5).map(url => `<li>${url.replace(SITE_URL, '')}</li>`).join('')}
-                    ${pagesWithoutData.length > 5 ? `<li><i>...y ${pagesWithoutData.length - 5} más</i></li>` : ''}
-                </ul>
-                <p style="color: #7f1d1d; font-size: 12px; margin: 10px 0 0 0;">💡 Considera crear backlinks o mejorar el contenido de estas páginas</p>
+                <p style="color: #7f1d1d; font-size: 13px; margin: 5px 0 15px 0;">
+                    📎 Ver archivo adjunto <strong>gsc_ai_analysis_prompt.txt</strong> para análisis detallado con IA
+                </p>
+
+                ${mainPages.length > 0 ? `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #991b1b; margin: 0 0 8px 0; font-size: 14px;">🎯 PÁGINAS PRINCIPALES (Prioridad Alta)</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #991b1b; font-size: 12px;">
+                            ${mainPages.slice(0, 5).map(p => `<li><a href="${p.url}" style="color: #991b1b; text-decoration: none;">${p.route}</a> - ${p.title}</li>`).join('')}
+                            ${mainPages.length > 5 ? `<li><i>...y ${mainPages.length - 5} más</i></li>` : ''}
+                        </ul>
+                    </div>
+                ` : ''}
+
+                ${blogPages.length > 0 ? `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #991b1b; margin: 0 0 8px 0; font-size: 14px;">📝 BLOG POSTS (${blogPages.length})</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #991b1b; font-size: 12px;">
+                            ${blogPages.slice(0, 3).map(p => `<li><a href="${p.url}" style="color: #991b1b; text-decoration: none;">${p.route.replace('/blog/', '')}</a></li>`).join('')}
+                            ${blogPages.length > 3 ? `<li><i>...y ${blogPages.length - 3} más</i></li>` : ''}
+                        </ul>
+                    </div>
+                ` : ''}
+
+                ${locationPages.length > 0 ? `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #991b1b; margin: 0 0 8px 0; font-size: 14px;">🏘️ PÁGINAS DE UBICACIÓN (${locationPages.length})</h4>
+                        <p style="margin: 0; padding-left: 20px; color: #7f1d1d; font-size: 12px; font-style: italic;">
+                            ${locationPages.length} páginas de barrios/ciudades sin datos
+                        </p>
+                    </div>
+                ` : ''}
+
+                <div style="background-color: #fef3c7; padding: 12px; border-radius: 6px; margin-top: 15px;">
+                    <h4 style="color: #78350f; margin: 0 0 8px 0; font-size: 13px;">💡 Tips para mejorar:</h4>
+                    <ol style="margin: 0; padding-left: 20px; color: #78350f; font-size: 12px; line-height: 1.6;">
+                        <li>Verifica que estén indexadas: <code>site:comparadorinternet.co [ruta]</code> en Google</li>
+                        <li>Crea backlinks internos desde páginas que sí rankean</li>
+                        <li>Comparte en redes sociales para acelerar indexación</li>
+                        <li>Actualiza el sitemap.xml y reenvía en GSC</li>
+                        <li>Usa la herramienta de inspección de URL en GSC</li>
+                    </ol>
+                </div>
             </div>
         `;
     }
@@ -388,7 +616,8 @@ async function sendEnhancedEmailReport(reportData, comparison, devices, opportun
             <div style="margin-top: 30px; padding: 15px; background-color: #f9fafb; border-radius: 8px; text-align: center;">
                 <p style="margin: 0; font-size: 12px; color: #6b7280;">
                     Reporte generado automáticamente por GSC Monitor v2<br>
-                    💡 Haz clic en cualquier página para visitarla directamente
+                    💡 Haz clic en cualquier página para visitarla directamente<br>
+                    📎 <strong>Archivo adjunto:</strong> gsc_ai_analysis_prompt.txt - Copia y pega su contenido en Claude para análisis detallado
                 </p>
             </div>
         </div>
@@ -400,8 +629,16 @@ async function sendEnhancedEmailReport(reportData, comparison, devices, opportun
             to: process.env.NOTIFICATION_EMAIL,
             subject: `📈 Reporte SEO: ${reportData.length} keywords | ${totalImpressions} impresiones${comparison ? ` (${comparison.totalKeywordsChange > 0 ? '+' : ''}${comparison.totalKeywordsChange} keywords)` : ''}`,
             html: htmlContent,
+            attachments: [
+                {
+                    filename: 'gsc_ai_analysis_prompt.txt',
+                    path: aiPromptPath,
+                    contentType: 'text/plain; charset=utf-8'
+                }
+            ]
         });
         console.log(`✅ Correo enviado exitosamente a: ${process.env.NOTIFICATION_EMAIL}`);
+        console.log(`   📎 Archivo adjunto: gsc_ai_analysis_prompt.txt`);
     } catch (error) {
         console.error(`❌ Error enviando correo: ${error.message}`);
     }
