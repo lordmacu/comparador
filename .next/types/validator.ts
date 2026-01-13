@@ -128,6 +128,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/cambiar-de-operador/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/cambiar-de-operador">> = Specific
+  const handler = {} as typeof import("../../app/cambiar-de-operador/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/casos/[caso]/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/casos/[caso]">> = Specific
@@ -402,6 +411,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/internet-solo-sin-telefono">> = Specific
   const handler = {} as typeof import("../../app/internet-solo-sin-telefono/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/mejor-internet-bogota-2026/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/mejor-internet-bogota-2026">> = Specific
+  const handler = {} as typeof import("../../app/mejor-internet-bogota-2026/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

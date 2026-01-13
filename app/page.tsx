@@ -13,7 +13,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import LastUpdated from '@/components/LastUpdated';
 import { Clock, Tag, BarChart3, BookOpen, CheckCircle2 } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
-import { Zap, Globe, Phone, Gift } from 'lucide-react';
+import { Zap, Globe, Phone, Gift, MapPin } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -349,7 +349,7 @@ export default function HomePage() {
               Encuentra el plan perfecto según tu presupuesto y necesidades
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Plan 300 Mbps */}
             <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-all hover:shadow-xl">
@@ -364,7 +364,7 @@ export default function HomePage() {
                   <span className="text-lg text-gray-600">/mes</span>
                 </div>
               </div>
-              
+
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
@@ -383,7 +383,7 @@ export default function HomePage() {
                   <span className="text-gray-700">Navegación web rápida</span>
                 </li>
               </ul>
-              
+
               <div className="space-y-3">
                 <p className="text-sm text-center text-gray-600 font-medium">
                   Te llamamos gratis para cotizar:
@@ -397,7 +397,7 @@ export default function HomePage() {
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg">
                 ⭐ MÁS POPULAR
               </div>
-              
+
               <div className="text-center mb-6">
                 <p className="text-gray-700 mb-2 font-semibold">Plan Medio</p>
                 <div className="mb-4">
@@ -409,7 +409,7 @@ export default function HomePage() {
                   <span className="text-lg text-gray-600">/mes</span>
                 </div>
               </div>
-              
+
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
@@ -428,7 +428,7 @@ export default function HomePage() {
                   <span className="text-gray-700">Múltiples dispositivos</span>
                 </li>
               </ul>
-              
+
               <div className="space-y-3">
                 <p className="text-sm text-center text-gray-700 font-medium">
                   Te llamamos gratis para cotizar:
@@ -450,7 +450,7 @@ export default function HomePage() {
                   <span className="text-lg text-gray-600">/mes</span>
                 </div>
               </div>
-              
+
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
@@ -469,7 +469,7 @@ export default function HomePage() {
                   <span className="text-gray-700">Smart home completo</span>
                 </li>
               </ul>
-              
+
               <div className="space-y-3">
                 <p className="text-sm text-center text-gray-600 font-medium">
                   Te llamamos gratis para cotizar:
@@ -511,8 +511,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6">
-              <a 
-                href="/planes" 
+              <a
+                href="/planes"
                 className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
               >
                 <BarChart3 className="w-12 h-12 mx-auto mb-4 text-blue-600 group-hover:scale-110 transition-transform" />
@@ -523,8 +523,8 @@ export default function HomePage() {
                 <span className="text-blue-600 font-semibold text-sm">Explorar planes →</span>
               </a>
 
-              <a 
-                href="/ofertas" 
+              <a
+                href="/ofertas"
                 className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
               >
                 <Gift className="w-12 h-12 mx-auto mb-4 text-orange-600 group-hover:scale-110 transition-transform" />
@@ -535,8 +535,8 @@ export default function HomePage() {
                 <span className="text-orange-600 font-semibold text-sm">Ver ofertas →</span>
               </a>
 
-              <a 
-                href="/contratar" 
+              <a
+                href="/contratar"
                 className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
               >
                 <Phone className="w-12 h-12 mx-auto mb-4 text-green-600 group-hover:scale-110 transition-transform" />
@@ -635,58 +635,83 @@ export default function HomePage() {
       {/* Search Intent Clusters - SEO Boost */}
       <section className="py-16 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-6xl">
-           <h2 className="text-3xl font-bold text-center mb-10 text-slate-900">¿Qué estás buscando hoy?</h2>
-           
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {/* Card 1 */}
-              <Link href="/internet-barato-colombia" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
-                 <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="font-bold text-xl">$</span>
-                 </div>
-                 <span className="font-bold text-slate-800">Internet Barato</span>
-              </Link>
+          <h2 className="text-3xl font-bold text-center mb-10 text-slate-900">¿Qué estás buscando hoy?</h2>
 
-               {/* Card 2 */}
-              <Link href="/internet-gaming-bogota" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
-                 <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="font-bold text-xl">🎮</span>
-                 </div>
-                 <span className="font-bold text-slate-800">Internet Gamer</span>
-              </Link>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {/* Local SEO Cluster */}
+            <Link href="/barrios/suba" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <MapPin size={20} />
+              </div>
+              <span className="font-bold text-slate-800 text-sm">Internet en Suba</span>
+            </Link>
+            <Link href="/barrios/kennedy" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <MapPin size={20} />
+              </div>
+              <span className="font-bold text-slate-800 text-sm">Internet en Kennedy</span>
+            </Link>
+            <Link href="/barrios/chapinero" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <MapPin size={20} />
+              </div>
+              <span className="font-bold text-slate-900 text-sm">Internet Chapinero</span>
+            </Link>
+            <Link href="/barrios/usaquen" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <MapPin size={20} />
+              </div>
+              <span className="font-bold text-slate-800 text-sm">Internet Usaquén</span>
+            </Link>
+            {/* Card 1 */}
+            <Link href="/internet-barato-colombia" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+              <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span className="font-bold text-xl">$</span>
+              </div>
+              <span className="font-bold text-slate-800">Internet Barato</span>
+            </Link>
 
-               {/* Card 3 */}
-              <Link href="/internet-edificios-bogota" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
-                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="font-bold text-xl">🏢</span>
-                 </div>
-                 <span className="font-bold text-slate-800">Para Edificios</span>
-              </Link>
+            {/* Card 2 */}
+            <Link href="/internet-gaming-bogota" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+              <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span className="font-bold text-xl">🎮</span>
+              </div>
+              <span className="font-bold text-slate-800">Internet Gamer</span>
+            </Link>
 
-              {/* Card 4 */}
-              <Link href="/internet-bogota-cobertura" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
-                 <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Globe className="w-6 h-6"/>
-                 </div>
-                 <span className="font-bold text-slate-800">Mapa Cobertura</span>
+            {/* Card 3 */}
+            <Link href="/internet-edificios-bogota" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span className="font-bold text-xl">🏢</span>
+              </div>
+              <span className="font-bold text-slate-800">Para Edificios</span>
+            </Link>
+
+            {/* Card 4 */}
+            <Link href="/internet-bogota-cobertura" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 flex flex-col items-center text-center gap-2 group">
+              <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Globe className="w-6 h-6" />
+              </div>
+              <span className="font-bold text-slate-800">Mapa Cobertura</span>
+            </Link>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-slate-500 mb-4 font-medium">Listas de Precios Oficiales (Enero 2026)</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/planes-etb-bogota" className="text-blue-600 hover:text-blue-800 font-semibold underline decoration-2 underline-offset-4">
+                Ver Tarifas ETB
               </Link>
-           </div>
-           
-           <div className="mt-8 text-center">
-             <p className="text-slate-500 mb-4 font-medium">Listas de Precios Oficiales (Enero 2026)</p>
-             <div className="flex flex-wrap justify-center gap-4">
-               <Link href="/planes-etb-bogota" className="text-blue-600 hover:text-blue-800 font-semibold underline decoration-2 underline-offset-4">
-                  Ver Tarifas ETB
-               </Link>
-               <span className="text-slate-300">|</span>
-                <Link href="/planes-claro-colombia" className="text-red-600 hover:text-red-800 font-semibold underline decoration-2 underline-offset-4">
-                  Ver Tarifas Claro
-               </Link>
-               <span className="text-slate-300">|</span>
-                <Link href="/planes-movistar-fibra" className="text-green-600 hover:text-green-800 font-semibold underline decoration-2 underline-offset-4">
-                  Ver Tarifas Movistar
-               </Link>
-             </div>
-           </div>
+              <span className="text-slate-300">|</span>
+              <Link href="/planes-claro-colombia" className="text-red-600 hover:text-red-800 font-semibold underline decoration-2 underline-offset-4">
+                Ver Tarifas Claro
+              </Link>
+              <span className="text-slate-300">|</span>
+              <Link href="/planes-movistar-fibra" className="text-green-600 hover:text-green-800 font-semibold underline decoration-2 underline-offset-4">
+                Ver Tarifas Movistar
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

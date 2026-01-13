@@ -203,6 +203,12 @@
       "namedRegex": "^/calculadora(?:/)?$"
     },
     {
+      "page": "/cambiar-de-operador",
+      "regex": "^/cambiar\\-de\\-operador(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cambiar\\-de\\-operador(?:/)?$"
+    },
+    {
       "page": "/claro",
       "regex": "^/claro(?:/)?$",
       "routeKeys": {},
@@ -375,6 +381,12 @@
       "regex": "^/manifest\\.webmanifest(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/manifest\\.webmanifest(?:/)?$"
+    },
+    {
+      "page": "/mejor-internet-bogota-2026",
+      "regex": "^/mejor\\-internet\\-bogota\\-2026(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mejor\\-internet\\-bogota\\-2026(?:/)?$"
     },
     {
       "page": "/movistar",
