@@ -40,34 +40,51 @@ async function sendEmailReport(reportData) {
     const rowsHtml = reportData.map(r => `
         <tr>
             <td style="padding: 8px; border-bottom: 1px solid #ddd;">${r.keyword}</td>
-            <td style="padding: 8px; border-bottom: 1px solid #ddd;"><b>${r.position}</b></td>
-            <td style="padding: 8px; border-bottom: 1px solid #ddd;">${r.impressions}</td>
-            <td style="padding: 8px; border-bottom: 1px solid #ddd; font-size: 0.8em; color: #666;">${r.page.replace(SITE_URL, '')}</td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: center;"><b>${r.position}</b></td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: center;">${r.impressions}</td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: center;">${r.clicks}</td>
+            <td style="padding: 8px; border-bottom: 1px solid #ddd; font-size: 0.8em;">
+                <a href="${r.page}" target="_blank" style="color: #2563eb; text-decoration: none;">
+                    ${r.page.replace(SITE_URL, '') || '/'}
+                </a>
+            </td>
         </tr>
     `).join('');
 
     const htmlContent = `
-        <h2 style="color: #2563eb;">🚀 Reporte SEO Semanal: ComparadorInternet.co</h2>
-        <p>Hola, aquí están las palabras clave posicionadas en Google Search Console recientemente:</p>
-        
-        <table style="width: 100%; border-collapse: collapse; text-align: left;">
-            <thead>
-                <tr style="background-color: #f3f4f6;">
-                    <th style="padding: 8px;">Keyword</th>
-                    <th style="padding: 8px;">Posición</th>
-                    <th style="padding: 8px;">Impresiones</th>
-                    <th style="padding: 8px;">Página</th>
-                </tr>
-            </thead>
-            <tbody>
-                ${rowsHtml}
-            </tbody>
-        </table>
-        
-        <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
-            Reporte generado automáticamente por tu Script de Monitoreo.<br>
-            Total palabras clave encontradas: ${reportData.length}
-        </p>
+        <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto;">
+            <h2 style="color: #2563eb;">🚀 Reporte SEO Semanal: ComparadorInternet.co</h2>
+            <p style="color: #374151; line-height: 1.6;">
+                Hola, aquí están las palabras clave posicionadas en Google Search Console recientemente:
+            </p>
+
+            <table style="width: 100%; border-collapse: collapse; text-align: left; margin: 20px 0;">
+                <thead>
+                    <tr style="background-color: #f3f4f6;">
+                        <th style="padding: 12px 8px; font-weight: 600; color: #1f2937;">Keyword</th>
+                        <th style="padding: 12px 8px; text-align: center; font-weight: 600; color: #1f2937;">Posición</th>
+                        <th style="padding: 12px 8px; text-align: center; font-weight: 600; color: #1f2937;">Impresiones</th>
+                        <th style="padding: 12px 8px; text-align: center; font-weight: 600; color: #1f2937;">Clics</th>
+                        <th style="padding: 12px 8px; font-weight: 600; color: #1f2937;">Página</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${rowsHtml}
+                </tbody>
+            </table>
+
+            <div style="margin-top: 30px; padding: 15px; background-color: #f9fafb; border-left: 4px solid #2563eb; border-radius: 4px;">
+                <p style="margin: 0; font-size: 0.9em; color: #666;">
+                    <strong>📊 Resumen:</strong><br>
+                    Total palabras clave encontradas: <strong>${reportData.length}</strong><br>
+                    Reporte generado automáticamente por tu Script de Monitoreo.
+                </p>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 0.85em; color: #9ca3af; text-align: center;">
+                💡 Haz clic en cualquier página para visitarla directamente en tu sitio web.
+            </p>
+        </div>
     `;
 
     try {
