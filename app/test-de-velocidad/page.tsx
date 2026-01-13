@@ -22,8 +22,8 @@ export default function SpeedTestPage() {
         setUploadSpeed(0);
         setPing(0);
 
-        const testFileUrl = 'https://filesamples.com/samples/audio/mp3/Symphony%20No.6%20(1st%20movement).mp3';
-        const fileSizeInBytes = 11.11 * 1024 * 1024; // ~11.11 MB as stated by user (fallback if content-length missing)
+        const testFileUrl = 'https://onlinetestcase.com/wp-content/uploads/2023/06/10-MB-MP3.mp3';
+        const fileSizeInBytes = 10 * 1024 * 1024; // 10 MB
 
         try {
             // Measure Ping
