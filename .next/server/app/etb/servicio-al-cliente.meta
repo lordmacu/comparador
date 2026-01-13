@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/etb/layout,_N_T_/etb/servicio-al-cliente/layout,_N_T_/etb/servicio-al-cliente/page,_N_T_/etb/servicio-al-cliente"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/etb/servicio-al-cliente/__PAGE__",
+    "/etb/servicio-al-cliente",
+    "/etb",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -281,6 +281,33 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/etb/planes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/etb/planes">> = Specific
+  const handler = {} as typeof import("../../app/etb/planes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/etb/servicio-al-cliente/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/etb/servicio-al-cliente">> = Specific
+  const handler = {} as typeof import("../../app/etb/servicio-al-cliente/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/etb/test-de-velocidad/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/etb/test-de-velocidad">> = Specific
+  const handler = {} as typeof import("../../app/etb/test-de-velocidad/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/faq/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/faq">> = Specific

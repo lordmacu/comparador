@@ -275,6 +275,24 @@
       "namedRegex": "^/etb(?:/)?$"
     },
     {
+      "page": "/etb/planes",
+      "regex": "^/etb/planes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/etb/planes(?:/)?$"
+    },
+    {
+      "page": "/etb/servicio-al-cliente",
+      "regex": "^/etb/servicio\\-al\\-cliente(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/etb/servicio\\-al\\-cliente(?:/)?$"
+    },
+    {
+      "page": "/etb/test-de-velocidad",
+      "regex": "^/etb/test\\-de\\-velocidad(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/etb/test\\-de\\-velocidad(?:/)?$"
+    },
+    {
       "page": "/etb-vs-claro-bogota",
       "regex": "^/etb\\-vs\\-claro\\-bogota(?:/)?$",
       "routeKeys": {},

@@ -22,8 +22,9 @@ export default function SpeedTestPage() {
         setUploadSpeed(0);
         setPing(0);
 
-        const testFileUrl = 'https://library.e.abb.com/public/313b6ebaf237059fc1257d0a0048fd68/EN_ACS550_01_UM_H_A4.pdf';
-        const fileSizeInBytes = 4388310; // Approx 4.2 MB
+        // Use local file to avoid CORS and ensure stability
+        const testFileUrl = '/speedtest.dat';
+        const fileSizeInBytes = 10 * 1024 * 1024; // Exactly 10 MB
 
         try {
             // Measure Ping
