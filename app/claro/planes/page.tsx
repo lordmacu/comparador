@@ -6,7 +6,7 @@ import QuickCallForm from '@/components/QuickCallForm';
 export const metadata: Metadata = {
     title: 'Internet Claro Hogar Precios: Planes Estrato 1 y 2 (2026)',
     description: 'Conoce los precios de Internet Claro Hogar 2026. Subsidios para Estrato 1 y 2. Paquetes de Tripleplay con TV, Internet y Telefonía. ¡Llama y cotiza ya!',
-    keywords: ['internet claro hogar precios', 'internet claro estrato 1 y 2', 'planes de internet claro hogar', 'internet claro hogar precios colombia', 'claro tripleplay'],
+    keywords: ['internet hogar claro', 'internet claro hogar precios', 'internet claro estrato 1 y 2', 'planes de internet claro hogar', 'internet claro hogar precios colombia', 'claro tripleplay'],
 };
 
 export default function ClaroPlanesPage() {

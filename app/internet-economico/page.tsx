@@ -6,7 +6,7 @@ import QuickCallForm from '@/components/QuickCallForm';
 export const metadata: Metadata = {
     title: 'Internet Hogar Económico Bogotá 2026 | Planes desde $42.000',
     description: '¿Buscas internet hogar barato en Bogotá? Compara planes económicos para Estrato 1, 2 y 3. Cobertura en Suba, Kennedy, Engativá y más. Instalación gratis.',
-    keywords: ['internet hogar bogota', 'internet hogar economico bogota', 'internet barato bogota', 'planes internet bogota estrato 2', 'internet etb bogota precios'],
+    keywords: ['internet hogar bogota', 'internet hogar economico bogota', 'plan solo internet hogar', 'internet barato bogota', 'planes internet bogota estrato 2'],
 };
 
 interface CheapPlan {
@@ -149,10 +149,8 @@ export default function EconomicoPage() {
                                     <div className="flex gap-4">
                                         <div className="bg-white p-3 rounded-full h-fit text-emerald-600 shadow-sm"><PiggyBank size={24} /></div>
                                         <div>
-                                            <h4 className="font-bold text-lg">Subsidios Distritales</h4>
-                                            <p className="text-gray-600 text-sm">
-                                                Si vives en estrato 1 o 2 en localidades como Ciudad Bolívar o Usme, pregunta por los planes con tarifa social subsidiada.
-                                            </p>
+                                            <h4 className="font-bold text-lg">Plan Solo Internet Hogar vs Triple Play</h4>
+                                            <p className="text-gray-600 text-sm">Si quieres ahorrar, busca un "Plan Solo Internet Hogar". La TV y telefonía pueden subir tu factura hasta un 40%.</p>
                                         </div>
                                     </div>
                                     <div className="flex gap-4">
