@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/cobertura-etb-bogota/layout,_N_T_/cobertura-etb-bogota/page,_N_T_/cobertura-etb-bogota"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/cobertura-etb-bogota/__PAGE__",
+    "/cobertura-etb-bogota",
+    "/_index",
+    "/_head"
+  ]
+}

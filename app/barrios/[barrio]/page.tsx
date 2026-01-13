@@ -121,6 +121,54 @@ const BARRIOS = {
     caracteristicas: ['Zona comercial y residencial', 'Variedad de planes', 'Buena cobertura'],
     latitude: 4.5737,
     longitude: -74.1179
+  },
+  'santa-fe': {
+    nombre: 'Santa Fe',
+    descripcion: 'Localidad central de Bogotá con zonas residenciales, comerciales y alta demanda de conectividad',
+    poblacion: '110 mil',
+    caracteristicas: ['Centro de Bogotá', 'Edificios y oficinas', 'Alta demanda de estabilidad'],
+    latitude: 4.6097,
+    longitude: -74.0820
+  },
+  'los-martires': {
+    nombre: 'Los Mártires',
+    descripcion: 'Localidad del centro con fuerte actividad comercial y logística, ideal para internet estable',
+    poblacion: '95 mil',
+    caracteristicas: ['Centro comercial', 'Alta densidad urbana', 'Necesidad de buena cobertura'],
+    latitude: 4.6115,
+    longitude: -74.0907
+  },
+  'antonio-narino': {
+    nombre: 'Antonio Nariño',
+    descripcion: 'Localidad del sur-centro de Bogotá con barrios residenciales y comercio local',
+    poblacion: '120 mil',
+    caracteristicas: ['Zona residencial', 'Comercio de barrio', 'Demanda de fibra en crecimiento'],
+    latitude: 4.5931,
+    longitude: -74.1015
+  },
+  'la-candelaria': {
+    nombre: 'La Candelaria',
+    descripcion: 'Centro histórico de Bogotá con alta concentración de turismo, universidades y oficinas',
+    poblacion: '25 mil',
+    caracteristicas: ['Centro histórico', 'Universidades', 'Edificios antiguos y retos de instalación'],
+    latitude: 4.5964,
+    longitude: -74.0724
+  },
+  usme: {
+    nombre: 'Usme',
+    descripcion: 'Localidad del sur de Bogotá con expansión urbana y necesidad de planes económicos y cobertura',
+    poblacion: '480 mil',
+    caracteristicas: ['Expansión residencial', 'Cobertura variable por zona', 'Validación por dirección clave'],
+    latitude: 4.4785,
+    longitude: -74.1309
+  },
+  sumapaz: {
+    nombre: 'Sumapaz',
+    descripcion: 'Localidad rural de Bogotá con cobertura más limitada y disponibilidad variable según sector',
+    poblacion: '8 mil',
+    caracteristicas: ['Zona rural', 'Cobertura limitada', 'Requiere validación detallada'],
+    latitude: 4.0372,
+    longitude: -74.2624
   }
 };
 

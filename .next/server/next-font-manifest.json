@@ -33,7 +33,19 @@
     "[project]/app/ciudades/[ciudad]/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
+    "[project]/app/claro-vs-movistar-bogota/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
     "[project]/app/claro/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/cobertura-claro-bogota/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/cobertura-etb-bogota/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/cobertura-movistar-bogota/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
     "[project]/app/como-cambiar-operador-internet/page": [
@@ -52,6 +64,12 @@
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
     "[project]/app/empresa/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/etb-vs-claro-bogota/page": [
+      "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
+    ],
+    "[project]/app/etb-vs-movistar-bogota/page": [
       "static/media/83afe278b6a6bb3c.p.3a6ba036.woff2"
     ],
     "[project]/app/etb/page": [

@@ -203,6 +203,30 @@
       "namedRegex": "^/claro(?:/)?$"
     },
     {
+      "page": "/claro-vs-movistar-bogota",
+      "regex": "^/claro\\-vs\\-movistar\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/claro\\-vs\\-movistar\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/cobertura-claro-bogota",
+      "regex": "^/cobertura\\-claro\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cobertura\\-claro\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/cobertura-etb-bogota",
+      "regex": "^/cobertura\\-etb\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cobertura\\-etb\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/cobertura-movistar-bogota",
+      "regex": "^/cobertura\\-movistar\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cobertura\\-movistar\\-bogota(?:/)?$"
+    },
+    {
       "page": "/como-cambiar-operador-internet",
       "regex": "^/como\\-cambiar\\-operador\\-internet(?:/)?$",
       "routeKeys": {},
@@ -237,6 +261,18 @@
       "regex": "^/etb(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/etb(?:/)?$"
+    },
+    {
+      "page": "/etb-vs-claro-bogota",
+      "regex": "^/etb\\-vs\\-claro\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/etb\\-vs\\-claro\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/etb-vs-movistar-bogota",
+      "regex": "^/etb\\-vs\\-movistar\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/etb\\-vs\\-movistar\\-bogota(?:/)?$"
     },
     {
       "page": "/faq",

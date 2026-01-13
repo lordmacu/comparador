@@ -137,10 +137,46 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/claro-vs-movistar-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/claro-vs-movistar-bogota">> = Specific
+  const handler = {} as typeof import("../../app/claro-vs-movistar-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/claro/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/claro">> = Specific
   const handler = {} as typeof import("../../app/claro/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/cobertura-claro-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/cobertura-claro-bogota">> = Specific
+  const handler = {} as typeof import("../../app/cobertura-claro-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/cobertura-etb-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/cobertura-etb-bogota">> = Specific
+  const handler = {} as typeof import("../../app/cobertura-etb-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/cobertura-movistar-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/cobertura-movistar-bogota">> = Specific
+  const handler = {} as typeof import("../../app/cobertura-movistar-bogota/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -195,6 +231,24 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/empresa">> = Specific
   const handler = {} as typeof import("../../app/empresa/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/etb-vs-claro-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/etb-vs-claro-bogota">> = Specific
+  const handler = {} as typeof import("../../app/etb-vs-claro-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/etb-vs-movistar-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/etb-vs-movistar-bogota">> = Specific
+  const handler = {} as typeof import("../../app/etb-vs-movistar-bogota/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

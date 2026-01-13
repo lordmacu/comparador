@@ -14,7 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const barrios = [
     'suba', 'kennedy', 'usaquen', 'chapinero', 'engativa', 'ciudad-bolivar',
     'teusaquillo', 'fontibon', 'puente-aranda', 'bosa', 'san-cristobal',
-    'barrios-unidos', 'tunjuelito', 'rafael-uribe-uribe'
+    'barrios-unidos', 'tunjuelito', 'rafael-uribe-uribe',
+    'santa-fe', 'los-martires', 'antonio-narino', 'la-candelaria', 'usme', 'sumapaz'
   ];
   
   // Casos de uso

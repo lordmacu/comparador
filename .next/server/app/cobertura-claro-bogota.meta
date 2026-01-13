@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/cobertura-claro-bogota/layout,_N_T_/cobertura-claro-bogota/page,_N_T_/cobertura-claro-bogota"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/cobertura-claro-bogota/__PAGE__",
+    "/cobertura-claro-bogota",
+    "/_index",
+    "/_head"
+  ]
+}

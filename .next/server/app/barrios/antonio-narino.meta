@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/barrios/layout,_N_T_/barrios/[barrio]/layout,_N_T_/barrios/[barrio]/page,_N_T_/barrios/antonio-narino"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/barrios/$d$barrio/__PAGE__",
+    "/barrios/$d$barrio",
+    "/barrios",
+    "/_index",
+    "/_head"
+  ]
+}
