@@ -631,6 +631,20 @@ GENERA LA IMAGEN AHORA.`;
             const statsAfter = await fs.stat(imagePath);
             const reduction = ((1 - statsAfter.size / statsBefore.size) * 100).toFixed(1);
             log(`Imagen comprimida: ${(statsAfter.size / 1024).toFixed(2)} KB (reducción: ${reduction}%)`, "success");
+            
+            // Generar thumbnail 400x200 para lista de posts
+            log("Generando thumbnail 400x200...", "info");
+            const thumbnailPath = path.join(imagesDir, `${postData.slug}-thumb.webp`);
+            await sharp(imagePath)
+              .resize(400, 200, { fit: 'cover', position: 'center' })
+              .webp({ quality: 70, effort: 6 })
+              .toFile(thumbnailPath);
+            await execAsync(`chmod 644 "${thumbnailPath}"`);
+            
+            const thumbStats = await fs.stat(thumbnailPath);
+            log(`Thumbnail generado: ${(thumbStats.size / 1024).toFixed(2)} KB`, "success");
+            
+            postData.thumbnailImage = `/blog-images/${postData.slug}-thumb.webp`;
           } catch (compError) {
             log(`Advertencia: No se pudo comprimir la imagen: ${compError.message}`, "error");
           }
