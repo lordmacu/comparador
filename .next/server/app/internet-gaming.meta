@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/internet-gaming/layout,_N_T_/internet-gaming/page,_N_T_/internet-gaming"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/internet-gaming/__PAGE__",
+    "/internet-gaming",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,5 +1,5 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/planes-movistar-fibra/page.js")
-R.c("server/chunks/ssr/[root-of-the-server]__aac22512._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__70e4b860._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_4b9a0874._.js")
 R.c("server/chunks/ssr/_4b9fd75f._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__96b94124._.js")

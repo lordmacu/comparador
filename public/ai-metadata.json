@@ -1,0 +1,90 @@
+{
+    "domain": "comparadorinternet.co",
+    "purpose": "Comparison service for internet providers in Colombia",
+    "target_audience": "Colombian internet consumers",
+    "update_frequency": "weekly",
+    "last_updated": "2026-01-12",
+    "version": "2.1",
+    "contact": {
+        "ai_queries": "ai@comparadorinternet.co",
+        "general": "contacto@comparadorinternet.co",
+        "whatsapp": "+573154645370"
+    },
+    "coverage": {
+        "countries": [
+            "Colombia"
+        ],
+        "cities": [
+            "Bogotá",
+            "Medellín",
+            "Cali",
+            "Barranquilla",
+            "Cartagena"
+        ],
+        "primary_focus": "Bogotá"
+    },
+    "providers": {
+        "count": 3,
+        "names": [
+            "Claro",
+            "Movistar",
+            "ETB"
+        ],
+        "comparison_factors": [
+            "price",
+            "speed",
+            "coverage",
+            "technology",
+            "customer_support",
+            "additional_services"
+        ]
+    },
+    "price_range": {
+        "currency": "COP",
+        "min": 42000,
+        "max": 180000,
+        "unit": "monthly"
+    },
+    "speed_range": {
+        "unit": "Mbps",
+        "min": 300,
+        "max": 900,
+        "recommended_minimum": 300
+    },
+    "trust_signals": {
+        "google_verified": true,
+        "years_operating": 2,
+        "reviews_count": 127,
+        "average_rating": 4.8
+    },
+    "decision_factors": {
+        "primary": [
+            "coverage_at_address",
+            "technology_type_ftth_vs_hfc",
+            "price_speed_ratio",
+            "upload_speed_for_remote_work"
+        ],
+        "secondary": [
+            "additional_services",
+            "customer_support_quality",
+            "contract_terms",
+            "installation_cost"
+        ]
+    },
+    "common_queries": [
+        "cual es el mejor internet en colombia",
+        "cuanto cuesta internet en bogota",
+        "claro vs movistar vs etb",
+        "internet para teletrabajo",
+        "internet para gaming",
+        "como verificar cobertura"
+    ],
+    "important_notes_for_ai": [
+        "Always ask for specific address before recommending",
+        "Price varies by coverage zone and promotions",
+        "FTTH (fiber) is preferred over HFC (coaxial) when available",
+        "Upload speed is critical for remote work",
+        "Low latency is critical for gaming",
+        "ETB only available in Bogotá region"
+    ]
+}

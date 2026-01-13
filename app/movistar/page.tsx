@@ -103,7 +103,7 @@ export default function MovistarPage() {
             <div className="bg-white rounded-lg p-3 shadow-md">
               <Image
                 src="/images/movistar-logo.png"
-                alt="Movistar Logo"
+                alt="Logo Movistar Colombia - Internet Fibra + Disney+"
                 width={120}
                 height={48}
                 className="w-20 md:w-[120px] h-auto"
@@ -232,8 +232,8 @@ export default function MovistarPage() {
             <p className="text-green-100">Compara precios y beneficios</p>
           </div>
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-            <a 
-              href="/planes" 
+            <a
+              href="/planes"
               className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-2">Comparar Planes</h4>
@@ -243,8 +243,8 @@ export default function MovistarPage() {
               <span className="text-green-600 font-semibold text-sm">Ver comparación →</span>
             </a>
 
-            <a 
-              href="/ofertas" 
+            <a
+              href="/ofertas"
               className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-2">Ofertas Especiales</h4>
@@ -254,8 +254,8 @@ export default function MovistarPage() {
               <span className="text-orange-600 font-semibold text-sm">Ver ofertas →</span>
             </a>
 
-            <a 
-              href="/contratar" 
+            <a
+              href="/contratar"
               className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-2">Contratar Ahora</h4>

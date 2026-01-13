@@ -45,7 +45,7 @@ export default function BogotaZonasPage() {
           }),
         }}
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-blue-50">
         {/* Hero */}
         <section className="bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 text-white py-16">
@@ -57,7 +57,7 @@ export default function BogotaZonasPage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                El Mejor Internet en Bogotá <br/>
+                El Mejor Internet en Bogotá <br />
                 <span className="text-yellow-300">Según tu Ubicación</span>
               </h1>
 
@@ -65,10 +65,10 @@ export default function BogotaZonasPage() {
                 La calidad del internet varía según el barrio. Te decimos cuál es la fibra óptica más estable en el Norte, Sur, Occidente y Centro.
               </p>
 
-               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-sm mx-auto shadow-xl mb-8">
-                 <h2 className="text-white text-lg font-semibold mb-2">Verificar Cobertura Exacta</h2>
-                 <p className="text-blue-100 text-sm mb-4">Ingresa tu dirección y te confirmamos viabilidad técnica.</p>
-                 <QuickCallForm buttonColor="#2563eb" provider="Cobertura" />
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-sm mx-auto shadow-xl mb-8">
+                <h2 className="text-white text-lg font-semibold mb-2">Verificar Cobertura Exacta</h2>
+                <p className="text-blue-100 text-sm mb-4">Ingresa tu dirección y te confirmamos viabilidad técnica.</p>
+                <QuickCallForm buttonColor="#2563eb" provider="Cobertura" />
               </div>
 
               <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-3xl mx-auto">
@@ -139,7 +139,7 @@ export default function BogotaZonasPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 🏆 Mejor Operador por Zona
               </h2>
-              <p className="text-xl text-gray-600">Basado en pruebas de velocidad y estabilidad 2025-2026</p>
+              <p className="text-xl text-gray-600">Basado en pruebas de velocidad y estabilidad 2026</p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -151,15 +151,15 @@ export default function BogotaZonasPage() {
                     Zona Norte
                   </h3>
                   <p className="text-sm text-gray-600 mb-4">Usaquén, Chapinero, Suba (Alta)</p>
-                  
+
                   <div className="bg-blue-50 rounded-lg p-3 text-center mb-4">
                     <span className="block text-xs uppercase font-bold text-blue-600">Recomendado</span>
                     <span className="text-2xl font-black text-blue-800">ETB Fibra</span>
                   </div>
-                  
+
                   <ul className="text-sm space-y-2 mb-4">
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Mejor infraestructura subterránea</li>
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Menor saturación en estratos 4-6</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Mejor infraestructura subterránea</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Menor saturación en estratos 4-6</li>
                   </ul>
                   <Link href="/etb" className="block text-center text-blue-600 font-bold text-sm hover:underline">Ver planes ETB →</Link>
                 </div>
@@ -173,15 +173,15 @@ export default function BogotaZonasPage() {
                     Zona Occidente
                   </h3>
                   <p className="text-sm text-gray-600 mb-4">Engativá, Fontibón, Modelia</p>
-                  
+
                   <div className="bg-red-50 rounded-lg p-3 text-center mb-4">
                     <span className="block text-xs uppercase font-bold text-red-600">Recomendado</span>
                     <span className="text-2xl font-black text-red-800">Claro / Movistar</span>
                   </div>
-                  
+
                   <ul className="text-sm space-y-2 mb-4">
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Claro tiene la red más extensa (HFC)</li>
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Movistar está desplegando fibra nueva</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Claro tiene la red más extensa (HFC)</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Movistar está desplegando fibra nueva</li>
                   </ul>
                   <Link href="/claro" className="block text-center text-red-600 font-bold text-sm hover:underline">Ver planes Claro →</Link>
                 </div>
@@ -195,15 +195,15 @@ export default function BogotaZonasPage() {
                     Zona Sur
                   </h3>
                   <p className="text-sm text-gray-600 mb-4">Kennedy, Bosa, Ciudad Bolívar</p>
-                  
+
                   <div className="bg-green-50 rounded-lg p-3 text-center mb-4">
                     <span className="block text-xs uppercase font-bold text-green-600">Recomendado</span>
                     <span className="text-2xl font-black text-green-800">Movistar Fibra</span>
                   </div>
-                  
+
                   <ul className="text-sm space-y-2 mb-4">
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Gran inversión en fibra nueva al sur</li>
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Precios más competitivos ($46k)</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Gran inversión en fibra nueva al sur</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Precios más competitivos ($46k)</li>
                   </ul>
                   <Link href="/movistar" className="block text-center text-green-600 font-bold text-sm hover:underline">Ver planes Movistar →</Link>
                 </div>
@@ -217,15 +217,15 @@ export default function BogotaZonasPage() {
                     Centro / Empresarial
                   </h3>
                   <p className="text-sm text-gray-600 mb-4">La Candelaria, Teusaquillo, Centro Int.</p>
-                  
+
                   <div className="bg-purple-50 rounded-lg p-3 text-center mb-4">
                     <span className="block text-xs uppercase font-bold text-purple-600">Recomendado</span>
                     <span className="text-2xl font-black text-purple-800">ETB Fibra</span>
                   </div>
-                  
+
                   <ul className="text-sm space-y-2 mb-4">
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Red antigua de cobre reemplazada</li>
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Alta estabilidad para oficinas</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Red antigua de cobre reemplazada</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Alta estabilidad para oficinas</li>
                   </ul>
                   <Link href="/etb" className="block text-center text-purple-600 font-bold text-sm hover:underline">Ver planes ETB →</Link>
                 </div>
@@ -236,66 +236,66 @@ export default function BogotaZonasPage() {
 
         {/* Tabla Detallada por Barrios */}
         <section className="py-16 bg-white">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold text-gray-900">📍 Detalle por Localidad Principal</h2>
-                </div>
-
-                <div className="overflow-x-auto rounded-lg shadow-lg border border-gray-200">
-                    <table className="w-full text-left border-collapse">
-                        <thead className="bg-gray-100">
-                            <tr>
-                                <th className="p-4 font-bold text-gray-700 border-b">Localidad</th>
-                                <th className="p-4 font-bold text-gray-700 border-b">Mejor Opción</th>
-                                <th className="p-4 font-bold text-gray-700 border-b hidden md:table-cell">Tecnología Predominante</th>
-                                <th className="p-4 font-bold text-gray-700 border-b hidden md:table-cell">Comentarios</th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-100">
-                            <tr className="hover:bg-gray-50">
-                                <td className="p-4 font-semibold">1. Usaquén</td>
-                                <td className="p-4 text-blue-600 font-bold">ETB / Claro</td>
-                                <td className="p-4 text-gray-600 hidden md:table-cell">Fibra Óptica FTTH</td>
-                                <td className="p-4 text-sm text-gray-500 hidden md:table-cell">Excelente cobertura de ambos. ETB mejor subida.</td>
-                            </tr>
-                            <tr className="hover:bg-gray-50">
-                                <td className="p-4 font-semibold">2. Chapinero</td>
-                                <td className="p-4 text-blue-600 font-bold">ETB</td>
-                                <td className="p-4 text-gray-600 hidden md:table-cell">Fibra Óptica FTTH</td>
-                                <td className="p-4 text-sm text-gray-500 hidden md:table-cell">Zona histórica de ETB. Muy estable.</td>
-                            </tr>
-                            <tr className="hover:bg-gray-50">
-                                <td className="p-4 font-semibold">11. Suba</td>
-                                <td className="p-4 text-green-600 font-bold">Movistar / ETB</td>
-                                <td className="p-4 text-gray-600 hidden md:table-cell">Fibra (Zonas Altas) / Cobre (Antiguo)</td>
-                                <td className="p-4 text-sm text-gray-500 hidden md:table-cell">Revisar dirección exacta. Movistar ha modernizado mucho.</td>
-                            </tr>
-                            <tr className="hover:bg-gray-50">
-                                <td className="p-4 font-semibold">10. Engativá</td>
-                                <td className="p-4 text-red-600 font-bold">Claro</td>
-                                <td className="p-4 text-gray-600 hidden md:table-cell">HFC (Híbrido Fibra Coaxial)</td>
-                                <td className="p-4 text-sm text-gray-500 hidden md:table-cell">Claro domina en conjuntos residenciales grandes.</td>
-                            </tr>
-                            <tr className="hover:bg-gray-50">
-                                <td className="p-4 font-semibold">8. Kennedy</td>
-                                <td className="p-4 text-green-600 font-bold">Movistar</td>
-                                <td className="p-4 text-gray-600 hidden md:table-cell">Fibra Óptica FTTH</td>
-                                <td className="p-4 text-sm text-gray-500 hidden md:table-cell">Movistar ofrece los mejores precios y velocidad aquí.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div className="mt-8 bg-yellow-50 border border-yellow-200 p-4 rounded-lg flex gap-4 items-start">
-                    <AlertTriangle className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
-                    <div>
-                        <h4 className="font-bold text-yellow-900">Importante sobre la cobertura</h4>
-                        <p className="text-sm text-yellow-800">
-                            Aunque tu barrio tenga cobertura de un operador, puede que tu edificio específico no tenga la "caja de paso" o permisos de administración. Siempre verifica con tu dirección exacta antes de contratar.
-                        </p>
-                    </div>
-                </div>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900">📍 Detalle por Localidad Principal</h2>
             </div>
+
+            <div className="overflow-x-auto rounded-lg shadow-lg border border-gray-200">
+              <table className="w-full text-left border-collapse">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="p-4 font-bold text-gray-700 border-b">Localidad</th>
+                    <th className="p-4 font-bold text-gray-700 border-b">Mejor Opción</th>
+                    <th className="p-4 font-bold text-gray-700 border-b hidden md:table-cell">Tecnología Predominante</th>
+                    <th className="p-4 font-bold text-gray-700 border-b hidden md:table-cell">Comentarios</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold">1. Usaquén</td>
+                    <td className="p-4 text-blue-600 font-bold">ETB / Claro</td>
+                    <td className="p-4 text-gray-600 hidden md:table-cell">Fibra Óptica FTTH</td>
+                    <td className="p-4 text-sm text-gray-500 hidden md:table-cell">Excelente cobertura de ambos. ETB mejor subida.</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold">2. Chapinero</td>
+                    <td className="p-4 text-blue-600 font-bold">ETB</td>
+                    <td className="p-4 text-gray-600 hidden md:table-cell">Fibra Óptica FTTH</td>
+                    <td className="p-4 text-sm text-gray-500 hidden md:table-cell">Zona histórica de ETB. Muy estable.</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold">11. Suba</td>
+                    <td className="p-4 text-green-600 font-bold">Movistar / ETB</td>
+                    <td className="p-4 text-gray-600 hidden md:table-cell">Fibra (Zonas Altas) / Cobre (Antiguo)</td>
+                    <td className="p-4 text-sm text-gray-500 hidden md:table-cell">Revisar dirección exacta. Movistar ha modernizado mucho.</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold">10. Engativá</td>
+                    <td className="p-4 text-red-600 font-bold">Claro</td>
+                    <td className="p-4 text-gray-600 hidden md:table-cell">HFC (Híbrido Fibra Coaxial)</td>
+                    <td className="p-4 text-sm text-gray-500 hidden md:table-cell">Claro domina en conjuntos residenciales grandes.</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold">8. Kennedy</td>
+                    <td className="p-4 text-green-600 font-bold">Movistar</td>
+                    <td className="p-4 text-gray-600 hidden md:table-cell">Fibra Óptica FTTH</td>
+                    <td className="p-4 text-sm text-gray-500 hidden md:table-cell">Movistar ofrece los mejores precios y velocidad aquí.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-8 bg-yellow-50 border border-yellow-200 p-4 rounded-lg flex gap-4 items-start">
+              <AlertTriangle className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-bold text-yellow-900">Importante sobre la cobertura</h4>
+                <p className="text-sm text-yellow-800">
+                  Aunque tu barrio tenga cobertura de un operador, puede que tu edificio específico no tenga la "caja de paso" o permisos de administración. Siempre verifica con tu dirección exacta antes de contratar.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* CTA General */}
@@ -316,9 +316,9 @@ export default function BogotaZonasPage() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-                <Link href="/planes" className="text-white underline hover:text-blue-200">Ver todos los planes</Link>
-                <Link href="/etb" className="text-white underline hover:text-blue-200">Cobertura ETB</Link>
-                <Link href="/movistar" className="text-white underline hover:text-blue-200">Cobertura Movistar</Link>
+              <Link href="/planes" className="text-white underline hover:text-blue-200">Ver todos los planes</Link>
+              <Link href="/etb" className="text-white underline hover:text-blue-200">Cobertura ETB</Link>
+              <Link href="/movistar" className="text-white underline hover:text-blue-200">Cobertura Movistar</Link>
             </div>
           </div>
         </section>

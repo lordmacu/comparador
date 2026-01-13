@@ -9,6 +9,7 @@ import remarkGfm from "remark-gfm";
 import BlogContactForm from "@/components/BlogContactForm";
 import TableOfContents from "@/components/TableOfContents";
 import InlineBlogCallWidget from "@/components/InlineBlogCallWidget";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 // ISR: Regenera la página cada 1 hora si hay tráfico
 export const revalidate = 3600;
@@ -116,7 +117,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // Limpiar símbolos de Markdown del HTML
   const cleanHtmlFromMarkdown = (html: string): string => {
     if (!isHtmlContent) return html;
-    
+
     return html
       // Eliminar ## antes de títulos HTML
       .replace(/##\s*(<h[2-6])/g, '$1')
@@ -314,9 +315,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   // Review Schema - For comparative posts
   const isComparativePost = post.slug.includes('vs') ||
-                           post.title.toLowerCase().includes('mejor') ||
-                           post.title.toLowerCase().includes('comparación') ||
-                           post.category === 'Comparativas';
+    post.title.toLowerCase().includes('mejor') ||
+    post.title.toLowerCase().includes('comparación') ||
+    post.category === 'Comparativas';
 
   const reviewSchema = isComparativePost ? {
     "@context": "https://schema.org",
@@ -324,8 +325,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "itemReviewed": {
       "@type": "Service",
       "name": post.title.includes('ETB') ? 'Internet ETB' :
-              post.title.includes('Movistar') ? 'Internet Movistar' :
-              post.title.includes('Claro') ? 'Internet Claro' : 'Servicios de Internet Colombia',
+        post.title.includes('Movistar') ? 'Internet Movistar' :
+          post.title.includes('Claro') ? 'Internet Claro' : 'Servicios de Internet Colombia',
       "provider": {
         "@type": "Organization",
         "name": "Comparador Internet Colombia"
@@ -379,9 +380,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   };
 
   const isHowToPost = post.title.toLowerCase().includes('cómo') ||
-                     post.title.toLowerCase().includes('como') ||
-                     post.category === 'Guías' ||
-                     post.slug.includes('como-');
+    post.title.toLowerCase().includes('como') ||
+    post.category === 'Guías' ||
+    post.slug.includes('como-');
 
   const howToSteps = isHowToPost ? extractHowToSteps(post.content) : [];
   const howToSchema = howToSteps.length > 0 ? {
@@ -444,16 +445,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-4 py-8">
           {/* Breadcrumb */}
-          <nav className="mb-6" aria-label="Breadcrumb">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
-              aria-label="Volver a la página principal del blog"
-            >
-              <ArrowLeft className="w-4 h-4" aria-hidden="true" />
-              Volver al Blog
-            </Link>
-          </nav>
+          {/* Breadcrumb */}
+          <div className="mb-6">
+            <Breadcrumbs
+              items={[
+                { name: 'Inicio', url: '/' },
+                { name: 'Blog', url: '/blog' },
+                { name: post.category, url: `/blog?category=${encodeURIComponent(post.category)}` },
+                { name: post.title, url: `/blog/${post.slug}` }
+              ]}
+            />
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Main Content */}
@@ -531,17 +533,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="prose prose-lg max-w-none">
                   {isHtmlContent ? (
                     <>
-                      <div 
+                      <div
                         className="blog-html-content"
-                        dangerouslySetInnerHTML={{ __html: cleanContentBeforeCta }} 
+                        dangerouslySetInnerHTML={{ __html: cleanContentBeforeCta }}
                         suppressHydrationWarning
                       />
-                      
+
                       <InlineBlogCallWidget postSlug={post.slug} />
-                      
-                      <div 
+
+                      <div
                         className="blog-html-content"
-                        dangerouslySetInnerHTML={{ __html: cleanContentAfterCta }} 
+                        dangerouslySetInnerHTML={{ __html: cleanContentAfterCta }}
                         suppressHydrationWarning
                       />
                     </>

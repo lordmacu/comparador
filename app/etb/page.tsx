@@ -103,7 +103,7 @@ export default function ETBPage() {
           <div className="flex justify-center mb-6">
             <Image
               src="/images/etb-logo.svg"
-              alt="ETB Logo"
+              alt="Logo ETB Bogotá - Internet Fibra Óptica"
               width={120}
               height={48}
               className="w-20 md:w-[120px] h-auto"
@@ -294,8 +294,8 @@ export default function ETBPage() {
             <p className="text-blue-100">Explora todas las opciones disponibles</p>
           </div>
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-            <a 
-              href="/planes" 
+            <a
+              href="/planes"
               className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-2">Comparar Planes</h4>
@@ -305,8 +305,8 @@ export default function ETBPage() {
               <span className="text-blue-600 font-semibold text-sm">Ver comparación →</span>
             </a>
 
-            <a 
-              href="/ofertas" 
+            <a
+              href="/ofertas"
               className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-2">Ofertas Activas</h4>
@@ -316,8 +316,8 @@ export default function ETBPage() {
               <span className="text-orange-600 font-semibold text-sm">Ver ofertas →</span>
             </a>
 
-            <a 
-              href="/contratar" 
+            <a
+              href="/contratar"
               className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-2">Contratar Online</h4>

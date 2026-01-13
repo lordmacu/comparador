@@ -149,6 +149,12 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/ai-info",
+      "regex": "^/ai\\-info(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ai\\-info(?:/)?$"
+    },
+    {
       "page": "/api/call-request",
       "regex": "^/api/call\\-request(?:/)?$",
       "routeKeys": {},
@@ -317,6 +323,12 @@
       "namedRegex": "^/internet\\-bogota\\-cobertura(?:/)?$"
     },
     {
+      "page": "/internet-economico",
+      "regex": "^/internet\\-economico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-economico(?:/)?$"
+    },
+    {
       "page": "/internet-edificios-bogota",
       "regex": "^/internet\\-edificios\\-bogota(?:/)?$",
       "routeKeys": {},
@@ -327,6 +339,12 @@
       "regex": "^/internet\\-empresas\\-pymes(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/internet\\-empresas\\-pymes(?:/)?$"
+    },
+    {
+      "page": "/internet-gaming",
+      "regex": "^/internet\\-gaming(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-gaming(?:/)?$"
     },
     {
       "page": "/internet-gaming-bogota",
@@ -375,6 +393,12 @@
       "regex": "^/ofertas(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/ofertas(?:/)?$"
+    },
+    {
+      "page": "/opiniones",
+      "regex": "^/opiniones(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/opiniones(?:/)?$"
     },
     {
       "page": "/planes",
@@ -429,6 +453,12 @@
       "regex": "^/sitemap\\.xml(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/test-de-velocidad",
+      "regex": "^/test\\-de\\-velocidad(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/test\\-de\\-velocidad(?:/)?$"
     },
     {
       "page": "/testimonios",

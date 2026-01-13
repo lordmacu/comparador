@@ -106,7 +106,7 @@ export default function ClaroPage() {
             <div className="bg-white rounded-lg p-3 shadow-md">
               <Image
                 src="/images/claro-logo.svg"
-                alt="Claro Logo"
+                alt="Logo Claro Colombia - Internet Fibra Óptica"
                 width={120}
                 height={48}
                 className="w-20 md:w-[120px] h-auto"
@@ -229,8 +229,8 @@ export default function ClaroPage() {
             <p className="text-red-100">Compara, ahorra y contrata online</p>
           </div>
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-            <a 
-              href="/planes" 
+            <a
+              href="/planes"
               className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-2">Comparar Planes</h4>
@@ -240,8 +240,8 @@ export default function ClaroPage() {
               <span className="text-red-600 font-semibold text-sm">Ver comparación →</span>
             </a>
 
-            <a 
-              href="/ofertas" 
+            <a
+              href="/ofertas"
               className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-2">Ofertas Exclusivas</h4>
@@ -251,8 +251,8 @@ export default function ClaroPage() {
               <span className="text-orange-600 font-semibold text-sm">Ver ofertas →</span>
             </a>
 
-            <a 
-              href="/contratar" 
+            <a
+              href="/contratar"
               className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform shadow-lg group"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-2">Contratar Online</h4>
