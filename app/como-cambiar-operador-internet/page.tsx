@@ -52,7 +52,7 @@ export default function CambiarOperadorPage() {
                 Guía definitiva para cancelar tu servicio actual sin traumas y conseguir una mejor oferta en el proceso.
               </p>
 
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
                  <div className="bg-slate-800 p-4 rounded-lg border border-slate-700 w-40">
                     <span className="block text-3xl font-bold text-white mb-1">10</span>
                     <span className="text-sm text-slate-400">Días antes de corte</span>
@@ -61,6 +61,12 @@ export default function CambiarOperadorPage() {
                     <span className="block text-3xl font-bold text-white mb-1">$0</span>
                     <span className="text-sm text-slate-400">Multas (si sabes cómo)</span>
                  </div>
+              </div>
+
+               <div className="bg-slate-800/80 backdrop-blur-md p-6 rounded-2xl border border-slate-700 max-w-sm mx-auto shadow-xl">
+                 <h2 className="text-white text-lg font-semibold mb-2">¿Te ayudamos a cambiarte?</h2>
+                 <p className="text-slate-300 text-sm mb-4">Gestionamos el cambio de operador sin estrés.</p>
+                 <QuickCallForm buttonColor="#ef4444" provider="Cambio Operador" />
               </div>
             </div>
           </div>

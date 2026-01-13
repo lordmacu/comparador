@@ -65,6 +65,12 @@ export default function BogotaZonasPage() {
                 La calidad del internet varía según el barrio. Te decimos cuál es la fibra óptica más estable en el Norte, Sur, Occidente y Centro.
               </p>
 
+               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-sm mx-auto shadow-xl mb-8">
+                 <h2 className="text-white text-lg font-semibold mb-2">Verificar Cobertura Exacta</h2>
+                 <p className="text-blue-100 text-sm mb-4">Ingresa tu dirección y te confirmamos viabilidad técnica.</p>
+                 <QuickCallForm buttonColor="#2563eb" provider="Cobertura" />
+              </div>
+
               <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-3xl mx-auto">
                 <div className="flex flex-wrap justify-center gap-4">
                   <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">📍 Norte: Usaquén - Suba</span>

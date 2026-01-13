@@ -80,7 +80,7 @@ export default function InternetBaratoPage() {
                 Encuentra el plan más <span className="font-bold text-white">económico</span> sin sacrificar velocidad ni calidad. Compara precios reales de ETB, Claro y Movistar.
               </p>
 
-              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-2xl mx-auto">
+              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-2xl mx-auto mb-8">
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
                     <div className="text-3xl font-black">$42k</div>
@@ -95,6 +95,12 @@ export default function InternetBaratoPage() {
                     <div className="text-sm text-green-100">Sin instalación</div>
                   </div>
                 </div>
+              </div>
+
+               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-sm mx-auto shadow-xl">
+                 <h2 className="text-white text-lg font-semibold mb-2">¿Quieres el plan más barato?</h2>
+                 <p className="text-green-100 text-sm mb-4">Te ayudamos a contratarlo hoy mismo.</p>
+                 <QuickCallForm buttonColor="#059669" provider="Multi" />
               </div>
             </div>
           </div>

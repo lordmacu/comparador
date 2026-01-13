@@ -93,7 +93,7 @@ export default function ZoomInternetPage() {
                 Descubre qué velocidad necesitas para Teams, Meet, Zoom y videollamadas sin interrupciones. Planes desde <span className="font-bold text-white">$42.000/mes</span>.
               </p>
 
-              <div className="flex flex-wrap items-center justify-center gap-6">
+              <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-lg">
                   <CheckCircle2 className="w-5 h-5" />
                   <span>Sin cortes</span>
@@ -107,6 +107,13 @@ export default function ZoomInternetPage() {
                   <span>Fibra óptica</span>
                 </div>
               </div>
+
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-sm mx-auto shadow-xl">
+                 <h2 className="text-white text-lg font-semibold mb-2">¿Quieres contratar internet estable?</h2>
+                 <p className="text-blue-100 text-sm mb-4">Déjanos tu número y te contactamos en minutos.</p>
+                 <QuickCallForm buttonColor="#3b82f6" provider="Multi" />
+              </div>
+
             </div>
           </div>
         </section>

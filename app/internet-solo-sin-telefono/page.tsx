@@ -52,7 +52,7 @@ export default function InternetSoloPage() {
                 ¿Para qué pagar por canales que no ves o un fijo que no usas? Pásate a planes puros de Fibra Óptica y ahorra.
               </p>
               
-              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-2xl mx-auto flex justify-center gap-8 md:gap-16">
+              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-2xl mx-auto flex justify-center gap-8 md:gap-16 mb-8">
                  <div className="text-center opacity-50 line-through decoration-red-500 decoration-4">
                     <Tv className="w-12 h-12 mx-auto mb-2" />
                     <span>TV Cable</span>
@@ -65,6 +65,12 @@ export default function InternetSoloPage() {
                     <Wifi className="w-12 h-12 mx-auto mb-2" />
                     <span>100% Internet</span>
                  </div>
+              </div>
+
+               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-sm mx-auto shadow-xl">
+                 <h2 className="text-white text-lg font-semibold mb-2">¿Solo quieres internet?</h2>
+                 <p className="text-indigo-100 text-sm mb-4">Te ayudamos a contratar sin servicios extra.</p>
+                 <QuickCallForm buttonColor="#4f46e5" provider="Multi" />
               </div>
             </div>
           </div>

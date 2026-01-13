@@ -77,6 +77,12 @@ export default function InternetEmpresasPage() {
                             Garantiza la operatividad de tu negocio con fibra óptica empresarial. Canales simétricos 1:1, IP Fija y soporte prioritario en menos de 4 horas.
                         </p>
                         
+                         <div className="bg-slate-800/80 backdrop-blur-md p-6 rounded-2xl border border-blue-500/20 max-w-sm shadow-xl mb-8">
+                             <h2 className="text-white text-lg font-semibold mb-2">Solicitar Propuesta Comercial</h2>
+                             <p className="text-slate-300 text-sm mb-4">Te enviamos cotizaciones de ETB, Claro y Movistar Empresas.</p>
+                             <QuickCallForm buttonColor="#3b82f6" provider="Empresas" />
+                         </div>
+
                         <div className="flex flex-col sm:flex-row gap-4 mb-8">
                             <Link href="#planes-pymes" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-center transition-colors">
                                 Ver Planes PyMEs

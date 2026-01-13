@@ -96,7 +96,7 @@ export default function InstalacionInternetPage() {
                 Todo lo que necesitas saber para <span className="font-bold text-white">instalar internet</span> en tu hogar: tiempos, costos, proceso y requisitos.
               </p>
 
-              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-2xl mx-auto">
+              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-2xl mx-auto mb-8">
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
                     <div className="text-3xl font-black">3-7 días</div>
@@ -111,6 +111,12 @@ export default function InstalacionInternetPage() {
                     <div className="text-sm text-blue-100">Duración visita</div>
                   </div>
                 </div>
+              </div>
+
+               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-sm mx-auto shadow-xl">
+                 <h2 className="text-white text-lg font-semibold mb-2">¿Necesitas instalación urgente?</h2>
+                 <p className="text-blue-100 text-sm mb-4">Te ayudamos a agendar tu cita lo antes posible.</p>
+                 <QuickCallForm buttonColor="#3b82f6" provider="Multi" />
               </div>
             </div>
           </div>

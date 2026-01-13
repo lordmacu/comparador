@@ -79,7 +79,7 @@ export default function SinPermanenciaPage() {
                 Contrata tu servicio sin amarrarte 12 meses. Ideal para estudiantes, arrendamientos cortos o si simplemente valoras tu libertad.
               </p>
 
-              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-2xl mx-auto">
+              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-2xl mx-auto mb-8">
                 <div className="flex justify-around items-center text-center">
                     <div>
                         <div className="text-4xl font-black mb-1 flex justify-center"><CalendarOff size={40} /></div>
@@ -91,6 +91,12 @@ export default function SinPermanenciaPage() {
                         <div className="text-sm font-bold text-orange-100">Sin Multas</div>
                     </div>
                 </div>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-sm mx-auto shadow-xl">
+                 <h2 className="text-white text-lg font-semibold mb-2">¿Prefieres libertad total?</h2>
+                 <p className="text-orange-100 text-sm mb-4">Te asesoramos sobre planes flexibles.</p>
+                 <QuickCallForm buttonColor="#ea580c" provider="Multi" />
               </div>
             </div>
           </div>

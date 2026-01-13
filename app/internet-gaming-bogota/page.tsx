@@ -110,6 +110,18 @@ export default function InternetGamingPage() {
                     No pierdas por culpa de tu internet. Comparamos los mejores proveedores de Bogotá para Gaming Competitivo (Low Ping).
                 </p>
 
+                <div className="bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-purple-500/20 max-w-sm mx-auto shadow-2xl mb-12 relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <h2 className="text-white text-lg font-bold mb-2 relative z-10 flex items-center justify-center gap-2">
+                    <Zap className="w-4 h-4 text-yellow-500" />
+                    ¿Quieres internet Pro-Gaming?
+                  </h2>
+                  <p className="text-slate-400 text-sm mb-4 relative z-10">Te asesoramos para instalar la fibra con menor ping.</p>
+                  <div className="relative z-10">
+                    <QuickCallForm buttonColor="#7c3aed" provider="Gamer" />
+                  </div>
+                </div>
+
                 <div className="bg-slate-900/50 backdrop-blur border border-slate-800 p-8 rounded-2xl max-w-4xl mx-auto shadow-2xl">
                     <div className="grid md:grid-cols-3 gap-8">
                          <div className="text-center">

@@ -54,7 +54,7 @@ export default function FibraOpticaPage() {
                 ¿Te vendieron "Fibra" pero tu internet sigue lento? Te explicamos la diferencia vital entre <strong>FTTH</strong> (Fibra Real) y <strong>HFC</strong> (Híbrido).
               </p>
 
-              <div className="flex justify-center gap-8 text-center mt-12">
+              <div className="flex justify-center gap-8 text-center mt-12 mb-12">
                 <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-md border border-white/20 hover:scale-105 transition-transform">
                     <div className="text-4xl font-black mb-2 flex items-center justify-center gap-2">
                          <Zap className="fill-yellow-400 text-yellow-400" /> 10x
@@ -67,6 +67,12 @@ export default function FibraOpticaPage() {
                     </div>
                     <div className="text-sm font-semibold uppercase tracking-wider">Menor Latencia</div>
                 </div>
+              </div>
+
+               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-sm mx-auto shadow-xl">
+                 <h2 className="text-white text-lg font-semibold mb-2">¿Quieres Fibra Óptica Real?</h2>
+                 <p className="text-cyan-100 text-sm mb-4">Verificamos si llega FTTH a tu dirección.</p>
+                 <QuickCallForm buttonColor="#0891b2" provider="Fibra" />
               </div>
             </div>
           </div>

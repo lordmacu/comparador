@@ -37,7 +37,7 @@ export default function AsesoresPage() {
       logoWidth: 100,
       textColor: 'text-[#002880]',
       borderColor: 'border-[#002880]',
-      description: 'Especialistas en Fibra Óptica para Bogotá y Cundinamarca.',
+      description: 'Para hablar con un asesor de internet de ETB, puedes usar la línea principal de Bogotá 315 464 5370. Especialistas en Fibra Óptica.',
       number: '315 464 5370'
     },
     {
@@ -48,7 +48,7 @@ export default function AsesoresPage() {
       logoWidth: 100,
       textColor: 'text-[#00377d]',
       borderColor: 'border-[#00377d]',
-      description: 'Líderes en Fibra Simétrica y Ofertas Exclusivas Online.',
+      description: 'Para hablar con un asesor de internet de Movistar, usa nuestra línea de atención comercial 315 464 5370. Líderes en Fibra Simétrica.',
       number: '315 464 5370'
     },
     {
@@ -59,7 +59,7 @@ export default function AsesoresPage() {
       logoWidth: 100,
       textColor: 'text-[#DA291C]',
       borderColor: 'border-[#DA291C]',
-      description: 'La mayor cobertura del país en Fibra y Tecnología HFC.',
+      description: 'Para hablar con un asesor de internet de Claro, comunícate con la línea de ventas 315 464 5370. Mayor cobertura del país.',
       number: '315 464 5370'
     }
   ];
