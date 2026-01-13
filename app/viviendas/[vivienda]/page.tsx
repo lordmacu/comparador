@@ -108,7 +108,7 @@ const VIVIENDAS: Record<string, ViviendaInfo> = {
     consideraciones: [
       'Casas de 2 pisos pueden necesitar repetidores WiFi o sistema mesh',
       'Velocidades de 300-500 Mbps recomendadas para familias numerosas',
-      'Considera planes con TV incluida si tienes múltiples televisores',
+      'Si haces streaming en varios televisores, considera más velocidad o fibra simétrica',
       'Verifica cobertura de fibra óptica en tu barrio específico'
     ],
     velocidadRecomendada: '300-500 Mbps',
@@ -176,7 +176,7 @@ const VIVIENDAS: Record<string, ViviendaInfo> = {
       {
         icono: '🎁',
         titulo: 'Beneficios Exclusivos',
-        descripcion: 'Internet en zonas comunes gratis, descuentos en TV e instalación sin costo para todos los residentes.'
+        descripcion: 'Internet en zonas comunes gratis, descuentos por volumen e instalación sin costo para todos los residentes.'
       }
     ],
     consideraciones: [

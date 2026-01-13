@@ -29,12 +29,6 @@ const planesStructuredData = {
               "priceCurrency": "COP",
               "availability": "https://schema.org/InStock",
               "validFrom": "2026-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": 4.6,
-              "reviewCount": 847,
-              "bestRating": 5
             }
           },
           {
@@ -49,12 +43,6 @@ const planesStructuredData = {
               "priceCurrency": "COP", 
               "availability": "https://schema.org/InStock",
               "validFrom": "2026-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": 3.8,
-              "reviewCount": 623,
-              "bestRating": 5
             }
           },
           {
@@ -69,12 +57,6 @@ const planesStructuredData = {
               "priceCurrency": "COP",
               "availability": "https://schema.org/InStock", 
               "validFrom": "2026-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": 4.5,
-              "reviewCount": 392,
-              "bestRating": 5
             }
           }
         ]
@@ -211,7 +193,7 @@ const plans: Plan[] = [
     technology: "Fibra Óptica",
     features: [
       "Plan inteligente conectado",
-      "Movistar TV incluida",
+      "Fibra simétrica (según cobertura)",
       "Control parental avanzado",
       "Backup de conexión",
       "Smart Home compatible"
@@ -219,7 +201,6 @@ const plans: Plan[] = [
     rating: 4.2,
     reviewCount: 567,
     coverage: ["Chapinero", "Rosales", "Zona T", "Chicó"],
-    promo: "TV gratis 3 meses"
   },
   {
     id: "etb-gaming-500",
@@ -607,6 +588,56 @@ export default function PlanesPage() {
                   <span className="text-lg">Actualizado 2026</span>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Accesos Rápidos (BOFU Bogotá) */}
+        <section className="py-10 -mt-8 relative z-10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-4">
+              <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+                <h2 className="text-lg font-bold text-gray-900 mb-3">Claro Bogotá</h2>
+                <div className="flex flex-wrap gap-2">
+                  <Link href="/planes-claro-bogota" className="px-4 py-2 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 transition-colors text-sm">
+                    Ver planes
+                  </Link>
+                  <Link href="/asesor-claro-bogota" className="px-4 py-2 rounded-lg bg-gray-100 text-gray-900 font-semibold hover:bg-gray-200 transition-colors text-sm">
+                    Hablar con asesor
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+                <h2 className="text-lg font-bold text-gray-900 mb-3">Movistar Bogotá</h2>
+                <div className="flex flex-wrap gap-2">
+                  <Link href="/planes-movistar-bogota" className="px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors text-sm">
+                    Ver planes
+                  </Link>
+                  <Link href="/asesor-movistar-bogota" className="px-4 py-2 rounded-lg bg-gray-100 text-gray-900 font-semibold hover:bg-gray-200 transition-colors text-sm">
+                    Hablar con asesor
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+                <h2 className="text-lg font-bold text-gray-900 mb-3">ETB Bogotá</h2>
+                <div className="flex flex-wrap gap-2">
+                  <Link href="/planes-etb-bogota" className="px-4 py-2 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors text-sm">
+                    Ver planes
+                  </Link>
+                  <Link href="/asesor-etb-bogota" className="px-4 py-2 rounded-lg bg-gray-100 text-gray-900 font-semibold hover:bg-gray-200 transition-colors text-sm">
+                    Hablar con asesor
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 text-center">
+              <Link href="/contratar-internet-bogota" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors">
+                Contratar internet en Bogotá
+                <Zap className="w-5 h-5" />
+              </Link>
             </div>
           </div>
         </section>

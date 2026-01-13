@@ -25,16 +25,13 @@ import type { Metadata } from 'next';
 const provider = getProvider('claro');
 
 export const metadata: Metadata = {
-  title: `Internet Claro 2026: Planes desde $45.000 | Fibra 900 Mbps + 5G`,
-  description: `Planes de internet Claro con fibra óptica hasta 900 Mbps desde $45.000/mes. Tecnología 5G, Claro TV+ incluido y atención 24/7. Cotiza y contrata ya con promociones exclusivas.`,
+  title: `Internet Claro 2026: Planes desde $45.000 | Fibra 900 Mbps`,
+  description: `Planes de internet Claro con fibra óptica o HFC (según cobertura) hasta 900 Mbps desde $45.000/mes. Valida cobertura por dirección y contrata con asesoría inmediata.`,
   keywords: [
     'internet Claro Colombia',
-    'Claro 5G Bogotá',
     'planes Claro internet 2026',
     'Claro vs ETB vs Movistar',
     'Claro fibra óptica',
-    'Claro TV+ internet combo',
-    'cobertura 5G Claro',
     'Claro internet gaming',
     'opiniones Claro 2026',
     'velocidad Claro Colombia',

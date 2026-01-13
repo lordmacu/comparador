@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Wifi, Phone, Tv, CheckCircle2, AlertCircle, TrendingDown, DollarSign } from 'lucide-react';
+import { Wifi, CheckCircle2 } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
 
 export const metadata: Metadata = {
   title: 'Planes ETB Bogotá 2026 | Precios de Internet Fibra Óptica',
-  description: 'Lista de precios actualizada ETB Hogar. Planes solo internet desde $42.000, Dúos y Tríos. Compara la fibra óptica de ETB vs Claro y Movistar. Promociones vigentes.',
+  description: 'Lista de precios de referencia ETB Hogar en Bogotá. Planes solo internet con fibra óptica simétrica. Compara ETB vs Claro y Movistar y valida cobertura por dirección antes de contratar.',
   keywords: [
     'planes etb bogota',
     'precios internet etb',
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     'fibra optica etb precios',
     'etb 300 megas precio',
     'promociones etb 2026',
-    'etb internet mas telefonia',
-    'etb triple play precio'
+    'etb solo internet',
+    'etb fibra bogota'
   ],
   alternates: {
     canonical: 'https://comparadorinternet.co/planes-etb-bogota',
@@ -57,7 +57,7 @@ export default function PlanesEtbPage() {
                         Tarifas Oficiales Enero 2026
                     </div>
                     <div className="flex items-center gap-4 mb-4">
-                        <img src="/images/etb-logo-white.png" alt="ETB Logo" className="h-12 w-auto brightness-0 invert" />
+                        <img src="/images/etb-logo.svg" alt="ETB Logo" className="h-12 w-auto" />
                         <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                             Planes y Precios <br/> ETB Hogar
                         </h1>
@@ -174,20 +174,20 @@ export default function PlanesEtbPage() {
                 <div className="mt-8 grid md:grid-cols-2 gap-6">
                     <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                         <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-3">
-                            <Phone className="w-5 h-5 text-blue-600" />
-                            ¿Línea Telefónica?
+                            <CheckCircle2 className="w-5 h-5 text-blue-600" />
+                            Instalación y cobertura
                         </h3>
                         <p className="text-slate-600 text-sm">
-                            Todos los planes incluyen línea telefónica local ilimitada GRATIS. No es obligatoria conectarla, pero viene en el paquete.
+                            La cobertura varía por barrio y edificio. Compártenos tu dirección y confirmamos disponibilidad de fibra antes de agendar la instalación.
                         </p>
                     </div>
                      <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                         <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-3">
-                            <Tv className="w-5 h-5 text-blue-600" />
-                            ¿Televisión?
+                            <Wifi className="w-5 h-5 text-blue-600" />
+                            WiFi 360 (opcional)
                         </h3>
                         <p className="text-slate-600 text-sm">
-                            Puedes adicionar TV Digital por +$30.000/mes. Incluye Win Sports+ (costo adicional) y canales HD.
+                            Si tu casa es grande o hay paredes gruesas, pregunta por extensores/mesh disponibles según plan para mejorar la señal.
                         </p>
                     </div>
                 </div>

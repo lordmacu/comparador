@@ -422,13 +422,6 @@ export function generateProductSchema(provider: Provider) {
       },
       "offerCount": provider.services?.length || 3
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.3",
-      "reviewCount": "1250",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
     "category": "Internet Service Provider",
     "areaServed": provider.coverage.national ? {
       "@type": "Country",

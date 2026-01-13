@@ -23,9 +23,7 @@ type ConversationStep =
   | 'city-selection'
   | 'people-count'
   | 'usage-type'
-  | 'additional-services'
   | 'recommendation'
-  | 'contact-method'
   | 'phone-input'
   | 'summary'
   | 'browsing';
@@ -35,7 +33,6 @@ interface ConversationData {
   city?: string;
   peopleCount?: string;
   usage?: string;
-  additionalServices?: string;
   contactMethod?: string;
   phone?: string;
 }
@@ -81,16 +78,33 @@ export default function ChatWidget() {
     if (savedState) {
       try {
         const parsed = JSON.parse(savedState);
+        const normalizedStep: ConversationStep =
+          parsed.currentStep === 'additional-services' || parsed.currentStep === 'contact-method'
+            ? 'recommendation'
+            : ([
+                'welcome',
+                'provider-selection',
+                'city-selection',
+                'people-count',
+                'usage-type',
+                'recommendation',
+                'phone-input',
+                'summary',
+                'browsing',
+              ] as ConversationStep[]).includes(parsed.currentStep as ConversationStep)
+              ? (parsed.currentStep as ConversationStep)
+              : 'welcome';
+
         setMessages(parsed.messages || []);
-        setCurrentStep(parsed.currentStep || 'welcome');
+        setCurrentStep(normalizedStep);
         setConversationData(parsed.conversationData || {});
         setIsOpen(parsed.isOpen || false);
         setIsMinimized(parsed.isMinimized !== undefined ? parsed.isMinimized : true);
         // Mostrar opciones si hay mensajes y no está en estados sin opciones
         if (parsed.messages && parsed.messages.length > 0 &&
-            parsed.currentStep !== 'summary' &&
-            parsed.currentStep !== 'browsing' &&
-            parsed.currentStep !== 'phone-input') {
+            normalizedStep !== 'summary' &&
+            normalizedStep !== 'browsing' &&
+            normalizedStep !== 'phone-input') {
           setShowOptions(true);
         }
       } catch (e) {
@@ -111,7 +125,19 @@ export default function ChatWidget() {
           setIsMinimized(false);
         }
         
-        addBotMessage('¡Hola! 👋 Soy Laura, asesora virtual. ¿Te ayudo a encontrar el plan de internet perfecto para ti?');
+        // Mensaje personalizado según el proveedor/página
+        let welcomeText = '¡Hola! 👋 Soy Laura, asesora virtual. ¿Te ayudo a encontrar el plan de internet perfecto para ti?';
+        const currentPath = pathname?.toLowerCase() || '';
+
+        if (currentPath.includes('claro')) {
+           welcomeText = '¡Hola! 👋 Soy Laura, asesora de Claro. ¿Te ayudo a encontrar el mejor plan de Claro para ti?';
+        } else if (currentPath.includes('movistar')) {
+           welcomeText = '¡Hola! 👋 Soy Laura, asesora de Movistar. ¿Te ayudo a encontrar el mejor plan de Movistar para ti?';
+        } else if (currentPath.includes('etb')) {
+           welcomeText = '¡Hola! 👋 Soy Laura, asesora de ETB. ¿Te ayudo a encontrar el mejor plan de ETB para ti?';
+        }
+        
+        addBotMessage(welcomeText);
       };
 
       // 1. Tiempo: 7 segundos es un buen balance (no muy agresivo, pero presente)
@@ -209,8 +235,8 @@ export default function ChatWidget() {
 
             const providerMessages: Record<string, string> = {
               claro: '¡Excelente elección! Claro tiene la mejor cobertura nacional y velocidades hasta 900 Mbps 🚀',
-              movistar: '¡Genial! Movistar ofrece descuentos exclusivos online y streaming incluido 📺',
-              etb: '¡Muy bien! ETB es líder en Bogotá con promociones especiales y fibra simétrica 🎁',
+              movistar: '¡Genial! Movistar tiene fibra simétrica y buena subida para teletrabajo y videollamadas 🚀',
+              etb: '¡Muy bien! ETB es fuerte en Bogotá con fibra simétrica y promos locales 🎁',
             };
             addBotMessage(providerMessages[currentProvider], 1000, false); // No mostrar opciones aún
             setTimeout(() => {
@@ -239,8 +265,8 @@ export default function ChatWidget() {
           setCurrentStep('people-count');
           const providerMessages: Record<string, string> = {
             claro: '¡Excelente elección! Claro tiene la mejor cobertura nacional y velocidades hasta 900 Mbps 🚀',
-            movistar: '¡Genial! Movistar ofrece descuentos exclusivos online y streaming incluido 📺',
-            etb: '¡Muy bien! ETB es líder en Bogotá con promociones especiales y fibra simétrica 🎁',
+            movistar: '¡Genial! Movistar tiene fibra simétrica y buena subida para teletrabajo y videollamadas 🚀',
+            etb: '¡Muy bien! ETB es fuerte en Bogotá con fibra simétrica y promos locales 🎁',
           };
           addBotMessage(providerMessages[value], 1000, false); // No mostrar opciones aún
           setTimeout(() => {
@@ -276,7 +302,25 @@ export default function ChatWidget() {
       case 'usage-type':
         newData.usage = value;
         setConversationData(newData);
-        setCurrentStep('additional-services');
+        setCurrentStep('recommendation');
+
+        const speed = newData.peopleCount === '5+' ? '900' : newData.peopleCount === '3-4' ? '500' : '300';
+        const providerName =
+          newData.provider === 'claro'
+            ? 'Claro'
+            : newData.provider === 'movistar'
+              ? 'Movistar'
+              : newData.provider === 'etb'
+                ? 'ETB'
+                : 'tu proveedor';
+        const usageLabel =
+          value === 'work'
+            ? 'Trabajo remoto'
+            : value === 'gaming'
+              ? 'Gaming y streaming'
+              : value === 'social'
+                ? 'Redes sociales y navegación'
+                : 'Uso completo';
 
         const usageMessages: Record<string, string> = {
           work: 'Para trabajo remoto te recomiendo mínimo 300 Mbps, mejor si es simétrica para videollamadas sin cortes 💼',
@@ -287,32 +331,12 @@ export default function ChatWidget() {
 
         addBotMessage(usageMessages[value], 1000, false); // No mostrar opciones aún
         setTimeout(() => {
-          addBotMessage('¿Te interesa también TV o telefonía?', 1000, true); // Mostrar opciones después de este
+          addBotMessage(
+            `Basándome en lo que me dijiste (${usageLabel}), ${providerName} con ${speed} Mbps sería ideal para ti.\n\n¿Quieres que un asesor te contacte para validar cobertura en tu dirección y darte el precio exacto?`,
+            1000,
+            true
+          );
         }, 2500);
-        break;
-
-      case 'additional-services':
-        newData.additionalServices = value;
-        setConversationData(newData);
-        setCurrentStep('recommendation');
-
-        const speed = newData.peopleCount === '5+' ? '900' : newData.peopleCount === '3-4' ? '500' : '300';
-        const providerName = newData.provider === 'claro' ? 'Claro' : newData.provider === 'movistar' ? 'Movistar' : 'ETB';
-
-        if (value === 'tv' || value === 'complete') {
-          addBotMessage('¡Perfecto! Los paquetes Dúo y Trío tienen descuentos especiales. Con un solo recibo pagas todo 📺💰', 1000, false);
-          setTimeout(() => {
-            addBotMessage(`Basándome en lo que me dijiste, ${providerName} con ${speed} Mbps sería ideal para ti.`, 1000, false);
-            setTimeout(() => {
-              addBotMessage('¿Quieres que un asesor te contacte para confirmar disponibilidad en tu zona y darte los precios exactos?', 1000, true);
-            }, 2500);
-          }, 2500);
-        } else {
-          addBotMessage(`Basándome en lo que me dijiste, ${providerName} con ${speed} Mbps sería ideal para ti.`, 1000, false);
-          setTimeout(() => {
-            addBotMessage('¿Quieres que un asesor te contacte para confirmar disponibilidad en tu zona y darte los precios exactos?', 1000, true);
-          }, 2500);
-        }
         break;
 
       case 'recommendation':
@@ -325,8 +349,24 @@ export default function ChatWidget() {
         } else if (value === 'whatsapp') {
           setCurrentStep('summary');
           const whatsappNumber = '573154645370';
-          const providerName = newData.provider === 'claro' ? 'Claro' : newData.provider === 'movistar' ? 'Movistar' : 'ETB';
-          const message = `Hola, vengo de la web. Me interesa un plan de internet ${providerName} para ${newData.peopleCount} personas, uso principal: ${newData.usage}`;
+          const providerName =
+            newData.provider === 'claro'
+              ? 'Claro'
+              : newData.provider === 'movistar'
+                ? 'Movistar'
+                : newData.provider === 'etb'
+                  ? 'ETB'
+                  : 'tu proveedor';
+          const speed = newData.peopleCount === '5+' ? '900' : newData.peopleCount === '3-4' ? '500' : '300';
+          const usageLabel =
+            newData.usage === 'work'
+              ? 'Trabajo remoto'
+              : newData.usage === 'gaming'
+                ? 'Gaming y streaming'
+                : newData.usage === 'social'
+                  ? 'Redes sociales y navegación'
+                  : 'Uso completo';
+          const message = `Hola, vengo de la web. Me interesa contratar internet ${providerName}. Hogar de ${newData.peopleCount} personas, uso: ${usageLabel}. Recomendación: ${speed} Mbps. ¿Me ayudas a validar cobertura en mi dirección?`;
           addBotMessage('¡Perfecto! Te redirijo al WhatsApp. Menciona que vienes de la web para ofertas exclusivas', 1000, false);
           setTimeout(() => {
             window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
@@ -334,11 +374,28 @@ export default function ChatWidget() {
         } else {
           setCurrentStep('summary');
           const speed = newData.peopleCount === '5+' ? '900' : newData.peopleCount === '3-4' ? '500' : '300';
-          const providerName = newData.provider === 'claro' ? 'Claro' : newData.provider === 'movistar' ? 'Movistar' : 'ETB';
-          const packageType = newData.additionalServices === 'complete' ? 'Trío (Internet + TV + Telefonía)' :
-                             newData.additionalServices === 'tv' ? 'Dúo (Internet + TV)' : 'Internet';
+          const providerName =
+            newData.provider === 'claro'
+              ? 'Claro'
+              : newData.provider === 'movistar'
+                ? 'Movistar'
+                : newData.provider === 'etb'
+                  ? 'ETB'
+                  : 'tu proveedor';
+          const usageLabel =
+            newData.usage === 'work'
+              ? 'Trabajo remoto'
+              : newData.usage === 'gaming'
+                ? 'Gaming y streaming'
+                : newData.usage === 'social'
+                  ? 'Redes sociales y navegación'
+                  : 'Uso completo';
 
-          addBotMessage(`¡Sin problema! Aquí está tu resumen:\n\n✅ Proveedor recomendado: ${providerName}\n✅ Velocidad sugerida: ${speed} Mbps\n✅ Ideal para: ${newData.usage}\n✅ Paquete: ${packageType}\n\nSi cambias de opinión, aquí abajo están los botones de contacto 😊`, 1000, false);
+          addBotMessage(
+            `¡Sin problema! Aquí está tu resumen:\n\n✅ Proveedor recomendado: ${providerName}\n✅ Velocidad sugerida: ${speed} Mbps\n✅ Uso principal: ${usageLabel}\n\nSi cambias de opinión, aquí abajo están los botones de contacto 😊`,
+            1000,
+            false
+          );
         }
         break;
 
@@ -347,7 +404,14 @@ export default function ChatWidget() {
           newData.phone = inputValue;
           setConversationData(newData);
           setCurrentStep('summary');
-          const providerName = newData.provider === 'claro' ? 'Claro' : newData.provider === 'movistar' ? 'Movistar' : 'ETB';
+          const providerName =
+            newData.provider === 'claro'
+              ? 'Claro'
+              : newData.provider === 'movistar'
+                ? 'Movistar'
+                : newData.provider === 'etb'
+                  ? 'ETB'
+                  : 'tu proveedor';
           addBotMessage(`¡Listo! ✅ Un asesor de ${providerName} te contactará muy pronto. Mientras tanto, aquí tienes más información.`, 1000, false);
           setInputValue('');
 
@@ -419,13 +483,6 @@ export default function ChatWidget() {
           { label: 'Gaming y streaming', value: 'gaming' },
           { label: 'Redes sociales y navegación', value: 'social' },
           { label: 'Todo lo anterior', value: 'all' },
-        ];
-
-      case 'additional-services':
-        return [
-          { label: 'Sí, TV también', value: 'tv' },
-          { label: 'Sí, un paquete completo (Internet + TV + Telefonía)', value: 'complete' },
-          { label: 'Solo internet', value: 'internet-only' },
         ];
 
       case 'recommendation':

@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     'Movistar Disney+ incluido',
     'planes Movistar 2026',
     'Movistar vs Claro velocidad',
-    'Movistar Total internet',
     'velocidad upload Movistar',
     'Movistar empresas',
     'mejor plan Movistar teletrabajo',

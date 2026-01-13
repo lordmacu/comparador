@@ -59,6 +59,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/asesor-claro-bogota`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/asesor-movistar-bogota`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/asesor-etb-bogota`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
       url: `${baseUrl}/calculadora`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
@@ -83,6 +101,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/planes-claro-bogota`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/planes-movistar-bogota`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/ofertas`,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
@@ -90,6 +120,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/contratar`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/contratar-internet-bogota`,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 0.95,

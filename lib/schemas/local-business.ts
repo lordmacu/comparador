@@ -3,13 +3,27 @@
  * Critical for appearing in local search results and Google Maps
  */
 
-export function generateLocalBusinessSchema() {
+export function generateLocalBusinessSchema(providerName?: string) {
+  let name = "Comparador Internet Colombia";
+  let alternateName = "Asesor de Internet Claro, Movistar y ETB";
+
+  if (providerName === 'Claro') {
+    name = "Asesor Internet Claro Colombia";
+    alternateName = "Planes y Servicios Claro Hogar";
+  } else if (providerName === 'Movistar') {
+    name = "Asesor Internet Movistar Colombia";
+    alternateName = "Planes Fibra Óptica Movistar";
+  } else if (providerName === 'ETB') {
+    name = "Asesor Internet ETB Bogotá";
+    alternateName = "Planes Fibra Óptica ETB";
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": "https://comparadorinternet.co/#localbusiness",
-    "name": "Comparador Internet Colombia",
-    "alternateName": "Asesor de Internet Claro, Movistar y ETB",
+    "name": name,
+    "alternateName": alternateName,
     "image": "https://comparadorinternet.co/og-image.jpg",
     "url": "https://comparadorinternet.co/asesores",
     "telephone": "+573154645370",

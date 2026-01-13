@@ -16,6 +16,16 @@
 # misc
 .DS_Store
 *.pem
+.vscode/
+service-account-key.json
+
+# generated SEO/audit outputs
+public/metadata_inventory.*
+public/seo_audit_report.json
+public/*seo*_report.json
+comparador-seo-*.json
+scripts/*seo-*.json
+scripts/*metadata*.json
 
 # debug
 npm-debug.log*

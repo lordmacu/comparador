@@ -221,6 +221,12 @@
       "namedRegex": "^/contratar(?:/)?$"
     },
     {
+      "page": "/contratar-internet-bogota",
+      "regex": "^/contratar\\-internet\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contratar\\-internet\\-bogota(?:/)?$"
+    },
+    {
       "page": "/empresa",
       "regex": "^/empresa(?:/)?$",
       "routeKeys": {},
@@ -335,6 +341,12 @@
       "namedRegex": "^/planes(?:/)?$"
     },
     {
+      "page": "/planes-claro-bogota",
+      "regex": "^/planes\\-claro\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/planes\\-claro\\-bogota(?:/)?$"
+    },
+    {
       "page": "/planes-claro-colombia",
       "regex": "^/planes\\-claro\\-colombia(?:/)?$",
       "routeKeys": {},
@@ -345,6 +357,12 @@
       "regex": "^/planes\\-etb\\-bogota(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/planes\\-etb\\-bogota(?:/)?$"
+    },
+    {
+      "page": "/planes-movistar-bogota",
+      "regex": "^/planes\\-movistar\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/planes\\-movistar\\-bogota(?:/)?$"
     },
     {
       "page": "/planes-movistar-fibra",

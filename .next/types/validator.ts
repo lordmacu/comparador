@@ -173,6 +173,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/contratar-internet-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/contratar-internet-bogota">> = Specific
+  const handler = {} as typeof import("../../app/contratar-internet-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/contratar/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/contratar">> = Specific
@@ -344,6 +353,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/planes-claro-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/planes-claro-bogota">> = Specific
+  const handler = {} as typeof import("../../app/planes-claro-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/planes-claro-colombia/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/planes-claro-colombia">> = Specific
@@ -357,6 +375,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/planes-etb-bogota">> = Specific
   const handler = {} as typeof import("../../app/planes-etb-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/planes-movistar-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/planes-movistar-bogota">> = Specific
+  const handler = {} as typeof import("../../app/planes-movistar-bogota/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

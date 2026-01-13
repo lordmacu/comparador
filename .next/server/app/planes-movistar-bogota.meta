@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/planes-movistar-bogota/layout,_N_T_/planes-movistar-bogota/page,_N_T_/planes-movistar-bogota"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/planes-movistar-bogota/__PAGE__",
+    "/planes-movistar-bogota",
+    "/_index",
+    "/_head"
+  ]
+}

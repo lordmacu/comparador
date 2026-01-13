@@ -5,7 +5,7 @@ import QuickCallForm from '@/components/QuickCallForm';
 
 export const metadata: Metadata = {
   title: 'Ofertas Internet Enero 2026 | Promociones y Descuentos Exclusivos',
-  description: '🔥 Ofertas exclusivas de internet en Colombia - Enero 2026. Hasta 3 meses gratis, descuentos del 50%, Disney+ y HBO Max incluidos. ETB, Claro y Movistar con las mejores promociones. ¡Aprovecha ahora!',
+  description: 'Ofertas y promociones de internet en Colombia - Enero 2026. Descuentos sujetos a cobertura y condiciones vigentes. ETB, Claro y Movistar. Cotiza y contrata con asesoría inmediata.',
   keywords: [
     'ofertas internet colombia 2026',
     'promociones internet enero',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Ofertas Internet Enero 2026 | Hasta 3 Meses Gratis + Descuentos 50%',
-    description: 'Las mejores ofertas de internet en Colombia. Descuentos exclusivos, meses gratis y beneficios premium. Válido enero 2026.',
+    description: 'Promociones de internet en Colombia. Descuentos sujetos a cobertura y condiciones vigentes. Válido enero 2026.',
     url: 'https://comparadorinternet.co/ofertas',
     siteName: 'Comparador Internet Colombia',
     locale: 'es_CO',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Ofertas Internet Enero 2026 | Promociones Exclusivas',
-    description: '🔥 Hasta 3 meses gratis + descuentos del 50%. Aprovecha las mejores ofertas de internet.',
+    description: 'Promociones de internet: meses de descuento y beneficios sujetos a condiciones vigentes.',
   },
 };
 
@@ -91,7 +91,6 @@ const offers: Offer[] = [
       'Descuento de $30.000/mes',
       'Ultra Fibra 600 Mbps simétrica',
       'Router WiFi 6 mesh incluido',
-      'Movistar TV opcional',
       'Gaming mode optimizado',
     ],
     savings: 480000,
@@ -104,16 +103,16 @@ const offers: Offer[] = [
     id: 'claro-streaming',
     provider: 'Claro',
     title: 'HBO Max + Paramount+ Incluidos',
-    subtitle: 'Internet 600 Mbps + TV HD',
+    subtitle: 'Internet 600 Mbps',
     speed: 600,
     originalPrice: 149900,
     discountedPrice: 109900,
     discount: 27,
     benefits: [
-      'HBO Max incluido permanente',
-      'Paramount+ por 6 meses',
-      'TV HD con 200 canales',
-      'Win Sports+ incluido',
+      'Beneficios digitales según promoción vigente',
+      'Validación de cobertura por dirección',
+      'Router WiFi incluido (según plan)',
+      'Soporte técnico',
       'Ahorra $40.000/mes',
       'Router tri-banda premium',
     ],
@@ -172,7 +171,7 @@ const offers: Offer[] = [
   {
     id: 'claro-familia',
     provider: 'Claro',
-    title: 'Internet + TV desde $79.900',
+    title: 'Internet hogar desde $79.900',
     subtitle: 'Plan Familia Completo 400 Mbps',
     speed: 400,
     originalPrice: 119900,
@@ -180,7 +179,6 @@ const offers: Offer[] = [
     discount: 33,
     benefits: [
       'Ahorro de $40.000/mes',
-      'TV HD 130 canales',
       'Claro Video + Claro Música',
       'Control parental avanzado',
       'Apps móviles sin costo de datos',

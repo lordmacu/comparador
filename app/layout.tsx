@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { renderJsonLd } from "@/lib/schemas";
-import { generateLocalBusinessSchema } from "@/lib/schemas/local-business";
+// Removed static generateLocalBusinessSchema import
 import Header from "@/components/Header";
 import { OrganizationSchema, WebsiteSchema } from "@/components/SchemaMarkup";
 import { WebVitals } from "@/components/WebVitals";
 import { ClientProviders } from "@/components/ClientProviders";
 import { Analytics } from "@/components/Analytics";
+import DynamicLocalBusiness from "@/components/DynamicLocalBusiness";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -104,7 +105,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const localBusinessSchema = generateLocalBusinessSchema();
+  // Static schema generation moved to DynamicLocalBusiness component
 
   return (
     <html lang="es-CO">
@@ -116,11 +117,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
         
-        {/* LocalBusiness Schema para SEO Local */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={renderJsonLd(localBusinessSchema)}
-        />
+        {/* LocalBusiness Schema para SEO Local (Dinámico según proveedor) */}
+        <DynamicLocalBusiness />
         
         {/* Organization and Website Schema */}
         <OrganizationSchema />
@@ -171,7 +169,7 @@ export default function RootLayout({
               <div>
                 <h4 className="text-white font-semibold mb-4">Información</h4>
                 <p className="text-sm">
-                  Última actualización: Diciembre 2026
+                  Última actualización: Enero 2026
                   <br />
                   Precios sujetos a disponibilidad y zona de cobertura.
                 </p>

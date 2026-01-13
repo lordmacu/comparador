@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2025-12-30",
+  "lastUpdated": "2026-01-13",
   "providers": {
     "claro": {
       "name": "Claro Colombia",
       "slug": "claro",
-      "tagline": "La red más grande de Colombia",
+      "tagline": "Cobertura nacional en fibra y HFC",
       "brand": {
         "logo": "/images/claro-logo.svg",
         "primaryColor": "#FF0000",
@@ -12,12 +12,12 @@
       },
       "hero": {
         "title": "Internet Claro: Conectividad sin límites",
-        "subtitle": "Fibra óptica, 5G y la mejor cobertura nacional",
+        "subtitle": "Fibra óptica y HFC con amplia cobertura nacional",
         "cta": "Descubre tu plan ideal"
       },
       "coverage": {
         "national": true,
-        "technology": "Fibra Óptica FTTH, HFC y 5G",
+        "technology": "Fibra Óptica FTTH y HFC",
         "cities": ["Bogotá", "Medellín", "Cali", "Barranquilla", "Cartagena", "Todo Colombia"],
         "description": "Cobertura en todo el país con tecnología de punta"
       },
@@ -34,12 +34,12 @@
         {
           "icon": "Zap",
           "title": "Velocidades hasta 900 Mbps",
-          "description": "Fibra óptica y 5G para streaming 4K, gaming y trabajo remoto sin interrupciones."
+          "description": "Tecnología (fibra/HFC según cobertura) para streaming 4K, gaming y trabajo remoto sin interrupciones."
         },
         {
-          "icon": "Tv",
-          "title": "Entretenimiento Incluido",
-          "description": "Claro TV+ con acceso a Netflix, HBO, Prime Video y Win Sports según tu plan."
+          "icon": "Wifi",
+          "title": "Internet estable para streaming y gaming",
+          "description": "Elige la velocidad correcta y valida la tecnología disponible (fibra/HFC) en tu dirección para una conexión estable."
         },
         {
           "icon": "Headphones",
@@ -49,39 +49,34 @@
       ],
       "services": [
         {
-          "name": "Internet Fibra Óptica",
-          "description": "Internet de alta velocidad con fibra óptica hasta tu hogar. La mejor tecnología para streaming, gaming y teletrabajo.",
-          "speeds": ["300 Mbps", "500 Mbps", "900 Mbps"],
-          "ideal": "Hogares con múltiples dispositivos conectados"
+          "name": "Internet Hogar (Fibra / HFC)",
+          "description": "Internet para hogar con tecnología disponible en tu zona (fibra óptica FTTH o HFC). Ideal para streaming, teletrabajo y gaming.",
+          "speeds": ["200 Mbps", "300 Mbps", "500 Mbps", "900 Mbps"],
+          "ideal": "Hogares en Bogotá y Colombia que buscan buena cobertura",
+          "features": [
+            "Validación de cobertura por dirección",
+            "Instalación a domicilio",
+            "Router incluido (según plan)",
+            "Soporte técnico"
+          ]
         },
         {
-          "name": "Paquetes Dúo y Trío",
-          "description": "Combina Internet + TV o Internet + TV + Telefonía en un solo plan con descuento especial.",
-          "options": ["Internet + TV", "Internet + TV + Telefonía"],
-          "features": ["Un solo recibo", "Descuento por combo", "Instalación única", "Soporte integrado"]
-        },
-        {
-          "name": "Televisión - Claro TV+",
-          "description": "Canales HD, contenido on demand y plataformas de streaming incluidas. Disfruta en Smart TV, celular y tablet.",
-          "features": ["Netflix", "HBO Max", "Prime Video", "Win Sports", "+100 canales HD"]
-        },
-        {
-          "name": "Telefonía Fija",
-          "description": "Llamadas ilimitadas a nivel nacional. Incluye buzón de voz e identificador de llamadas.",
-          "features": ["Llamadas ilimitadas", "Buzón de voz", "Identificador"]
-        },
-        {
-          "name": "Planes Móviles",
-          "description": "Combina tu internet hogar con plan móvil y obtén beneficios exclusivos con la red 5G de Claro.",
-          "features": ["Red 5G", "Datos ilimitados", "Descuentos por combo"]
+          "name": "Optimización WiFi en Casa",
+          "description": "Mejora la cobertura dentro de tu hogar con buenas prácticas de WiFi y, si aplica, mesh o repetidores.",
+          "ideal": "Casas grandes, muchos dispositivos o paredes gruesas",
+          "features": [
+            "Recomendación de ubicación del router",
+            "Consejos para 2.4 GHz vs 5 GHz",
+            "Sugerencia de mesh (opcional según necesidad)"
+          ]
         }
       ],
       "whyChoose": [
         "La red más grande y confiable de Colombia",
-        "Tecnología 5G disponible en principales ciudades",
+        "Cobertura nacional con fibra/HFC (según zona)",
         "Atención al cliente 24/7 los 365 días del año",
         "App Mi Claro para gestionar tu servicio",
-        "Beneficios exclusivos para clientes hogar + móvil",
+        "Variedad de velocidades según tu uso",
         "Instalación profesional incluida"
       ],
       "targetAudience": [
@@ -117,14 +112,14 @@
         },
         {
           "question": "¿Puedo contratar solo internet o debo llevar paquete?",
-          "answer": "Ofrecemos planes solo de internet y también paquetes combo con TV y telefonía. Contáctanos para conocer todas las opciones disponibles en tu zona."
+          "answer": "Sí. Manejamos planes solo de internet (fibra u HFC según tu dirección). Contáctanos para validar cobertura y promociones vigentes."
         }
       ]
     },
     "movistar": {
       "name": "Movistar Colombia",
       "slug": "movistar",
-      "tagline": "Más velocidad, más beneficios",
+      "tagline": "Fibra óptica 100% simétrica",
       "brand": {
         "logo": "/images/movistar-logo.png",
         "primaryColor": "#00A9E0",
@@ -132,7 +127,7 @@
       },
       "hero": {
         "title": "Internet Movistar: Fibra óptica ultra rápida",
-        "subtitle": "Descuentos exclusivos online + streaming incluido",
+        "subtitle": "Ultra Fibra simétrica + descuentos exclusivos online",
         "cta": "Consulta tu oferta especial"
       },
       "coverage": {
@@ -152,58 +147,48 @@
           "description": "Hasta 50% de descuento en tus primeros meses al contratar por canales digitales."
         },
         {
-          "icon": "Clapperboard",
-          "title": "Streaming Incluido",
-          "description": "Disney+, WIN play o Netflix incluidos según tu plan. Entretenimiento sin límites."
-        },
-        {
           "icon": "ArrowLeftRight",
           "title": "Fibra 100% Simétrica",
           "description": "Misma velocidad de subida y bajada. Ideal para videollamadas y creadores de contenido."
         },
         {
-          "icon": "Smartphone",
-          "title": "Movistar Total",
-          "description": "Combina hogar + móvil y obtén descuentos adicionales en ambos servicios."
+          "icon": "Wifi",
+          "title": "WiFi para hogares exigentes",
+          "description": "Router WiFi y configuración recomendada según tu casa y cantidad de dispositivos (WiFi 6/mesh según disponibilidad)."
+        },
+        {
+          "icon": "Headphones",
+          "title": "Instalación y soporte",
+          "description": "Asesoría para elegir el plan y agendar instalación según cobertura en tu zona."
         }
       ],
       "services": [
         {
-          "name": "Internet Fibra Óptica",
-          "description": "Internet de fibra 100% simétrica. La misma velocidad de subida y bajada para videollamadas perfectas.",
+          "name": "Internet Fibra Óptica (Simétrica)",
+          "description": "Internet de fibra 100% simétrica. La misma velocidad de subida y bajada para videollamadas, gaming y subir archivos sin cortes.",
           "speeds": ["300 Mbps", "600 Mbps", "900 Mbps"],
           "ideal": "Creadores de contenido, gamers, teletrabajo profesional",
-          "features": ["Velocidad simétrica", "Router WiFi 6", "Sin límite de datos"]
+          "features": ["Velocidad simétrica", "Router WiFi (según plan)", "Sin límite de datos"]
         },
         {
-          "name": "Paquetes Dúo y Trío",
-          "description": "Internet + TV o Internet + TV + Telefonía. Todo en un solo plan con descuentos exclusivos online.",
-          "options": ["Internet + TV", "Internet + TV + Telefonía"],
-          "features": ["Descuentos online", "Factura única", "Instalación coordinada", "Ahorro mensual"]
+          "name": "Optimización de Cobertura WiFi",
+          "description": "Recomendaciones para mejorar señal en casas grandes: ubicación del router, canal WiFi y opciones de mesh/repetidores.",
+          "ideal": "Hogares con varias habitaciones o 2 pisos",
+          "features": ["Consejos 2.4 GHz vs 5 GHz", "Sugerencia mesh (opcional)", "Buenas prácticas para teletrabajo"]
         },
         {
-          "name": "Televisión - Movistar TV",
-          "description": "TV con más de 100 canales HD, grabación en la nube y contenido on demand.",
-          "features": ["+100 canales HD", "Grabación en nube", "Control parental", "App móvil"]
-        },
-        {
-          "name": "Internet + Streaming",
-          "description": "Planes con plataforma de streaming incluida. Disney+, Netflix o WIN play según el plan.",
-          "options": ["Disney+", "Netflix", "WIN play"]
-        },
-        {
-          "name": "Planes Móviles",
-          "description": "Movistar Total: combina hogar + móvil con descuentos especiales en ambos servicios.",
-          "features": ["Descuentos cruzados", "Factura única", "Soporte prioritario"]
+          "name": "Instalación y activación",
+          "description": "Te guiamos en el proceso de contratación: validación de cobertura, agendamiento y recomendaciones del plan.",
+          "features": ["Validación de cobertura por dirección", "Agendamiento de instalación", "Asesoría según uso (trabajo, gaming, streaming)"]
         }
       ],
       "whyChoose": [
         "Descuentos exclusivos para compras online (hasta 50% OFF)",
         "Fibra óptica 100% simétrica - misma velocidad subida/bajada",
-        "Streaming incluido (Disney+, WIN play o Netflix según plan)",
-        "Primera operadora con tecnología Ultra Fibra en Colombia",
-        "Programa Movistar Plus con beneficios exclusivos",
-        "Gestión total desde la app Movistar"
+        "Buena opción para teletrabajo y creadores de contenido",
+        "Planes con velocidades altas según disponibilidad",
+        "Instalación y soporte según cobertura",
+        "Gestión desde canales digitales"
       ],
       "targetAudience": [
         {
@@ -215,12 +200,8 @@
           "description": "Quienes buscan el mejor precio online con descuentos exclusivos digitales."
         },
         {
-          "type": "Fanáticos del Streaming",
-          "description": "Planes que incluyen plataformas como Disney+, Netflix o WIN play."
-        },
-        {
-          "type": "Usuarios Movistar Móvil",
-          "description": "Aprovecha descuentos con Movistar Total combinando hogar + móvil."
+          "type": "Teletrabajo",
+          "description": "Conexión simétrica y estable para videollamadas, VPN y subir archivos pesados."
         }
       ],
       "faqs": [
@@ -229,16 +210,16 @@
           "answer": "Los descuentos exclusivos se aplican al contratar por WhatsApp o nuestro formulario web. Contáctanos y te enviamos la oferta personalizada para tu zona."
         },
         {
-          "question": "¿El streaming está incluido para siempre?",
-          "answer": "Las condiciones de las plataformas de streaming varían según el plan contratado. Contáctanos para conocer la oferta actual y todos los detalles."
-        },
-        {
           "question": "¿Qué es velocidad simétrica y por qué es mejor?",
           "answer": "Simétrica significa que tienes la misma velocidad de subida que de bajada. Ideal para videollamadas HD, subir archivos a la nube, streaming en vivo y trabajo remoto profesional."
         },
         {
-          "question": "¿Puedo combinar con mi plan móvil Movistar?",
-          "answer": "¡Sí! Con Movistar Total obtienes descuentos al combinar hogar + móvil. Consulta con nuestros asesores los beneficios disponibles."
+          "question": "¿Movistar tiene cobertura en mi zona?",
+          "answer": "La cobertura varía por barrio y edificio. Escríbenos tu dirección y validamos disponibilidad de fibra antes de avanzar con la contratación."
+        },
+        {
+          "question": "¿Cuánto tarda la instalación?",
+          "answer": "Depende de la cobertura y agenda disponible. Te ayudamos a coordinar la visita técnica y a confirmar requisitos antes de la instalación."
         }
       ]
     },
@@ -253,7 +234,7 @@
       },
       "hero": {
         "title": "Internet ETB: La fibra de Bogotá",
-        "subtitle": "Promociones especiales para la capital + streaming con descuento",
+        "subtitle": "Promociones especiales para la capital + fibra simétrica",
         "cta": "Ver promociones Bogotá"
       },
       "coverage": {
@@ -278,14 +259,14 @@
           "description": "Fibra óptica con la misma velocidad de subida y bajada. Tecnología de punta FTTH."
         },
         {
-          "icon": "Play",
-          "title": "Apps de Streaming con Descuento",
-          "description": "MAX, Win Play, DGO, Paramount+, Universal+ y Hot Go con ofertas especiales."
+          "icon": "Wifi",
+          "title": "WiFi 360 (Cobertura en toda la casa)",
+          "description": "Extensores WiFi para reducir zonas muertas y mejorar la señal dentro de tu hogar (según plan/disponibilidad)."
         },
         {
           "icon": "Shield",
-          "title": "WiFi 360 + Ciberseguridad",
-          "description": "Extensores WiFi para cobertura total en tu hogar y protección para tus dispositivos."
+          "title": "Soporte local y estabilidad",
+          "description": "Operador local con soporte enfocado en Bogotá y fibra FTTH para mejor estabilidad."
         }
       ],
       "services": [
@@ -294,28 +275,18 @@
           "description": "Fibra óptica 100% simétrica directo a tu hogar. Velocidad gemela de subida y bajada.",
           "speeds": ["200 Mbps", "500 Mbps", "910 Mbps"],
           "ideal": "Hogares en Bogotá que buscan calidad y atención local",
-          "features": ["Velocidad simétrica", "Instalación gratis", "WiFi 360 disponible"]
+          "features": ["Velocidad simétrica", "Instalación a coordinar según cobertura", "WiFi 360 disponible (según plan)"]
         },
         {
-          "name": "Paquetes Dúo y Trío",
-          "description": "Internet + Streaming o Internet + DGO + Telefonía. Ahorra con paquetes especiales para Bogotá.",
-          "options": ["Internet + DGO Pass", "Internet + DGO + Telefonía"],
-          "features": ["Promociones Bogotá", "Factura única", "Soporte local", "Descuentos por estrato"]
+          "name": "WiFi 360 (Extensores)",
+          "description": "Extiende tu señal WiFi a toda la casa con extensores y roaming automático (según plan/disponibilidad).",
+          "features": ["Mejor cobertura WiFi", "Roaming automático", "Menos zonas muertas"],
+          "ideal": "Casas grandes o con paredes gruesas"
         },
         {
-          "name": "Televisión - DGO Pass",
-          "description": "Plataforma de streaming con 23 canales en vivo, series y películas. Alternativa moderna a TV cable.",
-          "features": ["23 canales en vivo", "On demand", "Múltiples dispositivos"]
-        },
-        {
-          "name": "Streaming con Descuento",
-          "description": "Acceso preferencial a MAX, Win Play, Paramount+, Universal+ y más con ofertas especiales.",
-          "options": ["MAX", "Win Play", "Paramount+", "Universal+", "Hot Go"]
-        },
-        {
-          "name": "Planes Móviles",
-          "description": "Combina internet hogar + plan móvil ETB con beneficios adicionales.",
-          "features": ["Descuentos por combo", "Un solo proveedor", "Factura única"]
+          "name": "Soporte y asesoría de instalación",
+          "description": "Validación de cobertura y coordinación de instalación para internet ETB en Bogotá y municipios cercanos.",
+          "features": ["Validación de cobertura por dirección", "Agendamiento de instalación", "Recomendación de plan según uso"]
         }
       ],
       "whyChoose": [
@@ -324,7 +295,6 @@
         "Fibra óptica 100% simétrica (velocidad gemela)",
         "Sin prorrateo en facturación - pagas desde que se instala",
         "Soporte técnico local que conoce la ciudad",
-        "Apps de streaming con descuentos exclusivos",
         "WiFi 360 y ciberseguridad disponibles"
       ],
       "targetAudience": [
@@ -341,8 +311,8 @@
           "description": "Hogares con múltiples dispositivos conectados que necesitan WiFi 360 completo."
         },
         {
-          "type": "Cord Cutters",
-          "description": "Quienes prefieren streaming apps vs TV por cable tradicional."
+          "type": "Streaming y gaming",
+          "description": "Usuarios que consumen streaming (Netflix/YouTube) y juegan online, y necesitan estabilidad y buena subida."
         }
       ],
       "faqs": [
@@ -359,12 +329,12 @@
           "answer": "Son extensores WiFi que cubren toda tu casa eliminando zonas sin señal. El sistema hace roaming automático entre dispositivos. Incluido en planes premium o puedes agregarlo a tu plan actual."
         },
         {
-          "question": "¿Puedo acceder a las apps de streaming?",
-          "answer": "Sí, ETB tiene alianzas con MAX, Win Play, DGO, Paramount+ y más. Ofrecemos descuentos especiales y facilidades de pago. Consulta las ofertas vigentes contactándonos."
-        },
-        {
           "question": "¿Hay promociones especiales para mi estrato?",
           "answer": "¡Sí! Tenemos promociones especiales para estratos 2 y 3 en Bogotá. Contáctanos con tu información y te enviamos la mejor oferta disponible para tu zona y estrato."
+        },
+        {
+          "question": "¿Puedo contratar solo internet ETB?",
+          "answer": "Sí. Te ayudamos a validar cobertura y a elegir la velocidad ideal según tu uso (trabajo, gaming, streaming) para contratar solo internet."
         }
       ]
     }
@@ -372,7 +342,7 @@
   "metadata": {
     "version": "2.0",
     "country": "Colombia",
-    "strategy": "benefit-focused-no-pricing",
-    "notes": "Datos actualizados diciembre 2025. Enfoque en beneficios y servicios sin precios específicos. Los usuarios deben contactar para información de planes y pricing personalizado."
+    "strategy": "internet-only-benefit-focused",
+    "notes": "Enfoque: solo internet (fibra/banda ancha) sin TV ni telefonía. Los usuarios deben contactar para validar cobertura, promociones y precio final."
   }
 }
