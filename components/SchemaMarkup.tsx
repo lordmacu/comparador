@@ -17,15 +17,16 @@ export const OrganizationSchema = () => {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+57-1-234-5678",
-        "contactType": "customer service",
+        "telephone": "+57-315-464-5370",
+        "contactType": "sales",
         "availableLanguage": "Spanish",
-        "areaServed": "CO"
+        "areaServed": "CO",
+        "option": "TollFree"
       },
       {
         "@type": "ContactPoint", 
-        "telephone": "+57-300-123-4567",
-        "contactType": "sales",
+        "telephone": "+57-315-464-5370",
+        "contactType": "customer service",
         "availableLanguage": "Spanish", 
         "areaServed": "CO"
       }

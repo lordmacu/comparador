@@ -227,9 +227,7 @@ export default function InternetBaratoPage() {
 
               {/* #3 Movistar */}
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-200">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg">
-                  🥉 3ER LUGAR
-                </div>
+           
 
                 <div className="bg-gradient-to-br from-green-600 to-green-700 text-white p-6">
                   <div className="text-center">
