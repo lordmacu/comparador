@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { getAllPosts, getAllCategories } from "@/lib/blog";
 import { Clock, Calendar, Tag } from "lucide-react";
 
@@ -110,12 +109,13 @@ export default function BlogPage() {
                 {/* Featured Image */}
                 {post.image && (
                   <div className="relative w-full h-48 bg-gray-100">
-                    <Image
+                    <img
                       src={post.image}
                       alt={post.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      width={640}
+                      height={384}
                     />
                   </div>
                 )}
