@@ -1,6 +1,6 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/etb-vs-claro-bogota/page.js")
 R.c("server/chunks/ssr/[root-of-the-server]__610faadc._.js")
-R.c("server/chunks/ssr/_5de01c25._.js")
+R.c("server/chunks/ssr/_4b82ef7d._.js")
 R.c("server/chunks/ssr/_4adb9705._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_4b9a0874._.js")
 R.c("server/chunks/ssr/_b5005971._.js")
