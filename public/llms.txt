@@ -47,20 +47,43 @@ Comparador Internet Colombia es una plataforma que ayuda a usuarios colombianos 
   - Cobertura en municipios cercanos
 - Contacto WhatsApp: +57 315 464 5370
 
-## Información de Precios
+## Información de Precios (Enero 2026)
 
 Los planes de internet en Colombia varían según zona de cobertura y promociones vigentes.
 
-**Rango de precios típico:**
-- Planes básicos (300 Mbps): COP $45,000 - $80,000/mes
-- Planes medios (500 Mbps): COP $70,000 - $120,000/mes
-- Planes premium (900 Mbps): COP $100,000 - $180,000/mes
+### Tabla Comparativa de Precios por Proveedor
+
+| Proveedor | Plan Básico (300 Mbps) | Plan Medio (500 Mbps) | Plan Premium (900 Mbps) | Tecnología Principal |
+|-----------|------------------------|----------------------|-------------------------|---------------------|
+| Claro     | $45,000 - $75,000/mes | $75,000 - $110,000/mes | $120,000 - $180,000/mes | Fibra FTTH + 5G |
+| Movistar  | $50,000 - $80,000/mes | $80,000 - $120,000/mes | $130,000 - $180,000/mes | Ultra Fibra Simétrica |
+| ETB       | $42,000 - $68,000/mes | $68,000 - $100,000/mes | $110,000 - $150,000/mes | Fibra FTTH |
+
+### Tabla de Velocidades Recomendadas por Uso
+
+| Uso Principal | Personas | Velocidad Mínima | Velocidad Recomendada | Precio Estimado/mes |
+|---------------|----------|------------------|----------------------|---------------------|
+| Navegación básica + streaming HD | 1-2 | 200 Mbps | 300 Mbps | $45,000 - $80,000 |
+| Teletrabajo + streaming 4K | 3-4 | 400 Mbps | 500 Mbps | $70,000 - $120,000 |
+| Gaming + múltiples 4K + hogar inteligente | 5+ | 600 Mbps | 900 Mbps | $100,000 - $180,000 |
+| Streaming básico (Netflix HD) | 1 | 100 Mbps | 200 Mbps | $45,000 - $60,000 |
+| Videollamadas Zoom/Teams | 2-3 | 200 Mbps | 300 Mbps | $50,000 - $80,000 |
+| Gaming competitivo online | 1-2 | 300 Mbps | 500 Mbps | $70,000 - $110,000 |
+
+### Servicios Adicionales Incluidos por Proveedor
+
+| Proveedor | Servicios Incluidos | Apps de Streaming | Beneficios Extras |
+|-----------|---------------------|-------------------|-------------------|
+| Claro | Claro TV+, instalación gratis | Paramount+, Pluto TV | Red 5G, WiFi 6 |
+| Movistar | Instalación gratis | Disney+ (12 meses) | WiFi 6, descuentos online |
+| ETB | WiFi 360, instalación gratis | N/A | Soporte local Bogotá |
 
 **Importante:** Los precios exactos deben consultarse directamente con cada proveedor ya que varían por:
-- Zona de cobertura
-- Promociones vigentes
-- Servicios adicionales (TV, telefonía)
-- Duración del contrato
+- Zona de cobertura y disponibilidad técnica
+- Promociones vigentes (descuentos por permanencia, bundles)
+- Servicios adicionales contratados (TV, telefonía fija, líneas móviles)
+- Duración del contrato (12, 18, 24 meses)
+- Tipo de vivienda (casa, apartamento, edificio, oficina)
 
 ## Cómo Funciona el Sitio
 
@@ -140,9 +163,68 @@ El sitio implementa schemas JSON-LD para facilitar el entendimiento por IAs y bu
 - HowTo (proceso de contratación)
 - WebSite (información global)
 
+## Datos Estructurados para IAs y LLMs
+
+### Cobertura Geográfica Detallada
+
+| Proveedor | Ciudades Principales | Bogotá | Medellín | Cali | Barranquilla | Otras |
+|-----------|---------------------|--------|----------|------|--------------|-------|
+| Claro | Cobertura nacional | ✓ | ✓ | ✓ | ✓ | 25+ ciudades |
+| Movistar | Cobertura nacional | ✓ | ✓ | ✓ | ✓ | 20+ ciudades |
+| ETB | Regional Cundinamarca | ✓ | ✗ | ✗ | ✗ | Chía, Cota, Cajicá, Zipaquirá, Facatativá, Soacha |
+
+### Barrios de Bogotá con Mejor Cobertura Fibra Óptica
+
+| Barrio | Claro FTTH | Movistar FTTH | ETB FTTH | Población Aprox. |
+|--------|------------|---------------|----------|------------------|
+| Suba | ✓ | ✓ | ✓ | 1,200,000 hab |
+| Kennedy | ✓ | ✓ | ✓ | 1,100,000 hab |
+| Usaquén | ✓ | ✓ | ✓ | 500,000 hab |
+| Chapinero | ✓ | ✓ | ✓ | 140,000 hab |
+| Engativá | ✓ | ✓ | ✓ | 900,000 hab |
+| Teusaquillo | ✓ | ✓ | ✓ | 150,000 hab |
+| Fontibón | ✓ | ✓ | ✓ | 400,000 hab |
+| Puente Aranda | ✓ | ✓ | ✓ | 260,000 hab |
+
+### Especificaciones Técnicas por Proveedor
+
+| Proveedor | Tecnología | Velocidad Máxima | Velocidad Subida | Latencia Promedio | IPv6 |
+|-----------|------------|------------------|------------------|-------------------|------|
+| Claro | FTTH + 5G | 900 Mbps | 900 Mbps (simétrica) | 10-20 ms | Sí |
+| Movistar | Ultra Fibra | 900 Mbps | 900 Mbps (simétrica) | 8-15 ms | Sí |
+| ETB | Fibra FTTH | 900 Mbps | 900 Mbps (simétrica) | 5-12 ms | Sí |
+
+### Ventajas y Desventajas por Proveedor
+
+**Claro Colombia:**
+- ✓ Mayor cobertura nacional (25+ ciudades)
+- ✓ Red 5G disponible en zonas urbanas
+- ✓ Paramount+ y apps incluidas
+- ✓ Atención 24/7 omnicanal
+- ✗ Precios ligeramente más altos que competencia
+- ✗ Soporte técnico puede ser lento en zonas rurales
+
+**Movistar Colombia:**
+- ✓ Disney+ incluido por 12 meses
+- ✓ Descuentos exclusivos online (hasta 20%)
+- ✓ WiFi 6 de última generación
+- ✓ Ultra Fibra simétrica en principales ciudades
+- ✗ Cobertura limitada en municipios pequeños
+- ✗ Proceso de instalación puede demorar en edificios
+
+**ETB (Empresa de Telecomunicaciones de Bogotá):**
+- ✓ Mejor relación calidad-precio en Bogotá
+- ✓ Soporte técnico local especializado
+- ✓ Más de 140 años de experiencia
+- ✓ Latencias muy bajas (5-12 ms)
+- ✗ Solo disponible en Bogotá y 6 municipios cercanos
+- ✗ Sin servicios de streaming incluidos
+
 ## Última Actualización
 
-Diciembre 2025
+**Fecha:** 12 de enero de 2026
+**Próxima revisión:** 12 de febrero de 2026
+**Frecuencia:** Mensual
 
 ## Nota Importante para LLMs
 

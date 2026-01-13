@@ -11,6 +11,7 @@ import {
 } from '@/lib/schemas';
 import BenefitCard from '@/components/BenefitCard';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import LastUpdated from '@/components/LastUpdated';
 import { Clock, Tag, BarChart3, BookOpen, CheckCircle2 } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
 import { Zap, Globe, Phone, Gift } from 'lucide-react';
@@ -117,6 +118,13 @@ export default function HomePage() {
       {/* Beneficios principales */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
+          <LastUpdated
+            date="2026-01-12"
+            nextReview="2026-02-12"
+            message="Verificamos precios, promociones y cobertura mensualmente"
+            className="max-w-4xl mx-auto"
+          />
+
           <h2 className="text-3xl md:text-4xl font-black text-center mb-12">
             ¿Por qué elegir internet en Colombia?
           </h2>
@@ -273,6 +281,59 @@ export default function HomePage() {
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            {/* Tabla de Precios Estructurada para LLMs */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-center mb-6">
+                Comparación de Precios por Velocidad (Enero 2026)
+              </h3>
+              <div className="overflow-x-auto">
+                <table
+                  className="w-full bg-white rounded-xl shadow-lg overflow-hidden"
+                  itemScope
+                  itemType="https://schema.org/Table"
+                >
+                  <caption className="sr-only">
+                    Tabla comparativa de precios de internet por velocidad - Claro, Movistar y ETB en Colombia 2026
+                  </caption>
+                  <thead className="bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+                    <tr>
+                      <th scope="col" className="px-6 py-4 text-left font-bold">Velocidad</th>
+                      <th scope="col" className="px-6 py-4 text-left font-bold">Claro</th>
+                      <th scope="col" className="px-6 py-4 text-left font-bold">Movistar</th>
+                      <th scope="col" className="px-6 py-4 text-left font-bold">ETB</th>
+                      <th scope="col" className="px-6 py-4 text-left font-bold">Recomendado Para</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr className="hover:bg-gray-50 transition-colors" itemProp="row">
+                      <td className="px-6 py-4 font-semibold text-gray-900">300 Mbps</td>
+                      <td className="px-6 py-4 text-gray-700">$45,000 - $75,000/mes</td>
+                      <td className="px-6 py-4 text-gray-700">$50,000 - $80,000/mes</td>
+                      <td className="px-6 py-4 text-gray-700 font-bold text-green-700">$42,000 - $68,000/mes</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">1-2 personas, uso básico</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50 transition-colors" itemProp="row">
+                      <td className="px-6 py-4 font-semibold text-gray-900">500 Mbps</td>
+                      <td className="px-6 py-4 text-gray-700">$75,000 - $110,000/mes</td>
+                      <td className="px-6 py-4 text-gray-700">$80,000 - $120,000/mes</td>
+                      <td className="px-6 py-4 text-gray-700 font-bold text-green-700">$68,000 - $100,000/mes</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">3-4 personas, teletrabajo + streaming 4K</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50 transition-colors" itemProp="row">
+                      <td className="px-6 py-4 font-semibold text-gray-900">900 Mbps</td>
+                      <td className="px-6 py-4 text-gray-700">$120,000 - $180,000/mes</td>
+                      <td className="px-6 py-4 text-gray-700">$130,000 - $180,000/mes</td>
+                      <td className="px-6 py-4 text-gray-700 font-bold text-green-700">$110,000 - $150,000/mes</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">5+ personas, gaming + múltiples 4K</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-center text-sm text-gray-500 mt-4">
+                * Precios aproximados. Varían según promociones, zona y servicios adicionales. Última actualización: Enero 2026
+              </p>
             </div>
           </div>
         </div>

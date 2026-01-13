@@ -12,6 +12,8 @@ import {
   MessageCircle
 } from 'lucide-react';
 import QuickCallForm from '@/components/QuickCallForm';
+import LastUpdated from '@/components/LastUpdated';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Preguntas Frecuentes sobre Internet en Colombia 2026 | FAQ Completo',
@@ -160,16 +162,108 @@ const faqData = [
         answer: "Sí, si trabajas desde casa puedes deducir un porcentaje del servicio de internet como gasto deducible. Consulta con un contador para determinar el porcentaje válido según tu situación laboral y mantén las facturas organizadas."
       }
     ]
+  },
+
+  // Tecnología
+  {
+    category: "Tecnología y Equipos",
+    questions: [
+      {
+        question: "¿Qué es FTTH (Fibra hasta el Hogar)?",
+        answer: "FTTH significa Fiber To The Home. Es fibra óptica directa desde el nodo del operador hasta tu casa sin intermediarios de cobre o cable. Ofrece las mejores velocidades (hasta 10 Gbps), latencia ultra baja (5-10ms) y velocidades simétricas. Es la mejor tecnología disponible en 2026."
+      },
+      {
+        question: "¿Qué router me recomiendan comprar?",
+        answer: "Para hogares normales: TP-Link Archer AX50 o ASUS RT-AX55. Para gaming: ASUS ROG Rapture o Netgear Nighthawk. Para casas grandes: sistemas mesh como Google Nest WiFi o TP-Link Deco. Asegúrate que soporte WiFi 6 (802.11ax) y banda dual 2.4GHz/5GHz."
+      },
+      {
+        question: "¿WiFi 5 GHz es mejor que 2.4 GHz?",
+        answer: "Sí, para la mayoría de usos. WiFi 5 GHz ofrece velocidades mucho más altas (hasta 2 Gbps vs 600 Mbps), menos interferencia de otros dispositivos, pero menor alcance. Usa 5 GHz para dispositivos cercanos al router (PC, consolas, TV) y 2.4 GHz para dispositivos lejanos (cámaras, smart home)."
+      },
+      {
+        question: "¿Necesito un amplificador WiFi o repetidor?",
+        answer: "Solo si tu casa es grande (150m²+) o tiene paredes gruesas. Mejor opción: sistema mesh (Google WiFi, Eero, Deco) que crea una red unificada. Los repetidores tradicionales reducen velocidad a la mitad. Como última opción, usa Powerline (internet por la red eléctrica)."
+      }
+    ]
+  },
+
+  // Cobertura y Disponibilidad
+  {
+    category: "Cobertura y Disponibilidad",
+    questions: [
+      {
+        question: "¿Cómo sé si hay fibra óptica disponible en mi dirección?",
+        answer: "Contacta directamente a cada operador (Claro, Movistar, ETB) con tu dirección exacta incluyendo torre y apartamento. Los mapas de cobertura online son referenciales. Solo un estudio técnico confirma 100% la disponibilidad. En edificios nuevos puede tardar 30-60 días habilitar fibra."
+      },
+      {
+        question: "¿ETB solo funciona en Bogotá?",
+        answer: "Principalmente sí. ETB tiene cobertura en Bogotá y 6 municipios cercanos: Chía, Cota, Cajicá, Zipaquirá, Facatativá y Soacha. Fuera de estas zonas, debes contratar Claro o Movistar que tienen cobertura nacional en 25+ ciudades."
+      },
+      {
+        question: "¿Qué operadores hay en Medellín, Cali y Barranquilla?",
+        answer: "En Medellín: Claro, Movistar, UNE-EPM. En Cali: Claro, Movistar. En Barranquilla: Claro, Movistar. UNE-EPM domina en Medellín con excelente fibra óptica. Para otras ciudades, Claro y Movistar son las opciones principales."
+      },
+      {
+        question: "¿Puedo contratar internet en zona rural?",
+        answer: "Las opciones son limitadas. Algunas alternativas: internet satelital (Starlink, HughesNet), internet móvil 4G/5G con router (Claro, Movistar), WiMAX regional. Starlink es la mejor opción técnica pero costosa ($300,000-500,000/mes). Claro y Movistar ofrecen planes 4G ilimitados desde $80,000/mes."
+      }
+    ]
+  },
+
+  // Problemas Comunes
+  {
+    category: "Problemas y Soluciones",
+    questions: [
+      {
+        question: "¿Qué hago si mi internet se cae constantemente?",
+        answer: "Primer paso: reinicia el router (desconectar 30 segundos). Verifica cables y conexiones. Prueba velocidad por cable ethernet. Si persiste: llama al operador reportando horarios exactos de caída, solicita cambio de router, verifica si es problema del edificio. Documenta todo por escrito para reclamar descuentos."
+      },
+      {
+        question: "¿Cómo reclamo cuando el servicio es malo?",
+        answer: "1) Documenta el problema (screenshots de velocidad, horarios). 2) Llama y pide número de ticket. 3) Si no resuelven en 5 días, escribe a atención al cliente por email/Twitter. 4) Si persiste 15+ días, queja formal ante SIC (Superintendencia). 5) Exige descuento o compensación."
+      },
+      {
+        question: "¿Puedo cancelar el servicio antes de cumplir permanencia?",
+        answer: "Sí, pero pagarás multa (típicamente el valor de meses restantes). Alternativas: 1) Negocia con nuevo operador que asuma la multa. 2) Si el servicio es pésimo, documenta y reclama ante SIC para cancelar sin multa. 3) Algunos contratos permiten traslado a otra persona (cesión de contrato)."
+      },
+      {
+        question: "¿Por qué mi velocidad WiFi es más lenta que por cable?",
+        answer: "Es normal. WiFi siempre es más lento que cable ethernet. Causas: interferencia de vecinos, distancia al router, paredes gruesas, dispositivos antiguos (WiFi 4 o anteriores). Solución: ubica router central, usa WiFi 5 GHz, actualiza adaptadores WiFi, considera cable ethernet para PC/consola."
+      }
+    ]
+  },
+
+  // Seguridad
+  {
+    category: "Seguridad y Privacidad",
+    questions: [
+      {
+        question: "¿Cómo protejo mi red WiFi de intrusos?",
+        answer: "Pasos esenciales: 1) Cambia contraseña por defecto del router. 2) Usa WPA3 o mínimo WPA2. 3) Desactiva WPS. 4) Oculta nombre de red (SSID) opcional. 5) Actualiza firmware regularmente. 6) Usa contraseña fuerte (16+ caracteres, letras, números, símbolos). 7) Monitorea dispositivos conectados."
+      },
+      {
+        question: "¿Es seguro hacer home banking con WiFi público?",
+        answer: "NO. WiFi público es muy inseguro. Si necesitas hacerlo: 1) Usa VPN (NordVPN, ExpressVPN). 2) Verifica URL tenga https://. 3) Nunca guardes contraseñas. 4) Usa datos móviles en lugar de WiFi público para operaciones bancarias. El riesgo de robo de datos es alto."
+      },
+      {
+        question: "¿Debo usar VPN en mi internet del hogar?",
+        answer: "No es esencial, pero recomendado para: 1) Mayor privacidad (oculta tu IP). 2) Acceder contenido geo-bloqueado (Netflix USA). 3) Torrenting seguro. 4) Trabajo remoto con datos sensibles. VPNs recomendadas: NordVPN, ExpressVPN, Surfshark. Reduce velocidad 10-30%."
+      }
+    ]
   }
 ];
 
 const categories = [
   "Velocidades y Planes",
-  "Operadores", 
+  "Operadores",
   "Instalación y Soporte",
   "Precios y Facturación",
   "Gaming y Streaming",
-  "Teletrabajo"
+  "Teletrabajo",
+  "Tecnología y Equipos",
+  "Cobertura y Disponibilidad",
+  "Problemas y Soluciones",
+  "Seguridad y Privacidad"
 ];
 
 export default function FAQPage() {
@@ -245,6 +339,16 @@ export default function FAQPage() {
       {/* Search Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Breadcrumbs items={[{ name: 'Preguntas Frecuentes', url: 'https://comparadorinternet.co/faq' }]} />
+
+            <LastUpdated
+              date="2026-01-12"
+              nextReview="2026-02-12"
+              message="Actualizamos preguntas frecuentes mensualmente según consultas de usuarios"
+            />
+          </div>
+
           <div className="max-w-2xl mx-auto">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={24} />
