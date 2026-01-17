@@ -105,6 +105,14 @@ export const WebsiteSchema = () => {
     "publisher": {
       "@id": "https://comparadorinternet.co/#organization"
     },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://comparadorinternet.co/buscar?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
     "inLanguage": "es-CO",
     "mainEntity": {
       "@type": "ItemList",
