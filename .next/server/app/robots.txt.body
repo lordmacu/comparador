@@ -2,6 +2,13 @@ User-Agent: *
 Allow: /
 Disallow: /api/
 Disallow: /private/
+Disallow: /*.ico$
+Disallow: /*.png$
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.gif$
+Disallow: /*.svg$
+Disallow: /*.webp$
 
 User-Agent: Googlebot
 Allow: /

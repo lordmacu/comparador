@@ -38,6 +38,7 @@
   "/fibra-optica-bogota/page": "app/fibra-optica-bogota/page.js",
   "/guia-completa/page": "app/guia-completa/page.js",
   "/herramientas/page": "app/herramientas/page.js",
+  "/indexnow.xml/route": "app/indexnow.xml/route.js",
   "/instalacion-internet-bogota/page": "app/instalacion-internet-bogota/page.js",
   "/internet-barato-colombia/page": "app/internet-barato-colombia/page.js",
   "/internet-bogota-cobertura/page": "app/internet-bogota-cobertura/page.js",

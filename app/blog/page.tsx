@@ -6,41 +6,46 @@ import { Clock, Calendar, Tag } from "lucide-react";
 // ISR: Regenera la lista de posts cada 1 hora si hay tráfico
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
-  title: "Blog de Internet Colombia - Guías y Consejos",
-  description: "Artículos, guías y consejos sobre internet en Colombia. Aprende a optimizar tu conexión, elegir el mejor proveedor y más.",
-  keywords: [
-    "blog internet Colombia",
-    "guías internet",
-    "consejos internet",
-    "fibra óptica",
-    "velocidad internet",
-    "internet hogar"
-  ],
-  alternates: {
-    canonical: 'https://comparadorinternet.co/blog',
-  },
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  // Siempre apuntar a la URL canónica sin parámetros de categoría
+  const canonicalUrl = 'https://comparadorinternet.co/blog';
+  
+  return {
     title: "Blog de Internet Colombia - Guías y Consejos",
-    description: "Artículos, guías y consejos sobre internet en Colombia",
-    url: 'https://comparadorinternet.co/blog',
-    type: 'website',
-    locale: 'es_CO',
-    siteName: 'Comparador Internet Colombia',
-    images: [{
-      url: '/og-image.jpg',
-      width: 1200,
-      height: 630,
-      alt: 'Blog Internet Colombia - Guías y Consejos'
-    }]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Blog de Internet Colombia - Guías y Consejos",
-    description: "Artículos, guías y consejos sobre internet en Colombia",
-    images: ['/og-image.jpg'],
-  },
-};
+    description: "Artículos, guías y consejos sobre internet en Colombia. Aprende a optimizar tu conexión, elegir el mejor proveedor y más.",
+    keywords: [
+      "blog internet Colombia",
+      "guías internet",
+      "consejos internet",
+      "fibra óptica",
+      "velocidad internet",
+      "internet hogar"
+    ],
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: "Blog de Internet Colombia - Guías y Consejos",
+      description: "Artículos, guías y consejos sobre internet en Colombia",
+      url: canonicalUrl,
+      type: 'website',
+      locale: 'es_CO',
+      siteName: 'Comparador Internet Colombia',
+      images: [{
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Blog Internet Colombia - Guías y Consejos'
+      }]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: "Blog de Internet Colombia - Guías y Consejos",
+      description: "Artículos, guías y consejos sobre internet en Colombia",
+      images: ['/og-image.jpg'],
+    },
+  };
+}
 
 export default function BlogPage() {
   const posts = getAllPosts();

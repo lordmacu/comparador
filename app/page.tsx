@@ -16,36 +16,41 @@ import QuickCallForm from '@/components/QuickCallForm';
 import { Zap, Globe, Phone, Gift, MapPin } from 'lucide-react';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Comparador Internet Colombia 2026 | Planes desde $42.000/mes',
-  description: 'Compara planes de internet desde $42.000/mes. Claro, Movistar y ETB con fibra óptica hasta 900 Mbps. Te ayudamos a encontrar el mejor plan para tu hogar. Cotiza gratis.',
-  keywords: [
-    'internet Colombia',
-    'comparador internet',
-    'internet Claro',
-    'internet Movistar',
-    'internet ETB',
-    'fibra óptica Colombia',
-    'mejor internet Bogotá 2026',
-    'comparar planes internet Bogotá',
-    'internet gaming Bogotá',
-    'internet teletrabajo Colombia',
-    'planes internet hogar',
-    'contratar internet Colombia',
-    'ofertas internet 2026',
-    'ETB vs Claro vs Movistar',
-    'internet rápido Colombia'
-  ],
-  alternates: {
-    canonical: 'https://comparadorinternet.co',
-  },
-  openGraph: {
-    title: 'Comparador de Internet en Colombia 2026',
-    description: 'Compara servicios de internet de Claro, Movistar y ETB',
-    url: 'https://comparadorinternet.co',
-    type: 'website',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  // Siempre apuntar a la URL canónica sin parámetros de búsqueda
+  const canonicalUrl = 'https://comparadorinternet.co';
+  
+  return {
+    title: 'Comparador Internet Colombia 2026 | Planes desde $42.000/mes',
+    description: 'Compara planes de internet desde $42.000/mes. Claro, Movistar y ETB con fibra óptica hasta 900 Mbps. Te ayudamos a encontrar el mejor plan para tu hogar. Cotiza gratis.',
+    keywords: [
+      'internet Colombia',
+      'comparador internet',
+      'internet Claro',
+      'internet Movistar',
+      'internet ETB',
+      'fibra óptica Colombia',
+      'mejor internet Bogotá 2026',
+      'comparar planes internet Bogotá',
+      'internet gaming Bogotá',
+      'internet teletrabajo Colombia',
+      'planes internet hogar',
+      'contratar internet Colombia',
+      'ofertas internet 2026',
+      'ETB vs Claro vs Movistar',
+      'internet rápido Colombia'
+    ],
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: 'Comparador de Internet en Colombia 2026',
+      description: 'Compara servicios de internet de Claro, Movistar y ETB',
+      url: canonicalUrl,
+      type: 'website',
+    },
+  };
+}
 
 // ISR: Revalidar cada hora (3600 segundos)
 export const revalidate = 3600;

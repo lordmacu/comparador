@@ -8,7 +8,17 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/private/'],
+        disallow: [
+          '/api/', 
+          '/private/',
+          '/*.ico$',
+          '/*.png$',
+          '/*.jpg$',
+          '/*.jpeg$',
+          '/*.gif$',
+          '/*.svg$',
+          '/*.webp$',
+        ],
       },
       {
         userAgent: 'Googlebot',

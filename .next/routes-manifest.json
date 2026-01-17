@@ -341,6 +341,12 @@
       "namedRegex": "^/herramientas(?:/)?$"
     },
     {
+      "page": "/indexnow.xml",
+      "regex": "^/indexnow\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/indexnow\\.xml(?:/)?$"
+    },
+    {
       "page": "/instalacion-internet-bogota",
       "regex": "^/instalacion\\-internet\\-bogota(?:/)?$",
       "routeKeys": {},

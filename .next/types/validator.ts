@@ -668,6 +668,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/indexnow.xml/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/indexnow.xml">> = Specific
+  const handler = {} as typeof import("../../app/indexnow.xml/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/news-sitemap.xml/route.ts
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/news-sitemap.xml">> = Specific
