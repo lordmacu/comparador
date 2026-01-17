@@ -12,8 +12,8 @@ const execAsync = promisify(exec);
 dotenv.config();
 
 // ==================== CONFIGURACIÓN ====================
-const MODEL_WRITING = 'gemini-2.5-pro-preview-05-06';
-const MODEL_IMAGE = 'gemini-2.0-flash-exp';
+const MODEL_WRITING = 'gemini-3-pro-preview';
+const MODEL_IMAGE = 'gemini-2.5-flash-image';
 
 // ==================== OBTENER TEMA DEL ARGUMENTO ====================
 const topic = process.argv[2];
