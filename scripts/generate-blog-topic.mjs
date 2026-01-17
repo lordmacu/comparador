@@ -12,7 +12,7 @@ const execAsync = promisify(exec);
 dotenv.config();
 
 // ==================== CONFIGURACIÓN ====================
-const MODEL_WRITING = 'gemini-2.5-pro-preview-06-05';
+const MODEL_WRITING = 'gemini-2.5-pro-preview-05-06';
 const MODEL_IMAGE = 'gemini-2.0-flash-exp';
 
 // ==================== OBTENER TEMA DEL ARGUMENTO ====================
