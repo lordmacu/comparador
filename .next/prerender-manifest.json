@@ -723,6 +723,31 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/blog/claro-internet-2026-precios-asesor-bogota": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/claro-internet-2026-precios-asesor-bogota.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/blog/claro-vs-movistar-vs-etb-bogota": {
       "experimentalBypassFor": [
         {
@@ -839,6 +864,31 @@
       "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/como-saber-si-hay-fibra-optica-en-tu-direccion-bogota.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blog/etb-internet-bogota-2026-precios-fibra-optica": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/etb-internet-bogota-2026-precios-fibra-optica.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1114,6 +1164,31 @@
       "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/mejores-proveedores-internet-bogota.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blog/movistar-internet-bogota-2026-precios-fibra-asesor": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/movistar-internet-bogota-2026-precios-fibra-asesor.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -3434,8 +3509,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "c3dc77e1cf7b74c6513a071c067c4ab5",
-    "previewModeSigningKey": "ec0571033b0cdd7e2b39c2134738ca788cbad0414c506990136aab05b24acee9",
-    "previewModeEncryptionKey": "a85d5d9258139806e9ff2b1554311c2dca6cf1d268b14b7dfd0907c7f429943e"
+    "previewModeId": "7b10d3a4299af2658a6519226b6067ea",
+    "previewModeSigningKey": "13d67a9e07814d840160d6ad150732d1731c9c2d8b6b9d40ab6e9428ea59fb39",
+    "previewModeEncryptionKey": "abe061a15ccd0c4fe05559f28e9c71b78e51e0b3c317aa5cc1231fd6f433a40d"
   }
 }
