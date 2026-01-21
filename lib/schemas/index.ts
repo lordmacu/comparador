@@ -84,21 +84,6 @@ export function generateServiceSchema(service: Service, provider: Provider) {
       "ratingCount": ratings.reviewCount,
       "reviewCount": ratings.reviewCount
     },
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": ratings.rating,
-          "bestRating": 5
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "Comparador Internet Colombia"
-        },
-        "reviewBody": `Servicio ${service.name} de ${provider.name} evaluado por usuarios verificados en velocidad, estabilidad y soporte técnico.`
-      }
-    ],
     "areaServed": {
       "@type": "Country",
       "name": "Colombia"
