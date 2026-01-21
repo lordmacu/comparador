@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getProviderSlugs } from '@/lib/data';
-import { getAllPosts } from '@/lib/blog';
+import { getAllPosts, getAllCategories } from '@/lib/blog';
+import { slugifyCategory } from '@/lib/blog-utils';
 
 // Regenerar sitemap cada 1 hora
 export const revalidate = 3600;
@@ -9,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://comparadorinternet.co'; // CAMBIAR por tu dominio real
   const providerSlugs = getProviderSlugs();
   const blogPosts = getAllPosts();
+  const blogCategories = getAllCategories();
 
   // Barrios de Bogotá
   const barrios = [
@@ -408,6 +410,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+    // Categorías de Blog
+    ...blogCategories.map((category) => ({
+      url: `${baseUrl}/blog/categoria/${slugifyCategory(category)}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    })),
+    // Blog Posts
     })),
     ...blogPosts.map((post) => ({
       url: `${baseUrl}/blog/${post.slug}`,

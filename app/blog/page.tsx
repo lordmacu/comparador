@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts, getAllCategories } from "@/lib/blog";
+import { slugifyCategory } from "@/lib/blog-utils";
 import { Clock, Calendar, Tag } from "lucide-react";
 
 // ISR: Regenera la lista de posts cada 1 hora si hay tráfico
@@ -93,12 +94,13 @@ export default function BlogPage() {
         {/* Categories */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
-            <span
+            <Link
               key={category}
-              className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
+              href={`/blog/categoria/${slugifyCategory(category)}`}
+              className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
             >
               {category}
-            </span>
+            </Link>
           ))}
         </div>
 

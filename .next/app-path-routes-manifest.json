@@ -9,6 +9,7 @@
   "/asesores/page": "/asesores",
   "/barrios/[barrio]/page": "/barrios/[barrio]",
   "/blog/[slug]/page": "/blog/[slug]",
+  "/blog/categoria/[categoria]/page": "/blog/categoria/[categoria]",
   "/blog/feed.xml/route": "/blog/feed.xml",
   "/blog/page": "/blog",
   "/calculadora/page": "/calculadora",

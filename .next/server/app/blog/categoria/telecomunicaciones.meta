@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/blog/layout,_N_T_/blog/categoria/layout,_N_T_/blog/categoria/[categoria]/layout,_N_T_/blog/categoria/[categoria]/page,_N_T_/blog/categoria/telecomunicaciones"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/blog/categoria/$d$categoria/__PAGE__",
+    "/blog/categoria/$d$categoria",
+    "/blog/categoria",
+    "/blog",
+    "/_index",
+    "/_head"
+  ]
+}

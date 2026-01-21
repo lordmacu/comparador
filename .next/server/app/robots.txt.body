@@ -2,8 +2,6 @@ User-Agent: *
 Allow: /
 Disallow: /api/
 Disallow: /private/
-Disallow: /blog?*
-Disallow: /?q=*
 Disallow: /viviendas/*
 Disallow: /*.ico$
 Disallow: /*.png$
@@ -17,17 +15,13 @@ User-Agent: Googlebot
 Allow: /
 Disallow: /api/
 Disallow: /private/
-Disallow: /blog?*
-Disallow: /?q=*
-Disallow: /viviendas/edificio
+Disallow: /viviendas/*
 
 User-Agent: Bingbot
 Allow: /
 Disallow: /api/
 Disallow: /private/
-Disallow: /blog?*
-Disallow: /?q=*
-Disallow: /viviendas/edificio
+Disallow: /viviendas/*
 
 User-Agent: GPTBot
 Allow: /

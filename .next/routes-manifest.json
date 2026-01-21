@@ -73,6 +73,14 @@
       "namedRegex": "^/barrios/(?<nxtPbarrio>[^/]+?)(?:/)?$"
     },
     {
+      "page": "/blog/categoria/[categoria]",
+      "regex": "^/blog/categoria/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcategoria": "nxtPcategoria"
+      },
+      "namedRegex": "^/blog/categoria/(?<nxtPcategoria>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/blog/[slug]",
       "regex": "^/blog/([^/]+?)(?:/)?$",
       "routeKeys": {
