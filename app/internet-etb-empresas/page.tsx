@@ -99,40 +99,70 @@ export default function InternetETBEmpresasPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       
-      <section className="bg-gradient-to-br from-blue-700 via-blue-600 to-blue-500 text-white py-20">
-        <div className="container-custom">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Internet ETB Empresas<br />
-              <span className="text-blue-200">Fibra 100% para tu Negocio</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 text-blue-50">
-              Planes empresariales con fibra óptica 100% propia, IP Fija y soporte prioritario. 
-              La mejor conectividad para empresas en Bogotá. <strong>Desde $149.900/mes</strong>
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <Link 
-                href="/calculadora-empresas"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all inline-flex items-center gap-2 shadow-lg"
-              >
-                <Calculator className="w-5 h-5" />
-                Cotizar ETB
-              </Link>
-              <Link 
-                href="/comparar"
-                className="bg-blue-500/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-500/30 transition-all"
-              >
-                Comparar Operadores
-              </Link>
+      <section className="bg-gradient-to-br from-blue-700 via-blue-600 to-blue-500 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'radial-gradient(#3b82f6 1px, transparent 1px)', backgroundSize: '40px 40px'}}></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 px-4 py-2 rounded-full mb-6">
+                <Building className="w-5 h-5 text-blue-200" />
+                <span className="font-semibold text-blue-100 uppercase tracking-wide text-sm">Internet ETB Empresas</span>
+              </div>
+
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Internet ETB Empresas<br />
+                <span className="text-blue-200">Fibra 100% para tu Negocio</span>
+              </h1>
+              
+              <p className="text-xl text-blue-50 mb-8 max-w-lg">
+                Planes empresariales con fibra óptica 100% propia, IP Fija y soporte prioritario. 
+                La mejor conectividad para empresas en Bogotá. <strong>Desde $149.900/mes</strong>
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Link 
+                  href="/calculadora-empresas"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all inline-flex items-center justify-center gap-2 shadow-lg"
+                >
+                  <Calculator className="w-5 h-5" />
+                  Cotizar ETB
+                </Link>
+                <Link 
+                  href="/comparar"
+                  className="bg-white/10 border border-white/20 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all text-center"
+                >
+                  Comparar Operadores
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-200">100%</div>
+                  <div className="text-sm text-blue-100">Fibra Propia</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-200">99.9%</div>
+                  <div className="text-sm text-blue-100">SLA Uptime</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-200">24/7</div>
+                  <div className="text-sm text-blue-100">Soporte</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+              <h2 className="text-white text-xl font-bold mb-2">Deja tu teléfono y te llamamos</h2>
+              <p className="text-blue-100 text-sm mb-6">Recibe asesoría especializada ETB Empresas</p>
+              <QuickCallForm buttonColor="#2563eb" provider="ETB Empresas" />
             </div>
           </div>
         </div>
       </section>
 
       <section className="py-16">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Ventajas de ETB Empresas</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -191,7 +221,7 @@ export default function InternetETBEmpresasPage() {
       </section>
 
       <section className="py-16 bg-blue-50">
-        <div className="container-custom text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Ver Planes por Tipo de Negocio</h2>
           <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <Link href="/internet-etb-locales" className="bg-white p-6 rounded-lg hover:shadow-lg transition-all">
@@ -211,8 +241,8 @@ export default function InternetETBEmpresasPage() {
       </section>
 
       <section className="py-16">
-        <div className="container-custom max-w-2xl">
-          <QuickCallForm />
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <QuickCallForm provider="ETB Empresas" buttonColor="#2563eb" />
         </div>
       </section>
 

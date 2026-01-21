@@ -97,40 +97,69 @@ export default function InternetMovistarConsultoriosPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       
-      <section className="bg-gradient-to-br from-green-700 via-green-600 to-green-500 text-white py-20">
-        <div className="container-custom">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Internet Movistar Consultorios<br />
-              <span className="text-green-200">Conectividad Segura para Salud</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 text-green-50">
-              Internet empresarial para consultorios médicos, odontológicos y clínicas. 
-              Telemedicina HD, historia clínica segura e IP Fija. <strong>Desde $139.900/mes</strong>
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <Link 
-                href="/calculadora-empresas"
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition-all inline-flex items-center gap-2 shadow-lg"
-              >
-                <Calculator className="w-5 h-5" />
-                Cotizar para mi Consultorio
-              </Link>
-              <Link 
-                href="/comparar"
-                className="bg-green-500/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-500/30 transition-all"
-              >
-                Comparar Operadores
-              </Link>
+      <section className="bg-gradient-to-br from-green-700 via-green-600 to-green-500 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'radial-gradient(#22c55e 1px, transparent 1px)', backgroundSize: '40px 40px'}}></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block bg-green-500/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-green-400/30">
+                Internet Empresarial Movistar
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Internet Movistar Consultorios<br />
+                <span className="text-green-200">Conectividad Segura para Salud</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl mb-8 text-green-100">
+                Internet empresarial para consultorios médicos, odontológicos y clínicas. 
+                Telemedicina HD, historia clínica segura e IP Fija. <strong>Desde $139.900/mes</strong>
+              </p>
+              
+              <div className="flex flex-wrap gap-4 mb-8">
+                <Link 
+                  href="/calculadora-empresas"
+                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition-all inline-flex items-center gap-2 shadow-lg"
+                >
+                  <Calculator className="w-5 h-5" />
+                  Cotizar para mi Consultorio
+                </Link>
+                <Link 
+                  href="/comparar"
+                  className="bg-green-500/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-500/30 transition-all"
+                >
+                  Comparar Operadores
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-green-400/30">
+                <div>
+                  <div className="text-3xl font-bold mb-1">IP Fija</div>
+                  <div className="text-sm text-green-200">Incluida</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold mb-1">Telemedicina</div>
+                  <div className="text-sm text-green-200">HD</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold mb-1">VPN</div>
+                  <div className="text-sm text-green-200">Segura</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+              <h2 className="text-white text-xl font-bold mb-2">Deja tu teléfono y te llamamos</h2>
+              <p className="text-green-100 text-sm mb-6">Recibe asesoría especializada Movistar Consultorios</p>
+              <QuickCallForm buttonColor="#22c55e" provider="Movistar Consultorios" />
             </div>
           </div>
         </div>
       </section>
 
       <section className="py-16">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Movistar para el Sector Salud</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -189,7 +218,7 @@ export default function InternetMovistarConsultoriosPage() {
       </section>
 
       <section className="py-16 bg-green-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Todo lo que Necesita tu Consultorio</h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -219,7 +248,7 @@ export default function InternetMovistarConsultoriosPage() {
       </section>
 
       <section className="py-16 bg-white">
-        <div className="container-custom text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Más Soluciones Movistar por Sector</h2>
           <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             <Link href="/internet-movistar-empresas" className="bg-green-50 p-6 rounded-lg hover:shadow-lg transition-all">
@@ -239,8 +268,8 @@ export default function InternetMovistarConsultoriosPage() {
       </section>
 
       <section className="py-16 bg-gray-50">
-        <div className="container-custom max-w-2xl">
-          <QuickCallForm />
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <QuickCallForm provider="Movistar Consultorios" buttonColor="#22c55e" />
         </div>
       </section>
 
