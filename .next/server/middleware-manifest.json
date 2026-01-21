@@ -11,42 +11,14 @@
       "page": "/",
       "matchers": [
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\\\.json))?[\\/#\\?]?$",
-          "originalSource": "/"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/blog(\\\\.json)?[\\/#\\?]?$",
-          "originalSource": "/blog"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/viviendas(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
-          "originalSource": "/viviendas/:path*"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/internet-([^\\/#\\?]+?)-bogota(\\\\.json)?[\\/#\\?]?$",
-          "originalSource": "/internet-:barrio-bogota"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/mejor-internet-([^\\/#\\?]+?)-bogota(\\\\.json)?[\\/#\\?]?$",
-          "originalSource": "/mejor-internet-:caso-bogota"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/internet-([^\\/#\\?]+?)-bogota(\\\\.json)?[\\/#\\?]?$",
-          "originalSource": "/internet-:velocidad-bogota"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/internet-para-([^\\/#\\?]+?)-bogota(\\\\.json)?[\\/#\\?]?$",
-          "originalSource": "/internet-para-:vivienda-bogota"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/soluciones(?:\\/([^\\/#\\?]+?))-bogota(\\\\.json)?[\\/#\\?]?$",
-          "originalSource": "/soluciones/:solucion-bogota"
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/((?!api|_next\\/static|_next\\/image|favicon.ico).*))(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/((?!api|_next/static|_next/image|favicon.ico).*)"
         }
       ],
       "wasm": [],
       "assets": [],
       "env": {
-        "__NEXT_BUILD_ID": "TQMVmAlFj1GeoICUeEEnx",
+        "__NEXT_BUILD_ID": "4rCxWAlXihxwZ0296-PYt",
         "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "T0mHh9n3mlhbB0bVd21i6DJ7lOwZ0rUYy1yYcZEfoEk=",
         "__NEXT_PREVIEW_MODE_ID": "7b10d3a4299af2658a6519226b6067ea",
         "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "abe061a15ccd0c4fe05559f28e9c71b78e51e0b3c317aa5cc1231fd6f433a40d",

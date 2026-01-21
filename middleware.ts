@@ -129,13 +129,13 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/',
-    '/blog',
-    '/viviendas/:path*',
-    '/internet-:barrio-bogota',
-    '/mejor-internet-:caso-bogota',
-    '/internet-:velocidad-bogota',
-    '/internet-para-:vivienda-bogota',
-    '/soluciones/:solucion-bogota',
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 };
