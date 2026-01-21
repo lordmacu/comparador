@@ -1,7 +1,7 @@
 var R=require("../chunks/ssr/[turbopack]_runtime.js")("server/app/page.js")
 R.c("server/chunks/ssr/[root-of-the-server]__aac246b8._.js")
 R.c("server/chunks/ssr/app_page_tsx_5c04f47b._.js")
-R.c("server/chunks/ssr/_a8f1d46e._.js")
+R.c("server/chunks/ssr/_d59391e1._.js")
 R.c("server/chunks/ssr/components_BenefitCard_tsx_f5612942._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_4b9a0874._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__c7fc5542._.js")
