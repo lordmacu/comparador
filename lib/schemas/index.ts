@@ -133,7 +133,7 @@ export function generateWebSiteSchema() {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://comparadorinternet.co/?q={search_term_string}"
+        "urlTemplate": "https://comparadorinternet.co/blog?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }

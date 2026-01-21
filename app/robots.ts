@@ -11,6 +11,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/', 
           '/private/',
+          '/blog?*',  // Bloquear páginas de blog con filtros de categoría
+          '/?q=*',    // Bloquear búsquedas con parámetros
+          '/viviendas/*',  // Bloquear rutas antiguas de viviendas
           '/*.ico$',
           '/*.png$',
           '/*.jpg$',
@@ -23,12 +26,24 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/api/', '/private/'],
+        disallow: [
+          '/api/', 
+          '/private/',
+          '/blog?*',  // Bloquear páginas de blog con query params (category filters)
+          '/?q=*',    // Bloquear búsquedas con parámetros
+          '/viviendas/edificio',  // Bloquear ruta antigua, canonical apunta a /internet-para-edificio-bogota
+        ],
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/api/', '/private/'],
+        disallow: [
+          '/api/', 
+          '/private/',
+          '/blog?*',
+          '/?q=*',
+          '/viviendas/edificio',
+        ],
       },
       // Permitir bots de IA
       {

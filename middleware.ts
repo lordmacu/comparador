@@ -2,7 +2,37 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, searchParams } = request.nextUrl;
+
+  // Bloquear URLs con query params problemáticos y redirigir a versión canónica
+  if (pathname === '/blog' && searchParams.has('category')) {
+    // Redirigir /blog?category=X a /blog (canónico)
+    const url = request.nextUrl.clone();
+    url.search = ''; // Eliminar todos los query params
+    return NextResponse.redirect(url, 301);
+  }
+
+  // Bloquear URLs con query param q no válido (como {search_term_string})
+  if (searchParams.has('q')) {
+    const qValue = searchParams.get('q');
+    if (!qValue || qValue.includes('{') || qValue.includes('}') || qValue.length < 2) {
+      // Redirigir a la página sin query params
+      const url = request.nextUrl.clone();
+      url.search = '';
+      return NextResponse.redirect(url, 301);
+    }
+  }
+
+  // Bloquear acceso directo a /viviendas/* (redirigir a versión canónica SEO-friendly)
+  if (pathname.startsWith('/viviendas/')) {
+    const viviendaMatch = pathname.match(/^\/viviendas\/(apartamento|casa|oficina|edificio)$/);
+    if (viviendaMatch) {
+      const vivienda = viviendaMatch[1];
+      const url = request.nextUrl.clone();
+      url.pathname = `/internet-para-${vivienda}-bogota`;
+      return NextResponse.redirect(url, 301);
+    }
+  }
 
   // Detectar rutas de barrios: internet-{barrio}-bogota
   const barrioMatch = pathname.match(/^\/internet-([a-z-]+)-bogota$/);
@@ -84,6 +114,9 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    '/',
+    '/blog',
+    '/viviendas/:path*',
     '/internet-:barrio-bogota',
     '/mejor-internet-:caso-bogota',
     '/internet-:velocidad-bogota',
