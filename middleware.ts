@@ -7,19 +7,24 @@ export function middleware(request: NextRequest) {
   // Redirigir /blog?category=X a /blog/categoria/slug SEO-friendly
   if (pathname === '/blog' && searchParams.has('category')) {
     const category = searchParams.get('category');
-    if (category) {
+    if (category && category.trim().length > 0) {
       // Slugificar la categoría (inline para evitar importar en middleware)
       const slug = category
+        .trim()
         .toLowerCase()
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-+|-+$/g, '');
+        .replace(/[\u0300-\u036f]/g, '') // Remover acentos
+        .replace(/[^a-z0-9\s]+/g, '') // Mantener solo letras, números y espacios
+        .replace(/\s+/g, '-') // Reemplazar espacios con guiones
+        .replace(/-+/g, '-') // Remover guiones duplicados
+        .replace(/^-+|-+$/g, ''); // Remover guiones al inicio/final
       
-      const url = request.nextUrl.clone();
-      url.pathname = `/blog/categoria/${slug}`;
-      url.search = '';
-      return NextResponse.redirect(url, 301);
+      if (slug) {
+        const url = request.nextUrl.clone();
+        url.pathname = `/blog/categoria/${slug}`;
+        url.search = '';
+        return NextResponse.redirect(url, 301);
+      }
     }
   }
 
