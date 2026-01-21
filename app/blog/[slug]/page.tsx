@@ -206,13 +206,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "@type": ["BlogPosting", "NewsArticle"],
     "headline": post.title,
     "description": post.description,
-    "image": post.image || "https://comparadorinternet.co/og-image.jpg",
+    "image": {
+      "@type": "ImageObject",
+      "url": post.image || "https://comparadorinternet.co/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "thumbnailUrl": post.thumbnailImage || post.image || "https://comparadorinternet.co/og-image.jpg",
     "datePublished": post.publishedAt,
     "dateModified": post.updatedAt || post.publishedAt,
     "author": {
       "@type": "Person",
       "name": post.author,
+      "url": "https://comparadorinternet.co/empresa"
     },
     "publisher": {
       "@type": "Organization",
@@ -326,9 +332,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       "@type": "Article",
       "headline": post.title,
       "url": `https://comparadorinternet.co/blog/${post.slug}`,
+      "image": {
+        "@type": "ImageObject",
+        "url": post.image || "https://comparadorinternet.co/og-image.jpg"
+      },
       "author": {
         "@type": "Person",
-        "name": post.author
+        "name": post.author,
+        "url": "https://comparadorinternet.co/empresa"
       },
       "publisher": {
         "@type": "Organization",
