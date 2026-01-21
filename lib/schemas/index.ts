@@ -71,6 +71,10 @@ export function generateServiceSchema(service: Service, provider: Provider) {
       "@type": "Organization",
       "name": provider.name
     },
+    "brand": {
+      "@type": "Brand",
+      "name": provider.name
+    },
     "serviceType": "Internet Service",
     "aggregateRating": {
       "@type": "AggregateRating",
