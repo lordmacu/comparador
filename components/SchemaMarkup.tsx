@@ -124,6 +124,12 @@ export const WebsiteSchema = () => {
           "url": "https://comparadorinternet.co/calculadora",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "COP",
+            "availability": "https://schema.org/InStock"
+          },
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.6",
