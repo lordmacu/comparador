@@ -122,7 +122,15 @@ export const WebsiteSchema = () => {
           "@type": "SoftwareApplication",
           "name": "Calculadora de Internet",
           "url": "https://comparadorinternet.co/calculadora",
-          "applicationCategory": "UtilitiesApplication"
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "87",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
         },
         {
           "@type": "WebPage",
