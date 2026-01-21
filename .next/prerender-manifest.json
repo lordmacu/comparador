@@ -3483,7 +3483,7 @@
       ],
       "routeRegex": "^/blog/categoria/([^/]+?)(?:/)?$",
       "dataRoute": "/blog/categoria/[categoria].rsc",
-      "fallback": false,
+      "fallback": null,
       "fallbackRouteParams": [],
       "dataRouteRegex": "^/blog/categoria/([^/]+?)\\.rsc$",
       "prefetchDataRoute": null,

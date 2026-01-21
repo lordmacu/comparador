@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 
 // ISR: Regenera cada hora
 export const revalidate = 3600;
-export const dynamicParams = false;
+export const dynamicParams = true; // Permitir categorías dinámicas
 
 // Generar páginas estáticas para todas las categorías
 export function generateStaticParams() {
@@ -23,12 +23,15 @@ export async function generateMetadata({
   params: Promise<{ categoria: string }> 
 }): Promise<Metadata> {
   const { categoria: categoriaSlug } = await params;
-  const categoryName = categoryFromSlug(categoriaSlug);
-
+  
+  // Intentar obtener nombre de categoría conocida, o generar desde slug
+  let categoryName = categoryFromSlug(categoriaSlug);
   if (!categoryName) {
-    return {
-      title: 'Categoría no encontrada',
-    };
+    // Convertir slug a nombre legible: "internet-y-telefonia" -> "Internet y Telefonía"
+    categoryName = categoriaSlug
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
   }
 
   const posts = getPostsByCategory(categoryName);
@@ -75,10 +78,15 @@ export default async function CategoryPage({
   params: Promise<{ categoria: string }> 
 }) {
   const { categoria: categoriaSlug } = await params;
-  const categoryName = categoryFromSlug(categoriaSlug);
-
+  
+  // Intentar obtener nombre de categoría conocida, o generar desde slug
+  let categoryName = categoryFromSlug(categoriaSlug);
   if (!categoryName) {
-    notFound();
+    // Convertir slug a nombre legible: "internet-y-telefonia" -> "Internet y Telefonía"
+    categoryName = categoriaSlug
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
   }
 
   const posts = getPostsByCategory(categoryName);
@@ -203,8 +211,95 @@ export default async function CategoryPage({
 
           {/* Blog Posts Grid */}
           {posts.length === 0 ? (
-            <div className="text-center py-16">
-              <p className="text-xl text-gray-600">No hay artículos en esta categoría aún.</p>
+            <div className="max-w-4xl mx-auto">
+              {/* Mensaje de búsqueda */}
+              <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  ¿Estás buscando información sobre {categoryName}?
+                </h2>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Aunque aún no tenemos artículos específicos sobre <strong>{categoryName.toLowerCase()}</strong>, 
+                  estamos constantemente creando contenido nuevo sobre internet y telecomunicaciones en Colombia.
+                </p>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Te invitamos a explorar nuestras otras categorías donde encontrarás guías completas, 
+                  comparativas detalladas y consejos expertos para ayudarte a elegir el mejor servicio de internet 
+                  para tu hogar o empresa.
+                </p>
+                
+                {/* Beneficios */}
+                <div className="grid md:grid-cols-2 gap-4 mb-6">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h3 className="font-semibold text-gray-900 mb-2">📊 Comparación Inteligente</h3>
+                    <p className="text-gray-600 text-sm">
+                      Compara planes de Claro, Movistar y ETB en tiempo real
+                    </p>
+                  </div>
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h3 className="font-semibold text-gray-900 mb-2">💰 Mejor Precio</h3>
+                    <p className="text-gray-600 text-sm">
+                      Encuentra las mejores ofertas y promociones del mercado
+                    </p>
+                  </div>
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h3 className="font-semibold text-gray-900 mb-2">🎯 Asesoría Gratuita</h3>
+                    <p className="text-gray-600 text-sm">
+                      Recibe recomendaciones personalizadas sin costo
+                    </p>
+                  </div>
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h3 className="font-semibold text-gray-900 mb-2">⚡ Rápido y Fácil</h3>
+                    <p className="text-gray-600 text-sm">
+                      Contrata tu plan en minutos desde casa
+                    </p>
+                  </div>
+                </div>
+
+                {/* CTA Principal */}
+                <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl p-6 text-white text-center">
+                  <h3 className="text-2xl font-bold mb-3">
+                    ¿Necesitas Contratar Internet Ya?
+                  </h3>
+                  <p className="text-lg mb-6 opacity-90">
+                    Déjanos ayudarte a encontrar el plan perfecto para tus necesidades
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link
+                      href="/comparar"
+                      className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition-colors text-lg"
+                    >
+                      Ver Planes Disponibles
+                    </Link>
+                    <Link
+                      href="/calculadora"
+                      className="bg-blue-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-400 transition-colors text-lg border-2 border-white"
+                    >
+                      Calcular Mi Plan Ideal
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Explorar otras categorías */}
+              <div className="bg-gray-50 rounded-xl p-8 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Explora Nuestras Categorías
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Encuentra artículos útiles en nuestras otras categorías
+                </p>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {allCategories.map((category) => (
+                    <Link
+                      key={category}
+                      href={`/blog/categoria/${slugifyCategory(category)}`}
+                      className="px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors"
+                    >
+                      {category}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" role="list">
