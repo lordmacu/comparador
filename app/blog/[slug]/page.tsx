@@ -329,25 +329,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
-      "@type": "Article",
-      "headline": post.title,
+      "@type": "Product",
+      "name": post.title.replace(/\s*-\s*Comparador Internet Colombia/gi, ''),
+      "description": post.description,
       "url": `https://comparadorinternet.co/blog/${post.slug}`,
       "image": {
         "@type": "ImageObject",
         "url": post.image || "https://comparadorinternet.co/og-image.jpg"
       },
-      "author": {
-        "@type": "Person",
-        "name": post.author,
-        "url": "https://comparadorinternet.co/empresa"
-      },
-      "publisher": {
+      "brand": {
         "@type": "Organization",
-        "name": "Comparador Internet Colombia",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://comparadorinternet.co/logo.png"
-        }
+        "name": "Comparador Internet Colombia"
+      },
+      "category": "Servicios de Internet",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "1"
       }
     },
     "reviewRating": {
