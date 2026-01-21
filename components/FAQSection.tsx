@@ -21,31 +21,22 @@ export default function FAQSection({ faqs, accentColor }: FAQSectionProps) {
             Preguntas Frecuentes
           </h2>
 
-          <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
+          <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <details
                 key={idx}
                 className="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow group"
-                itemScope
-                itemProp="mainEntity"
-                itemType="https://schema.org/Question"
               >
                 <summary
                   className="font-bold text-lg cursor-pointer transition-colors"
                   style={{ color: '#1f2937' }}
-                  itemProp="name"
                   onMouseEnter={(e) => e.currentTarget.style.color = accentColor}
                   onMouseLeave={(e) => e.currentTarget.style.color = '#1f2937'}
                 >
                   {faq.question}
                 </summary>
-                <div
-                  className="mt-4"
-                  itemScope
-                  itemProp="acceptedAnswer"
-                  itemType="https://schema.org/Answer"
-                >
-                  <p className="text-gray-700 leading-relaxed mb-4" itemProp="text">
+                <div className="mt-4">
+                  <p className="text-gray-700 leading-relaxed mb-4">
                     {faq.answer}
                   </p>
 
