@@ -323,13 +323,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
-      "@type": "Service",
-      "name": post.title.includes('ETB') ? 'Internet ETB' :
-        post.title.includes('Movistar') ? 'Internet Movistar' :
-          post.title.includes('Claro') ? 'Internet Claro' : 'Servicios de Internet Colombia',
-      "provider": {
+      "@type": "Article",
+      "headline": post.title,
+      "url": `https://comparadorinternet.co/blog/${post.slug}`,
+      "author": {
+        "@type": "Person",
+        "name": post.author
+      },
+      "publisher": {
         "@type": "Organization",
-        "name": "Comparador Internet Colombia"
+        "name": "Comparador Internet Colombia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://comparadorinternet.co/logo.png"
+        }
       }
     },
     "reviewRating": {
