@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/internet-locales-comerciales/layout,_N_T_/internet-locales-comerciales/page,_N_T_/internet-locales-comerciales"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/internet-locales-comerciales/__PAGE__",
+    "/internet-locales-comerciales",
+    "/_index",
+    "/_head"
+  ]
+}

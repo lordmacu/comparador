@@ -137,6 +137,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/calculadora-empresas/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/calculadora-empresas">> = Specific
+  const handler = {} as typeof import("../../app/calculadora-empresas/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/calculadora/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/calculadora">> = Specific
@@ -407,6 +416,51 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/internet-claro-consultorios/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-claro-consultorios">> = Specific
+  const handler = {} as typeof import("../../app/internet-claro-consultorios/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-claro-empresas/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-claro-empresas">> = Specific
+  const handler = {} as typeof import("../../app/internet-claro-empresas/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-claro-locales/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-claro-locales">> = Specific
+  const handler = {} as typeof import("../../app/internet-claro-locales/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-claro-restaurantes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-claro-restaurantes">> = Specific
+  const handler = {} as typeof import("../../app/internet-claro-restaurantes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-consultorios-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-consultorios-bogota">> = Specific
+  const handler = {} as typeof import("../../app/internet-consultorios-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/internet-economico/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/internet-economico">> = Specific
@@ -425,10 +479,55 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/internet-empresas-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-empresas-bogota">> = Specific
+  const handler = {} as typeof import("../../app/internet-empresas-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/internet-empresas-pymes/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/internet-empresas-pymes">> = Specific
   const handler = {} as typeof import("../../app/internet-empresas-pymes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-etb-consultorios/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-etb-consultorios">> = Specific
+  const handler = {} as typeof import("../../app/internet-etb-consultorios/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-etb-empresas/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-etb-empresas">> = Specific
+  const handler = {} as typeof import("../../app/internet-etb-empresas/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-etb-locales/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-etb-locales">> = Specific
+  const handler = {} as typeof import("../../app/internet-etb-locales/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-etb-restaurantes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-etb-restaurantes">> = Specific
+  const handler = {} as typeof import("../../app/internet-etb-restaurantes/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -452,10 +551,82 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/internet-locales-comerciales/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-locales-comerciales">> = Specific
+  const handler = {} as typeof import("../../app/internet-locales-comerciales/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-movistar-consultorios/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-movistar-consultorios">> = Specific
+  const handler = {} as typeof import("../../app/internet-movistar-consultorios/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-movistar-empresas/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-movistar-empresas">> = Specific
+  const handler = {} as typeof import("../../app/internet-movistar-empresas/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-movistar-locales/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-movistar-locales">> = Specific
+  const handler = {} as typeof import("../../app/internet-movistar-locales/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-movistar-restaurantes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-movistar-restaurantes">> = Specific
+  const handler = {} as typeof import("../../app/internet-movistar-restaurantes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-oficinas-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-oficinas-bogota">> = Specific
+  const handler = {} as typeof import("../../app/internet-oficinas-bogota/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/internet-para-zoom-reuniones/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/internet-para-zoom-reuniones">> = Specific
   const handler = {} as typeof import("../../app/internet-para-zoom-reuniones/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-punto-venta-pos/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-punto-venta-pos">> = Specific
+  const handler = {} as typeof import("../../app/internet-punto-venta-pos/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/internet-restaurantes-bogota/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/internet-restaurantes-bogota">> = Specific
+  const handler = {} as typeof import("../../app/internet-restaurantes-bogota/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

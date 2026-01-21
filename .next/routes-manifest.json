@@ -217,6 +217,12 @@
       "namedRegex": "^/calculadora(?:/)?$"
     },
     {
+      "page": "/calculadora-empresas",
+      "regex": "^/calculadora\\-empresas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/calculadora\\-empresas(?:/)?$"
+    },
+    {
       "page": "/cambiar-de-operador",
       "regex": "^/cambiar\\-de\\-operador(?:/)?$",
       "routeKeys": {},
@@ -379,6 +385,36 @@
       "namedRegex": "^/internet\\-bogota\\-cobertura(?:/)?$"
     },
     {
+      "page": "/internet-claro-consultorios",
+      "regex": "^/internet\\-claro\\-consultorios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-claro\\-consultorios(?:/)?$"
+    },
+    {
+      "page": "/internet-claro-empresas",
+      "regex": "^/internet\\-claro\\-empresas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-claro\\-empresas(?:/)?$"
+    },
+    {
+      "page": "/internet-claro-locales",
+      "regex": "^/internet\\-claro\\-locales(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-claro\\-locales(?:/)?$"
+    },
+    {
+      "page": "/internet-claro-restaurantes",
+      "regex": "^/internet\\-claro\\-restaurantes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-claro\\-restaurantes(?:/)?$"
+    },
+    {
+      "page": "/internet-consultorios-bogota",
+      "regex": "^/internet\\-consultorios\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-consultorios\\-bogota(?:/)?$"
+    },
+    {
       "page": "/internet-economico",
       "regex": "^/internet\\-economico(?:/)?$",
       "routeKeys": {},
@@ -391,10 +427,40 @@
       "namedRegex": "^/internet\\-edificios\\-bogota(?:/)?$"
     },
     {
+      "page": "/internet-empresas-bogota",
+      "regex": "^/internet\\-empresas\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-empresas\\-bogota(?:/)?$"
+    },
+    {
       "page": "/internet-empresas-pymes",
       "regex": "^/internet\\-empresas\\-pymes(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/internet\\-empresas\\-pymes(?:/)?$"
+    },
+    {
+      "page": "/internet-etb-consultorios",
+      "regex": "^/internet\\-etb\\-consultorios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-etb\\-consultorios(?:/)?$"
+    },
+    {
+      "page": "/internet-etb-empresas",
+      "regex": "^/internet\\-etb\\-empresas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-etb\\-empresas(?:/)?$"
+    },
+    {
+      "page": "/internet-etb-locales",
+      "regex": "^/internet\\-etb\\-locales(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-etb\\-locales(?:/)?$"
+    },
+    {
+      "page": "/internet-etb-restaurantes",
+      "regex": "^/internet\\-etb\\-restaurantes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-etb\\-restaurantes(?:/)?$"
     },
     {
       "page": "/internet-gaming",
@@ -409,10 +475,58 @@
       "namedRegex": "^/internet\\-gaming\\-bogota(?:/)?$"
     },
     {
+      "page": "/internet-locales-comerciales",
+      "regex": "^/internet\\-locales\\-comerciales(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-locales\\-comerciales(?:/)?$"
+    },
+    {
+      "page": "/internet-movistar-consultorios",
+      "regex": "^/internet\\-movistar\\-consultorios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-movistar\\-consultorios(?:/)?$"
+    },
+    {
+      "page": "/internet-movistar-empresas",
+      "regex": "^/internet\\-movistar\\-empresas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-movistar\\-empresas(?:/)?$"
+    },
+    {
+      "page": "/internet-movistar-locales",
+      "regex": "^/internet\\-movistar\\-locales(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-movistar\\-locales(?:/)?$"
+    },
+    {
+      "page": "/internet-movistar-restaurantes",
+      "regex": "^/internet\\-movistar\\-restaurantes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-movistar\\-restaurantes(?:/)?$"
+    },
+    {
+      "page": "/internet-oficinas-bogota",
+      "regex": "^/internet\\-oficinas\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-oficinas\\-bogota(?:/)?$"
+    },
+    {
       "page": "/internet-para-zoom-reuniones",
       "regex": "^/internet\\-para\\-zoom\\-reuniones(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/internet\\-para\\-zoom\\-reuniones(?:/)?$"
+    },
+    {
+      "page": "/internet-punto-venta-pos",
+      "regex": "^/internet\\-punto\\-venta\\-pos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-punto\\-venta\\-pos(?:/)?$"
+    },
+    {
+      "page": "/internet-restaurantes-bogota",
+      "regex": "^/internet\\-restaurantes\\-bogota(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet\\-restaurantes\\-bogota(?:/)?$"
     },
     {
       "page": "/internet-sin-permanencia",

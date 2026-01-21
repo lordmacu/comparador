@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/internet-oficinas-bogota/layout,_N_T_/internet-oficinas-bogota/page,_N_T_/internet-oficinas-bogota"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/internet-oficinas-bogota/__PAGE__",
+    "/internet-oficinas-bogota",
+    "/_index",
+    "/_head"
+  ]
+}

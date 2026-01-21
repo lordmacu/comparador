@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/internet-consultorios-bogota/layout,_N_T_/internet-consultorios-bogota/page,_N_T_/internet-consultorios-bogota"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/internet-consultorios-bogota/__PAGE__",
+    "/internet-consultorios-bogota",
+    "/_index",
+    "/_head"
+  ]
+}
