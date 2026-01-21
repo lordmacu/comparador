@@ -30,8 +30,10 @@ export function generateLocalBusinessSchema(providerName?: string) {
     "priceRange": "$0 - $180,000",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Calle 100 #19-61",
       "addressLocality": "Bogotá",
       "addressRegion": "Cundinamarca",
+      "postalCode": "110111",
       "addressCountry": "CO"
     },
     "areaServed": [

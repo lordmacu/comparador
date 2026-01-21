@@ -15,6 +15,15 @@ export const OrganizationSchema = () => {
       "width": 512,
       "height": 512
     },
+    "image": "https://comparadorinternet.co/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 100 #19-61",
+      "addressLocality": "Bogotá",
+      "addressRegion": "Cundinamarca",
+      "postalCode": "110111",
+      "addressCountry": "CO"
+    },
     "telephone": "+573154645370",
     "contactPoint": [
       {
