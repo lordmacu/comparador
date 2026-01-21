@@ -12,6 +12,7 @@
   "/blog/categoria/[categoria]/page": "/blog/categoria/[categoria]",
   "/blog/feed.xml/route": "/blog/feed.xml",
   "/blog/page": "/blog",
+  "/buscar/page": "/buscar",
   "/calculadora/page": "/calculadora",
   "/cambiar-de-operador/page": "/cambiar-de-operador",
   "/casos/[caso]/page": "/casos/[caso]",

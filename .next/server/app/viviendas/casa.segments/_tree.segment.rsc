@@ -1,5 +1,5 @@
-:HL["/_next/static/chunks/eb213f198c2798c2.css","style"]
+:HL["/_next/static/chunks/e2489299a0e7304b.css","style"]
 :HL["/images/claro-logo.svg","image"]
 :HL["/images/movistar-logo.png","image"]
 :HL["/images/etb-logo.svg","image"]
-0:{"buildId":"trq7j3DlqsO1WEDabzz1p","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"viviendas","paramType":null,"paramKey":"viviendas","hasRuntimePrefetch":false,"slots":{"children":{"name":"vivienda","paramType":"d","paramKey":"casa","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"Za2cv8m35s7bgvy_JglWY","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"viviendas","paramType":null,"paramKey":"viviendas","hasRuntimePrefetch":false,"slots":{"children":{"name":"vivienda","paramType":"d","paramKey":"casa","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

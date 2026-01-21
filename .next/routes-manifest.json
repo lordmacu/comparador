@@ -205,6 +205,12 @@
       "namedRegex": "^/blog/feed\\.xml(?:/)?$"
     },
     {
+      "page": "/buscar",
+      "regex": "^/buscar(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/buscar(?:/)?$"
+    },
+    {
       "page": "/calculadora",
       "regex": "^/calculadora(?:/)?$",
       "routeKeys": {},

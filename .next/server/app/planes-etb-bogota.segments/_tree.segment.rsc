@@ -1,3 +1,3 @@
-:HL["/_next/static/chunks/eb213f198c2798c2.css","style"]
+:HL["/_next/static/chunks/e2489299a0e7304b.css","style"]
 :HL["/images/etb-logo.svg","image"]
-0:{"buildId":"trq7j3DlqsO1WEDabzz1p","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"planes-etb-bogota","paramType":null,"paramKey":"planes-etb-bogota","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"Za2cv8m35s7bgvy_JglWY","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"planes-etb-bogota","paramType":null,"paramKey":"planes-etb-bogota","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

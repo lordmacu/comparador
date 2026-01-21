@@ -12,6 +12,7 @@
   "/blog/categoria/[categoria]/page": "app/blog/categoria/[categoria]/page.js",
   "/blog/feed.xml/route": "app/blog/feed.xml/route.js",
   "/blog/page": "app/blog/page.js",
+  "/buscar/page": "app/buscar/page.js",
   "/calculadora/page": "app/calculadora/page.js",
   "/cambiar-de-operador/page": "app/cambiar-de-operador/page.js",
   "/casos/[caso]/page": "app/casos/[caso]/page.js",

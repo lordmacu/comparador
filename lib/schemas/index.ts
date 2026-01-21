@@ -128,8 +128,15 @@ export function generateWebSiteSchema() {
     "@type": "WebSite",
     "name": "Comparador de Internet Colombia",
     "description": "Descubre y compara los servicios de internet en Colombia: Claro, Movistar y ETB. Información sobre beneficios, tecnologías y cobertura.",
-    "url": "https://comparadorinternet.co"
-    // Nota: SearchAction removido - no hay funcionalidad de búsqueda en el sitio
+    "url": "https://comparadorinternet.co",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://comparadorinternet.co/buscar?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   };
 }
 
