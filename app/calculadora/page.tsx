@@ -66,31 +66,31 @@ export default function CalculadoraPage() {
     
     if (velocidadRec <= 100) {
       planes.push(
-        { operador: 'ETB', velocidad: '100 Mbps', precio: '$55,000/mes', link: '/etb' },
+        { operador: 'ETB', velocidad: '200 Mb', precio: '$41.930/mes (promo 6 meses)', link: '/etb' },
         { operador: 'Claro', velocidad: '100 Mbps', precio: '$60,000/mes', link: '/claro' },
         { operador: 'Movistar', velocidad: '100 Mbps', precio: '$58,000/mes', link: '/movistar' }
       );
     } else if (velocidadRec <= 200) {
       planes.push(
-        { operador: 'ETB', velocidad: '200 Mbps', precio: '$75,000/mes', link: '/etb' },
+        { operador: 'ETB', velocidad: '200 Mb', precio: '$41.930/mes (promo 6 meses)', link: '/etb' },
         { operador: 'Claro', velocidad: '200 Mbps', precio: '$80,000/mes', link: '/claro' },
         { operador: 'Movistar', velocidad: '200 Mbps', precio: '$78,000/mes', link: '/movistar' }
       );
     } else if (velocidadRec <= 300) {
       planes.push(
-        { operador: 'ETB', velocidad: '300 Mbps', precio: '$95,000/mes', link: '/etb' },
+        { operador: 'ETB', velocidad: '910 Mb', precio: '$62.930/mes (promo 12 meses)', link: '/etb' },
         { operador: 'Claro', velocidad: '300 Mbps', precio: '$100,000/mes', link: '/claro' },
         { operador: 'Movistar', velocidad: '300 Mbps', precio: '$98,000/mes', link: '/movistar' }
       );
     } else if (velocidadRec <= 500) {
       planes.push(
-        { operador: 'ETB', velocidad: '500 Mbps', precio: '$125,000/mes', link: '/etb' },
+        { operador: 'ETB', velocidad: '910 Mb', precio: '$62.930/mes (promo 12 meses)', link: '/etb' },
         { operador: 'Claro', velocidad: '500 Mbps', precio: '$130,000/mes', link: '/claro' },
         { operador: 'Movistar', velocidad: '600 Mbps', precio: '$135,000/mes', link: '/movistar' }
       );
     } else {
       planes.push(
-        { operador: 'ETB', velocidad: '1 Gbps', precio: '$180,000/mes', link: '/etb' },
+        { operador: 'ETB', velocidad: '910 Mb', precio: '$62.930/mes (promo 12 meses)', link: '/etb' },
         { operador: 'Claro', velocidad: '1 Gbps', precio: '$200,000/mes', link: '/claro' },
         { operador: 'Movistar', velocidad: '1 Gbps', precio: '$190,000/mes', link: '/movistar' }
       );

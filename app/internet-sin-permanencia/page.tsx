@@ -152,8 +152,8 @@ export default function SinPermanenciaPage() {
                         <p className="text-gray-600 mb-6">El único operador masivo que promueve activamente planes sin ataduras.</p>
                         
                         <div className="bg-gray-100 rounded-lg p-4 mb-6">
-                            <div className="text-4xl font-black text-blue-600 mb-1">$42.000</div>
-                            <div className="text-sm text-gray-500">Precio mensual / 300 Megas</div>
+                            <div className="text-4xl font-black text-blue-600 mb-1">$41.930</div>
+                            <div className="text-sm text-gray-500">Precio mensual / 200 Mb (promo 6 meses)</div>
                         </div>
 
                         <ul className="text-left space-y-3 mb-8">

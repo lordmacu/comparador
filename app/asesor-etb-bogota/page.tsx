@@ -73,7 +73,7 @@ export default function AsesorEtbBogotaPage() {
         name: '¿Qué velocidad ETB recomiendan para teletrabajo o gaming?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Para teletrabajo + streaming suele funcionar muy bien 300-500 Mbps; para gaming competitivo o muchos dispositivos, 500-900 Mbps. Te recomendamos según tu uso.',
+          text: 'Para teletrabajo + streaming suele funcionar muy bien 200 Mb; para gaming competitivo o muchos dispositivos, 910 Mb. Te recomendamos según tu uso.',
         },
       },
     ],
@@ -216,4 +216,3 @@ export default function AsesorEtbBogotaPage() {
     </>
   );
 }
-

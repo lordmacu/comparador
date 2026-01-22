@@ -273,7 +273,7 @@
         {
           "name": "Internet Fibra Óptica",
           "description": "Fibra óptica 100% simétrica directo a tu hogar. Velocidad gemela de subida y bajada.",
-          "speeds": ["200 Mbps", "500 Mbps", "910 Mbps"],
+          "speeds": ["200 Mbps", "910 Mbps"],
           "ideal": "Hogares en Bogotá que buscan calidad y atención local",
           "features": ["Velocidad simétrica", "Instalación a coordinar según cobertura", "WiFi 360 disponible (según plan)"]
         },

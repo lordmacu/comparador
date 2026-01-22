@@ -19,13 +19,13 @@ const planesStructuredData = {
         "itemListElement": [
           {
             "@type": "Product",
-            "name": "ETB Fibra 300 Mbps",
-            "description": "Plan de internet residencial con fibra óptica de 300 Mbps simétricos",
+            "name": "ETB Internet 200 Mb",
+            "description": "Plan de internet residencial con fibra óptica simétrica de 200 Mb (promo Bogotá)",
             "brand": "ETB",
             "category": "Internet Service",
             "offers": {
               "@type": "Offer",
-              "price": "89900",
+              "price": "41930",
               "priceCurrency": "COP",
               "availability": "https://schema.org/InStock",
               "validFrom": "2026-01-01"
@@ -84,24 +84,26 @@ interface Plan {
 
 const plans: Plan[] = [
   {
-    id: "etb-fibra-300",
+    id: "etb-internet-200",
     provider: "ETB",
-    name: "ETB Fibra 300",
-    speed: "300 Mbps",
-    uploadSpeed: "300 Mbps",
-    price: 89900,
+    name: "ETB Internet 200",
+    speed: "200 Mb",
+    uploadSpeed: "200 Mb",
+    price: 41930,
+    originalPrice: 59900,
     technology: "Fibra Óptica",
     features: [
-      "Velocidad simétrica (subida = bajada)",
-      "Instalación gratuita",
-      "Router WiFi 6 incluido", 
-      "Soporte técnico 24/7",
-      "Sin permanencia mínima"
+      "Promo 6 meses (Bogotá estratos 2-3)",
+      "DGO y/o Universal+ primer mes sin costo",
+      "Win Play y/o Hot Go 50% meses 1 y 2",
+      "Fibra 100% simétrica",
+      "Tarifa plena $59.900"
     ],
     rating: 4.6,
     reviewCount: 847,
     coverage: ["Chapinero", "Usaquén", "Zona Rosa", "Centro"],
-    popular: true
+    popular: true,
+    promo: "Municipios estratos 1-6: $39.534 por 12 meses"
   },
   {
     id: "claro-internet-200",
@@ -145,23 +147,25 @@ const plans: Plan[] = [
     popular: true
   },
   {
-    id: "etb-basico-100",
-    provider: "ETB", 
-    name: "ETB Básico 100",
-    speed: "100 Mbps",
-    uploadSpeed: "100 Mbps",
-    price: 49900,
+    id: "etb-internet-910",
+    provider: "ETB",
+    name: "ETB Internet 910",
+    speed: "910 Mb",
+    uploadSpeed: "910 Mb",
+    price: 62930,
+    originalPrice: 89900,
     technology: "Fibra Óptica",
     features: [
-      "Plan básico residencial",
-      "Velocidad simétrica",
-      "Ideal para 2-3 personas",
-      "Router básico incluido",
-      "Instalación sin costo"
+      "Promo 12 meses (estratos 1-3)",
+      "DGO y/o Universal+ primer mes sin costo",
+      "Win Play y/o Hot Pack 50% meses 1 y 2",
+      "Fibra 100% simétrica",
+      "Tarifa plena $89.900"
     ],
-    rating: 4.3,
+    rating: 4.7,
     reviewCount: 1203,
-    coverage: ["Fontibón", "Kennedy", "Bosa", "Ciudad Bolívar"]
+    coverage: ["Fontibón", "Kennedy", "Bosa", "Ciudad Bolívar"],
+    promo: "Estratos 4-6: $69.930 promo / $99.900 plena"
   },
   {
     id: "claro-hogar-100",
@@ -203,23 +207,25 @@ const plans: Plan[] = [
     coverage: ["Chapinero", "Rosales", "Zona T", "Chicó"],
   },
   {
-    id: "etb-gaming-500",
+    id: "etb-910-1app",
     provider: "ETB",
-    name: "ETB Gaming 500",
-    speed: "500 Mbps",
-    uploadSpeed: "500 Mbps",
-    price: 149900,
+    name: "ETB 910 + 1 App",
+    speed: "910 Mb",
+    uploadSpeed: "910 Mb",
+    price: 83930,
+    originalPrice: 119900,
     technology: "Fibra Óptica",
     features: [
-      "Optimizado para gaming",
-      "Ping ultra bajo < 5ms", 
-      "QoS gaming prioritario",
-      "Router gaming incluido",
-      "Soporte gamer 24/7"
+      "Elige DGO Pass, HBO Max, Win Play o Universal+",
+      "Promo 12 meses (estratos 1-3)",
+      "DGO y/o Universal+ primer mes sin costo",
+      "Fibra 100% simétrica",
+      "Tarifa plena $119.900"
     ],
     rating: 4.8,
     reviewCount: 234,
-    coverage: ["Chapinero", "Usaquén", "Zona Rosa", "Santa Bárbara"]
+    coverage: ["Chapinero", "Usaquén", "Zona Rosa", "Santa Bárbara"],
+    promo: "Estratos 4-6: $90.930 promo / $129.900 plena"
   },
   {
     id: "claro-premium-300",
@@ -260,24 +266,26 @@ const plans: Plan[] = [
     coverage: ["Centro", "Zona Industrial", "Chapinero", "Zona T"]
   },
   {
-    id: "etb-teletrabajo-200",
+    id: "etb-910-2apps",
     provider: "ETB",
-    name: "ETB Teletrabajo 200",
-    speed: "200 Mbps", 
-    uploadSpeed: "200 Mbps",
-    price: 79900,
+    name: "ETB 910 + 2 Apps",
+    speed: "910 Mb",
+    uploadSpeed: "910 Mb",
+    price: 97930,
+    originalPrice: 139900,
     technology: "Fibra Óptica",
     features: [
-      "Diseñado para trabajo remoto",
-      "Velocidad simétrica garantizada",
-      "VPN optimizada",
-      "Backup de conectividad",
-      "Videollamadas HD sin cortes"
+      "Elige 2 apps de video disponibles",
+      "Promo 12 meses (estratos 1-3)",
+      "DGO y/o Universal+ primer mes sin costo",
+      "Fibra 100% simétrica",
+      "Tarifa plena $139.900"
     ],
     rating: 4.4,
     reviewCount: 678,
     coverage: ["Teusaquillo", "Chapinero", "Usaquén", "Zona Norte"],
-    popular: true
+    popular: true,
+    promo: "Estratos 4-6: $104.930 promo / $149.900 plena"
   },
   {
     id: "claro-familia-150",

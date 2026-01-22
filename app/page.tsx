@@ -21,8 +21,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const canonicalUrl = 'https://comparadorinternet.co';
   
   return {
-    title: 'Comparador Internet Colombia 2026 | Planes desde $42.000/mes',
-    description: 'Compara planes de internet desde $42.000/mes. Claro, Movistar y ETB con fibra óptica hasta 900 Mbps. Te ayudamos a encontrar el mejor plan para tu hogar. Cotiza gratis.',
+    title: 'Comparador Internet Colombia 2026 | Planes desde $41.930/mes',
+    description: 'Compara planes de internet desde $41.930/mes. Claro, Movistar y ETB con fibra óptica hasta 910 Mb. Te ayudamos a encontrar el mejor plan para tu hogar. Cotiza gratis.',
     keywords: [
       'internet Colombia',
       'comparador internet',
@@ -141,7 +141,7 @@ export default function HomePage() {
                 </div>
               </div>
               <h3 className="font-bold text-lg mb-2">Fibra Óptica</h3>
-              <p className="text-gray-600 text-sm">Tecnología de punta hasta 900 Mbps</p>
+              <p className="text-gray-600 text-sm">Tecnología de punta hasta 910 Mb</p>
             </div>
             <div className="text-center">
               <div className="flex justify-center mb-4">
@@ -312,25 +312,18 @@ export default function HomePage() {
                   </thead>
                   <tbody className="divide-y divide-gray-200">
                     <tr className="hover:bg-gray-50 transition-colors" itemProp="row">
-                      <td className="px-6 py-4 font-semibold text-gray-900">300 Mbps</td>
-                      <td className="px-6 py-4 text-gray-700">$45,000 - $75,000/mes</td>
-                      <td className="px-6 py-4 text-gray-700">$50,000 - $80,000/mes</td>
-                      <td className="px-6 py-4 text-gray-700 font-bold text-green-700">$42,000 - $68,000/mes</td>
+                      <td className="px-6 py-4 font-semibold text-gray-900">200 Mb</td>
+                      <td className="px-6 py-4 text-gray-700">$59.900 - $80.000/mes</td>
+                      <td className="px-6 py-4 text-gray-700">$59.900 - $80.000/mes</td>
+                      <td className="px-6 py-4 text-gray-700 font-bold text-green-700">$41.930 - $59.900/mes</td>
                       <td className="px-6 py-4 text-sm text-gray-600">1-2 personas, uso básico</td>
                     </tr>
                     <tr className="hover:bg-gray-50 transition-colors" itemProp="row">
-                      <td className="px-6 py-4 font-semibold text-gray-900">500 Mbps</td>
-                      <td className="px-6 py-4 text-gray-700">$75,000 - $110,000/mes</td>
-                      <td className="px-6 py-4 text-gray-700">$80,000 - $120,000/mes</td>
-                      <td className="px-6 py-4 text-gray-700 font-bold text-green-700">$68,000 - $100,000/mes</td>
-                      <td className="px-6 py-4 text-sm text-gray-600">3-4 personas, teletrabajo + streaming 4K</td>
-                    </tr>
-                    <tr className="hover:bg-gray-50 transition-colors" itemProp="row">
-                      <td className="px-6 py-4 font-semibold text-gray-900">900 Mbps</td>
+                      <td className="px-6 py-4 font-semibold text-gray-900">910 Mb</td>
                       <td className="px-6 py-4 text-gray-700">$120,000 - $180,000/mes</td>
                       <td className="px-6 py-4 text-gray-700">$130,000 - $180,000/mes</td>
-                      <td className="px-6 py-4 text-gray-700 font-bold text-green-700">$110,000 - $150,000/mes</td>
-                      <td className="px-6 py-4 text-sm text-gray-600">5+ personas, gaming + múltiples 4K</td>
+                      <td className="px-6 py-4 text-gray-700 font-bold text-green-700">$62.930 - $99.900/mes</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">4-6 personas, streaming 4K + gaming</td>
                     </tr>
                   </tbody>
                 </table>
@@ -355,17 +348,17 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Plan 300 Mbps */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Plan 200 Mb */}
             <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-all hover:shadow-xl">
               <div className="text-center mb-6">
                 <p className="text-gray-600 mb-2 font-semibold">Plan Básico</p>
                 <div className="mb-4">
                   <Zap className="w-12 h-12 mx-auto text-blue-600" />
                 </div>
-                <h3 className="text-5xl font-black text-blue-600 mb-2">300 Mbps</h3>
+                <h3 className="text-5xl font-black text-blue-600 mb-2">200 Mb</h3>
                 <div className="text-3xl font-bold text-gray-900">
-                  Desde <span className="text-blue-600">$45.000</span>
+                  Desde <span className="text-blue-600">$41.930</span>
                   <span className="text-lg text-gray-600">/mes</span>
                 </div>
               </div>
@@ -397,61 +390,16 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Plan 500 Mbps - DESTACADO */}
-            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 border-4 border-yellow-400 relative hover:shadow-2xl transition-all transform hover:scale-105">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg">
-                ⭐ MÁS POPULAR
-              </div>
-
-              <div className="text-center mb-6">
-                <p className="text-gray-700 mb-2 font-semibold">Plan Medio</p>
-                <div className="mb-4">
-                  <Zap className="w-12 h-12 mx-auto text-yellow-600" />
-                </div>
-                <h3 className="text-5xl font-black text-yellow-600 mb-2">500 Mbps</h3>
-                <div className="text-3xl font-bold text-gray-900">
-                  Desde <span className="text-yellow-600">$75.000</span>
-                  <span className="text-lg text-gray-600">/mes</span>
-                </div>
-              </div>
-
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700"><strong>3-4 personas</strong> en casa</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Streaming <strong>4K</strong> sin pausas</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700"><strong>Teletrabajo</strong> + gaming</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Múltiples dispositivos</span>
-                </li>
-              </ul>
-
-              <div className="space-y-3">
-                <p className="text-sm text-center text-gray-700 font-medium">
-                  Te llamamos gratis para cotizar:
-                </p>
-                <QuickCallForm buttonColor="#ca8a04" />
-              </div>
-            </div>
-
-            {/* Plan 900 Mbps */}
+            {/* Plan 910 Mb */}
             <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 hover:border-purple-400 transition-all hover:shadow-xl">
               <div className="text-center mb-6">
                 <p className="text-gray-600 mb-2 font-semibold">Plan Premium</p>
                 <div className="mb-4">
                   <Zap className="w-12 h-12 mx-auto text-purple-600" />
                 </div>
-                <h3 className="text-5xl font-black text-purple-600 mb-2">900 Mbps</h3>
+                <h3 className="text-5xl font-black text-purple-600 mb-2">910 Mb</h3>
                 <div className="text-3xl font-bold text-gray-900">
-                  Desde <span className="text-purple-600">$120.000</span>
+                  Desde <span className="text-purple-600">$62.930</span>
                   <span className="text-lg text-gray-600">/mes</span>
                 </div>
               </div>
@@ -459,7 +407,7 @@ export default function HomePage() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700"><strong>5+ personas</strong> en casa</span>
+                  <span className="text-gray-700"><strong>4-6 personas</strong> en casa</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
@@ -831,8 +779,8 @@ export default function HomePage() {
                 </summary>
                 <div className="mt-4 text-gray-700" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                   <p itemProp="text">
-                    Para 1-2 personas con uso básico: 200-300 Mbps. Para familias (3-5 personas): 500 Mbps.
-                    Para gaming, streaming 4K múltiple o trabajo remoto intensivo: 900 Mbps o más. Los asesores te ayudarán a elegir el plan ideal.
+                    Para 1-2 personas con uso básico: 200 Mb. Para familias (3-5 personas): 910 Mb.
+                    Para gaming, streaming 4K múltiple o trabajo remoto intensivo: 910 Mb o más. Los asesores te ayudarán a elegir el plan ideal.
                   </p>
                 </div>
               </details>

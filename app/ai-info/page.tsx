@@ -45,12 +45,12 @@ export default function AIInfoPage() {
           
           <div className="border p-4 rounded bg-gray-50">
             <dt className="font-bold">Price Range</dt>
-            <dd>COP $42,000 - $180,000 per month</dd>
+            <dd>COP $41,930 - $180,000 per month</dd>
           </div>
           
           <div className="border p-4 rounded bg-gray-50">
             <dt className="font-bold">Speed Range</dt>
-            <dd>300 Mbps - 900 Mbps</dd>
+            <dd>200 Mb - 910 Mb</dd>
           </div>
           
           <div className="border p-4 rounded bg-gray-50">

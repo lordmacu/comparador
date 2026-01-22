@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: {
         absolute: 'Planes ETB Hogar Internet y TV: Precios Estrato 2 y 3 (2026)'
     },
-    description: 'Consulta los precios actualizados de Internet ETB Fibra Óptica para Estrato 2 y 3. Combos con TV digital, Netflix y HBO incluidos. Velocidades hasta 900 Mbps.',
+    description: 'Consulta los precios actualizados de Internet ETB Fibra Óptica para Estrato 2 y 3. Combos con TV digital y telefonía local ilimitada. Velocidades hasta 910 Mb.',
     keywords: ['planes ETB hogar internet y tv', 'etb internet hogar precios', 'planes etb hogar estrato 3', 'planes etb hogar estrato 2', 'etb duo', 'etb trio'],
 };
 
@@ -23,7 +23,7 @@ export default function ETBPlanesPage() {
                     </h1>
                     <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
                         Fibra óptica 100% simétrica con precios especiales para <strong>Estrato 2 y 3</strong>.
-                        Elige entre sólo Internet, Dúo (Internet + Telefonía) o Trío (Internet + TV + Teléfono).
+                        Elige entre solo internet, combos con apps o Internet + TV (Básica/Plus) y Telefonía local ilimitada.
                     </p>
                     <div className="flex justify-center">
                         <QuickCallForm buttonColor="#f97316" provider="ETB Planes" />
@@ -45,45 +45,79 @@ export default function ETBPlanesPage() {
 
                     {/* Solo Internet */}
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <Wifi className="text-blue-600" /> Internet Fibra (Single)
+                        <Wifi className="text-blue-600" /> Solo Internet
                     </h2>
                     <div className="grid md:grid-cols-3 gap-6 mb-16">
                         {/* Plan 1 */}
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:border-blue-500 transition-colors">
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">300 Megas</h3>
-                            <p className="text-gray-500 text-sm mb-4">Ideal para familias pequeñas</p>
-                            <div className="text-4xl font-black text-blue-600 mb-1">$64.900</div>
-                            <div className="text-xs text-gray-400 mb-6">/mes (Aprox Estrato 3)</div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Internet 200 Mb</h3>
+                            <p className="text-gray-500 text-sm mb-4">Todos Conectados (Bogotá estratos 2-3)</p>
+                            <div className="text-4xl font-black text-blue-600 mb-1">$41.930</div>
+                            <div className="text-xs text-gray-400 mb-6">Promo mes 1 al 6 • Tarifa plena $59.900</div>
                             <ul className="space-y-2 mb-6 text-sm text-gray-700">
-                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> 100% Simétrico</li>
-                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Instalación incluida</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Fibra 100% simétrica</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> DGO y/o Universal+ primer mes sin costo</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Win Play y/o Hot Go 50% meses 1 y 2</li>
                             </ul>
                             <a href="#contacto" className="block text-center bg-gray-100 text-gray-900 font-bold py-3 rounded-lg hover:bg-gray-200">Cotizar ahora</a>
                         </div>
                         {/* Plan 2 */}
                         <div className="bg-white rounded-2xl shadow-lg border-2 border-blue-600 p-6 relative">
                             <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">MAS VENDIDO</div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">600 Megas</h3>
-                            <p className="text-gray-500 text-sm mb-4">Para teletrabajo y streaming</p>
-                            <div className="text-4xl font-black text-blue-600 mb-1">$74.900</div>
-                            <div className="text-xs text-gray-400 mb-6">/mes (Aprox Estrato 3)</div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Internet 910 Mb</h3>
+                            <p className="text-gray-500 text-sm mb-4">Estratos 1-3</p>
+                            <div className="text-4xl font-black text-blue-600 mb-1">$62.930</div>
+                            <div className="text-xs text-gray-400 mb-6">Promo mes 1 al 12 • Tarifa plena $89.900</div>
                             <ul className="space-y-2 mb-6 text-sm text-gray-700">
-                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> 100% Simétrico</li>
-                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Puntos cableados extra</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Fibra 100% simétrica</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Promo 30% por 12 meses</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> DGO y/o Universal+ primer mes sin costo</li>
                             </ul>
                             <a href="#contacto" className="block text-center bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700">Cotizar ahora</a>
                         </div>
                         {/* Plan 3 */}
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:border-blue-500 transition-colors">
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">900 Megas</h3>
-                            <p className="text-gray-500 text-sm mb-4">Gamer / Pro</p>
-                            <div className="text-4xl font-black text-blue-600 mb-1">$99.900</div>
-                            <div className="text-xs text-gray-400 mb-6">/mes (Aprox Estrato 3)</div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Internet 910 Mb</h3>
+                            <p className="text-gray-500 text-sm mb-4">Estratos 4-6</p>
+                            <div className="text-4xl font-black text-blue-600 mb-1">$69.930</div>
+                            <div className="text-xs text-gray-400 mb-6">Promo mes 1 al 12 • Tarifa plena $99.900</div>
                             <ul className="space-y-2 mb-6 text-sm text-gray-700">
-                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> WiFi 6 (Alta velocidad)</li>
-                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Prioridad de soporte</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Fibra 100% simétrica</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Promo 30% por 12 meses</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> DGO y/o Universal+ primer mes sin costo</li>
                             </ul>
                             <a href="#contacto" className="block text-center bg-gray-100 text-gray-900 font-bold py-3 rounded-lg hover:bg-gray-200">Cotizar ahora</a>
+                        </div>
+                    </div>
+
+                    {/* Internet + Apps */}
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <Zap className="text-purple-600" /> Internet + Apps (910 Mb)
+                    </h2>
+                    <div className="grid md:grid-cols-2 gap-6 mb-16">
+                        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:border-purple-500 transition-colors">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">910 Mb + 1 App</h3>
+                            <p className="text-gray-500 text-sm mb-4">Estratos 1-3</p>
+                            <div className="text-4xl font-black text-purple-600 mb-1">$83.930</div>
+                            <div className="text-xs text-gray-400 mb-6">Promo mes 1 al 12 • Tarifa plena $119.900</div>
+                            <ul className="space-y-2 mb-6 text-sm text-gray-700">
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Elige DGO Pass, HBO Max, Win Play o Universal+</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Fibra 100% simétrica</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Estratos 4-6: $90.930 promo / $129.900 plena</li>
+                            </ul>
+                            <a href="#contacto" className="block text-center bg-purple-600 text-white font-bold py-3 rounded-lg hover:bg-purple-700">Cotizar ahora</a>
+                        </div>
+                        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:border-purple-500 transition-colors">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">910 Mb + 2 Apps</h3>
+                            <p className="text-gray-500 text-sm mb-4">Estratos 1-3</p>
+                            <div className="text-4xl font-black text-purple-600 mb-1">$97.930</div>
+                            <div className="text-xs text-gray-400 mb-6">Promo mes 1 al 12 • Tarifa plena $139.900</div>
+                            <ul className="space-y-2 mb-6 text-sm text-gray-700">
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Elige 2 apps de video disponibles</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Fibra 100% simétrica</li>
+                                <li className="flex gap-2"><Check size={16} className="text-green-500" /> Estratos 4-6: $104.930 promo / $149.900 plena</li>
+                            </ul>
+                            <a href="#contacto" className="block text-center bg-purple-600 text-white font-bold py-3 rounded-lg hover:bg-purple-700">Cotizar ahora</a>
                         </div>
                     </div>
 
@@ -101,15 +135,15 @@ export default function ETBPlanesPage() {
                                 <ul className="space-y-3 mb-8">
                                     <li className="flex items-center gap-3">
                                         <div className="bg-orange-100 p-2 rounded-lg text-orange-600"><Tv size={20} /></div>
-                                        <span>Televisión Digital Avanzada (+120 canales)</span>
+                                        <span>TV Básica (55 canales) o TV Plus (100+ canales)</span>
                                     </li>
                                     <li className="flex items-center gap-3">
                                         <div className="bg-blue-100 p-2 rounded-lg text-blue-600"><Phone size={20} /></div>
-                                        <span>Línea Telefónica Ilimitada Local</span>
+                                        <span>Telefonía local ilimitada (en plan Plus + Telefonía)</span>
                                     </li>
                                     <li className="flex items-center gap-3">
                                         <div className="bg-purple-100 p-2 rounded-lg text-purple-600"><Zap size={20} /></div>
-                                        <span>HBO Max o Universal+ (en planes seleccionados)</span>
+                                        <span>Promos en apps (DGO, Universal+, Win Play, Hot Pack)</span>
                                     </li>
                                 </ul>
                                 <Link href="/contratar" className="inline-block bg-orange-500 text-white font-bold py-3 px-8 rounded-xl hover:bg-orange-600 shadow-lg hover:shadow-orange-500/30 transition-all">
@@ -118,10 +152,10 @@ export default function ETBPlanesPage() {
                             </div>
                             <div className="bg-gray-100 rounded-2xl p-6 text-center">
                                 <h4 className="font-bold text-gray-500 mb-4">Precios Combos desde</h4>
-                                <div className="text-5xl font-black text-gray-900 mb-2">$95.900</div>
-                                <div className="text-sm text-gray-500 mb-6">IVA incluido / mes</div>
+                                <div className="text-5xl font-black text-gray-900 mb-2">$76.930</div>
+                                <div className="text-sm text-gray-500 mb-6">Promo 6 meses • Estratos 2-3</div>
                                 <p className="text-xs text-gray-400 italic">
-                                    *Precio referencia Estrato 3. Puede bajar en Estrato 2 o subir en Estrato 4-6.
+                                    *TV Básica estratos 2-3. Estratos 4-6 tienen tarifa superior.
                                 </p>
                             </div>
                         </div>
@@ -143,8 +177,8 @@ export default function ETBPlanesPage() {
                                 <span className="text-blue-600">+</span>
                             </summary>
                             <p className="mt-4 text-gray-600">
-                                Los precios en Estrato 2 suelen tener un subsidio o tarifa diferencial. El plan de entrada de 300 Megas
-                                puede conseguirse desde aprox. $50.000-$55.000 dependiendo de la zona y promociones vigentes.
+                                En Estrato 2 el plan de entrada es el de 200 Mb (Todos Conectados), con promo desde $41.930
+                                por 6 meses en Bogotá. La tarifa plena es $59.900 y depende de cobertura/zona.
                             </p>
                         </details>
                         <details className="bg-gray-50 rounded-xl p-6 open:bg-blue-50 transition-colors">
@@ -153,8 +187,8 @@ export default function ETBPlanesPage() {
                                 <span className="text-blue-600">+</span>
                             </summary>
                             <p className="mt-4 text-gray-600">
-                                Incluye el módem WiFi de última generación, la instalación cableada y una línea telefónica local
-                                (que es opcional de usar, pero viene incluída por regulación). No incluye decodificador de TV.
+                                Incluye el módem WiFi y la instalación según cobertura. La telefonía local solo aplica en planes que la incluyen
+                                (por ejemplo, TV Plus + Telefonía). No incluye decodificador de TV en planes solo internet.
                             </p>
                         </details>
                     </div>

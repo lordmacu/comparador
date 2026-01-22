@@ -4,8 +4,8 @@ import { DollarSign, CheckCircle2, TrendingDown, Zap, Phone, AlertCircle } from 
 import QuickCallForm from '@/components/QuickCallForm';
 
 export const metadata: Metadata = {
-  title: 'Internet Barato Colombia 2026 | Planes desde $42.000/mes',
-  description: 'Encuentra el internet más económico en Colombia. ETB desde $42.000, Claro $59.900, Movistar $59.900. Compara precios reales, fibra óptica y sin permanencia. Ahorra hasta $600.000 al año.',
+  title: 'Internet Barato Colombia 2026 | Planes desde $41.930/mes',
+  description: 'Encuentra el internet más económico en Colombia. ETB desde $41.930 (Bogotá), Claro $59.900, Movistar $59.900. Compara precios reales, fibra óptica y sin permanencia. Ahorra hasta $600.000 al año.',
   keywords: [
     'internet barato colombia',
     'internet economico bogota',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://comparadorinternet.co/internet-barato-colombia',
   },
   openGraph: {
-    title: 'Internet Barato Colombia | Desde $42.000/mes con Fibra Óptica',
+    title: 'Internet Barato Colombia | Desde $41.930/mes con Fibra Óptica',
     description: 'Los planes de internet más económicos. Compara precios reales y ahorra hasta $600k al año.',
     url: 'https://comparadorinternet.co/internet-barato-colombia',
     siteName: 'Comparador Internet Colombia',
@@ -46,7 +46,7 @@ export default function InternetBaratoPage() {
                 name: '¿Cuál es el internet más barato en Colombia?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'ETB ofrece el plan más económico desde $42.000/mes con 300 Mbps de fibra óptica simétrica en Bogotá. A nivel nacional, Claro tiene planes desde $59.900/mes con 200 Mbps.',
+                  text: 'ETB ofrece el plan más económico desde $41.930/mes con 200 Mb de fibra óptica simétrica en Bogotá (promo 6 meses). En municipios aplica $39.534/mes (12 meses). A nivel nacional, Claro tiene planes desde $59.900/mes con 200 Mbps.',
                 },
               },
               {
@@ -73,7 +73,7 @@ export default function InternetBaratoPage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Internet Barato en Colombia: Planes desde $42.000
+                Internet Barato en Colombia: Planes desde $41.930
               </h1>
 
               <p className="text-xl md:text-2xl text-green-100 mb-8">
@@ -83,16 +83,16 @@ export default function InternetBaratoPage() {
               <div className="bg-white/10 backdrop-blur rounded-2xl p-6 max-w-2xl mx-auto mb-8">
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <div className="text-3xl font-black">$42k</div>
+                    <div className="text-3xl font-black">$41.930</div>
                     <div className="text-sm text-green-100">Plan más barato</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-black">300 Mbps</div>
+                    <div className="text-3xl font-black">200 Mb</div>
                     <div className="text-sm text-green-100">Velocidad incluida</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-black">$0</div>
-                    <div className="text-sm text-green-100">Sin instalación</div>
+                    <div className="text-3xl font-black">Promo</div>
+                    <div className="text-sm text-green-100">Meses 1-6 Bogotá</div>
                   </div>
                 </div>
               </div>
@@ -126,39 +126,39 @@ export default function InternetBaratoPage() {
                 <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6">
                   <div className="text-center">
                     <div className="text-sm font-semibold mb-2">ETB Bogotá</div>
-                    <div className="text-5xl font-black mb-2">$42.000</div>
+                    <div className="text-5xl font-black mb-2">$41.930</div>
                     <div className="text-sm opacity-90">por mes</div>
                   </div>
                 </div>
 
                 <div className="p-6">
                   <div className="mb-4">
-                    <div className="text-3xl font-bold text-blue-600 mb-1">300 Mbps</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-1">200 Mb</div>
                     <div className="text-sm text-gray-600">Fibra óptica simétrica</div>
                   </div>
 
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-center gap-2 text-sm">
                       <CheckCircle2 className="w-4 h-4 text-green-600" />
-                      <span>Velocidad simétrica 300/300</span>
+                      <span>Velocidad simétrica 200/200</span>
                     </li>
                     <li className="flex items-center gap-2 text-sm">
                       <CheckCircle2 className="w-4 h-4 text-green-600" />
-                      <span>Sin permanencia mínima</span>
+                      <span>Promo 6 meses en Bogotá (estratos 2-3)</span>
                     </li>
                     <li className="flex items-center gap-2 text-sm">
                       <CheckCircle2 className="w-4 h-4 text-green-600" />
-                      <span>WiFi 360 incluido</span>
+                      <span>DGO y/o Universal+ primer mes sin costo</span>
                     </li>
                     <li className="flex items-center gap-2 text-sm">
                       <CheckCircle2 className="w-4 h-4 text-green-600" />
-                      <span>Instalación gratis</span>
+                      <span>Win Play y/o Hot Go 50% meses 1 y 2</span>
                     </li>
                   </ul>
 
                   <div className="bg-green-50 rounded-lg p-3 mb-4 text-center">
                     <div className="text-sm font-semibold text-green-800">Ahorras al año:</div>
-                    <div className="text-2xl font-black text-green-700">$576.000</div>
+                    <div className="text-2xl font-black text-green-700">$576.840</div>
                     <div className="text-xs text-green-600">vs planes tradicionales $90k/mes</div>
                   </div>
 
@@ -318,7 +318,7 @@ export default function InternetBaratoPage() {
                 <Zap className="w-10 h-10 text-yellow-600 mb-3" />
                 <h3 className="font-bold text-lg text-gray-900 mb-2">4. Velocidad Justa</h3>
                 <p className="text-gray-700 text-sm">
-                  300 Mbps es suficiente para 1-3 personas. No pagues 900 Mbps si no lo necesitas (diferencia de $50k/mes).
+                  200 Mb es suficiente para 1-3 personas. No pagues 910 Mb si no lo necesitas (diferencia de ~$21k-$40k/mes según promo/estrato).
                 </p>
               </div>
 
@@ -363,10 +363,10 @@ export default function InternetBaratoPage() {
                 </thead>
                 <tbody>
                   <tr className="bg-green-50 border-b">
-                    <td className="px-6 py-4 font-semibold">ETB 300</td>
-                    <td className="px-6 py-4">$42.000</td>
-                    <td className="px-6 py-4">300 Mbps</td>
-                    <td className="px-6 py-4 font-bold text-green-600">$140</td>
+                    <td className="px-6 py-4 font-semibold">ETB 200</td>
+                    <td className="px-6 py-4">$41.930</td>
+                    <td className="px-6 py-4">200 Mb</td>
+                    <td className="px-6 py-4 font-bold text-green-600">$210</td>
                     <td className="px-6 py-4">⭐⭐⭐⭐⭐</td>
                   </tr>
                   <tr className="border-b">

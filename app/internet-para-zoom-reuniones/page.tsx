@@ -5,7 +5,7 @@ import QuickCallForm from '@/components/QuickCallForm';
 
 export const metadata: Metadata = {
   title: 'Internet para Zoom y Reuniones Virtuales 2026 | Guía Completa Colombia',
-  description: 'Descubre qué velocidad necesitas para Zoom, Teams, Meet y videollamadas sin cortes. Guía completa con planes recomendados desde $42.000/mes. ETB, Claro y Movistar comparados.',
+  description: 'Descubre qué velocidad necesitas para Zoom, Teams, Meet y videollamadas sin cortes. Guía completa con planes recomendados desde $41.930/mes. ETB, Claro y Movistar comparados.',
   keywords: [
     'internet para zoom',
     'internet para reuniones virtuales',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Internet para Zoom y Reuniones Virtuales | Guía 2026',
-    description: 'Qué velocidad necesitas para Zoom, Teams y Meet sin cortes. Planes desde $42.000/mes.',
+    description: 'Qué velocidad necesitas para Zoom, Teams y Meet sin cortes. Planes desde $41.930/mes.',
     url: 'https://comparadorinternet.co/internet-para-zoom-reuniones',
     siteName: 'Comparador Internet Colombia',
     locale: 'es_CO',
@@ -90,7 +90,7 @@ export default function ZoomInternetPage() {
               </h1>
 
               <p className="text-xl md:text-2xl text-blue-100 mb-8">
-                Descubre qué velocidad necesitas para Teams, Meet, Zoom y videollamadas sin interrupciones. Planes desde <span className="font-bold text-white">$42.000/mes</span>.
+                Descubre qué velocidad necesitas para Teams, Meet, Zoom y videollamadas sin interrupciones. Planes desde <span className="font-bold text-white">$41.930/mes</span>.
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
@@ -261,7 +261,7 @@ export default function ZoomInternetPage() {
                   </div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-2">300 Mbps</h3>
                   <div className="text-xl font-semibold text-blue-600 mb-4">
-                    Desde $42.000/mes
+                    Desde $41.930/mes
                   </div>
                 </div>
 
@@ -346,9 +346,9 @@ export default function ZoomInternetPage() {
                   <div className="bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-bold inline-block mb-4">
                     4+ Personas
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">900 Mbps</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">910 Mb</h3>
                   <div className="text-xl font-semibold text-green-600 mb-4">
-                    Desde $95.000/mes
+                    Desde $62.930/mes
                   </div>
                 </div>
 
@@ -369,8 +369,8 @@ export default function ZoomInternetPage() {
 
                 <div className="bg-green-50 rounded-lg p-4 mb-4">
                   <div className="font-semibold text-gray-900 mb-2">Mejor opción:</div>
-                  <div className="text-green-600 font-bold">ETB Fibra 900 Mbps</div>
-                  <div className="text-sm text-gray-600">Simétrica: 900 subida / 900 bajada</div>
+                  <div className="text-green-600 font-bold">ETB Fibra 910 Mb</div>
+                  <div className="text-sm text-gray-600">Simétrica: 910 subida / 910 bajada</div>
                 </div>
 
                 <Link

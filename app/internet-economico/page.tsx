@@ -5,7 +5,7 @@ import QuickCallForm from '@/components/QuickCallForm';
 
 export const metadata: Metadata = {
     title: {
-        absolute: 'Internet Hogar Económico Bogotá 2026 | Planes desde $42.000'
+        absolute: 'Internet Hogar Económico Bogotá 2026 | Planes desde $41.930'
     },
     description: '¿Buscas internet hogar barato en Bogotá? Compara planes económicos para Estrato 1, 2 y 3. Cobertura en Suba, Kennedy, Engativá y más. Instalación gratis.',
     keywords: ['internet hogar bogota', 'internet hogar economico bogota', 'plan solo internet hogar', 'internet barato bogota', 'planes internet bogota estrato 2'],
@@ -24,11 +24,11 @@ interface CheapPlan {
 const cheapPlans: CheapPlan[] = [
     {
         provider: 'ETB',
-        name: 'Plan Entrada Fibra',
-        speed: 100,
-        price: 49900,
-        features: ['Instalación Gratis Bogotá', 'Fibra Óptica Pura', 'Soporte Local'],
-        bestFor: 'Estudiantes',
+        name: 'Internet 200 Mb',
+        speed: 200,
+        price: 41930,
+        features: ['Promo 6 meses Bogotá estratos 2-3', 'Fibra óptica simétrica', 'DGO/Universal+ primer mes sin costo'],
+        bestFor: 'Hogares pequeños',
         color: 'blue'
     },
     {
@@ -70,13 +70,13 @@ export default function EconomicoPage() {
                         <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
                             <div className="p-4">
                                 <div className="text-gray-500 text-sm mb-1 uppercase font-bold">Desde</div>
-                                <div className="text-3xl font-black text-emerald-600">$49.900</div>
-                                <div className="text-xs text-gray-400">Mensual en Bogotá</div>
+                                <div className="text-3xl font-black text-emerald-600">$41.930</div>
+                                <div className="text-xs text-gray-400">Promo 6 meses en Bogotá</div>
                             </div>
                             <div className="p-4">
-                                <div className="text-gray-500 text-sm mb-1 uppercase font-bold">Beneficio Local</div>
-                                <div className="text-3xl font-black text-emerald-600">$0 Costo</div>
-                                <div className="text-xs text-gray-400">Instalación (Estratos 1-3)</div>
+                                <div className="text-gray-500 text-sm mb-1 uppercase font-bold">Tarifa Plena</div>
+                                <div className="text-3xl font-black text-emerald-600">$59.900</div>
+                                <div className="text-xs text-gray-400">Después de promo</div>
                             </div>
                             <div className="p-4 flex flex-col justify-center">
                                 <Link href="#lista-planes" className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-xl transition-colors flex items-center justify-center gap-2">
@@ -189,7 +189,7 @@ export default function EconomicoPage() {
                             </div>
                             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                                 <h4 className="font-bold text-lg mb-2">¿Hay internet gratuito en Bogotá?</h4>
-                                <p className="text-gray-600">Existen Zonas Wifi Gratis del Distrito en parques y portales de Transmilenio, pero para el hogar recomendamos planes básicos desde $49.900 para garantizar estabilidad.</p>
+                                <p className="text-gray-600">Existen Zonas Wifi Gratis del Distrito en parques y portales de Transmilenio, pero para el hogar recomendamos planes básicos desde $41.930 para garantizar estabilidad.</p>
                             </div>
                         </div>
                     </div>

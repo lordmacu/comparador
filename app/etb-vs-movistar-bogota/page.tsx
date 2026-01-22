@@ -64,7 +64,7 @@ export default function EtbVsMovistarBogotaPage() {
         name: '¿Qué velocidad debería contratar?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Como referencia: 1-2 personas 200-300 Mbps, 3-4 personas 500 Mbps, 5+ personas 900 Mbps. El plan ideal depende del número de dispositivos y el tipo de uso.',
+          text: 'Como referencia: 1-2 personas 200 Mb; 3+ personas o uso intensivo 910 Mb. El plan ideal depende del número de dispositivos y el tipo de uso.',
         },
       },
       {
@@ -225,4 +225,3 @@ export default function EtbVsMovistarBogotaPage() {
     </>
   );
 }
-

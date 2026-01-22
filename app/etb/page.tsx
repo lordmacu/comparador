@@ -25,8 +25,8 @@ import type { Metadata } from 'next';
 const provider = getProvider('etb');
 
 export const metadata: Metadata = {
-  title: `Internet ETB Bogotá 2026: Desde $42.000 | Fibra 900 Mbps Local`,
-  description: `Planes de internet ETB con fibra óptica hasta 900 Mbps desde $42.000/mes en Bogotá. Operador local con 140 años de experiencia. WiFi 360 y soporte técnico especializado. Contrata ya.`,
+  title: `Internet ETB Bogotá 2026: Desde $41.930 | Fibra 910 Mb Local`,
+  description: `Planes de internet ETB con fibra óptica hasta 910 Mb desde $41.930/mes en Bogotá. Operador local con 140 años de experiencia. WiFi 360 y soporte técnico especializado. Contrata ya.`,
   keywords: [
     'internet ETB Bogotá',
     'ETB fibra simétrica',
