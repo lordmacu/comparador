@@ -36,7 +36,9 @@ async function generateImage(slug, title, description = "") {
     const randomStyle = IMAGE_STYLES[Math.floor(Math.random() * IMAGE_STYLES.length)];
     console.log(`📐 Estilo seleccionado: ${randomStyle}`);
     
-    const imagePrompt = `Genera una imagen fotográfica HIPERREALISTA de alta calidad profesional.
+    const imagePrompt = `Crea una imagen siguiendo exactamente este estilo visual:
+
+${randomStyle}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📋 TEMA DEL ARTÍCULO
@@ -44,11 +46,6 @@ async function generateImage(slug, title, description = "") {
 ${title}
 
 ${description ? `Descripción: ${description}` : ''}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🎨 ESTILO VISUAL SELECCIONADO
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-${randomStyle}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ✅ ELEMENTOS OBLIGATORIOS

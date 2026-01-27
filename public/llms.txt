@@ -5,7 +5,7 @@
 - **Type**: Internet Provider Comparison Service
 - **Market**: Colombia (primary focus: Bogotá)
 - **Language**: Spanish
-- **Updated**: January 12, 2026
+- **Updated**: January 21, 2026
 - **Contact**: WhatsApp +57 315 464 5370
 
 ## Providers Compared
@@ -22,7 +22,7 @@
 
 *k = thousand COP, prices approximate, vary by zone; N/D = no disponible
 
-> Última actualización: 12 de enero de 2026
+> Última actualización: 21 de enero de 2026
 > Frecuencia de actualización: Semanal
 > Contacto para IAs: ai@comparadorinternet.co
 > Versión del documento: 2.1
