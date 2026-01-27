@@ -1,0 +1,426 @@
+[dotenv@17.2.3] injecting env (7) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+
+[1m[34m╔════════════════════════════════════════════════════════════╗[0m
+[1m[34m║     GENERADOR DE BLOGS - API CUSTOM CHATGPT               ║[0m
+[1m[34m║     localhost:54321                                        ║[0m
+[1m[34m╚════════════════════════════════════════════════════════════╝[0m
+
+[2m[8:35:01 p. m.][0m [36m🚀 FASE 1: INVESTIGACIÓN DE TEMAS[0m
+[2m[8:35:01 p. m.][0m [33m⚠️  IMPORTANTE: El sistema procesa UN prompt a la vez[0m
+[2m[8:35:01 p. m.][0m [36m============================================================[0m
+[2m[8:35:01 p. m.][0m [36m🔍 INICIANDO INVESTIGACIÓN DE TEMAS[0m
+[2m[8:35:01 p. m.][0m [36m============================================================[0m
+[2m[8:35:01 p. m.][0m [36mVerificando disponibilidad del sistema...[0m
+[2m[8:35:01 p. m.][0m [33m⚠️  Esperará indefinidamente hasta que esté disponible[0m
+[2m[8:35:01 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:35:01 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:35:01 p. m.][0m [32m✅ Sistema disponible para procesar nuevo prompt[0m
+[2m[8:35:01 p. m.][0m [36mTask ID: research_1769477701078[0m
+[2m[8:35:01 p. m.][0m [36mEnviando prompt de investigación a ChatGPT...[0m
+[2m[8:35:01 p. m.][0m [36m📤 Enviando POST a http://localhost:54321/api/prompt/set[0m
+[2m[8:35:01 p. m.][0m [36m   - ID: research_1769477701078[0m
+[2m[8:35:01 p. m.][0m [36m   - New Chat: true[0m
+[2m[8:35:01 p. m.][0m [36m   - Extract JSON: true[0m
+[2m[8:35:01 p. m.][0m [36m   - Is Image: false[0m
+[2m[8:35:01 p. m.][0m [36m   - Prompt length: 9106 caracteres[0m
+[2m[8:35:01 p. m.][0m [32m📥 Respuesta HTTP: 200 OK[0m
+[2m[8:35:01 p. m.][0m [32m✅ Prompt enviado exitosamente[0m
+[2m[8:35:01 p. m.][0m [36m   Respuesta: "Prompt establecido correctamente"[0m
+[2m[8:35:01 p. m.][0m [32m✓ Prompt enviado, esperando respuesta de ChatGPT...[0m
+[2m[8:35:01 p. m.][0m [36mPolling conversación (esto puede tomar 30-60 segundos)...[0m
+[2m[8:35:01 p. m.][0m [36m🔍 Iniciando polling para conversación: research_1769477701078[0m
+[2m[8:35:01 p. m.][0m [33m   ⚠️  Sin límite de tiempo - esperará hasta que esté lista[0m
+[2m[8:35:01 p. m.][0m [36m   Verificando cada 2s...[0m
+[2m[8:35:01 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 1, 2s][0m
+[2m[8:35:01 p. m.][0m [36m⏳ 404 - Esperando... (2s transcurridos)[0m
+[2m[8:35:03 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 2, 4s][0m
+[2m[8:35:03 p. m.][0m [36m⏳ 404 - Esperando... (4s transcurridos)[0m
+[2m[8:35:05 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 3, 6s][0m
+[2m[8:35:05 p. m.][0m [36m⏳ 404 - Esperando... (6s transcurridos)[0m
+[2m[8:35:07 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 4, 8s][0m
+[2m[8:35:07 p. m.][0m [36m⏳ 404 - Esperando... (8s transcurridos)[0m
+[2m[8:35:09 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 5, 10s][0m
+[2m[8:35:09 p. m.][0m [36m⏳ 404 - Esperando... (10s transcurridos)[0m
+[2m[8:35:11 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 6, 12s][0m
+[2m[8:35:11 p. m.][0m [36m⏳ 404 - Esperando... (12s transcurridos)[0m
+[2m[8:35:13 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 7, 14s][0m
+[2m[8:35:13 p. m.][0m [36m⏳ 404 - Esperando... (14s transcurridos)[0m
+[2m[8:35:15 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 8, 16s][0m
+[2m[8:35:15 p. m.][0m [36m⏳ 404 - Esperando... (16s transcurridos)[0m
+[2m[8:35:17 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 9, 18s][0m
+[2m[8:35:17 p. m.][0m [36m⏳ 404 - Esperando... (18s transcurridos)[0m
+[2m[8:35:19 p. m.][0m [36m⏱️  Tiempo transcurrido: 20s (10 intentos)[0m
+[2m[8:35:19 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:35:19 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:35:19 p. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[8:35:19 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 10, 20s][0m
+[2m[8:35:19 p. m.][0m [36m⏳ 404 - Esperando... (20s transcurridos)[0m
+[2m[8:35:21 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 11, 22s][0m
+[2m[8:35:21 p. m.][0m [36m⏳ 404 - Esperando... (22s transcurridos)[0m
+[2m[8:35:23 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 12, 24s][0m
+[2m[8:35:23 p. m.][0m [36m⏳ 404 - Esperando... (24s transcurridos)[0m
+[2m[8:35:25 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 13, 26s][0m
+[2m[8:35:25 p. m.][0m [36m⏳ 404 - Esperando... (26s transcurridos)[0m
+[2m[8:35:27 p. m.][0m [36m📡 GET /api/conversations/research_1769477701078 [intento 14, 28s][0m
+[2m[8:35:27 p. m.][0m [32m✅ Conversación encontrada (200 OK) después de 28s[0m
+[2m[8:35:27 p. m.][0m [36m   - ID: research_1769477701078[0m
+[2m[8:35:27 p. m.][0m [36m   - Mensajes: 2[0m
+[2m[8:35:27 p. m.][0m [36m   - Último mensaje de: assistant[0m
+[2m[8:35:27 p. m.][0m [32m============================================================[0m
+[2m[8:35:27 p. m.][0m [32m✅ RESPUESTA RECIBIDA DE CHATGPT[0m
+[2m[8:35:27 p. m.][0m [32m============================================================[0m
+[2m[8:35:27 p. m.][0m [36m📄 Tipo de respuesta: object[0m
+[2m[8:35:27 p. m.][0m [32m✅ Respuesta ya es objeto JSON (parseado por API)[0m
+[2m[8:35:27 p. m.][0m [36m🔍 Validando estructura de respuesta...[0m
+[2m[8:35:27 p. m.][0m [36m   Tiene propiedad 'topics': true[0m
+[2m[8:35:27 p. m.][0m [36m   'topics' es array: true[0m
+[2m[8:35:27 p. m.][0m [32m✅ Estructura válida: 4 temas encontrados[0m
+
+
+[2m[8:35:27 p. m.][0m [32m📊 TEMAS ENCONTRADOS: 4[0m
+
+
+[1m[36m[1] ¿Cuánta velocidad de internet necesitas en 2026?[0m
+[2m   📝 Las búsquedas sobre velocidad ideal de internet crecen por el aumento del teletrabajo, streaming 4K/8K y hogares con muchos dispositivos. La gente busca no pagar de más y entender cuándo 300, 500 Mbps o 1 Gbps hacen diferencia real, lo que conecta naturalmente con comparar planes disponibles en Bogotá.[0m
+[2m   🔑 Keywords: velocidad de internet necesaria, cuántos megas necesito, velocidad internet para streaming y trabajo remoto, velocidad internet Bogotá 2026[0m
+
+[1m[36m[2] Fibra óptica vs cable coaxial: diferencias reales hoy[0m
+[2m   📝 El aumento de despliegues FTTH ha disparado búsquedas comparando fibra y coaxial. Los usuarios quieren entender latencia, estabilidad y simetría más allá del marketing, especialmente antes de cambiar de plan o tecnología en ciudades como Bogotá.[0m
+[2m   🔑 Keywords: fibra óptica vs cable coaxial, diferencias entre fibra y HFC, latencia fibra vs coaxial, internet por fibra en Bogotá[0m
+
+[1m[36m[3] Internet lento: causas ocultas más allá de la velocidad[0m
+[2m   📝 Crece la frustración por conexiones lentas incluso con planes rápidos. Tendencias muestran interés en conceptos como jitter, packet loss y bufferbloat. Educar sobre estos factores permite al lector evaluar mejor la calidad del servicio y comparar ofertas de internet con más criterio.[0m
+[2m   🔑 Keywords: por qué mi internet es lento, internet lento causas y soluciones, jitter packet loss bufferbloat, mejorar internet en casa[0m
+
+[1m[36m[4] Cobertura de fibra óptica por localidades en Bogotá[0m
+[2m   📝 Las búsquedas locales sobre disponibilidad de fibra siguen en alza por mudanzas, nuevos proyectos inmobiliarios y expansión de red. Los usuarios quieren saber qué tecnologías llegan a su barrio y qué esperar antes de comparar planes de internet.[0m
+[2m   🔑 Keywords: cobertura fibra óptica Bogotá, fibra óptica por localidades Bogotá, internet disponible en mi zona Bogotá, FTTH Bogotá 2026[0m
+
+[2m[8:35:27 p. m.][0m [36m💾 Guardando resultados...[0m
+[2m[8:35:27 p. m.][0m [36m   Directorio: /Users/cristian/internet/content/blog-research[0m
+[2m[8:35:27 p. m.][0m [32m   ✓ Directorio creado/verificado[0m
+[2m[8:35:27 p. m.][0m [32m✅ Resultados guardados: /Users/cristian/internet/content/blog-research/research_1769477701078.json[0m
+[2m[8:35:27 p. m.][0m [36m   Tamaño: 2243 bytes[0m
+[2m[8:35:27 p. m.][0m [36m🧹 Limpiando sistema para próxima fase...[0m
+[2m[8:35:27 p. m.][0m [36m🧹 Limpiando prompt y liberando sistema...[0m
+[2m[8:35:27 p. m.][0m [32m✅ Sistema reseteado y disponible para nuevo proceso[0m
+[2m[8:35:27 p. m.][0m [32m✅ Sistema disponible para siguiente proceso[0m
+[2m[8:35:27 p. m.][0m [36m============================================================[0m
+[2m[8:35:27 p. m.][0m [32m🎯 TEMA SELECCIONADO: "¿Cuánta velocidad de internet necesitas en 2026?"[0m
+[2m[8:35:27 p. m.][0m [36m============================================================[0m
+
+════════════════════════════════════════════════════════════
+
+[2m[8:35:27 p. m.][0m [32m✅ Fase 1 completada. Sistema limpio.[0m
+[2m[8:35:27 p. m.][0m [36m⏳ Esperando 2 segundos antes de la siguiente fase...[0m
+[2m[8:35:29 p. m.][0m [36m🚀 FASE 2: GENERACIÓN DE CONTENIDO[0m
+[2m[8:35:29 p. m.][0m [33m⚠️  Verificando disponibilidad antes de continuar...[0m
+[2m[8:35:29 p. m.][0m [36mVerificando disponibilidad del sistema...[0m
+[2m[8:35:29 p. m.][0m [33m⚠️  Esperará indefinidamente hasta que esté disponible[0m
+[2m[8:35:29 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:35:29 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:35:29 p. m.][0m [32m✅ Sistema disponible para procesar nuevo prompt[0m
+[2m[8:35:29 p. m.][0m [36m============================================================[0m
+[2m[8:35:29 p. m.][0m [36m✍️  INICIANDO GENERACIÓN DE CONTENIDO[0m
+[2m[8:35:29 p. m.][0m [36m============================================================[0m
+[2m[8:35:29 p. m.][0m [36m📰 Tema: ¿Cuánta velocidad de internet necesitas en 2026?[0m
+[2m[8:35:29 p. m.][0m [36mVerificando disponibilidad del sistema...[0m
+[2m[8:35:29 p. m.][0m [33m⚠️  Esperará indefinidamente hasta que esté disponible[0m
+[2m[8:35:29 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:35:29 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:35:29 p. m.][0m [32m✅ Sistema disponible para procesar nuevo prompt[0m
+[2m[8:35:29 p. m.][0m [36m🆔 Task ID: article_1769477729506_cuanta-velocidad-de-internet-n[0m
+[2m[8:35:29 p. m.][0m [36mEnviando prompt de redacción a ChatGPT...[0m
+[2m[8:35:29 p. m.][0m [36m   Prompt incluye: Eres un periodista tecnológico geek con profundo conocimiento técnico de redes, telecomunicaciones e infraestructura de internet. Escribes con la pasión de un tech enthusiast pero la rigurosidad de un periodista investigativo.[0m
+[2m[8:35:29 p. m.][0m [36m📤 Enviando POST a http://localhost:54321/api/prompt/set[0m
+[2m[8:35:29 p. m.][0m [36m   - ID: article_1769477729506_cuanta-velocidad-de-internet-n[0m
+[2m[8:35:29 p. m.][0m [36m   - New Chat: true[0m
+[2m[8:35:29 p. m.][0m [36m   - Extract JSON: true[0m
+[2m[8:35:29 p. m.][0m [36m   - Is Image: false[0m
+[2m[8:35:29 p. m.][0m [36m   - Prompt length: 10570 caracteres[0m
+[2m[8:35:29 p. m.][0m [32m📥 Respuesta HTTP: 200 OK[0m
+[2m[8:35:29 p. m.][0m [32m✅ Prompt enviado exitosamente[0m
+[2m[8:35:29 p. m.][0m [36m   Respuesta: "Prompt establecido correctamente"[0m
+[2m[8:35:29 p. m.][0m [32m✓ Prompt enviado, esperando que ChatGPT redacte el artículo...[0m
+[2m[8:35:29 p. m.][0m [36m⏱️  Esto puede tomar 1-2 minutos (artículo completo)...[0m
+[2m[8:35:29 p. m.][0m [36m🔍 Iniciando polling para conversación: article_1769477729506_cuanta-velocidad-de-internet-n[0m
+[2m[8:35:29 p. m.][0m [33m   ⚠️  Sin límite de tiempo - esperará hasta que esté lista[0m
+[2m[8:35:29 p. m.][0m [36m   Verificando cada 2s...[0m
+[2m[8:35:29 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 1, 2s][0m
+[2m[8:35:29 p. m.][0m [36m⏳ 404 - Esperando... (2s transcurridos)[0m
+[2m[8:35:31 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 2, 4s][0m
+[2m[8:35:31 p. m.][0m [36m⏳ 404 - Esperando... (4s transcurridos)[0m
+[2m[8:35:33 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 3, 6s][0m
+[2m[8:35:33 p. m.][0m [36m⏳ 404 - Esperando... (6s transcurridos)[0m
+[2m[8:35:35 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 4, 8s][0m
+[2m[8:35:35 p. m.][0m [36m⏳ 404 - Esperando... (8s transcurridos)[0m
+[2m[8:35:37 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 5, 10s][0m
+[2m[8:35:37 p. m.][0m [36m⏳ 404 - Esperando... (10s transcurridos)[0m
+[2m[8:35:39 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 6, 12s][0m
+[2m[8:35:39 p. m.][0m [36m⏳ 404 - Esperando... (12s transcurridos)[0m
+[2m[8:35:41 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 7, 14s][0m
+[2m[8:35:41 p. m.][0m [36m⏳ 404 - Esperando... (14s transcurridos)[0m
+[2m[8:35:43 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 8, 16s][0m
+[2m[8:35:43 p. m.][0m [36m⏳ 404 - Esperando... (16s transcurridos)[0m
+[2m[8:35:45 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 9, 18s][0m
+[2m[8:35:45 p. m.][0m [36m⏳ 404 - Esperando... (18s transcurridos)[0m
+[2m[8:35:47 p. m.][0m [36m⏱️  Tiempo transcurrido: 20s (10 intentos)[0m
+[2m[8:35:47 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:35:47 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:35:47 p. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[8:35:47 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 10, 20s][0m
+[2m[8:35:47 p. m.][0m [36m⏳ 404 - Esperando... (20s transcurridos)[0m
+[2m[8:35:49 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 11, 22s][0m
+[2m[8:35:49 p. m.][0m [36m⏳ 404 - Esperando... (22s transcurridos)[0m
+[2m[8:35:51 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 12, 24s][0m
+[2m[8:35:51 p. m.][0m [36m⏳ 404 - Esperando... (24s transcurridos)[0m
+[2m[8:35:53 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 13, 26s][0m
+[2m[8:35:53 p. m.][0m [36m⏳ 404 - Esperando... (26s transcurridos)[0m
+[2m[8:35:55 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 14, 28s][0m
+[2m[8:35:55 p. m.][0m [36m⏳ 404 - Esperando... (28s transcurridos)[0m
+[2m[8:35:57 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 15, 30s][0m
+[2m[8:35:57 p. m.][0m [36m⏳ 404 - Esperando... (30s transcurridos)[0m
+[2m[8:35:59 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 16, 32s][0m
+[2m[8:35:59 p. m.][0m [36m⏳ 404 - Esperando... (32s transcurridos)[0m
+[2m[8:36:01 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 17, 34s][0m
+[2m[8:36:01 p. m.][0m [36m⏳ 404 - Esperando... (34s transcurridos)[0m
+[2m[8:36:03 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 18, 36s][0m
+[2m[8:36:03 p. m.][0m [36m⏳ 404 - Esperando... (36s transcurridos)[0m
+[2m[8:36:05 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 19, 38s][0m
+[2m[8:36:05 p. m.][0m [36m⏳ 404 - Esperando... (38s transcurridos)[0m
+[2m[8:36:07 p. m.][0m [36m⏱️  Tiempo transcurrido: 40s (20 intentos)[0m
+[2m[8:36:07 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:36:07 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:36:07 p. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[8:36:07 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 20, 40s][0m
+[2m[8:36:07 p. m.][0m [36m⏳ 404 - Esperando... (40s transcurridos)[0m
+[2m[8:36:09 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 21, 42s][0m
+[2m[8:36:09 p. m.][0m [36m⏳ 404 - Esperando... (42s transcurridos)[0m
+[2m[8:36:11 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 22, 44s][0m
+[2m[8:36:11 p. m.][0m [36m⏳ 404 - Esperando... (44s transcurridos)[0m
+[2m[8:36:13 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 23, 46s][0m
+[2m[8:36:13 p. m.][0m [36m⏳ 404 - Esperando... (46s transcurridos)[0m
+[2m[8:36:15 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 24, 48s][0m
+[2m[8:36:15 p. m.][0m [36m⏳ 404 - Esperando... (48s transcurridos)[0m
+[2m[8:36:17 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 25, 50s][0m
+[2m[8:36:17 p. m.][0m [36m⏳ 404 - Esperando... (50s transcurridos)[0m
+[2m[8:36:19 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 26, 52s][0m
+[2m[8:36:19 p. m.][0m [36m⏳ 404 - Esperando... (52s transcurridos)[0m
+[2m[8:36:21 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 27, 54s][0m
+[2m[8:36:21 p. m.][0m [36m⏳ 404 - Esperando... (54s transcurridos)[0m
+[2m[8:36:23 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 28, 56s][0m
+[2m[8:36:23 p. m.][0m [36m⏳ 404 - Esperando... (56s transcurridos)[0m
+[2m[8:36:25 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 29, 58s][0m
+[2m[8:36:25 p. m.][0m [36m⏳ 404 - Esperando... (58s transcurridos)[0m
+[2m[8:36:27 p. m.][0m [36m⏱️  Tiempo transcurrido: 60s (30 intentos)[0m
+[2m[8:36:27 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:36:27 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:36:27 p. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[8:36:27 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 30, 60s][0m
+[2m[8:36:27 p. m.][0m [36m⏳ 404 - Esperando... (60s transcurridos)[0m
+[2m[8:36:29 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 31, 62s][0m
+[2m[8:36:29 p. m.][0m [36m⏳ 404 - Esperando... (62s transcurridos)[0m
+[2m[8:36:31 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 32, 64s][0m
+[2m[8:36:31 p. m.][0m [36m⏳ 404 - Esperando... (64s transcurridos)[0m
+[2m[8:36:33 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 33, 66s][0m
+[2m[8:36:33 p. m.][0m [36m⏳ 404 - Esperando... (66s transcurridos)[0m
+[2m[8:36:35 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 34, 68s][0m
+[2m[8:36:35 p. m.][0m [36m⏳ 404 - Esperando... (68s transcurridos)[0m
+[2m[8:36:37 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 35, 70s][0m
+[2m[8:36:37 p. m.][0m [36m⏳ 404 - Esperando... (70s transcurridos)[0m
+[2m[8:36:39 p. m.][0m [36m📡 GET /api/conversations/article_1769477729506_cuanta-velocidad-de-internet-n [intento 36, 72s][0m
+[2m[8:36:39 p. m.][0m [32m✅ Conversación encontrada (200 OK) después de 72s[0m
+[2m[8:36:39 p. m.][0m [36m   - ID: article_1769477729506_cuanta-velocidad-de-internet-n[0m
+[2m[8:36:39 p. m.][0m [36m   - Mensajes: 2[0m
+[2m[8:36:39 p. m.][0m [36m   - Último mensaje de: assistant[0m
+[2m[8:36:39 p. m.][0m [32m============================================================[0m
+[2m[8:36:39 p. m.][0m [32m✅ ARTÍCULO GENERADO[0m
+[2m[8:36:39 p. m.][0m [32m============================================================[0m
+[2m[8:36:39 p. m.][0m [36m📄 Tipo de respuesta: object[0m
+[2m[8:36:39 p. m.][0m [32m✅ Respuesta ya es objeto JSON[0m
+[2m[8:36:39 p. m.][0m [36m🔍 Validando estructura del artículo...[0m
+[2m[8:36:39 p. m.][0m [32m✅ Todos los campos requeridos presentes[0m
+
+
+[2m[8:36:39 p. m.][0m [32m📊 RESUMEN DEL ARTÍCULO GENERADO:[0m
+[1m[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mTítulo:[0m ¿Cuánta velocidad de internet necesitas en 2026? La guía real para no pagar de más
+[1mSlug:[0m cuanta-velocidad-internet-necesitas-2026
+[1mDescripción:[0m Descubre cuántos Mbps necesitas en 2026 según tu uso real: streaming, trabajo remoto y gaming. Evita pagar de más y elige mejor.
+[1mCategoría:[0m Guías
+[1mTags:[0m velocidad de internet, fibra optica, teletrabajo, streaming, ETB, Claro, Movistar
+[1mAutor:[0m Equipo Editorial
+[1mTiempo de lectura:[0m 8 minutos
+[1mLongitud del contenido:[0m 6391 caracteres
+[1mPalabras aprox:[0m 995
+[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[2m--- Preview del Contenido (primeras 10 líneas) ---[0m
+# ¿Cuánta velocidad de internet necesitas en 2026?
+
+¿De verdad necesitas 1 Gbps para ver Netflix y trabajar desde casa? O dicho de otra forma: ¿estás pagando por una autopista de ocho carriles cuando solo manejas un carril?
+
+En 2026, la pregunta ya no es si necesitas “buen internet”, sino **cuánta velocidad de internet necesaria** tiene sentido para tu uso real. El auge del teletrabajo, el streaming en 4K (y tímidamente 8K), las videollamadas eternas y los hogares llenos de dispositivos conectados ha disparado las búsquedas de *cuántos megas necesito*.
+
+La buena noticia: más velocidad no siempre significa mejor experiencia. La mala: muchos planes se venden como si la velocidad fuera lo único que importa. Aquí vamos a separar mito de realidad, con contexto colombiano y ejemplos claros para que sepas exactamente **qué plan te conviene en Bogotá en 2026**.
+
+## ¿Velocidad o latencia? El error más común al elegir internet
+
+[2m... (109 líneas totales)[0m
+
+[2m[8:36:39 p. m.][0m [36m💾 Guardando artículo...[0m
+[2m[8:36:39 p. m.][0m [32m   ✓ Directorio creado/verificado[0m
+[2m[8:36:39 p. m.][0m [32m✅ Artículo guardado: /Users/cristian/internet/content/blog/cuanta-velocidad-internet-necesitas-2026.json[0m
+[2m[8:36:39 p. m.][0m [36m   Tamaño: 7181 bytes[0m
+[2m[8:36:39 p. m.][0m [36m🧹 Limpiando sistema para próxima fase...[0m
+[2m[8:36:39 p. m.][0m [36m🧹 Limpiando prompt y liberando sistema...[0m
+[2m[8:36:39 p. m.][0m [32m✅ Sistema reseteado y disponible para nuevo proceso[0m
+[2m[8:36:39 p. m.][0m [32m✅ Sistema disponible para siguiente proceso[0m
+
+════════════════════════════════════════════════════════════
+
+[2m[8:36:39 p. m.][0m [32m✅ Fase 2 completada. Sistema limpio.[0m
+[2m[8:36:39 p. m.][0m [36m⏳ Esperando 2 segundos antes de la siguiente fase...[0m
+[2m[8:36:41 p. m.][0m [36m🚀 FASE 3: GENERACIÓN DE IMAGEN[0m
+[2m[8:36:41 p. m.][0m [33m⚠️  Verificando disponibilidad antes de continuar...[0m
+[2m[8:36:41 p. m.][0m [36mVerificando disponibilidad del sistema...[0m
+[2m[8:36:41 p. m.][0m [33m⚠️  Esperará indefinidamente hasta que esté disponible[0m
+[2m[8:36:41 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:36:41 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:36:41 p. m.][0m [32m✅ Sistema disponible para procesar nuevo prompt[0m
+[2m[8:36:41 p. m.][0m [36m🎨 INICIANDO GENERACIÓN DE IMAGEN[0m
+[2m[8:36:41 p. m.][0m [36m   Artículo: ¿Cuánta velocidad de internet necesitas en 2026? La guía real para no pagar de más[0m
+[2m[8:36:41 p. m.][0m [36m   Slug: cuanta-velocidad-internet-necesitas-2026[0m
+[2m[8:36:41 p. m.][0m [36mVerificando disponibilidad del sistema...[0m
+[2m[8:36:41 p. m.][0m [33m⚠️  Esperará indefinidamente hasta que esté disponible[0m
+[2m[8:36:41 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:36:41 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:36:41 p. m.][0m [32m✅ Sistema disponible para procesar nuevo prompt[0m
+[2m[8:36:41 p. m.][0m [36m📋 Task ID: 1769477801913[0m
+[2m[8:36:41 p. m.][0m [36m🎨 Estilo seleccionado: ilustración digital plana estilo Kurzgesagt, infografía con ...[0m
+[2m[8:36:41 p. m.][0m [36m📝 Prompt de imagen generado[0m
+[2m[8:36:41 p. m.][0m [36m   Longitud: 991 caracteres[0m
+[2m[8:36:41 p. m.][0m [36m📤 Enviando solicitud a http://localhost:54321/api/prompt/set[0m
+[2m[8:36:41 p. m.][0m [36m📤 Enviando POST a http://localhost:54321/api/prompt/set[0m
+[2m[8:36:41 p. m.][0m [36m   - ID: 1769477801913[0m
+[2m[8:36:41 p. m.][0m [36m   - New Chat: true[0m
+[2m[8:36:41 p. m.][0m [36m   - Extract JSON: false[0m
+[2m[8:36:41 p. m.][0m [36m   - Is Image: true[0m
+[2m[8:36:41 p. m.][0m [36m   - Prompt length: 991 caracteres[0m
+[2m[8:36:41 p. m.][0m [32m📥 Respuesta HTTP: 200 OK[0m
+[2m[8:36:41 p. m.][0m [32m✅ Prompt enviado exitosamente[0m
+[2m[8:36:41 p. m.][0m [36m   Respuesta: "Prompt establecido correctamente"[0m
+[2m[8:36:41 p. m.][0m [32m✅ Solicitud de imagen enviada[0m
+[2m[8:36:41 p. m.][0m [36m⏳ Esperando generación de imagen...[0m
+[2m[8:36:41 p. m.][0m [33m   ⚠️  El script esperará el tiempo que sea necesario[0m
+[2m[8:36:41 p. m.][0m [36m🔍 Iniciando polling para conversación: 1769477801913[0m
+[2m[8:36:41 p. m.][0m [33m   ⚠️  Sin límite de tiempo - esperará hasta que esté lista[0m
+[2m[8:36:41 p. m.][0m [36m   Verificando cada 2s...[0m
+[2m[8:36:41 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 1, 2s][0m
+[2m[8:36:41 p. m.][0m [36m⏳ 404 - Esperando... (2s transcurridos)[0m
+[2m[8:36:43 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 2, 4s][0m
+[2m[8:36:43 p. m.][0m [36m⏳ 404 - Esperando... (4s transcurridos)[0m
+[2m[8:36:45 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 3, 6s][0m
+[2m[8:36:46 p. m.][0m [36m⏳ 404 - Esperando... (6s transcurridos)[0m
+[2m[8:36:48 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 4, 8s][0m
+[2m[8:36:48 p. m.][0m [36m⏳ 404 - Esperando... (8s transcurridos)[0m
+[2m[8:36:50 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 5, 10s][0m
+[2m[8:36:50 p. m.][0m [36m⏳ 404 - Esperando... (10s transcurridos)[0m
+[2m[8:36:52 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 6, 12s][0m
+[2m[8:36:52 p. m.][0m [36m⏳ 404 - Esperando... (12s transcurridos)[0m
+[2m[8:36:54 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 7, 14s][0m
+[2m[8:36:54 p. m.][0m [36m⏳ 404 - Esperando... (14s transcurridos)[0m
+[2m[8:36:56 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 8, 16s][0m
+[2m[8:36:56 p. m.][0m [36m⏳ 404 - Esperando... (16s transcurridos)[0m
+[2m[8:36:58 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 9, 18s][0m
+[2m[8:36:58 p. m.][0m [36m⏳ 404 - Esperando... (18s transcurridos)[0m
+[2m[8:37:00 p. m.][0m [36m⏱️  Tiempo transcurrido: 20s (10 intentos)[0m
+[2m[8:37:00 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:37:00 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:37:00 p. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[8:37:00 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 10, 20s][0m
+[2m[8:37:00 p. m.][0m [36m⏳ 404 - Esperando... (20s transcurridos)[0m
+[2m[8:37:02 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 11, 22s][0m
+[2m[8:37:02 p. m.][0m [36m⏳ 404 - Esperando... (22s transcurridos)[0m
+[2m[8:37:04 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 12, 24s][0m
+[2m[8:37:04 p. m.][0m [36m⏳ 404 - Esperando... (24s transcurridos)[0m
+[2m[8:37:06 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 13, 26s][0m
+[2m[8:37:06 p. m.][0m [36m⏳ 404 - Esperando... (26s transcurridos)[0m
+[2m[8:37:08 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 14, 28s][0m
+[2m[8:37:08 p. m.][0m [36m⏳ 404 - Esperando... (28s transcurridos)[0m
+[2m[8:37:10 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 15, 30s][0m
+[2m[8:37:10 p. m.][0m [36m⏳ 404 - Esperando... (30s transcurridos)[0m
+[2m[8:37:12 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 16, 32s][0m
+[2m[8:37:12 p. m.][0m [36m⏳ 404 - Esperando... (32s transcurridos)[0m
+[2m[8:37:14 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 17, 34s][0m
+[2m[8:37:14 p. m.][0m [36m⏳ 404 - Esperando... (34s transcurridos)[0m
+[2m[8:37:16 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 18, 36s][0m
+[2m[8:37:16 p. m.][0m [36m⏳ 404 - Esperando... (36s transcurridos)[0m
+[2m[8:37:18 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 19, 38s][0m
+[2m[8:37:18 p. m.][0m [36m⏳ 404 - Esperando... (38s transcurridos)[0m
+[2m[8:37:20 p. m.][0m [36m⏱️  Tiempo transcurrido: 40s (20 intentos)[0m
+[2m[8:37:20 p. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[8:37:20 p. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[8:37:20 p. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[8:37:20 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 20, 40s][0m
+[2m[8:37:20 p. m.][0m [36m⏳ 404 - Esperando... (40s transcurridos)[0m
+[2m[8:37:22 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 21, 42s][0m
+[2m[8:37:22 p. m.][0m [36m⏳ 404 - Esperando... (42s transcurridos)[0m
+[2m[8:37:24 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 22, 44s][0m
+[2m[8:37:24 p. m.][0m [36m⏳ 404 - Esperando... (44s transcurridos)[0m
+[2m[8:37:26 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 23, 46s][0m
+[2m[8:37:26 p. m.][0m [36m⏳ 404 - Esperando... (46s transcurridos)[0m
+[2m[8:37:28 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 24, 48s][0m
+[2m[8:37:28 p. m.][0m [36m⏳ 404 - Esperando... (48s transcurridos)[0m
+[2m[8:37:30 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 25, 50s][0m
+[2m[8:37:30 p. m.][0m [36m⏳ 404 - Esperando... (50s transcurridos)[0m
+[2m[8:37:32 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 26, 52s][0m
+[2m[8:37:32 p. m.][0m [36m⏳ 404 - Esperando... (52s transcurridos)[0m
+[2m[8:37:34 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 27, 54s][0m
+[2m[8:37:34 p. m.][0m [36m⏳ 404 - Esperando... (54s transcurridos)[0m
+[2m[8:37:36 p. m.][0m [36m📡 GET /api/conversations/1769477801913 [intento 28, 56s][0m
+[2m[8:37:36 p. m.][0m [32m✅ Conversación encontrada (200 OK) después de 56s[0m
+[2m[8:37:36 p. m.][0m [36m   - ID: 1769477801913[0m
+[2m[8:37:36 p. m.][0m [36m   - Mensajes: 2[0m
+[2m[8:37:36 p. m.][0m [36m   - Último mensaje de: assistant[0m
+[2m[8:37:36 p. m.][0m [36m📥 Conversación recibida, analizando estructura...[0m
+[2m[8:37:36 p. m.][0m [36m   Total de mensajes: 2[0m
+[2m[8:37:36 p. m.][0m [36m   Rol del último mensaje: assistant[0m
+[2m[8:37:36 p. m.][0m [36m   Es imagen: true[0m
+[2m[8:37:36 p. m.][0m [36m   Contenido text: /images/1769477801913_1769477855500_ss0xw9i8p.png[0m
+[2m[8:37:36 p. m.][0m [32m✅ URL de imagen encontrada: http://localhost:54321/images/1769477801913_1769477855500_ss0xw9i8p.png[0m
+[2m[8:37:36 p. m.][0m [36m📥 Descargando imagen desde el servidor...[0m
+[2m[8:37:36 p. m.][0m [32m✅ Imagen descargada: 1932.12 KB[0m
+[2m[8:37:36 p. m.][0m [36m💾 Guardando imagen: /Users/cristian/internet/public/blog-images/cuanta-velocidad-internet-necesitas-2026.webp[0m
+[2m[8:37:36 p. m.][0m [32m✅ Permisos de imagen ajustados[0m
+[2m[8:37:36 p. m.][0m [36m📏 Tamaño original: 1932.12 KB[0m
+[2m[8:37:36 p. m.][0m [36m🗜️  Comprimiendo imagen...[0m
+[2m[8:37:36 p. m.][0m [32m✅ Imagen comprimida: 67.62 KB[0m
+[2m[8:37:36 p. m.][0m [36m🖼️  Generando thumbnail 400x200...[0m
+[2m[8:37:36 p. m.][0m [32m✅ Thumbnail generado: 13.75 KB[0m
+[2m[8:37:36 p. m.][0m [36m🧹 Limpiando prompt y liberando sistema...[0m
+[2m[8:37:36 p. m.][0m [32m✅ Sistema reseteado y disponible para nuevo proceso[0m
+[2m[8:37:36 p. m.][0m [32m✅ Artículo actualizado con rutas de imagen[0m
+
+════════════════════════════════════════════════════════════
+
+[2m[8:37:36 p. m.][0m [32m✅ Fase 3 completada. Sistema limpio.[0m
+[1m[32m🎉 PROCESO COMPLETADO EXITOSAMENTE[0m
+
+[36m📋 Resumen:[0m
+   [2mInvestigación:[0m /Users/cristian/internet/content/blog-research/research_1769477701078.json
+   [2mArtículo:[0m /Users/cristian/internet/content/blog/cuanta-velocidad-internet-necesitas-2026.json
+   [2mTítulo:[0m ¿Cuánta velocidad de internet necesitas en 2026? La guía real para no pagar de más
+   [2mSlug:[0m cuanta-velocidad-internet-necesitas-2026
+   [2mImagen:[0m /blog-images/cuanta-velocidad-internet-necesitas-2026.webp
+   [2mThumbnail:[0m /blog-images/cuanta-velocidad-internet-necesitas-2026-thumb.webp
+   [2mEstilo:[0m ilustración digital plana estilo Kurzgesagt, infog...
+
+[32m✅ Blog post completo generado con éxito[0m
+
+
+════════════════════════════════════════════════════════════
+
+[2m[8:37:36 p. m.][0m [36m🚀 FASE 4: DEPLOY AUTOMÁTICO[0m
+[2m[8:37:36 p. m.][0m [36mEjecutando deploy con mensaje: "🤖 Auto-generated blog post: ¿Cuánta velocidad de internet necesitas en 2026? La guía real para no pagar de más"[0m
+[2m[8:37:36 p. m.][0m [33mEsto puede tomar unos minutos...[0m

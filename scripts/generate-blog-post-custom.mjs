@@ -262,11 +262,11 @@ Identificar temas ALTAMENTE RELEVANTES, ACTUALES Y CON POTENCIAL SEO sobre tecno
 🌐 CATEGORÍAS DE CONTENIDO (Distribución estratégica):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🌐 1. BANDA ANCHA Y FIBRA ÓPTICA (40%):
+🌐 1. BANDA ANCHA Y FIBRA ÓPTICA (25%):
 ────────────────────────────────────────
 • Fibra óptica FTTH vs FTTB vs FTTC: diferencias técnicas y prácticas
 • Expansión de fibra en Bogotá: nuevas zonas, cronogramas, operadores
-• tecnologías de fibra, velocidades, futuro
+• GPON vs EPON vs XGS-PON: tecnologías de fibra, velocidades, futuro
 • Banda ancha simétrica vs asimétrica: casos de uso, ventajas
 • Internet de alta velocidad: ¿cuándo se necesitan 500 Mbps, 1 Gbps o más?
 • Fibra óptica vs cable coaxial: diferencias de latencia, estabilidad, velocidad
@@ -276,7 +276,38 @@ Identificar temas ALTAMENTE RELEVANTES, ACTUALES Y CON POTENCIAL SEO sobre tecno
 • Instalación de fibra: proceso, costos, equipos necesarios
 • Backbone de fibra en Colombia: inversiones, rutas, infraestructura
 
-📡 2. INTERNET SATELITAL Y ALTERNATIVAS (20%):
+🎮 2. INTERNET PARA CASOS DE USO ESPECÍFICOS (30%):
+─────────────────────────────────────────────────────
+**GAMING:**
+• Internet para gaming competitivo: latencia vs velocidad, qué importa más
+• Mejor operador para gamers en Bogotá: ping, estabilidad, uptime
+• Configuración de red óptima para gaming: QoS, puertos, DMZ
+• Gaming online: requisitos por juego (Fortnite, COD, FIFA, LoL)
+• Internet para streaming en Twitch/YouTube Gaming: upload necesario
+• Reducir lag y packet loss en juegos online
+
+**EMPRESAS Y NEGOCIOS:**
+• Internet empresarial vs residencial: diferencias reales, cuándo vale la pena
+• Conectividad para pequeñas empresas (PYMEs): opciones y costos
+• Internet dedicado vs compartido: casos de uso, diferencias técnicas
+• Soluciones para oficinas: redundancia, failover, backup
+• VPNs empresariales: conectar sucursales, trabajo remoto seguro
+• Internet para comercios: POS, facturación electrónica, necesidades
+
+**TRABAJO REMOTO Y HOGAR:**
+• Internet para teletrabajo: velocidad mínima para Zoom, Teams, Meet
+• Setup de red para trabajo desde casa: router, cobertura, seguridad
+• Múltiples personas en videollamada simultánea: bandwidth necesario
+• Internet para educación virtual: plataformas, requisitos, estabilidad
+• Smart home: cuánto consume IoT, cámaras, asistentes, domótica
+
+**STREAMING Y ENTRETENIMIENTO:**
+• Velocidad para Netflix 4K, Disney+, Prime Video: comparativa real
+• Streaming múltiple: cuántas personas pueden ver al mismo tiempo
+• Internet para crear contenido: YouTube, TikTok, upload necesario
+• Cortar cable: IPTV, streaming services, requisitos de red
+
+📡 3. INTERNET SATELITAL Y ALTERNATIVAS (15%):
 ───────────────────────────────────────────────
 • Starlink en Colombia: cobertura, velocidades reales, costos 2026
 • Internet satelital vs fibra vs 4G/5G: cuándo tiene sentido cada uno
@@ -284,68 +315,39 @@ Identificar temas ALTAMENTE RELEVANTES, ACTUALES Y CON POTENCIAL SEO sobre tecno
 • Latencia en internet satelital: LEO vs GEO, mejoras tecnológicas
 • Internet en zonas rurales: opciones disponibles en Colombia
 • 5G fijo como alternativa a fibra: velocidades, limitaciones, cobertura
-• WISPs (Wireless ISPs): cuándo son una opción viable
-• Soluciones híbridas: backup satelital para conexiones críticas
-• Costos comparados: satelital vs terrestre en diferentes escenarios
-• Regulación de internet satelital en Colombia
+• Internet para fincas, casas campestres: soluciones híbridas
+• Backup satelital para negocios críticos
 
-🔒 3. CIBERSEGURIDAD Y PRIVACIDAD (15%):
+🔒 4. CIBERSEGURIDAD Y PRIVACIDAD (10%):
 ────────────────────────────────────────
 • VPNs: cuándo usarlas, mejores opciones, mitos vs realidad
 • DNS seguro (DoH, DoT): qué es, cómo configurar, beneficios
 • Amenazas actuales: phishing, ransomware, ataques DDoS
 • Protección del router: cambio de contraseñas, firmware, exploits comunes
 • Redes WiFi públicas: riesgos y mejores prácticas
+• Seguridad para empresas: firewall, monitoreo, prevención
 • Protección de datos personales en Colombia (ley 1581)
-• Autenticación de dos factores para servicios críticos
-• Neutralidad de red: estado actual y regulaciones
-• Cifrado end-to-end en videollamadas y mensajería
 
-🛠️ 4. GUÍAS PRÁCTICAS Y SOLUCIONES (15%):
+🛠️ 5. GUÍAS PRÁCTICAS Y SOLUCIONES (10%):
 ──────────────────────────────────────────
 • "Internet lento: diagnóstico completo y 15 soluciones efectivas"
 • "Cómo elegir plan de internet: velocidad necesaria por uso real"
 • "Optimizar WiFi: ubicación, canales, ancho de banda, interferencias"
-• "Velocidad necesaria por uso: Netflix 4K, gaming competitivo, Zoom, trabajo remoto"
-• "Latencia vs velocidad: qué importa para gaming, videollamadas, browsing"
 • "Medir velocidad real: mejores herramientas, interpretar resultados"
-• "Internet simétrico vs asimétrico: diferencias, cuándo importa"
 • "Extender WiFi: comparativa de soluciones (mesh, powerline, repetidor)"
-• "Bufferbloat: qué es y cómo solucionarlo"
-• "Smart home: bandwidth necesario, mejores prácticas de red"
-• "Trabajo remoto: setup de red ideal, backup de internet"
 • "Configurar QoS: priorizar tráfico crítico en tu red"
+• "Bufferbloat: qué es y cómo solucionarlo"
+• "Cambiar de operador: proceso completo, portabilidad, tips"
 
-📰 5. NOTICIAS Y ACTUALIDAD TECNOLÓGICA (10%):
+📰 6. NOTICIAS Y ACTUALIDAD TECNOLÓGICA (10%):
 ───────────────────────────────────────────────
 • Inversiones en infraestructura de banda ancha: Claro, Movistar, ETB
 • Regulaciones MinTIC: espectro, licencias, obligaciones de cobertura
 • Estudios de velocidad: Ookla, Netflix ISP Index, rankings Colombia
 • Cambios tarifarios y promociones del sector telecomunicaciones
 • Quejas SuperIntendencia TIC: operadores, patrones, resoluciones
-• Apagones o caídas masivas de servicio
 • Lanzamiento de nuevos servicios o tecnologías en Colombia
-• Acuerdos de infraestructura compartida entre operadores
-• Programas gobierno para conectividad rural
-• Competencia en mercado de banda ancha
-• GPON vs EPON vs XGS-PON: tipos de fibra, diferencias para usuario final
-• Backbone de internet: cómo funciona la infraestructura global
-• Cables submarinos: mapa, importancia para Latinoamérica
-• Redes metropolitanas: cómo se conecta tu hogar con el mundo
-• PON vs Ethernet dedicado: internet residencial vs empresarial
-• Bufferbloat y diseño de queues en ISPs
-• CG-NAT: qué es, limitaciones, alternativas
-
-🌍 6. CONTEXTO LOCAL BOGOTÁ/COLOMBIA (10%):
-───────────────────────────────────────────────
-• Cobertura fibra óptica por localidad en Bogotá 2026
-• Comparativa de tecnologías disponibles por zona
-• Internet en estratos 1-2: opciones económicas, programas sociales
-• Derechos del consumidor de internet en Colombia
-• Proceso de cambio de operador: portabilidad, penalizaciones
-• Internet para pequeñas empresas: diferencias con residencial
-• Zonas con mejor/peor conectividad en Bogotá
-• Iniciativas gobierno: Colombia Conecta, MinTIC
+• Expansión de cobertura por zonas/barrios específicos
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🎯 KEYWORDS SEO DE ALTO IMPACTO:
@@ -1251,15 +1253,9 @@ async function run() {
       console.log(`${colors.bright}${colors.green}🌐 Sitio actualizado en: https://comparadorinternet.co${colors.reset}`);
       console.log(`${colors.bright}${colors.cyan}📰 Artículo publicado en: ${articleUrl}${colors.reset}\n`);
       
-      // Abrir la página del artículo en el navegador
-      log("🌍 Abriendo página del artículo...", "info");
-      try {
-        await execAsync(`open "${articleUrl}"`);
-        log("✅ Página abierta en el navegador", "success");
-      } catch (browserError) {
-        log(`⚠️  No se pudo abrir el navegador automáticamente`, "warning");
-        log(`   Visita manualmente: ${articleUrl}`, "info");
-      }
+      // Mostrar URL en logs (no abrir navegador en ejecuciones automáticas)
+      log(`🌐 Artículo disponible en: ${articleUrl}`, "success");
+      log("💡 La URL fue registrada en los logs para referencia", "info");
     } catch (deployError) {
       log(`⚠️  Error durante el deploy: ${deployError.message}`, "error");
       log("El blog post se generó correctamente pero el deploy falló", "warning");

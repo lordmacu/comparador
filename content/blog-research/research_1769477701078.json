@@ -1,0 +1,55 @@
+{
+  "taskId": "research_1769477701078",
+  "timestamp": "2026-01-27T01:35:27.496Z",
+  "topics": [
+    {
+      "title": "¿Cuánta velocidad de internet necesitas en 2026?",
+      "reason": "Las búsquedas sobre velocidad ideal de internet crecen por el aumento del teletrabajo, streaming 4K/8K y hogares con muchos dispositivos. La gente busca no pagar de más y entender cuándo 300, 500 Mbps o 1 Gbps hacen diferencia real, lo que conecta naturalmente con comparar planes disponibles en Bogotá.",
+      "keywords": [
+        "velocidad de internet necesaria",
+        "cuántos megas necesito",
+        "velocidad internet para streaming y trabajo remoto",
+        "velocidad internet Bogotá 2026"
+      ],
+      "scope": "mixed",
+      "category": "practica"
+    },
+    {
+      "title": "Fibra óptica vs cable coaxial: diferencias reales hoy",
+      "reason": "El aumento de despliegues FTTH ha disparado búsquedas comparando fibra y coaxial. Los usuarios quieren entender latencia, estabilidad y simetría más allá del marketing, especialmente antes de cambiar de plan o tecnología en ciudades como Bogotá.",
+      "keywords": [
+        "fibra óptica vs cable coaxial",
+        "diferencias entre fibra y HFC",
+        "latencia fibra vs coaxial",
+        "internet por fibra en Bogotá"
+      ],
+      "scope": "global",
+      "category": "arquitectura"
+    },
+    {
+      "title": "Internet lento: causas ocultas más allá de la velocidad",
+      "reason": "Crece la frustración por conexiones lentas incluso con planes rápidos. Tendencias muestran interés en conceptos como jitter, packet loss y bufferbloat. Educar sobre estos factores permite al lector evaluar mejor la calidad del servicio y comparar ofertas de internet con más criterio.",
+      "keywords": [
+        "por qué mi internet es lento",
+        "internet lento causas y soluciones",
+        "jitter packet loss bufferbloat",
+        "mejorar internet en casa"
+      ],
+      "scope": "global",
+      "category": "practica"
+    },
+    {
+      "title": "Cobertura de fibra óptica por localidades en Bogotá",
+      "reason": "Las búsquedas locales sobre disponibilidad de fibra siguen en alza por mudanzas, nuevos proyectos inmobiliarios y expansión de red. Los usuarios quieren saber qué tecnologías llegan a su barrio y qué esperar antes de comparar planes de internet.",
+      "keywords": [
+        "cobertura fibra óptica Bogotá",
+        "fibra óptica por localidades Bogotá",
+        "internet disponible en mi zona Bogotá",
+        "FTTH Bogotá 2026"
+      ],
+      "scope": "local",
+      "category": "local"
+    }
+  ],
+  "conversationId": "research_1769477701078"
+}
