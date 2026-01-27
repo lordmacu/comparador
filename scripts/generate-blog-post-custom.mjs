@@ -1014,7 +1014,21 @@ async function run() {
       }
       
       log("✅ Deploy completado exitosamente", "success");
-      console.log(`${colors.bright}${colors.green}🌐 Sitio actualizado en: https://comparadorinternet.co${colors.reset}\n`);
+      
+      // Construir URL del artículo nuevo
+      const articleUrl = `https://comparadorinternet.co/blog/${contentResult.articleData.slug}`;
+      console.log(`${colors.bright}${colors.green}🌐 Sitio actualizado en: https://comparadorinternet.co${colors.reset}`);
+      console.log(`${colors.bright}${colors.cyan}📰 Artículo publicado en: ${articleUrl}${colors.reset}\n`);
+      
+      // Abrir la página del artículo en el navegador
+      log("🌍 Abriendo página del artículo...", "info");
+      try {
+        await execAsync(`open "${articleUrl}"`);
+        log("✅ Página abierta en el navegador", "success");
+      } catch (browserError) {
+        log(`⚠️  No se pudo abrir el navegador automáticamente`, "warning");
+        log(`   Visita manualmente: ${articleUrl}`, "info");
+      }
     } catch (deployError) {
       log(`⚠️  Error durante el deploy: ${deployError.message}`, "error");
       log("El blog post se generó correctamente pero el deploy falló", "warning");

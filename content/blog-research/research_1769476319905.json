@@ -1,0 +1,107 @@
+{
+  "taskId": "research_1769476319905",
+  "timestamp": "2026-01-27T01:12:35.961Z",
+  "topics": [
+    {
+      "title": "WiFi 7 en 2026: qué es, para qué sirve y cuándo tendrá sentido en Colombia",
+      "reason": "WiFi 7 es una de las tecnologías más buscadas y genera expectativa, pero aún hay confusión sobre su utilidad real. Educa al lector sobre beneficios, requisitos y limita falsas expectativas, conectando naturalmente con la necesidad de planes de fibra de alta velocidad en Bogotá.",
+      "keywords": [
+        "WiFi 7",
+        "WiFi 7 Colombia",
+        "internet en Bogotá 2026"
+      ],
+      "scope": "mixed"
+    },
+    {
+      "title": "Por qué tu internet es lento en Bogotá (y cómo solucionarlo sin cambiar de plan)",
+      "reason": "Ataca una de las búsquedas más frecuentes y frustraciones reales de los usuarios. Aporta soluciones prácticas y prepara el terreno para evaluar si el problema es técnico o si conviene comparar planes y tecnologías disponibles.",
+      "keywords": [
+        "internet lento",
+        "cómo mejorar internet en casa",
+        "problemas comunes internet"
+      ],
+      "scope": "local"
+    },
+    {
+      "title": "Starlink vs fibra óptica: ¿vale la pena el internet satelital en zonas urbanas?",
+      "reason": "El auge de Starlink genera curiosidad y comparaciones directas con operadores tradicionales. El artículo aclara casos de uso reales y permite cerrar con una comparación informada de planes urbanos en Bogotá.",
+      "keywords": [
+        "Starlink Colombia",
+        "internet satelital",
+        "fibra óptica Bogotá"
+      ],
+      "scope": "mixed"
+    },
+    {
+      "title": "Cuánta velocidad de internet necesitas realmente para teletrabajo, streaming y gaming",
+      "reason": "Educa al lector sobre velocidad vs uso real, desmontando mitos comerciales. Facilita una transición natural hacia la comparación de planes según perfil de usuario.",
+      "keywords": [
+        "velocidad internet necesaria",
+        "mejor internet para teletrabajo",
+        "internet para gaming"
+      ],
+      "scope": "global"
+    },
+    {
+      "title": "Fibra óptica en Bogotá: qué zonas tienen mejor cobertura y qué viene en 2026",
+      "reason": "Contenido local altamente buscado y útil. Informa sobre expansión, brechas de cobertura y prepara al lector para comparar planes según su barrio.",
+      "keywords": [
+        "fibra óptica Bogotá",
+        "internet en Bogotá",
+        "cobertura fibra"
+      ],
+      "scope": "local"
+    },
+    {
+      "title": "Latencia vs velocidad: qué importa más para juegos online y videollamadas",
+      "reason": "Tema educativo con alto valor práctico que explica conceptos técnicos de forma clara. Conecta directamente con la calidad real de los planes de internet disponibles.",
+      "keywords": [
+        "latencia internet",
+        "ping gaming",
+        "velocidad vs latencia"
+      ],
+      "scope": "global"
+    },
+    {
+      "title": "Cómo elegir el mejor router WiFi para tu hogar en 2026",
+      "reason": "Complementa los problemas de conectividad doméstica y explica por qué un buen plan puede desperdiciarse con mal hardware, llevando a evaluar mejor las ofertas de los operadores.",
+      "keywords": [
+        "mejor router WiFi 2026",
+        "señal WiFi débil",
+        "cómo mejorar WiFi"
+      ],
+      "scope": "global"
+    },
+    {
+      "title": "5G fijo vs internet por cable: ¿alternativa real para hogares en Bogotá?",
+      "reason": "El 5G fijo empieza a sonar como sustituto del internet tradicional. El artículo analiza límites reales y conecta con la comparación de planes residenciales actuales.",
+      "keywords": [
+        "5G fijo",
+        "internet 5G hogar",
+        "internet en Bogotá 2026"
+      ],
+      "scope": "local"
+    },
+    {
+      "title": "Ciberseguridad en el hogar: cómo proteger tu red WiFi y tus datos personales",
+      "reason": "Tema en crecimiento por aumento de amenazas digitales. Educa sin vender miedo y enlaza con la importancia de routers, configuraciones y proveedores confiables.",
+      "keywords": [
+        "seguridad WiFi",
+        "ciberseguridad hogar",
+        "protección de datos internet"
+      ],
+      "scope": "global"
+    },
+    {
+      "title": "Internet residencial vs empresarial: diferencias reales que sí importan",
+      "reason": "Aclara una confusión común entre usuarios y pequeños negocios. Permite cerrar con una comparación clara de planes según necesidades reales en Bogotá.",
+      "keywords": [
+        "internet residencial",
+        "internet empresarial",
+        "planes de internet Bogotá"
+      ],
+      "scope": "local"
+    }
+  ],
+  "conversationId": "research_1769476319905"
+}
