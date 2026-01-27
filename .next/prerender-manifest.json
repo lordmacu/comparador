@@ -673,6 +673,31 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/blog/bufferbloat-por-que-tu-internet-se-cae-al-subir-archivos": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/bufferbloat-por-que-tu-internet-se-cae-al-subir-archivos.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/blog/checklist-para-contratar-internet-en-bogota": {
       "experimentalBypassFor": [
         {
@@ -898,6 +923,56 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/blog/etb-vs-claro-vs-movistar-2026-mejor-internet-bogota": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/etb-vs-claro-vs-movistar-2026-mejor-internet-bogota.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blog/etb-vs-claro-vs-movistar-2026-precios-velocidad-cobertura-bogota": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/etb-vs-claro-vs-movistar-2026-precios-velocidad-cobertura-bogota.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/blog/etb-vs-movistar-vs-claro-bogota": {
       "experimentalBypassFor": [
         {
@@ -964,6 +1039,31 @@
       "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/fusion-tigo-movistar-colombia-duopolio-analisis-2026.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blog/gpon-vs-xgs-pon-diferencias-reales-2026": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/gpon-vs-xgs-pon-diferencias-reales-2026.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1223,6 +1323,31 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/blog/categoria/comparativas": {
       "experimentalBypassFor": [
         {
@@ -1239,6 +1364,31 @@
       "initialExpireSeconds": 31536000,
       "srcRoute": "/blog/categoria/[categoria]",
       "dataRoute": "/blog/categoria/comparativas.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blog/categoria/fibra-optica": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/categoria/[categoria]",
+      "dataRoute": "/blog/categoria/fibra-optica.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",

@@ -1,0 +1,55 @@
+{
+  "taskId": "research_1769477193710",
+  "timestamp": "2026-01-27T01:26:59.778Z",
+  "topics": [
+    {
+      "title": "GPON vs XGS-PON: diferencias reales en 2026",
+      "reason": "Las búsquedas sobre GPON y XGS-PON están en alza por el despliegue de planes gigabit y multi-gig en ciudades grandes. Los usuarios quieren saber si realmente necesitan XGS-PON o si GPON sigue siendo suficiente, especialmente antes de contratar fibra en Bogotá.",
+      "keywords": [
+        "GPON vs XGS-PON",
+        "qué es XGS-PON",
+        "diferencia GPON XGS-PON",
+        "fibra XGS-PON en Bogotá"
+      ],
+      "scope": "mixed",
+      "category": "arquitectura"
+    },
+    {
+      "title": "¿Cuánta velocidad de internet necesitas realmente en 2026?",
+      "reason": "El aumento del teletrabajo, streaming 4K y hogares con múltiples dispositivos ha disparado las consultas sobre velocidad necesaria. La gente busca cifras claras y realistas para no pagar de más al comparar planes de internet residencial.",
+      "keywords": [
+        "velocidad de internet necesaria",
+        "cuántos Mbps necesito",
+        "internet para streaming y teletrabajo",
+        "velocidad internet hogar Colombia"
+      ],
+      "scope": "global",
+      "category": "practica"
+    },
+    {
+      "title": "Starlink en Colombia 2026: ¿vale la pena frente a la fibra?",
+      "reason": "Starlink mantiene tendencia creciente en Google Trends por su expansión y ajustes de precio. Muchos usuarios urbanos y rurales evalúan si tiene sentido frente a la fibra óptica o como respaldo, antes de elegir proveedor de internet.",
+      "keywords": [
+        "Starlink Colombia 2026",
+        "internet satelital vs fibra",
+        "velocidad Starlink real",
+        "alternativas a Starlink en Colombia"
+      ],
+      "scope": "local",
+      "category": "emergente"
+    },
+    {
+      "title": "Internet lento aunque tengas fibra: causas ocultas",
+      "reason": "Consultas como 'internet lento con fibra' y 'por qué mi internet es inestable' siguen creciendo. Los usuarios sospechan del operador, pero buscan entender problemas reales como WiFi, latencia o saturación antes de cambiar de plan.",
+      "keywords": [
+        "internet lento con fibra",
+        "por qué mi internet es inestable",
+        "causas internet lento",
+        "problemas de internet en Bogotá"
+      ],
+      "scope": "global",
+      "category": "practica"
+    }
+  ],
+  "conversationId": "research_1769477193710"
+}

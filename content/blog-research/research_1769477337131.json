@@ -1,0 +1,55 @@
+{
+  "taskId": "research_1769477337131",
+  "timestamp": "2026-01-27T01:29:23.467Z",
+  "topics": [
+    {
+      "title": "Bufferbloat: por qué tu internet se cae al subir archivos",
+      "reason": "Las búsquedas sobre caídas de videollamadas y lag al subir archivos han aumentado con el teletrabajo y el uso de la nube. Bufferbloat explica por qué una conexión rápida falla bajo carga y conecta directamente con la calidad real de los planes de internet, más allá de los Mbps.",
+      "keywords": [
+        "bufferbloat",
+        "internet lento al subir archivos",
+        "latencia alta con buena velocidad",
+        "bufferbloat en Colombia"
+      ],
+      "scope": "global",
+      "category": "arquitectura"
+    },
+    {
+      "title": "¿Cuánta velocidad necesitas realmente para trabajar remoto?",
+      "reason": "El trabajo remoto sigue creciendo y las personas buscan no pagar de más por velocidad innecesaria. Este tema responde una duda recurrente en Google y permite conectar naturalmente con la elección de planes adecuados según uso real en el hogar.",
+      "keywords": [
+        "velocidad internet trabajo remoto",
+        "internet para teletrabajo",
+        "Mbps necesarios para Zoom",
+        "plan internet hogar trabajo remoto"
+      ],
+      "scope": "mixed",
+      "category": "practica"
+    },
+    {
+      "title": "DNS seguro: cómo mejorar privacidad y velocidad en casa",
+      "reason": "Las búsquedas sobre privacidad, bloqueos y lentitud al navegar han impulsado el interés en DNS seguros (DoH/DoT). Es un tema educativo, accionable y muy ligado al rendimiento percibido de cualquier proveedor de internet.",
+      "keywords": [
+        "DNS seguro",
+        "DoH DoT qué es",
+        "mejorar velocidad con DNS",
+        "DNS privado en Colombia"
+      ],
+      "scope": "global",
+      "category": "seguridad"
+    },
+    {
+      "title": "Fibra óptica en Bogotá: qué es la última milla",
+      "reason": "Con la expansión de fibra en Bogotá, los usuarios buscan entender por qué dos planes similares rinden distinto según la zona. Explicar la última milla aclara diferencias de experiencia y prepara al lector para comparar tecnologías disponibles en su barrio.",
+      "keywords": [
+        "última milla internet",
+        "fibra óptica Bogotá",
+        "por qué mi fibra es lenta",
+        "tecnología última milla Colombia"
+      ],
+      "scope": "local",
+      "category": "local"
+    }
+  ],
+  "conversationId": "research_1769477337131"
+}
