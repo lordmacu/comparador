@@ -424,3 +424,28 @@ La buena noticia: más velocidad no siempre significa mejor experiencia. La mala
 [2m[8:37:36 p. m.][0m [36m🚀 FASE 4: DEPLOY AUTOMÁTICO[0m
 [2m[8:37:36 p. m.][0m [36mEjecutando deploy con mensaje: "🤖 Auto-generated blog post: ¿Cuánta velocidad de internet necesitas en 2026? La guía real para no pagar de más"[0m
 [2m[8:37:36 p. m.][0m [33mEsto puede tomar unos minutos...[0m
+[2m[8:37:59 p. m.][0m [31m⚠️  Error durante el deploy: Command failed: bash "/Users/cristian/internet/deploy-optimized.sh" "🤖 Auto-generated blog post: ¿Cuánta velocidad de internet necesitas en 2026? La guía real para no pagar de más"
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+To github.com-lordmacu:lordmacu/comparador.git
+   14ffad656..d677d6dca  main -> main
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+From https://github.com/lordmacu/comparador
+ * branch                main       -> FETCH_HEAD
+   14ffad656..d677d6dca  main       -> origin/main
+error: The following untracked working tree files would be overwritten by merge:
+	.next/server/app/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.html
+	.next/server/app/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.meta
+	.next/server/app/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.rsc
+	.next/server/app/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.segments/_full.segment.rsc
+	.next/server/app/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.segments/_head.segment.rsc
+	.next/server/app/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.segments/_index.segment.rsc
+	.next/server/app/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.segments/_tree.segment.rsc
+	.next/server/app/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.segments/blog.segment.rsc
+	.next/server/app/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.segments/blog/$d$slug.segment.rsc
+	.next/server/app/blog/wifi-7-en-2026-que-es-para-que-sirve-y-cuando-tendra-sentido-en-colombia.segments/blog/$d$slug/__PAGE__.segment.rsc
+Please move or remove them before you merge.
+Aborting
+Merge with strategy ort failed.
+[0m
+[2m[8:37:59 p. m.][0m [33mEl blog post se generó correctamente pero el deploy falló[0m
+[2m[8:37:59 p. m.][0m [36mPuedes ejecutar manualmente: ./deploy-optimized.sh "tu mensaje"[0m

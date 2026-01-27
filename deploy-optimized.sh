@@ -74,12 +74,10 @@ print_step "Deploying to server..."
 ssh -i "$SSH_KEY" "$SERVER_USER@$SERVER" << 'ENDSSH'
     set -e
     
-    # Limpiar .next antes de hacer pull para evitar conflictos
+    # Limpiar completamente .next antes de hacer pull
     cd /home/ubuntu/apps/comparador
-    echo "🧹 Limpiando directorio .next para evitar conflictos..."
-    git checkout -- .next/ 2>/dev/null || true
-    rm -rf .next/cache 2>/dev/null || true
-    cd /home/ubuntu/apps/comparador
+    echo "🧹 Eliminando directorio .next completo para evitar conflictos..."
+    rm -rf .next
     
     echo "🚀 Running update script..."
     bash update.sh

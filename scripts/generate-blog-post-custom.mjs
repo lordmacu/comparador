@@ -372,15 +372,39 @@ COMPARATIVAS Y DECISIONES:
 ✓ "mejor [producto/servicio] para [uso específico]"
 ✓ "vale la pena [tecnología nueva] en 2026"
 
-CASOS DE USO ESPECÍFICOS:
-✓ "velocidad internet necesaria para [actividad]"
-✓ "internet para [gaming/streaming/teletrabajo]"
-✓ "setup de red para [uso específico]"
+CASOS DE USO ESPECÍFICOS (muy importantes):
+**GAMING:**
+✓ "internet para gaming Bogotá"
+✓ "mejor internet para jugar online"
+✓ "latencia gaming [juego específico]"
+✓ "reducir ping [operador]"
+✓ "internet para streaming Twitch"
 
-LOCALES + TECH (mix poderoso):
-✓ "[tecnología] en Colombia/Bogotá 2026"
-✓ "[servicio] disponible en Bogotá"
-✓ "cuándo llega [tecnología] a Colombia"
+**EMPRESAS:**
+✓ "internet empresarial vs residencial"
+✓ "internet para negocio pequeño"
+✓ "conectividad para oficina"
+✓ "internet dedicado empresas Bogotá"
+✓ "internet para PYME Colombia"
+
+**TRABAJO REMOTO:**
+✓ "internet para teletrabajo"
+✓ "velocidad necesaria para Zoom"
+✓ "mejor internet trabajo desde casa"
+✓ "internet para videollamadas"
+✓ "setup internet home office"
+
+**HOGAR Y FAMILIA:**
+✓ "internet para toda la familia"
+✓ "cuántos megas necesito en casa"
+✓ "internet para smart home"
+✓ "internet para educación virtual"
+✓ "streaming Netflix velocidad necesaria"
+
+**LOCALES + CASOS DE USO (mix poderoso):**
+✓ "[caso de uso] + [operador] + Bogotá"
+✓ "internet para [gaming/empresa/hogar] [barrio]"
+✓ "mejor plan [caso de uso] Colombia 2026"
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ✅ CRITERIOS DE VALIDACIÓN (Todos obligatorios):
