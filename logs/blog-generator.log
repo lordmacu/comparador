@@ -449,3 +449,451 @@ Merge with strategy ort failed.
 [0m
 [2m[8:37:59 p. m.][0m [33mEl blog post se generó correctamente pero el deploy falló[0m
 [2m[8:37:59 p. m.][0m [36mPuedes ejecutar manualmente: ./deploy-optimized.sh "tu mensaje"[0m
+[dotenv@17.2.3] injecting env (7) from .env -- tip: ⚙️  override existing env vars with { override: true }
+
+[1m[34m╔════════════════════════════════════════════════════════════╗[0m
+[1m[34m║     GENERADOR DE BLOGS - API CUSTOM CHATGPT               ║[0m
+[1m[34m║     localhost:54321                                        ║[0m
+[1m[34m╚════════════════════════════════════════════════════════════╝[0m
+
+[2m[9:30:05 a. m.][0m [36m🚀 FASE 1: INVESTIGACIÓN DE TEMAS[0m
+[2m[9:30:05 a. m.][0m [33m⚠️  IMPORTANTE: El sistema procesa UN prompt a la vez[0m
+[2m[9:30:05 a. m.][0m [36m============================================================[0m
+[2m[9:30:05 a. m.][0m [36m🔍 INICIANDO INVESTIGACIÓN DE TEMAS[0m
+[2m[9:30:05 a. m.][0m [36m============================================================[0m
+[2m[9:30:05 a. m.][0m [36mVerificando disponibilidad del sistema...[0m
+[2m[9:30:05 a. m.][0m [33m⚠️  Esperará indefinidamente hasta que esté disponible[0m
+[2m[9:30:05 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:30:05 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:30:05 a. m.][0m [32m✅ Sistema disponible para procesar nuevo prompt[0m
+[2m[9:30:05 a. m.][0m [36mTask ID: research_1769610605357[0m
+[2m[9:30:05 a. m.][0m [36mEnviando prompt de investigación a ChatGPT...[0m
+[2m[9:30:05 a. m.][0m [36m📤 Enviando POST a http://localhost:54321/api/prompt/set[0m
+[2m[9:30:05 a. m.][0m [36m   - ID: research_1769610605357[0m
+[2m[9:30:05 a. m.][0m [36m   - New Chat: true[0m
+[2m[9:30:05 a. m.][0m [36m   - Extract JSON: true[0m
+[2m[9:30:05 a. m.][0m [36m   - Is Image: false[0m
+[2m[9:30:05 a. m.][0m [36m   - Prompt length: 9859 caracteres[0m
+[2m[9:30:05 a. m.][0m [32m📥 Respuesta HTTP: 200 OK[0m
+[2m[9:30:05 a. m.][0m [32m✅ Prompt enviado exitosamente[0m
+[2m[9:30:05 a. m.][0m [36m   Respuesta: "Prompt establecido correctamente"[0m
+[2m[9:30:05 a. m.][0m [32m✓ Prompt enviado, esperando respuesta de ChatGPT...[0m
+[2m[9:30:05 a. m.][0m [36mPolling conversación (esto puede tomar 30-60 segundos)...[0m
+[2m[9:30:05 a. m.][0m [36m🔍 Iniciando polling para conversación: research_1769610605357[0m
+[2m[9:30:05 a. m.][0m [33m   ⚠️  Sin límite de tiempo - esperará hasta que esté lista[0m
+[2m[9:30:05 a. m.][0m [36m   Verificando cada 2s...[0m
+[2m[9:30:05 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 1, 2s][0m
+[2m[9:30:05 a. m.][0m [36m⏳ 404 - Esperando... (2s transcurridos)[0m
+[2m[9:30:07 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 2, 4s][0m
+[2m[9:30:07 a. m.][0m [36m⏳ 404 - Esperando... (4s transcurridos)[0m
+[2m[9:30:09 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 3, 6s][0m
+[2m[9:30:09 a. m.][0m [36m⏳ 404 - Esperando... (6s transcurridos)[0m
+[2m[9:30:11 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 4, 8s][0m
+[2m[9:30:11 a. m.][0m [36m⏳ 404 - Esperando... (8s transcurridos)[0m
+[2m[9:30:13 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 5, 10s][0m
+[2m[9:30:13 a. m.][0m [36m⏳ 404 - Esperando... (10s transcurridos)[0m
+[2m[9:30:15 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 6, 12s][0m
+[2m[9:30:15 a. m.][0m [36m⏳ 404 - Esperando... (12s transcurridos)[0m
+[2m[9:30:17 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 7, 14s][0m
+[2m[9:30:17 a. m.][0m [36m⏳ 404 - Esperando... (14s transcurridos)[0m
+[2m[9:30:19 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 8, 16s][0m
+[2m[9:30:19 a. m.][0m [36m⏳ 404 - Esperando... (16s transcurridos)[0m
+[2m[9:30:21 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 9, 18s][0m
+[2m[9:30:21 a. m.][0m [36m⏳ 404 - Esperando... (18s transcurridos)[0m
+[2m[9:30:23 a. m.][0m [36m⏱️  Tiempo transcurrido: 20s (10 intentos)[0m
+[2m[9:30:23 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:30:23 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:30:23 a. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[9:30:23 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 10, 20s][0m
+[2m[9:30:23 a. m.][0m [36m⏳ 404 - Esperando... (20s transcurridos)[0m
+[2m[9:30:25 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 11, 22s][0m
+[2m[9:30:25 a. m.][0m [36m⏳ 404 - Esperando... (22s transcurridos)[0m
+[2m[9:30:27 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 12, 24s][0m
+[2m[9:30:27 a. m.][0m [36m⏳ 404 - Esperando... (24s transcurridos)[0m
+[2m[9:30:29 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 13, 26s][0m
+[2m[9:30:29 a. m.][0m [36m⏳ 404 - Esperando... (26s transcurridos)[0m
+[2m[9:30:31 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 14, 28s][0m
+[2m[9:30:31 a. m.][0m [36m⏳ 404 - Esperando... (28s transcurridos)[0m
+[2m[9:30:33 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 15, 30s][0m
+[2m[9:30:33 a. m.][0m [36m⏳ 404 - Esperando... (30s transcurridos)[0m
+[2m[9:30:35 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 16, 32s][0m
+[2m[9:30:35 a. m.][0m [36m⏳ 404 - Esperando... (32s transcurridos)[0m
+[2m[9:30:37 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 17, 34s][0m
+[2m[9:30:37 a. m.][0m [36m⏳ 404 - Esperando... (34s transcurridos)[0m
+[2m[9:30:39 a. m.][0m [36m📡 GET /api/conversations/research_1769610605357 [intento 18, 36s][0m
+[2m[9:30:41 a. m.][0m [32m✅ Conversación encontrada (200 OK) después de 36s[0m
+[2m[9:30:41 a. m.][0m [36m   - ID: research_1769610605357[0m
+[2m[9:30:41 a. m.][0m [36m   - Mensajes: 2[0m
+[2m[9:30:41 a. m.][0m [36m   - Último mensaje de: assistant[0m
+[2m[9:30:41 a. m.][0m [32m============================================================[0m
+[2m[9:30:41 a. m.][0m [32m✅ RESPUESTA RECIBIDA DE CHATGPT[0m
+[2m[9:30:41 a. m.][0m [32m============================================================[0m
+[2m[9:30:41 a. m.][0m [36m📄 Tipo de respuesta: object[0m
+[2m[9:30:41 a. m.][0m [32m✅ Respuesta ya es objeto JSON (parseado por API)[0m
+[2m[9:30:41 a. m.][0m [36m🔍 Validando estructura de respuesta...[0m
+[2m[9:30:41 a. m.][0m [36m   Tiene propiedad 'topics': true[0m
+[2m[9:30:41 a. m.][0m [36m   'topics' es array: true[0m
+[2m[9:30:41 a. m.][0m [32m✅ Estructura válida: 4 temas encontrados[0m
+
+
+[2m[9:30:41 a. m.][0m [32m📊 TEMAS ENCONTRADOS: 4[0m
+
+
+[1m[36m[1] Internet simétrico vs asimétrico: qué conviene en 2026[0m
+[2m   📝 Las búsquedas sobre internet simétrico están en alza por el crecimiento del teletrabajo, streaming y creación de contenido. Muchos usuarios no entienden por qué su subida es lenta y si vale la pena pagar más. El tema educa, aclara mitos y conecta naturalmente con la elección de planes de fibra en Bogotá según uso real.[0m
+[2m   🔑 Keywords: internet simétrico, internet asimétrico, diferencia internet simétrico y asimétrico, internet simétrico Bogotá[0m
+
+[1m[36m[2] Cuántos megas de internet necesito para trabajar desde casa[0m
+[2m   📝 El teletrabajo sigue creciendo y las personas buscan respuestas claras para Zoom, Teams y múltiples videollamadas. Es una consulta recurrente en Google Trends y foros locales. Permite educar con escenarios reales y llevar al lector a comparar planes según número de personas y uso.[0m
+[2m   🔑 Keywords: internet para teletrabajo, velocidad internet Zoom, cuántos megas necesito en casa, internet trabajo remoto Colombia[0m
+
+[1m[36m[3] Starlink en Colombia 2026: velocidades reales y cuándo conviene[0m
+[2m   📝 Starlink mantiene tendencia de búsqueda alta por expansión de cobertura y reducción de latencia. Usuarios urbanos y rurales comparan si vale la pena frente a fibra o 5G fijo. El tema aclara expectativas reales y conecta con decisiones de contratación según ubicación.[0m
+[2m   🔑 Keywords: Starlink Colombia, internet satelital Colombia, Starlink vs fibra, internet rural Colombia[0m
+
+[1m[36m[4] Internet lento en Bogotá: causas reales y cómo solucionarlo[0m
+[2m   📝 Las búsquedas de problemas de internet aumentan en horas pico y tras cambios de planes o routers. El tema ataca una necesidad inmediata, es altamente clickeable y permite guiar al usuario desde diagnóstico técnico hasta comparación informada de opciones disponibles en su zona.[0m
+[2m   🔑 Keywords: internet lento, por qué mi internet es lento, internet lento Bogotá, cómo mejorar velocidad de internet[0m
+
+[2m[9:30:41 a. m.][0m [36m💾 Guardando resultados...[0m
+[2m[9:30:41 a. m.][0m [36m   Directorio: /Users/cristian/internet/content/blog-research[0m
+[2m[9:30:41 a. m.][0m [32m   ✓ Directorio creado/verificado[0m
+[2m[9:30:41 a. m.][0m [32m✅ Resultados guardados: /Users/cristian/internet/content/blog-research/research_1769610605357.json[0m
+[2m[9:30:41 a. m.][0m [36m   Tamaño: 2261 bytes[0m
+[2m[9:30:41 a. m.][0m [36m🧹 Limpiando sistema para próxima fase...[0m
+[2m[9:30:41 a. m.][0m [36m🧹 Limpiando prompt y liberando sistema...[0m
+[2m[9:30:41 a. m.][0m [32m✅ Sistema reseteado y disponible para nuevo proceso[0m
+[2m[9:30:41 a. m.][0m [32m✅ Sistema disponible para siguiente proceso[0m
+[2m[9:30:41 a. m.][0m [36m============================================================[0m
+[2m[9:30:41 a. m.][0m [32m🎯 TEMA SELECCIONADO: "Internet simétrico vs asimétrico: qué conviene en 2026"[0m
+[2m[9:30:41 a. m.][0m [36m============================================================[0m
+
+════════════════════════════════════════════════════════════
+
+[2m[9:30:41 a. m.][0m [32m✅ Fase 1 completada. Sistema limpio.[0m
+[2m[9:30:41 a. m.][0m [36m⏳ Esperando 2 segundos antes de la siguiente fase...[0m
+[2m[9:30:43 a. m.][0m [36m🚀 FASE 2: GENERACIÓN DE CONTENIDO[0m
+[2m[9:30:43 a. m.][0m [33m⚠️  Verificando disponibilidad antes de continuar...[0m
+[2m[9:30:43 a. m.][0m [36mVerificando disponibilidad del sistema...[0m
+[2m[9:30:43 a. m.][0m [33m⚠️  Esperará indefinidamente hasta que esté disponible[0m
+[2m[9:30:43 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:30:43 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:30:43 a. m.][0m [32m✅ Sistema disponible para procesar nuevo prompt[0m
+[2m[9:30:43 a. m.][0m [36m============================================================[0m
+[2m[9:30:43 a. m.][0m [36m✍️  INICIANDO GENERACIÓN DE CONTENIDO[0m
+[2m[9:30:43 a. m.][0m [36m============================================================[0m
+[2m[9:30:43 a. m.][0m [36m📰 Tema: Internet simétrico vs asimétrico: qué conviene en 2026[0m
+[2m[9:30:43 a. m.][0m [36mVerificando disponibilidad del sistema...[0m
+[2m[9:30:43 a. m.][0m [33m⚠️  Esperará indefinidamente hasta que esté disponible[0m
+[2m[9:30:43 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:30:43 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:30:43 a. m.][0m [32m✅ Sistema disponible para procesar nuevo prompt[0m
+[2m[9:30:44 a. m.][0m [36m🆔 Task ID: article_1769610644015_internet-simetrico-vs-asimetri[0m
+[2m[9:30:44 a. m.][0m [36mEnviando prompt de redacción a ChatGPT...[0m
+[2m[9:30:44 a. m.][0m [36m   Prompt incluye: Eres un periodista tecnológico geek con profundo conocimiento técnico de redes, telecomunicaciones e infraestructura de internet. Escribes con la pasión de un tech enthusiast pero la rigurosidad de un periodista investigativo.[0m
+[2m[9:30:44 a. m.][0m [36m📤 Enviando POST a http://localhost:54321/api/prompt/set[0m
+[2m[9:30:44 a. m.][0m [36m   - ID: article_1769610644015_internet-simetrico-vs-asimetri[0m
+[2m[9:30:44 a. m.][0m [36m   - New Chat: true[0m
+[2m[9:30:44 a. m.][0m [36m   - Extract JSON: true[0m
+[2m[9:30:44 a. m.][0m [36m   - Is Image: false[0m
+[2m[9:30:44 a. m.][0m [36m   - Prompt length: 10564 caracteres[0m
+[2m[9:30:44 a. m.][0m [32m📥 Respuesta HTTP: 200 OK[0m
+[2m[9:30:44 a. m.][0m [32m✅ Prompt enviado exitosamente[0m
+[2m[9:30:44 a. m.][0m [36m   Respuesta: "Prompt establecido correctamente"[0m
+[2m[9:30:44 a. m.][0m [32m✓ Prompt enviado, esperando que ChatGPT redacte el artículo...[0m
+[2m[9:30:44 a. m.][0m [36m⏱️  Esto puede tomar 1-2 minutos (artículo completo)...[0m
+[2m[9:30:44 a. m.][0m [36m🔍 Iniciando polling para conversación: article_1769610644015_internet-simetrico-vs-asimetri[0m
+[2m[9:30:44 a. m.][0m [33m   ⚠️  Sin límite de tiempo - esperará hasta que esté lista[0m
+[2m[9:30:44 a. m.][0m [36m   Verificando cada 2s...[0m
+[2m[9:30:44 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 1, 2s][0m
+[2m[9:30:44 a. m.][0m [36m⏳ 404 - Esperando... (2s transcurridos)[0m
+[2m[9:30:46 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 2, 4s][0m
+[2m[9:30:46 a. m.][0m [36m⏳ 404 - Esperando... (4s transcurridos)[0m
+[2m[9:30:48 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 3, 6s][0m
+[2m[9:30:48 a. m.][0m [36m⏳ 404 - Esperando... (6s transcurridos)[0m
+[2m[9:30:50 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 4, 8s][0m
+[2m[9:30:50 a. m.][0m [36m⏳ 404 - Esperando... (8s transcurridos)[0m
+[2m[9:30:52 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 5, 10s][0m
+[2m[9:30:52 a. m.][0m [36m⏳ 404 - Esperando... (10s transcurridos)[0m
+[2m[9:30:54 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 6, 12s][0m
+[2m[9:30:54 a. m.][0m [36m⏳ 404 - Esperando... (12s transcurridos)[0m
+[2m[9:30:56 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 7, 14s][0m
+[2m[9:30:56 a. m.][0m [36m⏳ 404 - Esperando... (14s transcurridos)[0m
+[2m[9:30:58 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 8, 16s][0m
+[2m[9:30:58 a. m.][0m [36m⏳ 404 - Esperando... (16s transcurridos)[0m
+[2m[9:31:00 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 9, 18s][0m
+[2m[9:31:00 a. m.][0m [36m⏳ 404 - Esperando... (18s transcurridos)[0m
+[2m[9:31:02 a. m.][0m [36m⏱️  Tiempo transcurrido: 20s (10 intentos)[0m
+[2m[9:31:02 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:31:02 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:31:02 a. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[9:31:02 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 10, 20s][0m
+[2m[9:31:02 a. m.][0m [36m⏳ 404 - Esperando... (20s transcurridos)[0m
+[2m[9:31:04 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 11, 22s][0m
+[2m[9:31:04 a. m.][0m [36m⏳ 404 - Esperando... (22s transcurridos)[0m
+[2m[9:31:06 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 12, 24s][0m
+[2m[9:31:06 a. m.][0m [36m⏳ 404 - Esperando... (24s transcurridos)[0m
+[2m[9:31:08 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 13, 26s][0m
+[2m[9:31:08 a. m.][0m [36m⏳ 404 - Esperando... (26s transcurridos)[0m
+[2m[9:31:10 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 14, 28s][0m
+[2m[9:31:10 a. m.][0m [36m⏳ 404 - Esperando... (28s transcurridos)[0m
+[2m[9:31:12 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 15, 30s][0m
+[2m[9:31:12 a. m.][0m [36m⏳ 404 - Esperando... (30s transcurridos)[0m
+[2m[9:31:14 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 16, 32s][0m
+[2m[9:31:14 a. m.][0m [36m⏳ 404 - Esperando... (32s transcurridos)[0m
+[2m[9:31:16 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 17, 34s][0m
+[2m[9:31:16 a. m.][0m [36m⏳ 404 - Esperando... (34s transcurridos)[0m
+[2m[9:31:18 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 18, 36s][0m
+[2m[9:31:18 a. m.][0m [36m⏳ 404 - Esperando... (36s transcurridos)[0m
+[2m[9:31:20 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 19, 38s][0m
+[2m[9:31:20 a. m.][0m [36m⏳ 404 - Esperando... (38s transcurridos)[0m
+[2m[9:31:22 a. m.][0m [36m⏱️  Tiempo transcurrido: 40s (20 intentos)[0m
+[2m[9:31:22 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:31:22 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:31:22 a. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[9:31:22 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 20, 40s][0m
+[2m[9:31:22 a. m.][0m [36m⏳ 404 - Esperando... (40s transcurridos)[0m
+[2m[9:31:24 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 21, 42s][0m
+[2m[9:31:24 a. m.][0m [36m⏳ 404 - Esperando... (42s transcurridos)[0m
+[2m[9:31:26 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 22, 44s][0m
+[2m[9:31:26 a. m.][0m [36m⏳ 404 - Esperando... (44s transcurridos)[0m
+[2m[9:31:28 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 23, 46s][0m
+[2m[9:31:28 a. m.][0m [36m⏳ 404 - Esperando... (46s transcurridos)[0m
+[2m[9:31:30 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 24, 48s][0m
+[2m[9:31:30 a. m.][0m [36m⏳ 404 - Esperando... (48s transcurridos)[0m
+[2m[9:31:32 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 25, 50s][0m
+[2m[9:31:32 a. m.][0m [36m⏳ 404 - Esperando... (50s transcurridos)[0m
+[2m[9:31:34 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 26, 52s][0m
+[2m[9:31:34 a. m.][0m [36m⏳ 404 - Esperando... (52s transcurridos)[0m
+[2m[9:31:36 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 27, 54s][0m
+[2m[9:31:36 a. m.][0m [36m⏳ 404 - Esperando... (54s transcurridos)[0m
+[2m[9:31:38 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 28, 56s][0m
+[2m[9:31:38 a. m.][0m [36m⏳ 404 - Esperando... (56s transcurridos)[0m
+[2m[9:31:40 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 29, 58s][0m
+[2m[9:31:40 a. m.][0m [36m⏳ 404 - Esperando... (58s transcurridos)[0m
+[2m[9:31:42 a. m.][0m [36m⏱️  Tiempo transcurrido: 60s (30 intentos)[0m
+[2m[9:31:42 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:31:42 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:31:42 a. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[9:31:42 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 30, 60s][0m
+[2m[9:31:42 a. m.][0m [36m⏳ 404 - Esperando... (60s transcurridos)[0m
+[2m[9:31:44 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 31, 62s][0m
+[2m[9:31:44 a. m.][0m [36m⏳ 404 - Esperando... (62s transcurridos)[0m
+[2m[9:31:46 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 32, 64s][0m
+[2m[9:31:46 a. m.][0m [36m⏳ 404 - Esperando... (64s transcurridos)[0m
+[2m[9:31:48 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 33, 66s][0m
+[2m[9:31:48 a. m.][0m [36m⏳ 404 - Esperando... (66s transcurridos)[0m
+[2m[9:31:50 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 34, 68s][0m
+[2m[9:31:50 a. m.][0m [36m⏳ 404 - Esperando... (68s transcurridos)[0m
+[2m[9:31:52 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 35, 70s][0m
+[2m[9:31:52 a. m.][0m [36m⏳ 404 - Esperando... (70s transcurridos)[0m
+[2m[9:31:54 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 36, 72s][0m
+[2m[9:31:54 a. m.][0m [36m⏳ 404 - Esperando... (72s transcurridos)[0m
+[2m[9:31:56 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 37, 74s][0m
+[2m[9:31:56 a. m.][0m [36m⏳ 404 - Esperando... (74s transcurridos)[0m
+[2m[9:31:58 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 38, 76s][0m
+[2m[9:31:58 a. m.][0m [36m⏳ 404 - Esperando... (76s transcurridos)[0m
+[2m[9:32:00 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 39, 78s][0m
+[2m[9:32:00 a. m.][0m [36m⏳ 404 - Esperando... (78s transcurridos)[0m
+[2m[9:32:02 a. m.][0m [36m⏱️  Tiempo transcurrido: 80s (40 intentos)[0m
+[2m[9:32:02 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:32:02 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:32:02 a. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[9:32:02 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 40, 80s][0m
+[2m[9:32:02 a. m.][0m [36m⏳ 404 - Esperando... (80s transcurridos)[0m
+[2m[9:32:04 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 41, 82s][0m
+[2m[9:32:04 a. m.][0m [36m⏳ 404 - Esperando... (82s transcurridos)[0m
+[2m[9:32:06 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 42, 84s][0m
+[2m[9:32:06 a. m.][0m [36m⏳ 404 - Esperando... (84s transcurridos)[0m
+[2m[9:32:08 a. m.][0m [36m📡 GET /api/conversations/article_1769610644015_internet-simetrico-vs-asimetri [intento 43, 86s][0m
+[2m[9:32:08 a. m.][0m [32m✅ Conversación encontrada (200 OK) después de 86s[0m
+[2m[9:32:08 a. m.][0m [36m   - ID: article_1769610644015_internet-simetrico-vs-asimetri[0m
+[2m[9:32:08 a. m.][0m [36m   - Mensajes: 2[0m
+[2m[9:32:08 a. m.][0m [36m   - Último mensaje de: assistant[0m
+[2m[9:32:08 a. m.][0m [32m============================================================[0m
+[2m[9:32:08 a. m.][0m [32m✅ ARTÍCULO GENERADO[0m
+[2m[9:32:08 a. m.][0m [32m============================================================[0m
+[2m[9:32:08 a. m.][0m [36m📄 Tipo de respuesta: object[0m
+[2m[9:32:08 a. m.][0m [32m✅ Respuesta ya es objeto JSON[0m
+[2m[9:32:08 a. m.][0m [36m🔍 Validando estructura del artículo...[0m
+[2m[9:32:08 a. m.][0m [32m✅ Todos los campos requeridos presentes[0m
+
+
+[2m[9:32:08 a. m.][0m [32m📊 RESUMEN DEL ARTÍCULO GENERADO:[0m
+[1m[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mTítulo:[0m Internet simétrico vs asimétrico: la diferencia real y qué te conviene en 2026
+[1mSlug:[0m internet-simetrico-vs-asimetrico-que-conviene-2026
+[1mDescripción:[0m ¿Tu subida es lenta? Entiende la diferencia entre internet simétrico y asimétrico y elige el plan correcto en Bogotá en 2026.
+[1mCategoría:[0m Fibra Óptica
+[1mTags:[0m internet simetrico, internet asimetrico, fibra optica, bogota, teletrabajo
+[1mAutor:[0m Equipo Editorial
+[1mTiempo de lectura:[0m 10 minutos
+[1mLongitud del contenido:[0m 6168 caracteres
+[1mPalabras aprox:[0m 945
+[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[2m--- Preview del Contenido (primeras 10 líneas) ---[0m
+# Internet simétrico vs asimétrico: la diferencia real y qué te conviene en 2026
+
+¿Te ha pasado que descargas rápido pero subir un archivo a Drive se siente eterno?
+
+Ese momento —cuando el Speedtest muestra 300 Mbps de bajada y apenas 20 Mbps de subida— es la razón por la que las búsquedas sobre **internet simétrico** se dispararon. Teletrabajo, streaming en vivo y creación de contenido pusieron la subida en el centro del debate. Y sí: en 2026 ya no es un detalle menor.
+
+En Bogotá, donde conviven fibra GPON, coaxial heredado y despliegues nuevos por barrios como Chapinero, Suba o Kennedy, la confusión es comprensible. Este artículo baja el ruido: explica la **diferencia entre internet simétrico y asimétrico**, cuándo pagar más tiene sentido y cómo elegir según tu uso real.
+
+## ¿Qué significa que un internet sea simétrico o asimétrico?
+
+[2m... (98 líneas totales)[0m
+
+[2m[9:32:08 a. m.][0m [36m💾 Guardando artículo...[0m
+[2m[9:32:08 a. m.][0m [32m   ✓ Directorio creado/verificado[0m
+[2m[9:32:08 a. m.][0m [32m✅ Artículo guardado: /Users/cristian/internet/content/blog/internet-simetrico-vs-asimetrico-que-conviene-2026.json[0m
+[2m[9:32:08 a. m.][0m [36m   Tamaño: 6949 bytes[0m
+[2m[9:32:08 a. m.][0m [36m🧹 Limpiando sistema para próxima fase...[0m
+[2m[9:32:08 a. m.][0m [36m🧹 Limpiando prompt y liberando sistema...[0m
+[2m[9:32:08 a. m.][0m [32m✅ Sistema reseteado y disponible para nuevo proceso[0m
+[2m[9:32:08 a. m.][0m [32m✅ Sistema disponible para siguiente proceso[0m
+
+════════════════════════════════════════════════════════════
+
+[2m[9:32:08 a. m.][0m [32m✅ Fase 2 completada. Sistema limpio.[0m
+[2m[9:32:08 a. m.][0m [36m⏳ Esperando 2 segundos antes de la siguiente fase...[0m
+[2m[9:32:10 a. m.][0m [36m🚀 FASE 3: GENERACIÓN DE IMAGEN[0m
+[2m[9:32:10 a. m.][0m [33m⚠️  Verificando disponibilidad antes de continuar...[0m
+[2m[9:32:10 a. m.][0m [36mVerificando disponibilidad del sistema...[0m
+[2m[9:32:10 a. m.][0m [33m⚠️  Esperará indefinidamente hasta que esté disponible[0m
+[2m[9:32:10 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:32:10 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:32:10 a. m.][0m [32m✅ Sistema disponible para procesar nuevo prompt[0m
+[2m[9:32:10 a. m.][0m [36m🎨 INICIANDO GENERACIÓN DE IMAGEN[0m
+[2m[9:32:10 a. m.][0m [36m   Artículo: Internet simétrico vs asimétrico: la diferencia real y qué te conviene en 2026[0m
+[2m[9:32:10 a. m.][0m [36m   Slug: internet-simetrico-vs-asimetrico-que-conviene-2026[0m
+[2m[9:32:10 a. m.][0m [36mVerificando disponibilidad del sistema...[0m
+[2m[9:32:10 a. m.][0m [33m⚠️  Esperará indefinidamente hasta que esté disponible[0m
+[2m[9:32:10 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:32:10 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:32:10 a. m.][0m [32m✅ Sistema disponible para procesar nuevo prompt[0m
+[2m[9:32:10 a. m.][0m [36m📋 Task ID: 1769610730224[0m
+[2m[9:32:10 a. m.][0m [36m🎨 Estilo seleccionado: ilustración editorial estilo The New Yorker, minimalista, lí...[0m
+[2m[9:32:10 a. m.][0m [36m📝 Prompt de imagen generado[0m
+[2m[9:32:10 a. m.][0m [36m   Longitud: 986 caracteres[0m
+[2m[9:32:10 a. m.][0m [36m📤 Enviando solicitud a http://localhost:54321/api/prompt/set[0m
+[2m[9:32:10 a. m.][0m [36m📤 Enviando POST a http://localhost:54321/api/prompt/set[0m
+[2m[9:32:10 a. m.][0m [36m   - ID: 1769610730224[0m
+[2m[9:32:10 a. m.][0m [36m   - New Chat: true[0m
+[2m[9:32:10 a. m.][0m [36m   - Extract JSON: false[0m
+[2m[9:32:10 a. m.][0m [36m   - Is Image: true[0m
+[2m[9:32:10 a. m.][0m [36m   - Prompt length: 986 caracteres[0m
+[2m[9:32:10 a. m.][0m [32m📥 Respuesta HTTP: 200 OK[0m
+[2m[9:32:10 a. m.][0m [32m✅ Prompt enviado exitosamente[0m
+[2m[9:32:10 a. m.][0m [36m   Respuesta: "Prompt establecido correctamente"[0m
+[2m[9:32:10 a. m.][0m [32m✅ Solicitud de imagen enviada[0m
+[2m[9:32:10 a. m.][0m [36m⏳ Esperando generación de imagen...[0m
+[2m[9:32:10 a. m.][0m [33m   ⚠️  El script esperará el tiempo que sea necesario[0m
+[2m[9:32:10 a. m.][0m [36m🔍 Iniciando polling para conversación: 1769610730224[0m
+[2m[9:32:10 a. m.][0m [33m   ⚠️  Sin límite de tiempo - esperará hasta que esté lista[0m
+[2m[9:32:10 a. m.][0m [36m   Verificando cada 2s...[0m
+[2m[9:32:10 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 1, 2s][0m
+[2m[9:32:10 a. m.][0m [36m⏳ 404 - Esperando... (2s transcurridos)[0m
+[2m[9:32:12 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 2, 4s][0m
+[2m[9:32:12 a. m.][0m [36m⏳ 404 - Esperando... (4s transcurridos)[0m
+[2m[9:32:14 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 3, 6s][0m
+[2m[9:32:14 a. m.][0m [36m⏳ 404 - Esperando... (6s transcurridos)[0m
+[2m[9:32:16 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 4, 8s][0m
+[2m[9:32:16 a. m.][0m [36m⏳ 404 - Esperando... (8s transcurridos)[0m
+[2m[9:32:18 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 5, 10s][0m
+[2m[9:32:18 a. m.][0m [36m⏳ 404 - Esperando... (10s transcurridos)[0m
+[2m[9:32:20 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 6, 12s][0m
+[2m[9:32:20 a. m.][0m [36m⏳ 404 - Esperando... (12s transcurridos)[0m
+[2m[9:32:22 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 7, 14s][0m
+[2m[9:32:22 a. m.][0m [36m⏳ 404 - Esperando... (14s transcurridos)[0m
+[2m[9:32:24 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 8, 16s][0m
+[2m[9:32:24 a. m.][0m [36m⏳ 404 - Esperando... (16s transcurridos)[0m
+[2m[9:32:26 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 9, 18s][0m
+[2m[9:32:26 a. m.][0m [36m⏳ 404 - Esperando... (18s transcurridos)[0m
+[2m[9:32:28 a. m.][0m [36m⏱️  Tiempo transcurrido: 20s (10 intentos)[0m
+[2m[9:32:28 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:32:28 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:32:28 a. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[9:32:28 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 10, 20s][0m
+[2m[9:32:28 a. m.][0m [36m⏳ 404 - Esperando... (20s transcurridos)[0m
+[2m[9:32:30 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 11, 22s][0m
+[2m[9:32:30 a. m.][0m [36m⏳ 404 - Esperando... (22s transcurridos)[0m
+[2m[9:32:32 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 12, 24s][0m
+[2m[9:32:32 a. m.][0m [36m⏳ 404 - Esperando... (24s transcurridos)[0m
+[2m[9:32:34 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 13, 26s][0m
+[2m[9:32:34 a. m.][0m [36m⏳ 404 - Esperando... (26s transcurridos)[0m
+[2m[9:32:36 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 14, 28s][0m
+[2m[9:32:36 a. m.][0m [36m⏳ 404 - Esperando... (28s transcurridos)[0m
+[2m[9:32:38 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 15, 30s][0m
+[2m[9:32:38 a. m.][0m [36m⏳ 404 - Esperando... (30s transcurridos)[0m
+[2m[9:32:40 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 16, 32s][0m
+[2m[9:32:40 a. m.][0m [36m⏳ 404 - Esperando... (32s transcurridos)[0m
+[2m[9:32:42 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 17, 34s][0m
+[2m[9:32:42 a. m.][0m [36m⏳ 404 - Esperando... (34s transcurridos)[0m
+[2m[9:32:44 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 18, 36s][0m
+[2m[9:32:44 a. m.][0m [36m⏳ 404 - Esperando... (36s transcurridos)[0m
+[2m[9:32:46 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 19, 38s][0m
+[2m[9:32:46 a. m.][0m [36m⏳ 404 - Esperando... (38s transcurridos)[0m
+[2m[9:32:48 a. m.][0m [36m⏱️  Tiempo transcurrido: 40s (20 intentos)[0m
+[2m[9:32:48 a. m.][0m [36mConsultando http://localhost:54321/api/status...[0m
+[2m[9:32:48 a. m.][0m [32mEstado: DISPONIBLE [0m
+[2m[9:32:48 a. m.][0m [33m   ⚠️  Sistema disponible pero la conversación aún no existe[0m
+[2m[9:32:48 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 20, 40s][0m
+[2m[9:32:48 a. m.][0m [36m⏳ 404 - Esperando... (40s transcurridos)[0m
+[2m[9:32:50 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 21, 42s][0m
+[2m[9:32:50 a. m.][0m [36m⏳ 404 - Esperando... (42s transcurridos)[0m
+[2m[9:32:52 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 22, 44s][0m
+[2m[9:32:52 a. m.][0m [36m⏳ 404 - Esperando... (44s transcurridos)[0m
+[2m[9:32:54 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 23, 46s][0m
+[2m[9:32:54 a. m.][0m [36m⏳ 404 - Esperando... (46s transcurridos)[0m
+[2m[9:32:56 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 24, 48s][0m
+[2m[9:32:56 a. m.][0m [36m⏳ 404 - Esperando... (48s transcurridos)[0m
+[2m[9:32:58 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 25, 50s][0m
+[2m[9:32:58 a. m.][0m [36m⏳ 404 - Esperando... (50s transcurridos)[0m
+[2m[9:33:00 a. m.][0m [36m📡 GET /api/conversations/1769610730224 [intento 26, 52s][0m
+[2m[9:33:00 a. m.][0m [32m✅ Conversación encontrada (200 OK) después de 52s[0m
+[2m[9:33:00 a. m.][0m [36m   - ID: 1769610730224[0m
+[2m[9:33:00 a. m.][0m [36m   - Mensajes: 2[0m
+[2m[9:33:00 a. m.][0m [36m   - Último mensaje de: assistant[0m
+[2m[9:33:00 a. m.][0m [36m📥 Conversación recibida, analizando estructura...[0m
+[2m[9:33:00 a. m.][0m [36m   Total de mensajes: 2[0m
+[2m[9:33:00 a. m.][0m [36m   Rol del último mensaje: assistant[0m
+[2m[9:33:00 a. m.][0m [36m   Es imagen: true[0m
+[2m[9:33:00 a. m.][0m [36m   Contenido text: /images/1769610730224_1769610780141_tgii0oivn.png[0m
+[2m[9:33:00 a. m.][0m [32m✅ URL de imagen encontrada: http://localhost:54321/images/1769610730224_1769610780141_tgii0oivn.png[0m
+[2m[9:33:00 a. m.][0m [36m📥 Descargando imagen desde el servidor...[0m
+[2m[9:33:00 a. m.][0m [32m✅ Imagen descargada: 1946.83 KB[0m
+[2m[9:33:00 a. m.][0m [36m💾 Guardando imagen: /Users/cristian/internet/public/blog-images/internet-simetrico-vs-asimetrico-que-conviene-2026.webp[0m
+[2m[9:33:00 a. m.][0m [32m✅ Permisos de imagen ajustados[0m
+[2m[9:33:00 a. m.][0m [36m📏 Tamaño original: 1946.83 KB[0m
+[2m[9:33:00 a. m.][0m [36m🗜️  Comprimiendo imagen...[0m
+[2m[9:33:01 a. m.][0m [32m✅ Imagen comprimida: 64.92 KB[0m
+[2m[9:33:01 a. m.][0m [36m🖼️  Generando thumbnail 400x200...[0m
+[2m[9:33:01 a. m.][0m [32m✅ Thumbnail generado: 9.55 KB[0m
+[2m[9:33:01 a. m.][0m [36m🧹 Limpiando prompt y liberando sistema...[0m
+[2m[9:33:01 a. m.][0m [32m✅ Sistema reseteado y disponible para nuevo proceso[0m
+[2m[9:33:01 a. m.][0m [32m✅ Artículo actualizado con rutas de imagen[0m
+
+════════════════════════════════════════════════════════════
+
+[2m[9:33:01 a. m.][0m [32m✅ Fase 3 completada. Sistema limpio.[0m
+[1m[32m🎉 PROCESO COMPLETADO EXITOSAMENTE[0m
+
+[36m📋 Resumen:[0m
+   [2mInvestigación:[0m /Users/cristian/internet/content/blog-research/research_1769610605357.json
+   [2mArtículo:[0m /Users/cristian/internet/content/blog/internet-simetrico-vs-asimetrico-que-conviene-2026.json
+   [2mTítulo:[0m Internet simétrico vs asimétrico: la diferencia real y qué te conviene en 2026
+   [2mSlug:[0m internet-simetrico-vs-asimetrico-que-conviene-2026
+   [2mImagen:[0m /blog-images/internet-simetrico-vs-asimetrico-que-conviene-2026.webp
+   [2mThumbnail:[0m /blog-images/internet-simetrico-vs-asimetrico-que-conviene-2026-thumb.webp
+   [2mEstilo:[0m ilustración editorial estilo The New Yorker, minim...
+
+[32m✅ Blog post completo generado con éxito[0m
+
+
+════════════════════════════════════════════════════════════
+
+[2m[9:33:01 a. m.][0m [36m🚀 FASE 4: DEPLOY AUTOMÁTICO[0m
+[2m[9:33:01 a. m.][0m [36mEjecutando deploy con mensaje: "🤖 Auto-generated blog post: Internet simétrico vs asimétrico: la diferencia real y qué te conviene en 2026"[0m
+[2m[9:33:01 a. m.][0m [33mEsto puede tomar unos minutos...[0m

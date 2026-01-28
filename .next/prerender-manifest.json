@@ -1223,6 +1223,31 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/blog/internet-simetrico-vs-asimetrico-que-conviene-2026": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/blog/[slug]",
+      "dataRoute": "/blog/internet-simetrico-vs-asimetrico-que-conviene-2026.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/blog/liderazgo-claro-5g-vs-tigo-movistar-colombia": {
       "experimentalBypassFor": [
         {

@@ -1,0 +1,55 @@
+{
+  "taskId": "research_1769610605357",
+  "timestamp": "2026-01-28T14:30:41.867Z",
+  "topics": [
+    {
+      "title": "Internet simétrico vs asimétrico: qué conviene en 2026",
+      "reason": "Las búsquedas sobre internet simétrico están en alza por el crecimiento del teletrabajo, streaming y creación de contenido. Muchos usuarios no entienden por qué su subida es lenta y si vale la pena pagar más. El tema educa, aclara mitos y conecta naturalmente con la elección de planes de fibra en Bogotá según uso real.",
+      "keywords": [
+        "internet simétrico",
+        "internet asimétrico",
+        "diferencia internet simétrico y asimétrico",
+        "internet simétrico Bogotá"
+      ],
+      "scope": "mixed",
+      "category": "arquitectura"
+    },
+    {
+      "title": "Cuántos megas de internet necesito para trabajar desde casa",
+      "reason": "El teletrabajo sigue creciendo y las personas buscan respuestas claras para Zoom, Teams y múltiples videollamadas. Es una consulta recurrente en Google Trends y foros locales. Permite educar con escenarios reales y llevar al lector a comparar planes según número de personas y uso.",
+      "keywords": [
+        "internet para teletrabajo",
+        "velocidad internet Zoom",
+        "cuántos megas necesito en casa",
+        "internet trabajo remoto Colombia"
+      ],
+      "scope": "global",
+      "category": "practica"
+    },
+    {
+      "title": "Starlink en Colombia 2026: velocidades reales y cuándo conviene",
+      "reason": "Starlink mantiene tendencia de búsqueda alta por expansión de cobertura y reducción de latencia. Usuarios urbanos y rurales comparan si vale la pena frente a fibra o 5G fijo. El tema aclara expectativas reales y conecta con decisiones de contratación según ubicación.",
+      "keywords": [
+        "Starlink Colombia",
+        "internet satelital Colombia",
+        "Starlink vs fibra",
+        "internet rural Colombia"
+      ],
+      "scope": "global",
+      "category": "emergente"
+    },
+    {
+      "title": "Internet lento en Bogotá: causas reales y cómo solucionarlo",
+      "reason": "Las búsquedas de problemas de internet aumentan en horas pico y tras cambios de planes o routers. El tema ataca una necesidad inmediata, es altamente clickeable y permite guiar al usuario desde diagnóstico técnico hasta comparación informada de opciones disponibles en su zona.",
+      "keywords": [
+        "internet lento",
+        "por qué mi internet es lento",
+        "internet lento Bogotá",
+        "cómo mejorar velocidad de internet"
+      ],
+      "scope": "local",
+      "category": "practica"
+    }
+  ],
+  "conversationId": "research_1769610605357"
+}
